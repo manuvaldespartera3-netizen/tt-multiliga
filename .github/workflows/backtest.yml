@@ -1,3 +1,27 @@
+name: Backtest multiliga
+
+on:
+  workflow_dispatch:
+    inputs:
+      liga:
+        description: "Liga a analizar"
+        type: choice
+        default: "TT Cup"
+        options:
+          - "Las 3"
+          - "TT Cup"
+          - "Czech Liga Pro"
+          - "TT Elite Series"
+      dias:
+        description: "Dias a analizar (la 2a mitad es el test)"
+        default: "60"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backtest
+  cancel-in-progress: false
 jobs:
   backtest:
     runs-on: ubuntu-latest
