@@ -6,15 +6,15 @@ on:
       liga:
         description: "Liga a analizar"
         type: choice
-        default: "TT Cup"
+        default: "Las 3"
         options:
           - "Las 3"
           - "TT Cup"
           - "Czech Liga Pro"
           - "TT Elite Series"
       dias:
-        description: "Dias a analizar (la 2a mitad es el test)"
-        default: "60"
+        description: "Dias a analizar"
+        default: "180"
 
 permissions:
   contents: write
@@ -22,10 +22,34 @@ permissions:
 concurrency:
   group: backtest
   cancel-in-progress: false
+
 jobs:
+  preparar:
+    runs-on: ubuntu-latest
+    outputs:
+      ligas: ${{ steps.m.outputs.ligas }}
+    steps:
+      - id: m
+        run: |
+          TT='{"id":"15005","slug":"tt_cup"}'
+          LP='{"id":"19039","slug":"czech_liga_pro"}'
+          ES='{"id":"19041","slug":"tt_elite_series"}'
+          case "${{ github.event.inputs.liga }}" in
+            "TT Cup")          echo "ligas=[$TT]" >> $GITHUB_OUTPUT ;;
+            "Czech Liga Pro")  echo "ligas=[$LP]" >> $GITHUB_OUTPUT ;;
+            "TT Elite Series") echo "ligas=[$ES]" >> $GITHUB_OUTPUT ;;
+            *)                 echo "ligas=[$TT,$LP,$ES]" >> $GITHUB_OUTPUT ;;
+          esac
+
   backtest:
+    needs: preparar
     runs-on: ubuntu-latest
     timeout-minutes: 350
+    strategy:
+      max-parallel: 1          # una liga detras de otra: no saturar la API del avisador
+      fail-fast: false
+      matrix:
+        liga: ${{ fromJSON(needs.preparar.outputs.ligas) }}
     steps:
       - uses: actions/checkout@v4
 
@@ -33,29 +57,27 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Elegir liga
-        run: |
-          case "${{ github.event.inputs.liga }}" in
-            "TT Cup")          echo "LIGA=15005" >> $GITHUB_ENV ;;
-            "Czech Liga Pro")  echo "LIGA=19039" >> $GITHUB_ENV ;;
-            "TT Elite Series") echo "LIGA=19041" >> $GITHUB_ENV ;;
-            *)                 echo "LIGA=todas" >> $GITHUB_ENV ;;
-          esac
+      - name: Instalar numpy
+        run: pip install numpy
 
       # lo ya descargado se guarda: si se corta, la siguiente vez sigue donde lo dejo
       - name: Recuperar descargas anteriores
         uses: actions/cache/restore@v4
         with:
           path: resultados/**/cache
-          key: mb-${{ github.run_id }}
-          restore-keys: mb-
+          key: mb-${{ matrix.liga.slug }}-${{ github.run_id }}
+          # TT Cup tambien aprovecha lo descargado en la primera prueba (clave "mb-<numero>")
+          restore-keys: |
+            mb-${{ matrix.liga.slug }}-
+            ${{ matrix.liga.slug == 'tt_cup' && 'mb-' || 'mb-ninguna-' }}
 
-      - name: Backtest
+      - name: Validar
         env:
           ZYLA_API_KEY: ${{ secrets.ZYLA_API_KEY }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
-          BT_DAYS: ${{ github.event.inputs.dias || '60' }}
+          LIGA: ${{ matrix.liga.id }}
+          BT_DAYS: ${{ github.event.inputs.dias || '180' }}
         run: python mb_backtest.py
 
       - name: Guardar descargas
@@ -63,7 +85,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: resultados/**/cache
-          key: mb-${{ github.run_id }}
+          key: mb-${{ matrix.liga.slug }}-${{ github.run_id }}
 
       - name: Avisar si falla
         if: failure() || cancelled()
@@ -74,7 +96,7 @@ jobs:
           [ -n "$TELEGRAM_TOKEN" ] || exit 0
           curl -s "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
             --data-urlencode "chat_id=${MY_CHAT_ID}" \
-            --data-urlencode "text=⚠️ El backtest multiliga se ha cortado. Vuelve a lanzarlo: seguirá donde lo dejó." > /dev/null
+            --data-urlencode "text=⚠️ La validación de ${{ matrix.liga.slug }} se ha cortado. Vuelve a lanzarla: seguirá donde lo dejó." > /dev/null
 
       - name: Guardar resultados en el repositorio
         if: always()
@@ -82,5 +104,5 @@ jobs:
           git config user.name "tt-multiliga"
           git config user.email "tt-multiliga@users.noreply.github.com"
           git add $(find resultados -path '*/cache' -prune -o -type f \( -name '*.txt' -o -name '*.csv' \) -print) 2>/dev/null || true
-          git commit -m "Resultados backtest $(date +%F)" || echo "sin cambios"
-          git push || true
+          git commit -m "Validacion ${{ matrix.liga.slug }} $(date +%F)" || echo "sin cambios"
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done || true
