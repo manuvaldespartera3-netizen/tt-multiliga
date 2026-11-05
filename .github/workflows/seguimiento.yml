@@ -11,6 +11,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write      # para lanzar la siguiente vuelta
 
 jobs:
   seguir:
@@ -38,6 +39,7 @@ jobs:
           restore-keys: seg-
 
       - name: Seguimiento
+        id: seg
         env:
           ZYLA_API_KEY: ${{ secrets.ZYLA_API_KEY }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
@@ -68,3 +70,14 @@ jobs:
             fi
             git push || true
           fi
+
+      # GitHub no siempre respeta la programacion de cada 5 minutos: al acabar,
+      # cada vuelta lanza la siguiente. Si algo ha fallado, espera 5 min antes.
+      # Para pararlo del todo: Actions -> Seguimiento TT Cup -> ... -> Disable workflow
+      - name: Lanzar la siguiente vuelta
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ steps.seg.outcome }}" != "success" ]; then sleep 300; fi
+          gh workflow run seguimiento.yml --ref main -R "${{ github.repository }}" || true
