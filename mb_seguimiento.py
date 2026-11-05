@@ -1,7 +1,8 @@
 """
 mb_seguimiento.py - Bot de seguimiento de la REGLA EN CALIENTE en TT Cup.
 
-Cada ejecucion (GitHub la lanza cada 5 minutos):
+Cada ejecucion (GitHub la lanza cada 5 minutos y dura ~14 minutos, con una
+vuelta por minuto):
   1. Lee los partidos de TT Cup (historico en cache + hoy y manana en directo).
   2. Calcula Elo, forma, H2H y lo que lleva hoy cada jugador, con el mismo corte
      de 2 horas que el backtest validado.
@@ -46,6 +47,7 @@ AVISO = int(os.getenv("AVISO_MIN", "125")) * 60
 VALOR_FUERTE = 0.10
 VALOR_SOSPECHA = 0.30
 PACE = float(os.getenv("PACE", "1.0"))
+RUN_MIN = float(os.getenv("RUN_MIN", "14"))      # minutos que dura cada ejecucion
 TG = os.getenv("TELEGRAM_TOKEN", "").strip()
 CHAT = os.getenv("MY_CHAT_ID", "").strip()
 
@@ -458,18 +460,28 @@ def main():
            "❌ no apostar · 💰 APUESTA · ⭐⭐ FUERTE · ⚠️ valor >30%, desconfiar\n"
            "↩️ Responde al aviso con tu cuota (ej. 1,84) o escribe: apellido cuota\n"
            "Todo queda apuntado. Resumen cada noche a las 23:45.")
-    leer_respuestas(picks, st)
-    evs = cargar(now)
-    train, cands = calcular(evs, now)
-    print(f"{len(evs)} partidos · {len(train)} para entrenar · {len(cands)} candidatos")
-    if len(train) >= 500 and cands:
-        mod = entrenar([vector(f) for f in train], [f["gana_a"] for f in train])
-        nuevos_picks(cands, mod, picks, st, now)
-    resolver(picks, evs)
-    resumen_dia(picks, st, now)
-    guardar_picks(picks)
-    guardar_estado(st)
-
+    # Cada ejecucion se queda RUN_MIN minutos dando una vuelta por minuto: asi
+    # contesta rapido a tus cuotas y no depende de que GitHub sea puntual.
+    fin = time.time() + RUN_MIN * 60
+    mod = None
+    while True:
+        t0 = time.time()
+        now = datetime.now(TZ)
+        leer_respuestas(picks, st)
+        evs = cargar(now)
+        train, cands = calcular(evs, now)
+        print(f"{now:%H:%M} · {len(evs)} partidos · {len(train)} para entrenar · {len(cands)} candidatos")
+        if mod is None and len(train) >= 500:
+            mod = entrenar([vector(f) for f in train], [f["gana_a"] for f in train])
+        if mod is not None and cands:
+            nuevos_picks(cands, mod, picks, st, now)
+        resolver(picks, evs)
+        resumen_dia(picks, st, now)
+        guardar_picks(picks)
+        guardar_estado(st)
+        if time.time() + 60 > fin:
+            break
+        time.sleep(max(5, 60 - (time.time() - t0)))
 
 if __name__ == "__main__":
     main()
