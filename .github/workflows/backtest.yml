@@ -78,6 +78,8 @@ jobs:
           MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
           LIGA: ${{ matrix.liga.id }}
           BT_DAYS: ${{ github.event.inputs.dias || '180' }}
+          BT_PACE: "0.8"
+          BT_MAX_MIN: "290"
         run: python mb_backtest.py
 
       - name: Guardar descargas
