@@ -15,6 +15,7 @@ vuelta por minuto):
        ❌ NO          valor <0%
   4. Lee tus respuestas en Telegram con la cuota de BetCris (respondiendo al aviso
      o escribiendo "apellido cuota") y lo apunta todo con tu cuota real.
+     "borrar apellido" quita la cuota apuntada de ese pick.
   5. Cuando el partido termina apunta el resultado. Si apuntaste cuota, te
      avisa del resultado con tu beneficio.
   6. Sobre las 23:45 manda el resumen del dia y el acumulado.
@@ -313,10 +314,26 @@ def texto_resultado(p):
     return t
 
 
+def buscar_pick(picks, por_msg, m, texto):
+    """El pick al que se refiere tu mensaje: el aviso al que respondes o el
+    apellido que escribes (el mas reciente, mejor si aun esta pendiente)."""
+    rep = str((m.get("reply_to_message") or {}).get("message_id", ""))
+    if por_msg.get(rep):
+        return por_msg[rep]
+    palabras = [w for w in limpio(texto).split()
+                if len(w) >= 3 and w not in ("borrar", "borra", "quitar", "quita")]
+    cand = [p for p in picks if any(w in limpio(p["pick"]).split() for w in palabras)]
+    pend = [p for p in cand if p.get("resultado") == "pendiente"]
+    cand = pend or cand
+    return max(cand, key=lambda p: (p["fecha"], p["hora"])) if cand else None
+
+
 def leer_respuestas(picks, st):
-    """Apunta las cuotas de BetCris que le escribes al bot:
-       - respondiendo al aviso con la cuota ("1,84"), o
-       - escribiendo "apellido cuota" ("precek 1,84")."""
+    """Lo que le escribes al bot:
+       - responder al aviso con la cuota ("1,84") o "apellido cuota" ("precek 1,84")
+         -> apunta tu cuota de BetCris
+       - "borrar apellido" (o responder al aviso con "borrar")
+         -> quita tu cuota de ese pick (el aviso sigue en el registro general)"""
     upd = tg_updates(st.get("offset", 0))
     por_msg = {str(p.get("msg")): p for p in picks if p.get("msg")}
     for u in upd:
@@ -325,32 +342,37 @@ def leer_respuestas(picks, st):
         if str((m.get("chat") or {}).get("id")) != CHAT:
             continue
         texto = (m.get("text") or "").strip()
+        mid = m.get("message_id")
+        if limpio(texto).split()[:1] in (["borrar"], ["borra"], ["quitar"], ["quita"]):
+            pk = buscar_pick(picks, por_msg, m, texto)
+            if not pk or not pk.get("cuota_betcris"):
+                tg("❓ No encuentro ningún pick con cuota apuntada con ese nombre. "
+                   "Escribe: borrar apellido", mid)
+                continue
+            for k in ("cuota_betcris", "valor_betcris", "decision_betcris", "beneficio_betcris"):
+                pk[k] = ""
+            tg(f"🗑️ Borrada tu cuota de {pk['pick'].upper()} ({pk['hora']}). "
+               "Ya no cuenta en tus estadísticas de BetCris.", mid)
+            continue
         nums = re.findall(r"\d+[.,]\d+|\d+", texto)
         if not nums:
             continue
         cb = float(nums[-1].replace(",", "."))
         if not (1.01 <= cb <= 50):
-            tg("❓ No entiendo la cuota. Escríbela así: 1,84", m.get("message_id"))
+            tg("❓ No entiendo la cuota. Escríbela así: 1,84", mid)
             continue
-        rep = str((m.get("reply_to_message") or {}).get("message_id", ""))
-        pk = por_msg.get(rep)
+        pk = buscar_pick(picks, por_msg, m, texto)
         if not pk:
-            palabras = [w for w in limpio(texto).split() if len(w) >= 3]
-            cand = [p for p in picks if any(w in limpio(p["pick"]).split() for w in palabras)]
-            pend = [p for p in cand if p.get("resultado") == "pendiente"]
-            cand = pend or cand
-            if not cand:
-                tg("❓ No encuentro ese pick. Responde al aviso con la cuota, "
-                   "o escribe: apellido cuota (ej. precek 1,84)", m.get("message_id"))
-                continue
-            pk = max(cand, key=lambda p: (p["fecha"], p["hora"]))
+            tg("❓ No encuentro ese pick. Responde al aviso con la cuota, "
+               "o escribe: apellido cuota (ej. precek 1,84)", mid)
+            continue
         pk["cuota_betcris"] = cb
         calc_betcris(pk)
         t = (f"📝 Apuntado {pk['pick'].upper()} ({pk['hora']}) · BetCris {cb:.2f}\n"
              f"Valor {float(pk['valor_betcris']) * 100:+.0f}% → {NIVEL_TXT[pk['decision_betcris']]}")
         if pk.get("resultado") in ("ganado", "perdido", "anulado"):
             t += "\n" + texto_resultado(pk)
-        tg(t, m.get("message_id"))
+        tg(t, mid)
 
 
 def resolver(picks, evs):
