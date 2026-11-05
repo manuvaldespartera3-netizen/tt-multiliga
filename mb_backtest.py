@@ -58,8 +58,10 @@ WARMUP = int(os.getenv("BT_WARMUP", "45"))
 ARRANQUE = int(os.getenv("ARRANQUE_DIAS", "30"))
 VISTO = int(os.getenv("VISTO_DIAS", "30"))
 CUTOFF = float(os.getenv("CUTOFF_H", "2")) * 3600
-MAX_ODDS = int(os.getenv("MAX_ODDS", "8000"))
+MAX_ODDS = int(os.getenv("MAX_ODDS", "20000"))
 PACE = float(os.getenv("BT_PACE", "1.2"))
+MAX_MIN = float(os.getenv("BT_MAX_MIN", "290"))   # minutos max. por liga; luego informa con lo que tenga
+INICIO = time.time()
 TG = os.getenv("TELEGRAM_TOKEN", "").strip()
 CHAT = os.getenv("MY_CHAT_ID", "").strip()
 OUT_ROOT = os.getenv("BT_OUT", "resultados")
@@ -146,7 +148,7 @@ class Cuotas:
         if os.path.exists(path):
             with open(path) as f:
                 return odds_from(json.load(f))
-        if self.cortado or self.nuevas >= MAX_ODDS:
+        if self.cortado or self.nuevas >= MAX_ODDS or time.time() - INICIO > MAX_MIN * 60:
             self.cupo += 1
             return None
         data = None
@@ -426,8 +428,13 @@ MESES = {"01": "ene", "02": "feb", "03": "mar", "04": "abr", "05": "may", "06": 
          "07": "jul", "08": "ago", "09": "sep", "10": "oct", "11": "nov", "12": "dic"}
 
 
+INCOMPLETO = False
+
+
 def bloque_estrategia(L, titulo, val, visto, contraste=None):
     v, motivo = veredicto(val)
+    if INCOMPLETO:
+        v, motivo = "⏳ SIN TERMINAR", "faltan cuotas: vuelve a lanzarlo y seguirá donde lo dejó"
     L.append(titulo)
     L.append(f"VEREDICTO: {v}")
     L.append(f"   ({motivo})")
@@ -479,10 +486,12 @@ def analizar(lid):
         if o:
             f["ini_a"], f["fin_a"], f["ini_b"], f["fin_b"] = o
     print(f"[{nombre}] cuotas nuevas {cu.nuevas} · pendientes {cu.cupo}")
+    global INCOMPLETO
+    INCOMPLETO = cu.cupo > 0
     if cu.cupo:
         L.append(f"⚠️ Faltan cuotas de {cu.cupo} partidos "
                  + ("(Zyla dejó de responder: puede que se haya acabado el cupo del mes). "
-                    if cu.cortado else "(límite por ejecución). ")
+                    if cu.cortado else "(límite de tiempo de esta ejecución). ")
                  + "Vuelve a lanzarlo: sigue donde lo dejó.")
         L.append("")
 
@@ -608,6 +617,8 @@ def main():
     for lid in ids:
         if lid not in LIGAS:
             raise SystemExit(f"Liga desconocida: {lid}")
+        global INICIO
+        INICIO = time.time()
         tg_msg(f"⏳ Empieza la validación de {LIGAS[lid]} ({DAYS} días). Tardará un rato.")
         lineas, ev, _ = analizar(lid)
         txt = "\n".join(lineas)
