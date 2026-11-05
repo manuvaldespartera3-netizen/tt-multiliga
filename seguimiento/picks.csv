@@ -22,7 +22,7 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-05,19:25,FLOJO,Vorisek T.,Kadavy O.,0.519,1.93,2.12,2.51,1.73,-0.103,1.96,0.017,APUESTA,,1,anulado,,0,0,2026-11-05 17:20,67,17496103
 2026-11-05,19:30,SIN CUOTA,Duch A.,Zapala K.,0.588,1.7,1.87,2.21,,,1.64,-0.036,FLOJO,,2,perdido,2-3,,-1,2026-11-05 17:25,68,17498255
 2026-11-05,20:10,FLOJO,Vitasek D.,Marsalek P.,0.599,1.67,1.84,2.17,1.53,-0.083,1.6,-0.042,FLOJO,,2,anulado,,0,0,2026-11-05 18:05,79,17496099
-2026-11-05,20:30,SIN CUOTA,Guzy K.,Zapala K.,0.578,1.73,1.9,2.25,,,,,,,2,pendiente,,,,2026-11-05 18:25,83,17498424
+2026-11-05,20:30,SIN CUOTA,Guzy K.,Zapala K.,0.578,1.73,1.9,2.25,,,,,,,2,perdido,2-3,,,2026-11-05 18:25,83,17498424
 2026-11-05,20:40,APUESTA,Vitasek D.,Kanak A.,0.585,1.71,1.88,2.22,1.83,0.07,,,,,3,anulado,,0,,2026-11-05 18:35,86,17496072
 2026-11-05,21:25,SIN CUOTA,Fiklik O.,Martin Cerny,0.402,2.49,2.74,3.24,,,3.15,0.266,FUERTE,,4,pendiente,,,,2026-11-05 19:20,90,17498554
 2026-11-05,22:25,FUERTE,Fiklik O.,Kulisek M.,0.553,1.81,1.99,2.35,2.1,0.161,2.1,0.161,FUERTE,,4,pendiente,,,,2026-11-05 20:20,100,17498557
@@ -30,3 +30,4 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-05,22:50,FUERTE,Vich L.,Vyskocil Z.,0.635,1.57,1.73,2.05,1.83,0.162,,,,,1,pendiente,,,,2026-11-05 20:45,106,17498558
 2026-11-05,22:35,FLOJO,Vidourek J.,Simon M.,0.583,1.71,1.89,2.23,1.5,-0.125,,,,,1,pendiente,,,,2026-11-05 20:46,107,17498563
 2026-11-05,22:55,APUESTA,Fiklik O.,Vanek P.,0.491,2.04,2.24,2.65,2.2,0.079,,,,,4,pendiente,,,,2026-11-05 20:50,108,17498555
+2026-11-05,23:25,FLOJO,Kulisek M.,Martin Cerny,0.449,2.23,2.45,2.9,2.2,-0.013,,,,,1,pendiente,,,,2026-11-05 21:20,109,17498556
