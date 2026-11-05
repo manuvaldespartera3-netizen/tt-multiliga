@@ -15,7 +15,7 @@ permissions:
 jobs:
   seguir:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       # siempre la version mas reciente de main, con el picks.csv al dia
       - uses: actions/checkout@v4
@@ -42,6 +42,7 @@ jobs:
           ZYLA_API_KEY: ${{ secrets.ZYLA_API_KEY }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
+          RUN_MIN: "14"
         run: python mb_seguimiento.py
 
       # solo se guarda una copia nueva cuando entra un dia nuevo al historico
