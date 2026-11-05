@@ -1,1 +1,69 @@
+name: Seguimiento TT Cup
 
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: seguimiento
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  seguir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # siempre la version mas reciente de main, con el picks.csv al dia
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar numpy
+        run: pip install numpy
+
+      # dias ya terminados: se descargan una vez y se guardan
+      - name: Recuperar historico
+        uses: actions/cache/restore@v4
+        with:
+          path: seguimiento/cache
+          key: seg-${{ github.run_id }}
+          restore-keys: seg-
+
+      - name: Seguimiento
+        env:
+          ZYLA_API_KEY: ${{ secrets.ZYLA_API_KEY }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
+        run: python mb_seguimiento.py
+
+      # solo se guarda una copia nueva cuando entra un dia nuevo al historico
+      - name: Guardar historico
+        if: always()
+        uses: actions/cache/save@v4
+        continue-on-error: true
+        with:
+          path: seguimiento/cache
+          key: seg-${{ hashFiles('seguimiento/cache/*.json') }}
+
+      - name: Guardar picks
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain seguimiento/picks.csv seguimiento/estado.json)" ]; then
+            git config user.name "tt-multiliga"
+            git config user.email "tt-multiliga@users.noreply.github.com"
+            git add seguimiento/picks.csv seguimiento/estado.json
+            git commit -m "Seguimiento TT Cup"
+            if ! git pull --rebase; then
+              git rebase --abort || true
+              git pull --no-rebase --no-edit -X ours || true
+            fi
+            git push || true
+          fi
