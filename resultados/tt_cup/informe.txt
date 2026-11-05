@@ -1,51 +1,61 @@
-📊 TT CUP · backtest bot multiliga
-Periodo 05/09 – 03/11 · decisión 2 h antes del partido
-9992 partidos · 9598 con ambos jugadores conocidos (≥10 previos)
-Ajuste: 4809 partidos · Test (sin ver): 4789 partidos
+📊 TT CUP · validación bot multiliga
+Decisión 2 h antes del partido · cuota de Sofascore · 1 u por pick
+Arranque (solo aprende): 08/05 – 06/06
+Validación (nunca vista): 07/06 – 04/10
+Ya vistos: 05/10 – 03/11
+26348 partidos con ambos jugadores conocidos
 
-🎯 ACIERTO DEL MODELO (partidos de test)
-• Favorito del modelo gana el 55.1% (solo Elo: 54.6%)
-• Favorito de la casa gana el 58.0%
-• Precisión (log-loss, menos es mejor): modelo 0.6800 · casa 0.6691  ⚠️ la casa afina más que el modelo
+Partidos de la regla en validación: 3479 (1927 con cuota; sin cuota = la casa no lo ofrecía)
 
-Peso de cada factor (+ = ayuda a predecir a favor):
-   Elo: +0.21
-   Partidos jugados hoy: +0.06
-   H2H 90 días: +0.06
-   Balance de hoy: +0.03
-   Forma ajustada: +0.00
+🔥 REGLA EN CALIENTE (el pick ya ha jugado hoy, el rival aún no)
+VEREDICTO: 🟢 CONFIRMADA
+   (gana en 5 de 5 meses y el rango probable es todo positivo)
+• Validación (nunca vista): 🟢 1916 picks · win 58% · cuota 1.94 · +193.2 u · YIELD +10.1% · rango probable +6% a +14%
+• Por meses: jun +7% (163) · jul +6% (395) · ago +14% (587) · sep +7% (688) · oct +27% (83)
+• Por cuota:
+   1.25–1.60: 🟢 265 picks · win 72% · cuota 1.47 · +15.6 u · YIELD +5.9%
+   1.60–2.00: 🟢 912 picks · win 61% · cuota 1.78 · +78.2 u · YIELD +8.6%
+   2.00–2.60: 🟢 610 picks · win 50% · cuota 2.17 · +47.3 u · YIELD +7.7%
+   2.60–4.00: 🟢 129 picks · win 47% · cuota 2.92 · +52.1 u · YIELD +40.4%
+• Pick favorito de la casa: 🟢 794 picks · win 65% · cuota 1.63 · +48.3 u · YIELD +6.1%
+• Pick NO favorito: 🟢 1122 picks · win 53% · cuota 2.15 · +144.9 u · YIELD +12.9%
+• Contraste, apostando al que NO ha jugado: 🔴 1913 picks · win 42% · cuota 1.90 · -438.2 u · YIELD -22.9%
+• Últimos 30 días (ya vistos): 🟢 602 picks · win 59% · cuota 1.94 · +66.6 u · YIELD +11.1%
 
-⚠️ Faltan cuotas de 789 partidos (cupo de consultas). Vuelve a lanzarlo: sigue donde lo dejó.
+🔥🧠 REGLA + MODELO (valor ≥5%)
+VEREDICTO: 🟢 CONFIRMADA
+   (gana en 5 de 5 meses y el rango probable es todo positivo)
+• Validación (nunca vista): 🟢 672 picks · win 54% · cuota 2.26 · +137.8 u · YIELD +20.5% · rango probable +13% a +28%
+• Por meses: jun +29% (69) · jul +21% (143) · ago +23% (190) · sep +12% (240) · oct +46% (30)
+• Por cuota:
+   1.25–1.60: ⚪ 1 picks · win 100% · cuota 1.57 · +0.6 u · YIELD +57.0% · ⚠️ pocos
+   1.60–2.00: 🟢 144 picks · win 65% · cuota 1.81 · +25.0 u · YIELD +17.3%
+   2.00–2.60: 🟢 399 picks · win 52% · cuota 2.21 · +59.1 u · YIELD +14.8%
+   2.60–4.00: 🟢 128 picks · win 48% · cuota 2.92 · +53.1 u · YIELD +41.5%
+• Pick favorito de la casa: 🟢 67 picks · win 66% · cuota 1.75 · +10.5 u · YIELD +15.7%
+• Pick NO favorito: 🟢 605 picks · win 53% · cuota 2.32 · +127.3 u · YIELD +21.0%
+• Últimos 30 días (ya vistos): 🟢 230 picks · win 54% · cuota 2.25 · +42.1 u · YIELD +18.3%
 
-💶 YIELD SEGÚN EL VALOR MÍNIMO EXIGIDO (cuota final, 1 u por pick)
-   (valor = prob × cuota − 1 · cuotas 1.25–4.0)
-▶ valor ≥0%: 🔴 1286 picks · 558✅ · win 43% · cuota media 2.25 · -83.8 u · YIELD -6.5%
-▶ valor ≥3%: 🔴 1088 picks · 463✅ · win 43% · cuota media 2.30 · -68.6 u · YIELD -6.3%
-▶ valor ≥5%: 🔴 957 picks · 399✅ · win 42% · cuota media 2.34 · -60.7 u · YIELD -6.3%
-▶ valor ≥8%: 🔴 798 picks · 335✅ · win 42% · cuota media 2.40 · -31.1 u · YIELD -3.9%
-▶ valor ≥10%: 🔴 712 picks · 300✅ · win 42% · cuota media 2.43 · -16.1 u · YIELD -2.3%
-▶ valor ≥15%: 🔴 534 picks · 220✅ · win 41% · cuota media 2.52 · -5.2 u · YIELD -1.0%
-▶ valor ≥20%: 🟢 387 picks · 161✅ · win 42% · cuota media 2.62 · +16.1 u · YIELD +4.1%
+🔥🧠 REGLA + MODELO (valor ≥10%)
+VEREDICTO: 🟢 CONFIRMADA
+   (gana en 4 de 4 meses y el rango probable es todo positivo)
+• Validación (nunca vista): 🟢 459 picks · win 54% · cuota 2.37 · +120.0 u · YIELD +26.2% · rango probable +17% a +35%
+• Por meses: jun +29% (48) · jul +32% (103) · ago +24% (138) · sep +19% (151) · oct +58% (19)
+• Por cuota:
+   1.25–1.60: 0 picks
+   1.60–2.00: 🟢 49 picks · win 73% · cuota 1.83 · +17.1 u · YIELD +35.0%
+   2.00–2.60: 🟢 288 picks · win 53% · cuota 2.23 · +54.5 u · YIELD +18.9%
+   2.60–4.00: 🟢 122 picks · win 47% · cuota 2.93 · +48.4 u · YIELD +39.7%
+• Pick favorito de la casa: ⚪ 20 picks · win 60% · cuota 1.78 · +1.3 u · YIELD +6.7% · ⚠️ pocos
+• Pick NO favorito: 🟢 439 picks · win 54% · cuota 2.40 · +118.7 u · YIELD +27.0%
+• Últimos 30 días (ya vistos): 🟢 171 picks · win 51% · cuota 2.36 · +31.6 u · YIELD +18.5%
 
-   Con la cuota de APERTURA (referencia, si entraras pronto):
-▶ valor ≥5%: 🔴 957 picks · 399✅ · win 42% · cuota media 2.34 · -60.7 u · YIELD -6.3%
-▶ valor ≥10%: 🔴 712 picks · 300✅ · win 42% · cuota media 2.43 · -16.1 u · YIELD -2.3%
+🧠 MODELO GENERAL · últimos 30 días (solo referencia)
+• Favorito gana: modelo 56.0% · casa 58.0%
+• Precisión (menos es mejor): modelo 0.6799 · casa 0.6705 ⚠️ casa mejor
+• Margen medio de la casa: 7.7%
+• Valor ≥5%: 🔴 1055 picks · win 42% · cuota 2.39 · -47.4 u · YIELD -4.5%
+• Valor ≥10%: 🔴 746 picks · win 40% · cuota 2.50 · -32.3 u · YIELD -4.3%
+• Peso de cada factor: Elo +0.19 · H2H 90 días +0.10 · Partidos jugados hoy +0.04 · Balance de hoy -0.01 · Forma ajustada -0.01
 
-   Referencia sin modelo: apostar siempre al favorito de la casa
-▶ 🔴 1814 picks · 1052✅ · win 58% · cuota media 1.62 · -125.5 u · YIELD -6.9%
-
-🔍 DETALLE con valor ≥5%
-▶ cuota 1.25–1.60: ⚪ 7 picks · 5✅ · win 71% · cuota media 1.55 · +0.7 u · YIELD +10.1% · ⚠️ pocos
-▶ cuota 1.60–2.00: 🟢 151 picks · 84✅ · win 56% · cuota media 1.81 · +0.6 u · YIELD +0.4%
-▶ cuota 2.00–2.60: 🔴 548 picks · 234✅ · win 43% · cuota media 2.22 · -30.8 u · YIELD -5.6%
-▶ cuota 2.60–4.00: 🔴 251 picks · 76✅ · win 30% · cuota media 2.95 · -31.3 u · YIELD -12.5%
-▶ pick favorito de la casa: 🟢 69 picks · 44✅ · win 64% · cuota media 1.72 · +6.3 u · YIELD +9.2%
-▶ pick NO favorito de la casa: 🔴 888 picks · 355✅ · win 40% · cuota media 2.39 · -67.1 u · YIELD -7.6%
-▶ con H2H a favor (≥2 victorias más): 🔴 100 picks · 51✅ · win 51% · cuota media 1.93 · -4.4 u · YIELD -4.4%
-▶ el pick ya ha jugado hoy: 🟢 333 picks · 168✅ · win 50% · cuota media 2.27 · +34.6 u · YIELD +10.4%
-▶ el pick aún no ha jugado hoy: 🔴 624 picks · 231✅ · win 37% · cuota media 2.38 · -95.4 u · YIELD -15.3%
-▶ 1.ª mitad del test: 🔴 344 picks · 138✅ · win 40% · cuota media 2.30 · -36.4 u · YIELD -10.6%
-▶ 2.ª mitad del test: 🔴 613 picks · 261✅ · win 43% · cuota media 2.37 · -24.3 u · YIELD -4.0%
-   inestable ⚠️ no gana en las dos mitades
-
-📅 Picks al día con valor ≥5%: ~30.9
+📅 Picks al día · regla: ~16.0 · regla+modelo 10%: ~3.8
