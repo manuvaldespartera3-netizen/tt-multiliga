@@ -1,1 +1,91 @@
+name: Buscar patrones
 
+on:
+  workflow_dispatch:
+    inputs:
+      liga:
+        description: "Liga"
+        type: choice
+        default: "Czech Liga Pro"
+        options:
+          - "Czech Liga Pro"
+          - "TT Elite Series"
+          - "TT Cup"
+      dias:
+        description: "Dias a analizar"
+        default: "150"
+
+permissions:
+  contents: write
+
+# misma cola que el backtest: nunca van a la vez (no saturar la API)
+concurrency:
+  group: backtest
+  cancel-in-progress: false
+
+jobs:
+  explorar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar numpy
+        run: pip install numpy
+
+      - name: Elegir liga
+        run: |
+          case "${{ github.event.inputs.liga }}" in
+            "TT Cup")          echo "LIGA=15005" >> $GITHUB_ENV; echo "SLUG=tt_cup" >> $GITHUB_ENV ;;
+            "TT Elite Series") echo "LIGA=19041" >> $GITHUB_ENV; echo "SLUG=tt_elite_series" >> $GITHUB_ENV ;;
+            *)                 echo "LIGA=19039" >> $GITHUB_ENV; echo "SLUG=czech_liga_pro" >> $GITHUB_ENV ;;
+          esac
+
+      # usa (y amplia) lo ya descargado por el backtest de esa liga
+      - name: Recuperar descargas anteriores
+        uses: actions/cache/restore@v4
+        with:
+          path: resultados/**/cache
+          key: mb-${{ env.SLUG }}-${{ github.run_id }}
+          restore-keys: mb-${{ env.SLUG }}-
+
+      - name: Buscar patrones
+        env:
+          ZYLA_API_KEY: ${{ secrets.ZYLA_API_KEY }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
+          BT_DAYS: ${{ github.event.inputs.dias || '150' }}
+          BT_PACE: "0.8"
+          BT_MAX_MIN: "290"
+        run: python mb_explorar.py
+
+      - name: Guardar descargas
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: resultados/**/cache
+          key: mb-${{ env.SLUG }}-${{ github.run_id }}
+
+      - name: Avisar si falla
+        if: failure() || cancelled()
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
+        run: |
+          [ -n "$TELEGRAM_TOKEN" ] || exit 0
+          curl -s "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${MY_CHAT_ID}" \
+            --data-urlencode "text=⚠️ La búsqueda de patrones en ${{ github.event.inputs.liga }} se ha cortado. Vuelve a lanzarla: seguirá donde lo dejó." > /dev/null
+
+      - name: Guardar resultados en el repositorio
+        if: always()
+        run: |
+          git config user.name "tt-multiliga"
+          git config user.email "tt-multiliga@users.noreply.github.com"
+          git add resultados/*/patrones.* 2>/dev/null || true
+          git commit -m "Patrones ${{ env.SLUG }} $(date +%F)" || echo "sin cambios"
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done || true
