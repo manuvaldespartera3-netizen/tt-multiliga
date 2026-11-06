@@ -31,3 +31,5 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-05,22:35,FLOJO,Vidourek J.,Simon M.,0.583,1.71,1.89,2.23,1.5,-0.125,1.62,-0.056,FLOJO,,1,anulado,,0,0,2026-11-05 20:46,107,17498563
 2026-11-05,22:55,APUESTA,Fiklik O.,Vanek P.,0.491,2.04,2.24,2.65,2.2,0.079,2.78,0.365,SOSPECHOSO,2.2,4,perdido,1-3,-1,-1,2026-11-05 20:50,108,17498555
 2026-11-05,23:25,FLOJO,Kulisek M.,Martin Cerny,0.449,2.23,2.45,2.9,2.2,-0.013,,,,2.2,1,perdido,0-3,-1,,2026-11-05 21:20,109,17498556
+2026-11-06,10:00,SIN CUOTA,Chojnacki J.,Stepien M.,0.438,2.29,2.51,2.97,,,2.17,-0.05,FLOJO,,1,pendiente,,,,2026-11-06 07:55,130,17501669
+2026-11-06,10:10,SIN CUOTA,Lasota L.,Raska M.,0.488,2.05,2.25,2.66,,,,,,,1,pendiente,,,,2026-11-06 08:05,133,17501033
