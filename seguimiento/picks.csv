@@ -42,4 +42,4 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-06,13:40,FUERTE,Precek E.,Mrowetz B.,0.586,1.71,1.88,2.22,1.91,0.119,,,,,3,pendiente,,,,2026-11-06 11:35,154,17501489
 2026-11-06,14:15,SIN CUOTA,Benes R.,Skvrna J.,0.456,2.19,2.41,2.85,,,,,,,3,pendiente,,,,2026-11-06 12:10,162,17501133
 2026-11-06,14:50,SIN CUOTA,Knazik O.,Rek L.,0.426,2.35,2.58,3.05,,,2.21,-0.059,FLOJO,,1,pendiente,,,,2026-11-06 12:49,166,17501090
-2026-11-06,15:25,FLOJO,Sykora D.,Chlumsky P.,0.602,1.66,1.83,2.16,1.53,-0.079,,,,,1,pendiente,,,,2026-11-06 13:22,170,17501037
+2026-11-06,15:25,FLOJO,Sykora D.,Chlumsky P.,0.602,1.66,1.83,2.16,1.53,-0.079,1.6,-0.037,FLOJO,,1,pendiente,,,,2026-11-06 13:22,170,17501037
