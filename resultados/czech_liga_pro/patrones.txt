@@ -2,4 +2,18 @@
 Exploración: 09/06 – 17/09 · Confirmación (no usada para buscar): 17/09 – 05/11
 Decisión 2 h antes · cuota de Sofascore · 1 u por pick
 
-⏳ SIN TERMINAR: faltan cuotas de 5099 de 24556 partidos. Vuelve a lanzarlo: sigue donde lo dejó.
+24556 partidos · 5674 con cuota · margen medio de la casa 7.7%
+Referencia, apostar a todo: 11288 picks · win 50% · cuota 1.93 · -785.8 u · YIELD -7.0% (-8% a -5%)
+
+Patrones probados: 40 · pasan la exploración: 2
+
+▶ Jugadores infravalorados (4)
+   ⏳ pocos datos en confirmación
+   Exploración:  196 picks · win 69% · cuota 1.80 · +44.2 u · YIELD +22.6% (+13% a +32%)
+   Confirmación: 33 picks · win 52% · cuota 1.87 · -1.5 u · YIELD -4.6% (-32% a +22%)
+▶ Contra jugadores sobrevalorados (21)
+   🔴 NO SE CONFIRMA
+   Exploración:  998 picks · win 61% · cuota 1.89 · +112.8 u · YIELD +11.3% (+6% a +16%)
+   Confirmación: 242 picks · win 52% · cuota 1.88 · -15.1 u · YIELD -6.2% (-16% a +4%)
+
+CONCLUSIÓN: ningún patrón se confirma en los meses no usados para buscar. Mejor no apostar en esta liga con estos datos.
