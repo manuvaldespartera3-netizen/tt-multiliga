@@ -35,7 +35,7 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar numpy
-        run: pip install numpy
+        run: pip install numpy scikit-learn
 
       - name: Elegir liga
         run: |
