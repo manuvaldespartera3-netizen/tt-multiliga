@@ -102,7 +102,10 @@ def parse(e):
                 ida=str(home.get("id", home.get("name", "?"))),
                 idb=str(away.get("id", away.get("name", "?"))),
                 t=_int(e.get("startTimestamp") or e.get("timestamp")),
-                final=final, status=st)
+                final=final, status=st,
+                # puntos totales de cada jugador (suma de los sets); 0,0 si no vienen
+                pts=(sum(_int(hs.get(f"period{i}")) for i in range(1, 8)),
+                     sum(_int(as_.get(f"period{i}")) for i in range(1, 8))))
 
 
 # --------------------------------------------------------------------- cuotas
