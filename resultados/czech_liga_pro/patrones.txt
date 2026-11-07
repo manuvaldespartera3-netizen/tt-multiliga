@@ -1,19 +1,37 @@
-🔎 CZECH LIGA PRO · búsqueda de patrones
-Exploración: 09/06 – 17/09 · Confirmación (no usada para buscar): 17/09 – 05/11
+🔎 CZECH LIGA PRO · búsqueda profunda de patrones
+Exploración: 10/06 – 18/09 · Confirmación (no usada para buscar): 18/09 – 06/11
 Decisión 2 h antes · cuota de Sofascore · 1 u por pick
 
-24556 partidos · 5674 con cuota · margen medio de la casa 7.7%
-Referencia, apostar a todo: 11288 picks · win 50% · cuota 1.93 · -785.8 u · YIELD -7.0% (-8% a -5%)
+24601 partidos · 5592 con cuota · margen medio de la casa 7.7%
+Referencia, apostar a todo: 11127 picks · win 50% · cuota 1.93 · -775.6 u · YIELD -7.0% (-8% a -5%)
 
-Patrones probados: 40 · pasan la exploración: 2
-
-▶ Jugadores infravalorados (4)
+📋 PATRONES · probados: 56 · pasan la exploración: 2
+▶ Jugadores infravalorados (3)
    ⏳ pocos datos en confirmación
-   Exploración:  196 picks · win 69% · cuota 1.80 · +44.2 u · YIELD +22.6% (+13% a +32%)
-   Confirmación: 33 picks · win 52% · cuota 1.87 · -1.5 u · YIELD -4.6% (-32% a +22%)
+   Exploración:  133 picks · win 70% · cuota 1.80 · +32.1 u · YIELD +24.1% (+12% a +36%)
+   Confirmación: 18 picks · win 56% · cuota 1.90 · +1.0 u · YIELD +5.6% (-32% a +43%)
 ▶ Contra jugadores sobrevalorados (21)
    🔴 NO SE CONFIRMA
-   Exploración:  998 picks · win 61% · cuota 1.89 · +112.8 u · YIELD +11.3% (+6% a +16%)
-   Confirmación: 242 picks · win 52% · cuota 1.88 · -15.1 u · YIELD -6.2% (-16% a +4%)
+   Exploración:  941 picks · win 61% · cuota 1.89 · +103.2 u · YIELD +11.0% (+6% a +16%)
+   Confirmación: 231 picks · win 50% · cuota 1.89 · -20.9 u · YIELD -9.0% (-19% a +1%)
+
+🤖 MODELO DE IA (corrige la cuota de la casa con todas las variables)
+   Precisión en confirmación (menos es mejor): IA 0.6926 · casa 0.6784 ⚠️ la casa afina más
+   ▶ valor ≥3%
+      Exploración:  807 picks · win 48% · cuota 2.02 · -58.9 u · YIELD -7.3% (-13% a -2%)
+      Confirmación: 685 picks · win 51% · cuota 2.04 · -1.4 u · YIELD -0.2% (-7% a +6%)
+   ▶ valor ≥5%
+      Exploración:  732 picks · win 48% · cuota 2.03 · -56.2 u · YIELD -7.7% (-14% a -2%)
+      Confirmación: 621 picks · win 51% · cuota 2.05 · +2.4 u · YIELD +0.4% (-6% a +7%)
+   ▶ valor ≥8%
+      Exploración:  623 picks · win 49% · cuota 2.05 · -32.3 u · YIELD -5.2% (-12% a +2%)
+      Confirmación: 509 picks · win 50% · cuota 2.09 · +2.0 u · YIELD +0.4% (-7% a +8%)
+   ▶ valor ≥12%
+      Exploración:  479 picks · win 47% · cuota 2.09 · -36.7 u · YIELD -7.7% (-15% a -0%)
+      Confirmación: 380 picks · win 48% · cuota 2.13 · -3.1 u · YIELD -0.8% (-10% a +8%)
+   ▶ valor ≥20%
+      Exploración:  272 picks · win 43% · cuota 2.19 · -32.8 u · YIELD -12.1% (-23% a -1%)
+      Confirmación: 195 picks · win 47% · cuota 2.27 · +2.6 u · YIELD +1.4% (-12% a +15%)
+   Ningún umbral gana con claridad en la exploración.
 
 CONCLUSIÓN: ningún patrón se confirma en los meses no usados para buscar. Mejor no apostar en esta liga con estos datos.

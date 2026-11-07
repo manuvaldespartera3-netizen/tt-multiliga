@@ -1,41 +1,57 @@
 patron,exploracion,confirmacion,veredicto
-"Favorito 1,25–1,50",740 picks · win 66% · cuota 1.39 · -61.2 u · YIELD -8.3% (-12% a -4%),220 picks · win 63% · cuota 1.39 · -28.2 u · YIELD -12.8% (-20% a -5%),no pasa exploración
-"Favorito 1,50–1,70",1859 picks · win 59% · cuota 1.60 · -99.3 u · YIELD -5.3% (-8% a -2%),509 picks · win 60% · cuota 1.60 · -18.6 u · YIELD -3.6% (-9% a +2%),no pasa exploración
-"Cuota 1,70–1,90",2358 picks · win 52% · cuota 1.79 · -178.1 u · YIELD -7.6% (-11% a -5%),574 picks · win 49% · cuota 1.79 · -68.8 u · YIELD -12.0% (-18% a -6%),no pasa exploración
-"Cuota 1,90–2,20",1916 picks · win 46% · cuota 2.00 · -143.9 u · YIELD -7.5% (-11% a -4%),486 picks · win 48% · cuota 2.01 · -19.8 u · YIELD -4.1% (-12% a +3%),no pasa exploración
-"No favorito 2,20–2,70",1595 picks · win 39% · cuota 2.37 · -144.1 u · YIELD -9.0% (-14% a -4%),430 picks · win 39% · cuota 2.38 · -27.8 u · YIELD -6.5% (-16% a +3%),no pasa exploración
-"No favorito 2,70–4,00",460 picks · win 32% · cuota 3.10 · -3.1 u · YIELD -0.7% (-12% a +10%),141 picks · win 35% · cuota 3.05 · +7.0 u · YIELD +4.9% (-15% a +25%),no pasa exploración
-Local favorito,2097 picks · win 57% · cuota 1.61 · -183.8 u · YIELD -8.8% (-12% a -6%),544 picks · win 54% · cuota 1.60 · -76.6 u · YIELD -14.1% (-20% a -8%),no pasa exploración
-Visitante favorito,1858 picks · win 60% · cuota 1.62 · -69.6 u · YIELD -3.7% (-7% a -1%),507 picks · win 61% · cuota 1.60 · -17.5 u · YIELD -3.5% (-9% a +2%),no pasa exploración
-Local no favorito,2366 picks · win 42% · cuota 2.18 · -276.8 u · YIELD -11.7% (-15% a -8%),636 picks · win 41% · cuota 2.20 · -72.0 u · YIELD -11.3% (-18% a -4%),no pasa exploración
-Visitante no favorito,2607 picks · win 45% · cuota 2.19 · -99.5 u · YIELD -3.8% (-7% a -0%),673 picks · win 47% · cuota 2.21 · +10.0 u · YIELD +1.5% (-6% a +8%),no pasa exploración
-H2H a favor ≥3 victorias más,984 picks · win 57% · cuota 1.66 · -59.5 u · YIELD -6.0% (-10% a -2%),261 picks · win 54% · cuota 1.62 · -35.7 u · YIELD -13.7% (-22% a -5%),no pasa exploración
-H2H a favor ≥3 más y NO favorito,213 picks · win 47% · cuota 1.94 · -18.9 u · YIELD -8.9% (-20% a +2%),38 picks · win 29% · cuota 1.94 · -15.6 u · YIELD -41.1% (-67% a -16%),no pasa exploración
-H2H en contra ≥3 y favorito,126 picks · win 51% · cuota 1.73 · -15.3 u · YIELD -12.2% (-25% a +1%),14 picks · win 64% · cuota 1.68 · +1.3 u · YIELD +9.3% (-27% a +45%),no pasa exploración
-H2H ≥6 partidos y gana ≥70%,389 picks · win 60% · cuota 1.62 · -15.5 u · YIELD -4.0% (-11% a +3%),99 picks · win 60% · cuota 1.60 · -5.2 u · YIELD -5.2% (-19% a +8%),no pasa exploración
-"Sin H2H reciente, favorito",823 picks · win 63% · cuota 1.60 · +0.3 u · YIELD +0.0% (-4% a +4%),239 picks · win 59% · cuota 1.60 · -14.1 u · YIELD -5.9% (-14% a +3%),no pasa exploración
-"Sin H2H reciente, no favorito",1064 picks · win 40% · cuota 2.21 · -153.2 u · YIELD -14.4% (-20% a -9%),296 picks · win 42% · cuota 2.22 · -25.7 u · YIELD -8.7% (-19% a +2%),no pasa exploración
-Ganó su último hoy y el rival perdió,261 picks · win 51% · cuota 1.85 · -20.8 u · YIELD -8.0% (-17% a +1%),48 picks · win 69% · cuota 1.89 · +11.5 u · YIELD +23.9% (+3% a +45%),no pasa exploración
-Perdió su último hoy y el rival ganó,262 picks · win 48% · cuota 1.99 · -21.8 u · YIELD -8.3% (-18% a +2%),48 picks · win 31% · cuota 1.95 · -21.1 u · YIELD -44.0% (-64% a -24%),no pasa exploración
-Perdió su último hoy (no favorito),622 picks · win 44% · cuota 2.21 · -34.2 u · YIELD -5.5% (-13% a +2%),117 picks · win 37% · cuota 2.17 · -24.3 u · YIELD -20.7% (-37% a -5%),no pasa exploración
-Ganó su último hoy (favorito),498 picks · win 58% · cuota 1.62 · -35.6 u · YIELD -7.2% (-13% a -1%),118 picks · win 63% · cuota 1.61 · +0.7 u · YIELD +0.6% (-11% a +12%),no pasa exploración
-Ha jugado ≥2 menos que el rival hoy,877 picks · win 47% · cuota 1.91 · -133.5 u · YIELD -15.2% (-20% a -10%),195 picks · win 48% · cuota 1.92 · -23.1 u · YIELD -11.8% (-23% a -1%),no pasa exploración
-Ha jugado ≥2 más que el rival hoy,876 picks · win 53% · cuota 1.96 · -2.0 u · YIELD -0.2% (-6% a +5%),196 picks · win 52% · cuota 1.95 · -6.6 u · YIELD -3.4% (-15% a +8%),no pasa exploración
-Rival con ≥4 partidos hoy,632 picks · win 47% · cuota 1.92 · -84.8 u · YIELD -13.4% (-20% a -7%),129 picks · win 49% · cuota 1.93 · -13.4 u · YIELD -10.4% (-24% a +3%),no pasa exploración
-Racha ≥3 victorias,1288 picks · win 50% · cuota 1.88 · -124.0 u · YIELD -9.6% (-14% a -5%),382 picks · win 52% · cuota 1.90 · -8.4 u · YIELD -2.2% (-10% a +6%),no pasa exploración
-Racha ≥3 derrotas (rebote),1322 picks · win 49% · cuota 2.02 · -73.3 u · YIELD -5.5% (-10% a -1%),402 picks · win 50% · cuota 1.96 · -22.2 u · YIELD -5.5% (-14% a +2%),no pasa exploración
-Rival con racha ≥3 derrotas,1322 picks · win 51% · cuota 1.86 · -107.8 u · YIELD -8.2% (-12% a -4%),401 picks · win 49% · cuota 1.93 · -38.8 u · YIELD -9.7% (-18% a -2%),no pasa exploración
-Rival con racha ≥4 victorias (contra),635 picks · win 48% · cuota 2.01 · -49.6 u · YIELD -7.8% (-14% a -1%),209 picks · win 48% · cuota 1.96 · -18.3 u · YIELD -8.8% (-20% a +3%),no pasa exploración
-Revancha: perdió con él antes hoy,260 picks · win 53% · cuota 2.00 · +4.1 u · YIELD +1.6% (-9% a +12%),27 picks · win 37% · cuota 1.95 · -9.0 u · YIELD -33.4% (-61% a -6%),no pasa exploración
-Revancha: le ganó antes hoy,259 picks · win 47% · cuota 1.83 · -42.7 u · YIELD -16.5% (-26% a -7%),27 picks · win 63% · cuota 1.89 · +4.5 u · YIELD +16.8% (-13% a +47%),no pasa exploración
-Rival sin jugar ≥3 días,2534 picks · win 52% · cuota 1.95 · -95.8 u · YIELD -3.8% (-7% a -1%),827 picks · win 49% · cuota 1.96 · -69.5 u · YIELD -8.4% (-14% a -3%),no pasa exploración
-Sin jugar ≥3 días,2531 picks · win 48% · cuota 1.93 · -251.1 u · YIELD -9.9% (-13% a -7%),824 picks · win 51% · cuota 1.94 · -42.0 u · YIELD -5.1% (-11% a +0%),no pasa exploración
-Elo ve ≥8 puntos más que la casa,2237 picks · win 41% · cuota 2.29 · -207.8 u · YIELD -9.3% (-13% a -5%),682 picks · win 43% · cuota 2.30 · -24.6 u · YIELD -3.6% (-11% a +4%),no pasa exploración
-Elo ve ≥15 puntos más que la casa,986 picks · win 38% · cuota 2.48 · -81.5 u · YIELD -8.3% (-15% a -2%),336 picks · win 43% · cuota 2.47 · +10.5 u · YIELD +3.1% (-8% a +14%),no pasa exploración
-Elo ve ≥8 más y además favorito,299 picks · win 54% · cuota 1.71 · -23.7 u · YIELD -7.9% (-16% a +0%),78 picks · win 60% · cuota 1.71 · +1.7 u · YIELD +2.2% (-13% a +18%),no pasa exploración
-Favorito antes de las 12:00,1229 picks · win 58% · cuota 1.61 · -98.8 u · YIELD -8.0% (-12% a -4%),343 picks · win 55% · cuota 1.61 · -40.0 u · YIELD -11.7% (-19% a -5%),no pasa exploración
-No favorito antes de las 12:00,1525 picks · win 44% · cuota 2.21 · -89.6 u · YIELD -5.9% (-10% a -1%),415 picks · win 45% · cuota 2.21 · -6.9 u · YIELD -1.7% (-11% a +7%),no pasa exploración
-Favorito desde las 20:00,1078 picks · win 60% · cuota 1.62 · -41.9 u · YIELD -3.9% (-8% a +0%),291 picks · win 55% · cuota 1.61 · -35.0 u · YIELD -12.0% (-20% a -4%),no pasa exploración
-No favorito desde las 20:00,1351 picks · win 42% · cuota 2.18 · -147.2 u · YIELD -10.9% (-16% a -6%),364 picks · win 46% · cuota 2.19 · -11.5 u · YIELD -3.2% (-12% a +6%),no pasa exploración
-Jugadores infravalorados (4),196 picks · win 69% · cuota 1.80 · +44.2 u · YIELD +22.6% (+13% a +32%),33 picks · win 52% · cuota 1.87 · -1.5 u · YIELD -4.6% (-32% a +22%),⏳ pocos datos en confirmación
-Contra jugadores sobrevalorados (21),998 picks · win 61% · cuota 1.89 · +112.8 u · YIELD +11.3% (+6% a +16%),242 picks · win 52% · cuota 1.88 · -15.1 u · YIELD -6.2% (-16% a +4%),🔴 NO SE CONFIRMA
+"Favorito 1,25–1,50",731 picks · win 66% · cuota 1.39 · -60.7 u · YIELD -8.3% (-12% a -4%),221 picks · win 62% · cuota 1.39 · -29.4 u · YIELD -13.3% (-21% a -6%),no pasa exploración
+"Favorito 1,50–1,70",1839 picks · win 59% · cuota 1.60 · -95.4 u · YIELD -5.2% (-8% a -2%),499 picks · win 60% · cuota 1.60 · -21.1 u · YIELD -4.2% (-10% a +2%),no pasa exploración
+"Cuota 1,70–1,90",2317 picks · win 52% · cuota 1.79 · -179.9 u · YIELD -7.8% (-11% a -5%),560 picks · win 49% · cuota 1.79 · -65.6 u · YIELD -11.7% (-18% a -5%),no pasa exploración
+"Cuota 1,90–2,20",1890 picks · win 47% · cuota 2.00 · -135.9 u · YIELD -7.2% (-11% a -3%),478 picks · win 48% · cuota 2.01 · -21.3 u · YIELD -4.5% (-12% a +3%),no pasa exploración
+"No favorito 2,20–2,70",1575 picks · win 38% · cuota 2.37 · -147.7 u · YIELD -9.4% (-14% a -5%),419 picks · win 40% · cuota 2.38 · -21.3 u · YIELD -5.1% (-14% a +4%),no pasa exploración
+"No favorito 2,70–4,00",455 picks · win 32% · cuota 3.10 · -4.9 u · YIELD -1.1% (-12% a +10%),143 picks · win 35% · cuota 3.05 · +7.7 u · YIELD +5.4% (-15% a +25%),no pasa exploración
+Local favorito,2066 picks · win 57% · cuota 1.61 · -187.7 u · YIELD -9.1% (-12% a -6%),543 picks · win 55% · cuota 1.60 · -73.6 u · YIELD -13.5% (-19% a -8%),no pasa exploración
+Visitante favorito,1839 picks · win 60% · cuota 1.62 · -64.7 u · YIELD -3.5% (-7% a -0%),491 picks · win 60% · cuota 1.60 · -21.6 u · YIELD -4.4% (-10% a +1%),no pasa exploración
+Local no favorito,2336 picks · win 41% · cuota 2.18 · -284.2 u · YIELD -12.2% (-16% a -9%),617 picks · win 42% · cuota 2.20 · -59.5 u · YIELD -9.6% (-17% a -2%),no pasa exploración
+Visitante no favorito,2566 picks · win 45% · cuota 2.19 · -87.8 u · YIELD -3.4% (-7% a +0%),669 picks · win 46% · cuota 2.22 · +3.6 u · YIELD +0.5% (-6% a +8%),no pasa exploración
+H2H a favor ≥3 victorias más,969 picks · win 58% · cuota 1.66 · -49.7 u · YIELD -5.1% (-9% a -1%),253 picks · win 53% · cuota 1.62 · -38.8 u · YIELD -15.3% (-24% a -7%),no pasa exploración
+H2H a favor ≥3 más y NO favorito,207 picks · win 48% · cuota 1.94 · -13.1 u · YIELD -6.3% (-17% a +5%),36 picks · win 28% · cuota 1.95 · -15.4 u · YIELD -42.9% (-69% a -17%),no pasa exploración
+H2H en contra ≥3 y favorito,124 picks · win 51% · cuota 1.73 · -15.1 u · YIELD -12.2% (-25% a +1%),14 picks · win 64% · cuota 1.68 · +1.3 u · YIELD +9.3% (-27% a +45%),no pasa exploración
+H2H ≥6 partidos y gana ≥70%,383 picks · win 60% · cuota 1.62 · -12.6 u · YIELD -3.3% (-10% a +3%),99 picks · win 59% · cuota 1.60 · -6.7 u · YIELD -6.8% (-20% a +7%),no pasa exploración
+"Sin H2H reciente, favorito",815 picks · win 63% · cuota 1.60 · +0.3 u · YIELD +0.0% (-4% a +4%),239 picks · win 59% · cuota 1.61 · -15.7 u · YIELD -6.6% (-15% a +2%),no pasa exploración
+"Sin H2H reciente, no favorito",1048 picks · win 40% · cuota 2.21 · -150.9 u · YIELD -14.4% (-20% a -9%),296 picks · win 43% · cuota 2.22 · -23.7 u · YIELD -8.0% (-18% a +2%),no pasa exploración
+Ganó su último hoy y el rival perdió,259 picks · win 51% · cuota 1.85 · -20.2 u · YIELD -7.8% (-17% a +2%),47 picks · win 70% · cuota 1.88 · +12.5 u · YIELD +26.6% (+6% a +47%),no pasa exploración
+Perdió su último hoy y el rival ganó,260 picks · win 48% · cuota 1.99 · -21.7 u · YIELD -8.3% (-18% a +2%),47 picks · win 30% · cuota 1.96 · -21.7 u · YIELD -46.2% (-66% a -26%),no pasa exploración
+Perdió su último hoy (no favorito),612 picks · win 43% · cuota 2.21 · -37.8 u · YIELD -6.2% (-13% a +1%),118 picks · win 37% · cuota 2.18 · -22.4 u · YIELD -19.0% (-35% a -3%),no pasa exploración
+Ganó su último hoy (favorito),497 picks · win 59% · cuota 1.62 · -29.7 u · YIELD -6.0% (-12% a -0%),110 picks · win 61% · cuota 1.61 · -2.5 u · YIELD -2.3% (-15% a +10%),no pasa exploración
+Ha jugado ≥2 menos que el rival hoy,867 picks · win 46% · cuota 1.91 · -140.5 u · YIELD -16.2% (-21% a -11%),185 picks · win 50% · cuota 1.92 · -16.1 u · YIELD -8.7% (-20% a +3%),no pasa exploración
+Ha jugado ≥2 más que el rival hoy,866 picks · win 54% · cuota 1.96 · +3.2 u · YIELD +0.4% (-5% a +6%),186 picks · win 50% · cuota 1.96 · -9.6 u · YIELD -5.2% (-17% a +7%),no pasa exploración
+Rival con ≥4 partidos hoy,621 picks · win 47% · cuota 1.93 · -89.6 u · YIELD -14.4% (-21% a -8%),122 picks · win 51% · cuota 1.92 · -8.2 u · YIELD -6.7% (-21% a +7%),no pasa exploración
+Ya ha jugado hoy y el rival no,1165 picks · win 50% · cuota 1.94 · -78.6 u · YIELD -6.8% (-11% a -2%),274 picks · win 48% · cuota 1.90 · -28.4 u · YIELD -10.4% (-20% a -1%),no pasa exploración
+"Ya ha jugado hoy y el rival no, favorito",526 picks · win 59% · cuota 1.61 · -31.7 u · YIELD -6.0% (-12% a -0%),144 picks · win 53% · cuota 1.60 · -22.1 u · YIELD -15.4% (-26% a -4%),no pasa exploración
+Perdió su último 2-3 (por poco),343 picks · win 50% · cuota 1.93 · -22.1 u · YIELD -6.4% (-15% a +2%),73 picks · win 45% · cuota 1.88 · -12.9 u · YIELD -17.6% (-36% a +1%),no pasa exploración
+Perdió su último 0-3 (paliza),310 picks · win 49% · cuota 2.04 · -17.4 u · YIELD -5.6% (-15% a +4%),73 picks · win 41% · cuota 1.96 · -16.9 u · YIELD -23.1% (-41% a -5%),no pasa exploración
+Ganó su último 3-0,294 picks · win 48% · cuota 1.89 · -36.8 u · YIELD -12.5% (-22% a -3%),70 picks · win 54% · cuota 1.88 · -5.1 u · YIELD -7.3% (-24% a +10%),no pasa exploración
+Rival perdió su último 0-3,310 picks · win 50% · cuota 1.88 · -26.5 u · YIELD -8.5% (-18% a +0%),74 picks · win 58% · cuota 1.94 · +5.4 u · YIELD +7.3% (-11% a +25%),no pasa exploración
+Rival ganó su último 3-2 (desgaste),346 picks · win 51% · cuota 1.95 · -11.5 u · YIELD -3.3% (-12% a +5%),73 picks · win 44% · cuota 1.90 · -12.1 u · YIELD -16.5% (-35% a +2%),no pasa exploración
+Rival juega seguido (<45 min de su último),0 picks,0 picks,no pasa exploración
+Juega seguido (<45 min de su último),0 picks,0 picks,no pasa exploración
+Domina en puntos (últ. 10) y NO favorito,1301 picks · win 42% · cuota 2.16 · -142.4 u · YIELD -10.9% (-16% a -6%),428 picks · win 44% · cuota 2.20 · -21.2 u · YIELD -4.9% (-14% a +4%),no pasa exploración
+"Domina en puntos (últ. 10), cualquier cuota",2002 picks · win 51% · cuota 1.85 · -186.8 u · YIELD -9.3% (-13% a -6%),575 picks · win 51% · cuota 1.94 · -27.2 u · YIELD -4.7% (-11% a +2%),no pasa exploración
+Favorito con peor margen de puntos,1373 picks · win 58% · cuota 1.63 · -78.4 u · YIELD -5.7% (-9% a -2%),425 picks · win 55% · cuota 1.61 · -50.1 u · YIELD -11.8% (-18% a -5%),no pasa exploración
+Domina en sets (últ. 10) y NO favorito,1285 picks · win 42% · cuota 2.15 · -147.5 u · YIELD -11.5% (-16% a -7%),409 picks · win 42% · cuota 2.21 · -33.2 u · YIELD -8.1% (-17% a +1%),no pasa exploración
+Racha de derrotas pero buen margen de puntos,627 picks · win 51% · cuota 1.94 · -29.5 u · YIELD -4.7% (-11% a +2%),146 picks · win 45% · cuota 1.92 · -23.7 u · YIELD -16.2% (-29% a -3%),no pasa exploración
+Racha de victorias pero mal margen de puntos (contra),611 picks · win 48% · cuota 1.93 · -60.9 u · YIELD -10.0% (-16% a -4%),140 picks · win 56% · cuota 1.93 · +8.1 u · YIELD +5.8% (-8% a +19%),no pasa exploración
+Racha ≥3 victorias,1277 picks · win 50% · cuota 1.88 · -123.9 u · YIELD -9.7% (-14% a -5%),366 picks · win 53% · cuota 1.90 · -4.5 u · YIELD -1.2% (-10% a +7%),no pasa exploración
+Racha ≥3 derrotas (rebote),1310 picks · win 49% · cuota 2.02 · -82.0 u · YIELD -6.3% (-11% a -2%),399 picks · win 51% · cuota 1.96 · -16.2 u · YIELD -4.1% (-12% a +4%),no pasa exploración
+Rival con racha ≥3 derrotas,1310 picks · win 51% · cuota 1.86 · -100.6 u · YIELD -7.7% (-12% a -3%),398 picks · win 48% · cuota 1.93 · -40.4 u · YIELD -10.1% (-18% a -2%),no pasa exploración
+Rival con racha ≥4 victorias (contra),647 picks · win 48% · cuota 2.01 · -49.6 u · YIELD -7.7% (-14% a -1%),196 picks · win 47% · cuota 1.96 · -17.1 u · YIELD -8.7% (-21% a +3%),no pasa exploración
+Revancha: perdió con él antes hoy,259 picks · win 53% · cuota 1.99 · +5.0 u · YIELD +1.9% (-8% a +12%),25 picks · win 32% · cuota 1.97 · -10.5 u · YIELD -41.9% (-70% a -14%),no pasa exploración
+Revancha: le ganó antes hoy,258 picks · win 47% · cuota 1.84 · -43.1 u · YIELD -16.7% (-26% a -8%),25 picks · win 68% · cuota 1.88 · +6.5 u · YIELD +26.1% (-4% a +56%),no pasa exploración
+Rival sin jugar ≥3 días,2502 picks · win 52% · cuota 1.94 · -93.9 u · YIELD -3.8% (-7% a -1%),825 picks · win 48% · cuota 1.96 · -73.0 u · YIELD -8.9% (-14% a -3%),no pasa exploración
+Sin jugar ≥3 días,2499 picks · win 48% · cuota 1.93 · -249.5 u · YIELD -10.0% (-13% a -7%),822 picks · win 51% · cuota 1.94 · -37.4 u · YIELD -4.5% (-10% a +1%),no pasa exploración
+Elo ve ≥8 puntos más que la casa,2198 picks · win 41% · cuota 2.29 · -192.0 u · YIELD -8.7% (-13% a -5%),674 picks · win 43% · cuota 2.31 · -26.3 u · YIELD -3.9% (-11% a +3%),no pasa exploración
+Elo ve ≥15 puntos más que la casa,970 picks · win 38% · cuota 2.48 · -75.0 u · YIELD -7.7% (-14% a -1%),337 picks · win 43% · cuota 2.48 · +11.5 u · YIELD +3.4% (-8% a +14%),no pasa exploración
+Elo ve ≥8 más y además favorito,301 picks · win 54% · cuota 1.71 · -24.2 u · YIELD -8.0% (-16% a +0%),78 picks · win 60% · cuota 1.71 · +1.9 u · YIELD +2.4% (-13% a +18%),no pasa exploración
+Elo y puntos coinciden contra la casa,1114 picks · win 42% · cuota 2.16 · -126.5 u · YIELD -11.4% (-17% a -6%),379 picks · win 46% · cuota 2.21 · -3.8 u · YIELD -1.0% (-10% a +8%),no pasa exploración
+Favorito antes de las 12:00,1217 picks · win 58% · cuota 1.61 · -99.8 u · YIELD -8.2% (-12% a -4%),337 picks · win 55% · cuota 1.60 · -39.4 u · YIELD -11.7% (-19% a -5%),no pasa exploración
+No favorito antes de las 12:00,1504 picks · win 44% · cuota 2.21 · -89.1 u · YIELD -5.9% (-11% a -1%),407 picks · win 45% · cuota 2.22 · -7.0 u · YIELD -1.7% (-11% a +7%),no pasa exploración
+Favorito desde las 20:00,1062 picks · win 60% · cuota 1.62 · -40.8 u · YIELD -3.8% (-8% a +0%),286 picks · win 55% · cuota 1.61 · -36.4 u · YIELD -12.7% (-20% a -5%),no pasa exploración
+No favorito desde las 20:00,1325 picks · win 42% · cuota 2.18 · -145.5 u · YIELD -11.0% (-16% a -6%),357 picks · win 46% · cuota 2.19 · -8.0 u · YIELD -2.2% (-12% a +7%),no pasa exploración
+Jugadores infravalorados (3),133 picks · win 70% · cuota 1.80 · +32.1 u · YIELD +24.1% (+12% a +36%),18 picks · win 56% · cuota 1.90 · +1.0 u · YIELD +5.6% (-32% a +43%),⏳ pocos datos en confirmación
+Contra jugadores sobrevalorados (21),941 picks · win 61% · cuota 1.89 · +103.2 u · YIELD +11.0% (+6% a +16%),231 picks · win 50% · cuota 1.89 · -20.9 u · YIELD -9.0% (-19% a +1%),🔴 NO SE CONFIRMA
