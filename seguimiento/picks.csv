@@ -133,5 +133,5 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-08,21:55,SOSPECHOSO,Kulisek M.,Kosacky A.,0.523,1.91,2.1,2.49,2.5,0.307,2.24,0.172,FUERTE,2.5,4,ganado,3-2,1.5,1.24,2026-11-08 19:50,514,finished,17517472
 2026-11-08,22:10,FUERTE,Oleksik J.,Matus J.,0.592,1.69,1.86,2.2,2.1,0.243,2.16,0.279,FUERTE,2.1,1,perdido,1-3,-1,-1,2026-11-08 20:05,515,finished,17517488
 2026-11-08,22:15,FLOJO,Vitasek D.,Marsalek P.,0.535,1.87,2.06,2.43,1.8,-0.037,1.91,0.022,APUESTA,1.8,4,ganado,3-1,0.8,0.91,2026-11-08 20:10,516,finished,17517495
-2026-11-08,22:35,SOSPECHOSO,Cyrus M.,Vosyka L.,0.412,2.43,2.67,3.16,3.4,0.4,3.31,0.364,SOSPECHOSO,,1,pendiente,,,,2026-11-08 20:42,529,inprogress,17517494
-2026-11-08,22:50,FLOJO,Rein T.,Kubat P.,0.62,1.61,1.77,2.1,1.25,-0.225,1.25,-0.225,FLOJO,,2,pendiente,,,,2026-11-08 20:45,530,inprogress,17517487
+2026-11-08,22:35,SOSPECHOSO,Cyrus M.,Vosyka L.,0.412,2.43,2.67,3.16,3.4,0.4,3.31,0.364,SOSPECHOSO,3.4,1,perdido,1-3,-1,-1,2026-11-08 20:42,529,finished,17517494
+2026-11-08,22:50,FLOJO,Rein T.,Kubat P.,0.62,1.61,1.77,2.1,1.25,-0.225,1.25,-0.225,FLOJO,1.25,2,ganado,3-0,0.25,0.25,2026-11-08 20:45,530,finished,17517487
