@@ -131,3 +131,5 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-08,20:00,SIN CUOTA,Dohnal J.,Cousin J.,0.534,1.87,2.06,2.43,,,,,,,1,pendiente,,,,2026-11-08 19:38,512,17520877
 2026-11-08,21:45,SIN CUOTA,Velky Junior D.,Travnicek J.,0.562,1.78,1.96,2.32,,,,,,,4,pendiente,,,,2026-11-08 19:40,513,17517462
 2026-11-08,21:55,SOSPECHOSO,Kulisek M.,Kosacky A.,0.523,1.91,2.1,2.49,2.5,0.307,,,,,4,pendiente,,,,2026-11-08 19:50,514,17517472
+2026-11-08,22:10,FUERTE,Oleksik J.,Matus J.,0.592,1.69,1.86,2.2,2.1,0.243,,,,,1,pendiente,,,,2026-11-08 20:05,515,17517488
+2026-11-08,22:15,FLOJO,Vitasek D.,Marsalek P.,0.535,1.87,2.06,2.43,1.8,-0.037,,,,,4,pendiente,,,,2026-11-08 20:10,516,17517495
