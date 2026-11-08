@@ -60,7 +60,7 @@ ESTADO = os.path.join(DIR, "estado.json")
 COLS = ["fecha", "hora", "nivel", "pick", "rival", "prob", "cuota_minima", "cuota_fuerte",
         "cuota_sospecha", "cuota_2h", "valor_2h", "cuota_betcris", "valor_betcris",
         "decision_betcris", "cuota_final", "pick_jugados_hoy", "resultado", "marcador",
-        "beneficio", "beneficio_betcris", "aviso", "msg", "id"]
+        "beneficio", "beneficio_betcris", "aviso", "msg", "estado_sofa", "id"]
 
 NIVEL_TXT = {"SOSPECHOSO": "⚠️ SOSPECHOSO (valor >30%, desconfiar)",
              "FUERTE": "⭐⭐ FUERTE", "APUESTA": "💰 APUESTA",
@@ -387,35 +387,51 @@ def leer_respuestas(picks, st):
         tg(t, mid)
 
 
-def resolver(picks, evs):
+def resolver(picks, evs, now):
+    """Apunta resultados. Un partido solo se da por ANULADO si Sofascore lo marca
+    cancelado o si 6 h despues de su hora sigue sin un resultado valido (justo al
+    acabar, Sofascore a veces da el partido por terminado sin el marcador
+    completo). Los anulados se vuelven a revisar: si luego aparece el resultado,
+    se corrigen. Devuelve cuantos anulados se han corregido."""
+    corregidos = 0
     for p in picks:
-        if p.get("resultado") != "pendiente":
+        res = p.get("resultado")
+        if res not in ("pendiente", "anulado"):
             continue
         e = evs.get(p["id"])
         if not e:
             continue
         st = (e.get("status") or {}).get("type", "")
-        if st in ("notstarted", "inprogress"):
-            continue
-        m = parse(e)
+        p["estado_sofa"] = st
+        m = parse(e) if st == "finished" else None
         if not m or not m["final"]:
-            p["resultado"], p["beneficio"] = "anulado", 0
-        else:
-            gana_local = m["final"][0] > m["final"][1]
-            pick_local = (e.get("homeTeam") or {}).get("name") == p["pick"]
-            gana = gana_local == pick_local
-            p["marcador"] = (f"{m['final'][0]}-{m['final'][1]}" if pick_local
-                             else f"{m['final'][1]}-{m['final'][0]}")
-            o = cuotas(p["id"])
-            time.sleep(PACE)
-            if o:
-                p["cuota_final"] = o[1] if pick_local else o[3]
-            c = p.get("cuota_2h") or p.get("cuota_final")
-            p["resultado"] = "ganado" if gana else "perdido"
-            p["beneficio"] = round(float(c) - 1, 2) if (gana and c) else (-1 if c else "")
+            if res == "pendiente":
+                try:
+                    inicio = datetime.strptime(f"{p['fecha']} {p['hora']}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
+                except ValueError:
+                    inicio = now
+                if st in ("canceled", "cancelled") or (now - inicio).total_seconds() > 6 * 3600:
+                    p["resultado"], p["beneficio"] = "anulado", 0
+                    calc_betcris(p)
+            continue
+        gana_local = m["final"][0] > m["final"][1]
+        pick_local = (e.get("homeTeam") or {}).get("name") == p["pick"]
+        gana = gana_local == pick_local
+        p["marcador"] = (f"{m['final'][0]}-{m['final'][1]}" if pick_local
+                         else f"{m['final'][1]}-{m['final'][0]}")
+        o = cuotas(p["id"])
+        time.sleep(PACE)
+        if o:
+            p["cuota_final"] = o[1] if pick_local else o[3]
+        c = p.get("cuota_2h") or p.get("cuota_final")
+        p["resultado"] = "ganado" if gana else "perdido"
+        p["beneficio"] = round(float(c) - 1, 2) if (gana and c) else (-1 if c else "")
         calc_betcris(p)
-        if p.get("cuota_betcris"):               # solo te avisa de los que apuntaste
+        if res == "anulado":
+            corregidos += 1                      # corregido en silencio
+        elif p.get("cuota_betcris"):             # solo te avisa de los que apuntaste
             tg(texto_resultado(p), p.get("msg") or None)
+    return corregidos
 
 
 def resumen(rows, campo="beneficio"):
@@ -510,7 +526,10 @@ def main():
             mod = entrenar([vector(f) for f in train], [f["gana_a"] for f in train])
         if mod is not None and cands:
             nuevos_picks(cands, mod, picks, st, now)
-        resolver(picks, evs)
+        corr = resolver(picks, evs, now)
+        if corr:
+            tg(f"🔧 Corregidos {corr} picks que estaban como anulados: ya tienen su "
+               "resultado real y cuentan en el resumen.")
         resumen_dia(picks, st, now)
         guardar_picks(picks)
         guardar_estado(st)
