@@ -16,6 +16,7 @@ vuelta por minuto):
   4. Lee tus respuestas en Telegram con la cuota de BetCris (respondiendo al aviso
      o escribiendo "apellido cuota") y lo apunta todo con tu cuota real.
      "borrar apellido" quita la cuota apuntada de ese pick.
+     "estado" -> te contesta si esta funcionando y cuantos avisos lleva hoy.
   5. Cuando el partido termina apunta el resultado. Si apuntaste cuota, te
      avisa del resultado con tu beneficio.
   6. Sobre las 23:45 manda el resumen del dia y el acumulado.
@@ -343,6 +344,17 @@ def leer_respuestas(picks, st):
             continue
         texto = (m.get("text") or "").strip()
         mid = m.get("message_id")
+        if limpio(texto).strip() in ("estado", "status", "vivo"):
+            ahora = datetime.now(TZ)
+            hoy = ahora.strftime("%Y-%m-%d")
+            del_dia = [p for p in picks if p["fecha"] == hoy]
+            pend = sum(1 for p in del_dia if p.get("resultado") == "pendiente")
+            ult = max((p.get("aviso", "") for p in picks), default="")
+            tg(f"✅ Funcionando · comprobado a las {ahora:%H:%M}\n"
+               f"Hoy: {len(del_dia)} avisos ({pend} pendientes de resultado)\n"
+               f"Último aviso: {ult[11:] if ult.startswith(hoy) else ult or '—'}\n"
+               f"Si no llegan avisos es porque ahora no hay partidos que cumplan la regla.", mid)
+            continue
         if limpio(texto).split()[:1] in (["borrar"], ["borra"], ["quitar"], ["quita"]):
             pk = buscar_pick(picks, por_msg, m, texto)
             if not pk or not pk.get("cuota_betcris"):
@@ -481,6 +493,7 @@ def main():
            "Cada aviso te dice qué hacer según la cuota de BetCris:\n"
            "❌ no apostar · 💰 APUESTA · ⭐⭐ FUERTE · ⚠️ valor >30%, desconfiar\n"
            "↩️ Responde al aviso con tu cuota (ej. 1,84) o escribe: apellido cuota\n"
+           "Escribe «estado» para saber si está funcionando\n"
            "Todo queda apuntado. Resumen cada noche a las 23:45.")
     # Cada ejecucion se queda RUN_MIN minutos dando una vuelta por minuto: asi
     # contesta rapido a tus cuotas y no depende de que GitHub sea puntual.
