@@ -112,4 +112,6 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-08,14:50,APUESTA,Cibik P.,Brynych J.,0.671,1.49,1.64,1.94,1.5,0.006,1.58,0.06,APUESTA,,1,pendiente,,,,2026-11-08 12:45,443,17516664
 2026-11-08,15:25,APUESTA,Nadvornik V.,Zacharda J.,0.549,1.82,2.0,2.37,1.83,0.004,,,,,1,pendiente,,,,2026-11-08 13:20,448,17516667
 2026-11-08,16:15,SOSPECHOSO,Cizek A.,Skulina D.,0.507,1.97,2.17,2.57,2.63,0.333,2.42,0.227,FUERTE,,2,pendiente,,,,2026-11-08 14:10,451,17517398
-2026-11-08,16:40,FUERTE,Kanak A.,Skalicky J.,0.46,2.17,2.39,2.82,2.5,0.151,,,,,3,pendiente,,,,2026-11-08 14:35,456,17517283
+2026-11-08,16:40,FUERTE,Kanak A.,Skalicky J.,0.46,2.17,2.39,2.82,2.5,0.151,2.32,0.067,APUESTA,,3,pendiente,,,,2026-11-08 14:35,456,17517283
+2026-11-08,16:45,FLOJO,Cizek A.,Molin T.,0.535,1.87,2.06,2.43,1.8,-0.037,1.67,-0.107,FLOJO,,2,pendiente,,,,2026-11-08 14:40,457,17517403
+2026-11-08,16:55,FLOJO,Zahradka Z.,Kulveit J.,0.449,2.23,2.45,2.9,2.1,-0.058,2.21,-0.008,FLOJO,,4,pendiente,,,,2026-11-08 14:50,462,17517422
