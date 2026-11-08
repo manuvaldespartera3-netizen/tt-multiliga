@@ -127,8 +127,8 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-08,20:45,FLOJO,Vitasek D.,Travnicek J.,0.576,1.74,1.91,2.26,1.62,-0.067,1.75,0.008,APUESTA,,3,pendiente,,,,2026-11-08 18:40,496,17517439
 2026-11-08,21:15,APUESTA,Velky Junior D.,Marsalek P.,0.625,1.6,1.76,2.08,1.62,0.013,1.65,0.031,APUESTA,,3,pendiente,,,,2026-11-08 19:10,498,17517446
 2026-11-08,21:25,FUERTE,Kulisek M.,Martin Cerny,0.437,2.29,2.52,2.97,2.63,0.15,2.4,0.049,APUESTA,,4,pendiente,,,,2026-11-08 19:20,501,17517469
-2026-11-08,21:35,SIN CUOTA,Masternak J.,Radlo S.,0.445,2.25,2.47,2.92,,,,,,,2,pendiente,,,,2026-11-08 19:30,510,17520783
-2026-11-08,20:00,SIN CUOTA,Dohnal J.,Cousin J.,0.534,1.87,2.06,2.43,,,,,,,1,pendiente,,,,2026-11-08 19:38,512,17520877
+2026-11-08,21:35,SIN CUOTA,Masternak J.,Radlo S.,0.445,2.25,2.47,2.92,,,2.12,-0.057,FLOJO,,2,pendiente,,,,2026-11-08 19:30,510,17520783
+2026-11-08,20:00,SIN CUOTA,Dohnal J.,Cousin J.,0.534,1.87,2.06,2.43,,,,,,,1,ganado,3-0,,,2026-11-08 19:38,512,17520877
 2026-11-08,21:45,SIN CUOTA,Velky Junior D.,Travnicek J.,0.562,1.78,1.96,2.32,,,,,,,4,pendiente,,,,2026-11-08 19:40,513,17517462
 2026-11-08,21:55,SOSPECHOSO,Kulisek M.,Kosacky A.,0.523,1.91,2.1,2.49,2.5,0.307,,,,,4,pendiente,,,,2026-11-08 19:50,514,17517472
 2026-11-08,22:10,FUERTE,Oleksik J.,Matus J.,0.592,1.69,1.86,2.2,2.1,0.243,,,,,1,pendiente,,,,2026-11-08 20:05,515,17517488
