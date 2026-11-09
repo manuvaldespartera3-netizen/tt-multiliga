@@ -158,8 +158,8 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-09,14:25,APUESTA,Bochnak D.,Ovcharenko M.,0.602,1.66,1.83,2.16,1.8,0.084,,,,1.8,4,perdido,1-3,-1,,2026-11-09 12:20,601,finished,17522435
 2026-11-09,14:50,SIN CUOTA,Fiklik O.,Vonasek J.,0.512,1.95,2.15,2.54,,,1.99,0.019,APUESTA,,1,perdido,0-3,,-1,2026-11-09 12:45,615,finished,17522420
 2026-11-09,14:55,FLOJO,Bochnak D.,Vesecky D.,0.615,1.63,1.79,2.12,1.5,-0.078,,,,1.5,4,ganado,3-2,0.5,,2026-11-09 12:50,618,finished,17522488
-2026-11-09,15:25,FLOJO,Martin Cerny,Ovcharenko M.,0.509,1.96,2.16,2.55,1.73,-0.12,1.75,-0.109,FLOJO,,5,pendiente,,,,2026-11-09 13:20,620,inprogress,17522405
-2026-11-09,16:40,FUERTE,Kantor L.,Volny J.,0.518,1.93,2.12,2.51,2.2,0.14,,,,,2,pendiente,,,,2026-11-09 14:35,628,notstarted,17524957
-2026-11-09,16:55,SIN CUOTA,Ovcharenko M.,Strejc F.,0.59,1.69,1.86,2.2,,,,,,,1,pendiente,,,,2026-11-09 14:50,630,notstarted,17525981
+2026-11-09,15:25,FLOJO,Martin Cerny,Ovcharenko M.,0.509,1.96,2.16,2.55,1.73,-0.12,1.75,-0.109,FLOJO,1.73,5,perdido,0-3,-1,-1,2026-11-09 13:20,620,finished,17522405
+2026-11-09,16:40,FUERTE,Kantor L.,Volny J.,0.518,1.93,2.12,2.51,2.2,0.14,2.06,0.067,APUESTA,,2,pendiente,,,,2026-11-09 14:35,628,notstarted,17524957
+2026-11-09,16:55,SIN CUOTA,Ovcharenko M.,Strejc F.,0.59,1.69,1.86,2.2,,,2.28,0.345,SOSPECHOSO,,1,pendiente,,,,2026-11-09 14:50,630,notstarted,17525981
 2026-11-09,17:10,FUERTE,Dzida L.,Srubar M.,0.492,2.03,2.24,2.64,2.25,0.107,,,,,2,pendiente,,,,2026-11-09 15:05,632,notstarted,17524969
-2026-11-09,17:40,FLOJO,Dzida L.,Volny J.,0.57,1.75,1.93,2.28,1.44,-0.179,,,,,3,pendiente,,,,2026-11-09 15:35,633,notstarted,17524942
+2026-11-09,17:40,FLOJO,Dzida L.,Volny J.,0.57,1.75,1.93,2.28,1.44,-0.179,1.48,-0.156,FLOJO,,3,pendiente,,,,2026-11-09 15:35,633,notstarted,17524942
