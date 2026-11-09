@@ -151,10 +151,10 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-09,12:45,SIN CUOTA,Kindl T.,Dzida L.,0.531,1.88,2.07,2.45,,,1.83,-0.028,FLOJO,,2,perdido,0-3,,-1,2026-11-09 10:40,587,finished,17522445
 2026-11-09,13:15,FLOJO,Krupnik J.,Kantor L.,0.635,1.57,1.73,2.05,1.44,-0.086,1.49,-0.054,FLOJO,1.44,3,ganado,3-2,0.44,0.49,2026-11-09 11:10,592,finished,17522477
 2026-11-09,13:40,FUERTE,Veliev A.,Slavik L.,0.574,1.74,1.92,2.27,2.1,0.205,2.12,0.217,FUERTE,2.1,3,ganado,3-1,1.1,1.12,2026-11-09 11:35,593,finished,17522553
-2026-11-09,13:45,SIN CUOTA,Krupnik J.,Dzida L.,0.581,1.72,1.89,2.24,,,1.72,-0.001,FLOJO,,4,pendiente,,,,2026-11-09 11:40,594,inprogress,17522449
-2026-11-09,13:55,FLOJO,Martin Cerny,Vesecky D.,0.574,1.74,1.92,2.26,1.62,-0.07,1.64,-0.059,FLOJO,,4,pendiente,,,,2026-11-09 11:50,596,inprogress,17522463
-2026-11-09,14:10,FUERTE,Benes R.,Moravec M.,0.529,1.89,2.08,2.46,2.25,0.189,2.24,0.185,FUERTE,,5,pendiente,,,,2026-11-09 12:05,598,notstarted,17522486
-2026-11-09,14:15,APUESTA,Kindl T.,Kantor L.,0.454,2.2,2.42,2.86,2.25,0.022,2.09,-0.051,FLOJO,,3,pendiente,,,,2026-11-09 12:10,600,notstarted,17522476
+2026-11-09,13:45,SIN CUOTA,Krupnik J.,Dzida L.,0.581,1.72,1.89,2.24,,,1.72,-0.001,FLOJO,,4,perdido,2-3,,-1,2026-11-09 11:40,594,finished,17522449
+2026-11-09,13:55,FLOJO,Martin Cerny,Vesecky D.,0.574,1.74,1.92,2.26,1.62,-0.07,1.64,-0.059,FLOJO,1.62,4,perdido,0-3,-1,-1,2026-11-09 11:50,596,finished,17522463
+2026-11-09,14:10,FUERTE,Benes R.,Moravec M.,0.529,1.89,2.08,2.46,2.25,0.189,2.24,0.185,FUERTE,,5,pendiente,,,,2026-11-09 12:05,598,inprogress,17522486
+2026-11-09,14:15,APUESTA,Kindl T.,Kantor L.,0.454,2.2,2.42,2.86,2.25,0.022,2.09,-0.051,FLOJO,,3,pendiente,,,,2026-11-09 12:10,600,inprogress,17522476
 2026-11-09,14:25,APUESTA,Bochnak D.,Ovcharenko M.,0.602,1.66,1.83,2.16,1.8,0.084,,,,,4,pendiente,,,,2026-11-09 12:20,601,notstarted,17522435
 2026-11-09,14:50,SIN CUOTA,Fiklik O.,Vonasek J.,0.512,1.95,2.15,2.54,,,1.99,0.019,APUESTA,,1,pendiente,,,,2026-11-09 12:45,615,notstarted,17522420
 2026-11-09,14:55,FLOJO,Bochnak D.,Vesecky D.,0.615,1.63,1.79,2.12,1.5,-0.078,,,,,4,pendiente,,,,2026-11-09 12:50,618,notstarted,17522488
