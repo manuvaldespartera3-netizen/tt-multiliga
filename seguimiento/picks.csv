@@ -165,8 +165,10 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-09,17:40,FLOJO,Dzida L.,Volny J.,0.57,1.75,1.93,2.28,1.44,-0.179,1.48,-0.156,FLOJO,1.44,3,ganado,3-0,0.44,0.48,2026-11-09 15:35,633,finished,17524942
 2026-11-09,18:15,FLOJO,Sikora F.,Vicherek P.,0.551,1.82,2.0,2.36,1.8,-0.009,1.75,-0.036,FLOJO,1.8,1,ganado,3-1,0.8,0.75,2026-11-09 16:14,644,finished,17524951
 2026-11-09,18:25,SIN CUOTA,Ovcharenko M.,Martin Stusek,0.575,1.74,1.91,2.26,,,2.11,0.213,FUERTE,1.91,3,ganado,3-2,0.91,1.11,2026-11-09 16:20,645,finished,17526259
-2026-11-09,18:50,FLOJO,Dvorak M.,Balcar F.,0.516,1.94,2.13,2.52,1.8,-0.072,1.68,-0.133,FLOJO,,1,pendiente,,,,2026-11-09 16:51,647,inprogress,17526164
-2026-11-09,19:00,SIN CUOTA,Kiejda P.,Caban J.,0.471,2.12,2.34,2.76,,,1.9,-0.105,FLOJO,,1,pendiente,,,,2026-11-09 16:55,651,notstarted,17522825
+2026-11-09,18:50,FLOJO,Dvorak M.,Balcar F.,0.516,1.94,2.13,2.52,1.8,-0.072,1.68,-0.133,FLOJO,1.8,1,ganado,3-0,0.8,0.68,2026-11-09 16:51,647,finished,17526164
+2026-11-09,19:00,SIN CUOTA,Kiejda P.,Caban J.,0.471,2.12,2.34,2.76,,,1.9,-0.105,FLOJO,,1,pendiente,,,,2026-11-09 16:55,651,inprogress,17522825
 2026-11-09,19:25,FUERTE,Ovcharenko M.,Jicha D.,0.647,1.55,1.7,2.01,2.0,0.293,1.99,0.288,FUERTE,,4,pendiente,,,,2026-11-09 17:20,653,notstarted,17526268
 2026-11-09,19:30,SIN CUOTA,Kos K.,Rokita G.,0.591,1.69,1.86,2.2,,,1.54,-0.09,FLOJO,,1,pendiente,,,,2026-11-09 17:25,654,notstarted,17522826
 2026-11-09,20:45,FUERTE,Baca J.,Kowal R.,0.583,1.72,1.89,2.23,2.1,0.224,1.84,0.073,APUESTA,,3,pendiente,,,,2026-11-09 18:40,662,notstarted,17524954
+2026-11-09,19:05,SIN CUOTA,Trnka T.,Hons D.,0.574,1.74,1.92,2.26,,,,,,,1,pendiente,,,,2026-11-09 18:59,670,inprogress,17527671
+2026-11-09,21:15,FLOJO,Sarganek D.,Baros A.,0.619,1.61,1.78,2.1,1.5,-0.071,,,,,3,pendiente,,,,2026-11-09 19:10,672,notstarted,17524956
