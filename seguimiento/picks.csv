@@ -140,4 +140,6 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-09,09:55,SIN CUOTA,Martin Cerny,Kocab J.,0.634,1.58,1.73,2.05,,,1.48,-0.062,FLOJO,,1,pendiente,,,,2026-11-09 07:50,555,notstarted,17522279
 2026-11-09,10:00,SIN CUOTA,Chojnacki J.,Skvarskyi D.,0.396,2.53,2.78,3.28,,,2.78,0.101,FUERTE,,2,pendiente,,,,2026-11-09 07:55,558,notstarted,17522810
 2026-11-09,10:10,APUESTA,Heuman I.,Benes R.,0.524,1.91,2.1,2.48,2.1,0.1,2.17,0.137,FUERTE,,1,pendiente,,,,2026-11-09 08:05,561,notstarted,17522311
-2026-11-09,10:15,APUESTA,Lasota L.,Raska M.,0.556,1.8,1.98,2.34,1.83,0.018,,,,,1,pendiente,,,,2026-11-09 08:13,564,notstarted,17522310
+2026-11-09,10:15,APUESTA,Lasota L.,Raska M.,0.556,1.8,1.98,2.34,1.83,0.018,2.04,0.134,FUERTE,,1,pendiente,,,,2026-11-09 08:13,564,notstarted,17522310
+2026-11-09,10:25,SIN CUOTA,Bochnak D.,Nadvornik V.,0.534,1.87,2.06,2.43,,,,,,,1,pendiente,,,,2026-11-09 08:20,567,notstarted,17522391
+2026-11-09,10:30,SIN CUOTA,Gola P.,Galus M.,0.471,2.12,2.34,2.76,,,,,,,4,pendiente,,,,2026-11-09 08:25,568,notstarted,17522811
