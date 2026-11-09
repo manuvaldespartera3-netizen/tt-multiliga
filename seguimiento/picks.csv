@@ -148,7 +148,7 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-09,11:30,SIN CUOTA,Chojnacki J.,Galus M.,0.409,2.45,2.69,3.18,,,2.42,-0.01,FLOJO,,3,ganado,3-2,,1.42,2026-11-09 09:25,571,finished,17522813
 2026-11-09,11:40,APUESTA,Benes R.,Slavik L.,0.489,2.04,2.25,2.66,2.1,0.028,1.8,-0.12,FLOJO,2.1,2,ganado,3-1,1.1,0.8,2026-11-09 09:35,576,finished,17522462
 2026-11-09,12:10,FUERTE,Veliev A.,Moravec M.,0.55,1.82,2.0,2.36,2.1,0.156,1.94,0.067,APUESTA,2.1,3,ganado,3-1,1.1,0.94,2026-11-09 10:05,577,finished,17522483
-2026-11-09,12:45,SIN CUOTA,Kindl T.,Dzida L.,0.531,1.88,2.07,2.45,,,1.83,-0.028,FLOJO,,2,pendiente,,,,2026-11-09 10:40,587,inprogress,17522445
+2026-11-09,12:45,SIN CUOTA,Kindl T.,Dzida L.,0.531,1.88,2.07,2.45,,,1.83,-0.028,FLOJO,,2,perdido,0-3,,-1,2026-11-09 10:40,587,finished,17522445
 2026-11-09,13:15,FLOJO,Krupnik J.,Kantor L.,0.635,1.57,1.73,2.05,1.44,-0.086,1.49,-0.054,FLOJO,,3,pendiente,,,,2026-11-09 11:10,592,notstarted,17522477
 2026-11-09,13:40,FUERTE,Veliev A.,Slavik L.,0.574,1.74,1.92,2.27,2.1,0.205,2.12,0.217,FUERTE,,3,pendiente,,,,2026-11-09 11:35,593,notstarted,17522553
 2026-11-09,13:45,SIN CUOTA,Krupnik J.,Dzida L.,0.581,1.72,1.89,2.24,,,1.72,-0.001,FLOJO,,4,pendiente,,,,2026-11-09 11:40,594,notstarted,17522449
