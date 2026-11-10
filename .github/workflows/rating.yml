@@ -1,1 +1,76 @@
+name: Rating oficial Liga Pro
+
+on:
+  workflow_dispatch:
+    inputs:
+      dias:
+        description: "Dias a analizar"
+        default: "150"
+
+permissions:
+  contents: write
+
+# misma cola que el backtest y la busqueda de patrones: nunca van a la vez
+concurrency:
+  group: backtest
+  cancel-in-progress: false
+
+jobs:
+  rating:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar numpy
+        run: pip install numpy scikit-learn
+
+      # partidos y cuotas de Liga Pro ya descargados (y los torneos de la web)
+      - name: Recuperar descargas anteriores
+        uses: actions/cache/restore@v4
+        with:
+          path: resultados/**/cache
+          key: mb-czech_liga_pro-${{ github.run_id }}
+          restore-keys: mb-czech_liga_pro-
+
+      - name: Analizar rating oficial
+        env:
+          ZYLA_API_KEY: ${{ secrets.ZYLA_API_KEY }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
+          BT_DAYS: ${{ github.event.inputs.dias || '150' }}
+          BT_PACE: "0.8"
+          BT_MAX_MIN: "290"
+        run: python mb_rating.py
+
+      - name: Guardar descargas
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: resultados/**/cache
+          key: mb-czech_liga_pro-${{ github.run_id }}
+
+      - name: Avisar si falla
+        if: failure() || cancelled()
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
+        run: |
+          [ -n "$TELEGRAM_TOKEN" ] || exit 0
+          curl -s "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${MY_CHAT_ID}" \
+            --data-urlencode "text=⚠️ El análisis del rating de Liga Pro se ha cortado. Vuelve a lanzarlo: seguirá donde lo dejó." > /dev/null
+
+      - name: Guardar resultados en el repositorio
+        if: always()
+        run: |
+          git config user.name "tt-multiliga"
+          git config user.email "tt-multiliga@users.noreply.github.com"
+          git add resultados/czech_liga_pro/rating.txt 2>/dev/null || true
+          git commit -m "Rating Liga Pro $(date +%F)" || echo "sin cambios"
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done || true
 
