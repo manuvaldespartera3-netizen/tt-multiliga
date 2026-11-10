@@ -2,4 +2,40 @@
 Exploración: 14/05 – 11/09 · Confirmación (no usada para buscar): 11/09 – 09/11
 Decisión 2 h antes · cuota de Sofascore · 1 u por pick
 
-⏳ SIN TERMINAR: faltan cuotas de 6334 de 51403 partidos. Vuelve a lanzarlo: sigue donde lo dejó.
+51403 partidos · 6560 con cuota · margen medio de la casa 7.5%
+Referencia, apostar a todo: 12459 picks · win 50% · cuota 1.99 · -1069.6 u · YIELD -8.6% (-10% a -7%)
+
+📋 PATRONES · probados: 56 · pasan la exploración: 3
+▶ Elo ve ≥8 más y además favorito
+   🟡 GANA, PERO AÚN DUDOSO
+   Exploración:  759 picks · win 67% · cuota 1.61 · +45.6 u · YIELD +6.0% (+1% a +11%)
+   Confirmación: 308 picks · win 66% · cuota 1.58 · +8.6 u · YIELD +2.8% (-4% a +10%)
+▶ Jugadores infravalorados (2)
+   ⏳ pocos datos en confirmación
+   Exploración:  111 picks · win 71% · cuota 1.84 · +26.1 u · YIELD +23.5% (+10% a +37%)
+   Confirmación: 27 picks · win 59% · cuota 1.84 · +0.7 u · YIELD +2.6% (-28% a +33%)
+▶ Contra jugadores sobrevalorados (28)
+   🔴 NO SE CONFIRMA
+   Exploración:  1828 picks · win 63% · cuota 1.83 · +135.8 u · YIELD +7.4% (+4% a +11%)
+   Confirmación: 645 picks · win 47% · cuota 2.01 · -86.6 u · YIELD -13.4% (-20% a -7%)
+
+🤖 MODELO DE IA (corrige la cuota de la casa con todas las variables)
+   Precisión en confirmación (menos es mejor): IA 0.6618 · casa 0.6357 ⚠️ la casa afina más
+   ▶ valor ≥3%
+      Exploración:  1851 picks · win 58% · cuota 1.83 · -7.6 u · YIELD -0.4% (-4% a +3%)
+      Confirmación: 881 picks · win 53% · cuota 1.83 · -76.0 u · YIELD -8.6% (-14% a -4%)
+   ▶ valor ≥5%
+      Exploración:  1684 picks · win 58% · cuota 1.84 · +0.7 u · YIELD +0.0% (-4% a +4%)
+      Confirmación: 782 picks · win 52% · cuota 1.84 · -76.9 u · YIELD -9.8% (-15% a -4%)
+   ▶ valor ≥8%
+      Exploración:  1468 picks · win 58% · cuota 1.85 · +11.4 u · YIELD +0.8% (-3% a +5%)
+      Confirmación: 618 picks · win 52% · cuota 1.86 · -65.2 u · YIELD -10.5% (-17% a -4%)
+   ▶ valor ≥12%
+      Exploración:  1156 picks · win 57% · cuota 1.88 · +4.4 u · YIELD +0.4% (-4% a +5%)
+      Confirmación: 436 picks · win 50% · cuota 1.88 · -50.8 u · YIELD -11.7% (-19% a -4%)
+   ▶ valor ≥20%
+      Exploración:  631 picks · win 55% · cuota 2.00 · +14.5 u · YIELD +2.3% (-4% a +9%)
+      Confirmación: 202 picks · win 45% · cuota 1.99 · -36.8 u · YIELD -18.2% (-29% a -7%)
+   Ningún umbral gana con claridad en la exploración.
+
+CONCLUSIÓN: nada confirmado del todo; a vigilar: Elo ve ≥8 más y además favorito
