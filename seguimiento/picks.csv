@@ -199,8 +199,8 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-10,18:35,FUERTE,Cyrus M.,Pesout P.,0.461,2.17,2.39,2.82,2.75,0.268,2.66,0.226,FUERTE,2.75,1,perdido,0-3,-1,-1,2026-11-10 16:49,766,finished,17531460
 2026-11-10,19:00,SIN CUOTA,Kos K.,Matachowski B.,0.561,1.78,1.96,2.32,,,,,,,2,perdido,2-3,,,2026-11-10 16:55,767,finished,17533775
 2026-11-10,19:25,APUESTA,Volek J.,Moravec P.,0.582,1.72,1.89,2.23,1.83,0.065,1.9,0.106,FUERTE,1.83,1,ganado,3-1,0.83,0.9,2026-11-10 17:20,769,finished,17533070
-2026-11-10,22:10,FLOJO,Przybyla J.,Kus O.,0.485,2.06,2.27,2.68,2.0,-0.03,,,,,1,pendiente,,,,2026-11-10 20:05,788,notstarted,17531288
-2026-11-10,22:15,APUESTA,Fojtik T.,Cizek A.,0.524,1.91,2.1,2.48,2.0,0.047,,,,,1,pendiente,,,,2026-11-10 20:21,789,notstarted,17531283
-2026-11-10,22:35,APUESTA,Jonas R.,Vidourek J.,0.495,2.02,2.22,2.63,2.1,0.039,,,,,1,pendiente,,,,2026-11-10 20:32,790,notstarted,17531287
+2026-11-10,22:10,FLOJO,Przybyla J.,Kus O.,0.485,2.06,2.27,2.68,2.0,-0.03,2.15,0.043,APUESTA,,1,pendiente,,,,2026-11-10 20:05,788,inprogress,17531288
+2026-11-10,22:15,APUESTA,Fojtik T.,Cizek A.,0.524,1.91,2.1,2.48,2.0,0.047,2.19,0.148,FUERTE,,1,pendiente,,,,2026-11-10 20:21,789,notstarted,17531283
+2026-11-10,22:35,APUESTA,Jonas R.,Vidourek J.,0.495,2.02,2.22,2.63,2.1,0.039,2.34,0.158,FUERTE,,1,pendiente,,,,2026-11-10 20:32,790,notstarted,17531287
 2026-11-10,22:50,FLOJO,Hendrych J.,Cousin J.,0.519,1.93,2.12,2.5,1.57,-0.185,,,,,1,pendiente,,,,2026-11-10 20:49,791,notstarted,17531577
 2026-11-10,23:25,FLOJO,Kosacky A.,Kulisek M.,0.567,1.76,1.94,2.29,1.53,-0.132,,,,,1,pendiente,,,,2026-11-10 21:20,792,notstarted,17531582
