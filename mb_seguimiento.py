@@ -1,5 +1,6 @@
 """
-mb_seguimiento.py - Bot de seguimiento de la REGLA EN CALIENTE en TT Cup.
+mb_seguimiento.py - Bot de seguimiento: REGLA EN CALIENTE en TT Cup y, en
+prueba, dos señales de ELITE SERIES (favorito en caliente / Elo mejor que la casa).
 
 Cada ejecucion (GitHub la lanza cada 5 minutos y dura ~14 minutos, con una
 vuelta por minuto):
@@ -42,7 +43,11 @@ from mb_api import TZ, parse, day_events, odds_raw, odds_from
 from mb_backtest import (Estado, vector, entrenar, predecir, MATCH_LEN, CUTOFF,
                          MIN_PLAYED, MIN_ODD, MAX_ODD)
 
-LID = os.getenv("TOURNAMENT", "15005")
+LIGAS_SEG = [x.strip() for x in os.getenv("LIGAS", "15005,19041").split(",") if x.strip()]
+TTCUP, ELITE = "15005", "19041"
+NOMBRE = {TTCUP: "TT Cup", ELITE: "Elite Series"}
+ELO_DIF = 0.08            # Elite: el Elo ve al favorito ≥8 puntos mejor que la casa
+REVISAR_CUOTA = 15 * 60   # Elite: si aun no hay cuota, se vuelve a mirar cada 15 min
 TRAIN_DAYS = int(os.getenv("TRAIN_DAYS", "120"))
 WARMUP_DAYS = int(os.getenv("WARMUP_DAYS", "45"))
 AVISO = int(os.getenv("AVISO_MIN", "125")) * 60
@@ -57,7 +62,7 @@ DIR = "seguimiento"
 CACHE = os.path.join(DIR, "cache")
 PICKS = os.path.join(DIR, "picks.csv")
 ESTADO = os.path.join(DIR, "estado.json")
-COLS = ["fecha", "hora", "nivel", "pick", "rival", "prob", "cuota_minima", "cuota_fuerte",
+COLS = ["liga", "fecha", "hora", "nivel", "pick", "rival", "prob", "cuota_minima", "cuota_fuerte",
         "cuota_sospecha", "cuota_2h", "valor_2h", "cuota_betcris", "valor_betcris",
         "decision_betcris", "cuota_final", "pick_jugados_hoy", "resultado", "marcador",
         "beneficio", "beneficio_betcris", "aviso", "msg", "estado_sofa", "id"]
@@ -68,16 +73,20 @@ NIVEL_TXT = {"SOSPECHOSO": "⚠️ SOSPECHOSO (valor >30%, desconfiar)",
 
 
 # ===================================================================== datos
-def fetch_day(d, now):
+def cache_dir(lid):
+    return CACHE if lid == TTCUP else os.path.join(DIR, f"cache_{lid}")
+
+
+def fetch_day(d, now, lid=TTCUP):
     """Partidos de un dia. Solo se guarda en cache cuando el dia ya ha acabado
     hace mas de 3 h (para no guardar un dia a medias)."""
-    path = os.path.join(CACHE, f"{d}.json")
+    path = os.path.join(cache_dir(lid), f"{d}.json")
     if os.path.exists(path):
         with open(path) as f:
             return json.load(f)
     for intento in range(4):
         try:
-            evs = day_events(LID, d)
+            evs = day_events(lid, d)
             break
         except Exception as ex:
             print("WARN dia", d, ex)
@@ -86,19 +95,19 @@ def fetch_day(d, now):
         return []
     fin_dia = datetime.strptime(d, "%Y-%m-%d").replace(tzinfo=TZ) + timedelta(days=1, hours=3)
     if now >= fin_dia:
-        os.makedirs(CACHE, exist_ok=True)
+        os.makedirs(cache_dir(lid), exist_ok=True)
         with open(path, "w") as f:
             json.dump(evs, f)
         time.sleep(PACE)
     return evs
 
 
-def cargar(now):
+def cargar(now, lid=TTCUP):
     hoy = now.date()
     evs = {}
     d = hoy - timedelta(days=TRAIN_DAYS + WARMUP_DAYS)
     while d <= hoy + timedelta(days=1):
-        for e in fetch_day(d.strftime("%Y-%m-%d"), now):
+        for e in fetch_day(d.strftime("%Y-%m-%d"), now, lid):
             evs[str(e.get("id"))] = e
         d += timedelta(days=1)
     return evs
@@ -113,7 +122,7 @@ def cuotas(mid):
 
 
 # ============================================================ caracteristicas
-def calcular(evs, now):
+def calcular(evs, now, todos=False):
     """Entrenamiento (partidos terminados) y candidatos (partidos por empezar)."""
     ms = [p for p in (parse(e) for e in evs.values()) if p]
     fin = sorted([m for m in ms if m["final"]], key=lambda x: x["t"] + MATCH_LEN)
@@ -142,7 +151,7 @@ def calcular(evs, now):
         else:
             f["caliente"] = ("a" if f["hoy_j_a"] > 0 and f["hoy_j_b"] == 0 else
                              "b" if f["hoy_j_b"] > 0 and f["hoy_j_a"] == 0 else None)
-            if f["caliente"]:
+            if f["caliente"] or todos:
                 cands.append(f)
     return train, cands
 
@@ -278,7 +287,7 @@ def nuevos_picks(cands, mod, picks, st, now):
                f"↩️ Responde con tu cuota de BetCris para apuntarla\n"
                f"🧪 Seguimiento")
         msg = tg(txt)
-        picks.append(dict(fecha=dt.strftime("%Y-%m-%d"), hora=dt.strftime("%H:%M"),
+        picks.append(dict(liga="TT Cup", fecha=dt.strftime("%Y-%m-%d"), hora=dt.strftime("%H:%M"),
                           nivel=nv, pick=pick, rival=rival, prob=round(p, 3),
                           cuota_minima=c_apuesta, cuota_fuerte=c_fuerte,
                           cuota_sospecha=c_sospecha,
@@ -288,15 +297,84 @@ def nuevos_picks(cands, mod, picks, st, now):
         ya.add(f["id"])
 
 
+def nuevos_picks_elite(cands, picks, st, now):
+    """Elite Series (seguimiento): dos señales debiles del historico (+3-5%):
+       🔥 A: el favorito ya ha jugado hoy y el rival todavia no
+       📈 B: el favorito, y el Elo le ve ≥8 puntos mejor de lo que dice la cuota
+       Se apuesta si BetCris paga al menos lo que pagaba Sofascore."""
+    revisados = st.setdefault("elite_revisados", {})
+    ya = {p["id"] for p in picks}
+    ahora = time.time()
+    for f in sorted(cands, key=lambda x: x["t"]):
+        if f["id"] in ya or ahora - revisados.get(f["id"], 0) < REVISAR_CUOTA:
+            continue
+        revisados[f["id"]] = ahora
+        o = cuotas(f["id"])
+        time.sleep(PACE)
+        if not o:
+            continue
+        ca, cb = o[1], o[3]
+        for lado, c, co in (("a", ca, cb), ("b", cb, ca)):
+            if not (MIN_ODD <= c <= MAX_ODD) or c >= co:
+                continue                                  # solo favoritos
+            pm = (1 / c) / (1 / c + 1 / co)
+            pe = f["p_elo"] if lado == "a" else 1 - f["p_elo"]
+            sen_a = f["caliente"] == lado
+            sen_b = pe - pm >= ELO_DIF
+            if not (sen_a or sen_b):
+                continue
+            pick, rival = (f["a"], f["b"]) if lado == "a" else (f["b"], f["a"])
+            jh = f["hoy_j_a"] if lado == "a" else f["hoy_j_b"]
+            dt = datetime.fromtimestamp(f["t"], TZ)
+            senales = []
+            if sen_a:
+                senales.append(f"🔥 ya ha jugado {jh} hoy, rival aún no")
+            if sen_b:
+                senales.append(f"📈 el Elo le ve {(pe - pm) * 100:.0f} puntos mejor que la casa")
+            txt = (f"🇵🇱 PICK ELITE SERIES · {dt:%H:%M}\n"
+                   f"✅ {pick.upper()}\n"
+                   f"vs {rival}\n"
+                   f"\n"
+                   f"💰 APUESTA si BetCris ≥ {c:.2f}\n"
+                   f"❌ menos de {c:.2f} → no apostar\n"
+                   f"\n"
+                   + "\n".join(senales) + "\n"
+                   f"Sofascore: {c:.2f} (favorito)\n"
+                   f"↩️ Responde con tu cuota de BetCris para apuntarla\n"
+                   f"🧪 Seguimiento · señal débil, sin dinero hasta confirmarla")
+            msg = tg(txt)
+            picks.append(dict(liga="Elite Series", fecha=dt.strftime("%Y-%m-%d"),
+                              hora=dt.strftime("%H:%M"),
+                              nivel="A+B" if sen_a and sen_b else ("A" if sen_a else "B"),
+                              pick=pick, rival=rival, prob=round(pm, 3), cuota_minima=c,
+                              cuota_2h=c, valor_2h=0, pick_jugados_hoy=jh,
+                              aviso=now.strftime("%Y-%m-%d %H:%M"), resultado="pendiente",
+                              msg=msg or "", id=f["id"]))
+            ya.add(f["id"])
+            break
+    for k in [k for k, v in revisados.items() if ahora - v > 86400]:
+        del revisados[k]
+
+
+def es_elite(p):
+    return p.get("liga") == "Elite Series"
+
+
 def calc_betcris(p):
     """Decision y beneficio con la cuota de BetCris apuntada."""
     cb = num(p.get("cuota_betcris"))
     pr = num(p.get("prob"))
     if not cb or not pr:
         return
-    v = pr * cb - 1
-    p["valor_betcris"] = round(v, 3)
-    p["decision_betcris"] = nivel_valor(v)
+    if es_elite(p):
+        cm = num(p.get("cuota_minima")) or MIN_ODD
+        v = cb / cm - 1
+        p["valor_betcris"] = round(v, 3)
+        p["decision_betcris"] = "APUESTA" if cb >= cm else "FLOJO"
+    else:
+        v = pr * cb - 1
+        p["valor_betcris"] = round(v, 3)
+        p["decision_betcris"] = nivel_valor(v)
     if p.get("resultado") == "ganado":
         p["beneficio_betcris"] = round(cb - 1, 2)
     elif p.get("resultado") == "perdido":
@@ -350,8 +428,10 @@ def leer_respuestas(picks, st):
             del_dia = [p for p in picks if p["fecha"] == hoy]
             pend = sum(1 for p in del_dia if p.get("resultado") == "pendiente")
             ult = max((p.get("aviso", "") for p in picks), default="")
+            n_el = sum(1 for p in del_dia if es_elite(p))
             tg(f"✅ Funcionando · comprobado a las {ahora:%H:%M}\n"
-               f"Hoy: {len(del_dia)} avisos ({pend} pendientes de resultado)\n"
+               f"Hoy: {len(del_dia)} avisos (TT Cup {len(del_dia) - n_el} · Elite {n_el}) · "
+               f"{pend} pendientes de resultado\n"
                f"Último aviso: {ult[11:] if ult.startswith(hoy) else ult or '—'}\n"
                f"Si no llegan avisos es porque ahora no hay partidos que cumplan la regla.", mid)
             continue
@@ -380,8 +460,12 @@ def leer_respuestas(picks, st):
             continue
         pk["cuota_betcris"] = cb
         calc_betcris(pk)
-        t = (f"📝 Apuntado {pk['pick'].upper()} ({pk['hora']}) · BetCris {cb:.2f}\n"
-             f"Valor {float(pk['valor_betcris']) * 100:+.0f}% → {NIVEL_TXT[pk['decision_betcris']]}")
+        if es_elite(pk):
+            t = (f"📝 Apuntado {pk['pick'].upper()} (Elite {pk['hora']}) · BetCris {cb:.2f}\n"
+                 f"Mínima {float(pk['cuota_minima']):.2f} → {NIVEL_TXT[pk['decision_betcris']]}")
+        else:
+            t = (f"📝 Apuntado {pk['pick'].upper()} ({pk['hora']}) · BetCris {cb:.2f}\n"
+                 f"Valor {float(pk['valor_betcris']) * 100:+.0f}% → {NIVEL_TXT[pk['decision_betcris']]}")
         if pk.get("resultado") in ("ganado", "perdido", "anulado"):
             t += "\n" + texto_resultado(pk)
         tg(t, mid)
@@ -465,6 +549,16 @@ def bloque(rows):
             f"  ❌ No apostar: {so(('FLOJO',))}\n")
 
 
+def bloque_elite(rows):
+    con_bc = [r for r in rows if r.get("decision_betcris")]
+    return (f"🎯 Con tus cuotas BetCris ({len(con_bc)} apuntados):\n"
+            f"  💰 Apuestas: {resumen([r for r in con_bc if r['decision_betcris'] == 'APUESTA'], 'beneficio_betcris')}\n"
+            f"  ❌ No apostar: {resumen([r for r in con_bc if r['decision_betcris'] == 'FLOJO'], 'beneficio_betcris')}\n"
+            f"📊 Todos los avisos, cuota Sofascore: {resumen(rows)}\n"
+            f"  🔥 señal A (en caliente): {resumen([r for r in rows if 'A' in r.get('nivel', '')])}\n"
+            f"  📈 señal B (Elo): {resumen([r for r in rows if 'B' in r.get('nivel', '')])}\n")
+
+
 def resumen_dia(picks, st, now):
     """Resumen a partir de las 23:45; si esa noche no hubo ejecucion, de madrugada."""
     if now.hour == 23 and now.minute >= 45:
@@ -476,15 +570,22 @@ def resumen_dia(picks, st, now):
     hoy = dia.strftime("%Y-%m-%d")
     if st.get("resumen", "") >= hoy:
         return
-    del_dia = [p for p in picks if p["fecha"] == hoy]
+    tt = [p for p in picks if not es_elite(p)]
+    del_dia = [p for p in tt if p["fecha"] == hoy]
     pend = sum(1 for p in del_dia if p["resultado"] == "pendiente")
     sin = sum(1 for p in del_dia if p["resultado"] != "pendiente" and not p.get("cuota_2h"))
     txt = (f"📋 RESUMEN TT CUP · {dia:%d/%m} · {len(del_dia)} avisos\n" + bloque(del_dia)
            + (f"⏳ Pendientes: {pend}\n" if pend else "")
            + (f"(sin cuota en Sofascore: {sin}, solo cuentan si apuntaste BetCris)\n" if sin else "")
-           + f"\n📈 ACUMULADO desde {st.get('inicio', hoy)} · {len(picks)} avisos\n" + bloque(picks)
+           + f"\n📈 ACUMULADO desde {st.get('inicio', hoy)} · {len(tt)} avisos\n" + bloque(tt)
            + "(1 u por pick)")
     tg(txt)
+    el = [p for p in picks if es_elite(p)]
+    if el:
+        el_dia = [p for p in el if p["fecha"] == hoy]
+        tg(f"🇵🇱 RESUMEN ELITE SERIES · {dia:%d/%m} · {len(el_dia)} avisos\n" + bloque_elite(el_dia)
+           + f"\n📈 ACUMULADO desde {st.get('inicio_elite', hoy)} · {len(el)} avisos\n"
+           + bloque_elite(el) + "(1 u por pick · señal en prueba, sin dinero)")
     st["resumen"] = hoy
 
 
@@ -495,6 +596,10 @@ def main():
     st = leer_estado()
     picks = leer_picks()
     for p in picks:                          # picks de versiones anteriores
+        if not p.get("liga"):
+            p["liga"] = "TT Cup"
+        if es_elite(p):
+            continue
         if p.get("nivel") == "REGLA" or not p.get("nivel"):
             p["nivel"] = nivel_de(p)
         if not p.get("cuota_sospecha") and num(p.get("prob")):
@@ -503,6 +608,14 @@ def main():
             p["cuota_sospecha"] = round((1 + VALOR_SOSPECHA) / float(p["prob"]), 2)
     if not st.get("inicio"):
         st["inicio"] = now.strftime("%Y-%m-%d")
+    if ELITE in LIGAS_SEG and not st.get("inicio_elite"):
+        st["inicio_elite"] = now.strftime("%Y-%m-%d")
+        tg("🇵🇱 Añadido el seguimiento de ELITE SERIES (sin dinero, en prueba)\n"
+           "Solo favoritos, con una de estas dos señales:\n"
+           "🔥 ya ha jugado hoy y el rival aún no\n"
+           "📈 el Elo le ve mejor de lo que dice la cuota\n"
+           "💰 Se apuesta si BetCris paga al menos la cuota del aviso.\n"
+           "↩️ Responde con tu cuota igual que en TT Cup. Resumen aparte cada noche.")
     if not st.get("v2"):
         st["v2"] = True
         tg("🟢 Seguimiento TT Cup actualizado\n"
@@ -519,14 +632,24 @@ def main():
         t0 = time.time()
         now = datetime.now(TZ)
         leer_respuestas(picks, st)
-        evs = cargar(now)
-        train, cands = calcular(evs, now)
-        print(f"{now:%H:%M} · {len(evs)} partidos · {len(train)} para entrenar · {len(cands)} candidatos")
-        if mod is None and len(train) >= 500:
-            mod = entrenar([vector(f) for f in train], [f["gana_a"] for f in train])
-        if mod is not None and cands:
-            nuevos_picks(cands, mod, picks, st, now)
-        corr = resolver(picks, evs, now)
+        todos_evs = {}
+        for lid in LIGAS_SEG:
+            try:
+                evs = cargar(now, lid)
+                todos_evs.update(evs)
+                train, cands = calcular(evs, now, todos=(lid == ELITE))
+                print(f"{now:%H:%M} · {NOMBRE.get(lid, lid)} · {len(evs)} partidos · "
+                      f"{len(train)} para entrenar · {len(cands)} candidatos")
+                if lid == TTCUP:
+                    if mod is None and len(train) >= 500:
+                        mod = entrenar([vector(f) for f in train], [f["gana_a"] for f in train])
+                    if mod is not None and cands:
+                        nuevos_picks(cands, mod, picks, st, now)
+                elif lid == ELITE and cands:
+                    nuevos_picks_elite(cands, picks, st, now)
+            except Exception as ex:          # un fallo en una liga no para la otra
+                print("ERROR liga", lid, ex)
+        corr = resolver(picks, todos_evs, now)
         if corr:
             tg(f"🔧 Corregidos {corr} picks que estaban como anulados: ya tienen su "
                "resultado real y cuentan en el resumen.")
