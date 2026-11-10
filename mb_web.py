@@ -12,7 +12,7 @@ import urllib.parse
 import urllib.request
 
 BASE = os.getenv("WEB_BASE", "https://tt.league-pro.com").rstrip("/")
-MAX = int(os.getenv("WEB_MAX", "25"))
+MAX = int(os.getenv("WEB_MAX", "40"))
 OUT = "web"
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36",
       "Accept-Language": "es,en;q=0.8"}
@@ -34,7 +34,7 @@ def nombre(url):
 
 def main():
     os.makedirs(OUT, exist_ok=True)
-    vistos, cola, indice = set(), [BASE + "/"], []
+    vistos, cola, indice = set(), [BASE + "/en/tournaments", BASE + "/en/players"], []
     while cola and len(vistos) < MAX:
         url = cola.pop(0)
         if url in vistos:
@@ -54,8 +54,14 @@ def main():
             u = urllib.parse.urljoin(final, h)
             if urllib.parse.urlparse(u).netloc != urllib.parse.urlparse(BASE).netloc:
                 continue
+            if "/_nuxt/" in u or u.endswith((".css", ".js", ".png", ".jpg", ".svg", ".ico")):
+                continue                     # ficheros de la web, no datos
             if any(k in u.lower() for k in CLAVES) and u not in vistos and u not in cola:
-                cola.append(u)
+                # primero las paginas de torneos concretos (tienen el rating antes/despues)
+                if re.search(r"/tournaments/\d+", u):
+                    cola.insert(0, u)
+                else:
+                    cola.append(u)
         time.sleep(1.5)
     with open(os.path.join(OUT, "indice.txt"), "w") as fh:
         fh.write("\n".join(indice) + "\n")
