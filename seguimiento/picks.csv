@@ -195,3 +195,5 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-10,18:10,FUERTE,Coufal O.,Lasota L.,0.562,1.78,1.96,2.31,2.2,0.237,,,,,1,pendiente,,,,2026-11-10 16:05,761,notstarted,17531515
 2026-11-10,18:15,FUERTE,Zaskodny M.,Sikora F.,0.448,2.23,2.46,2.9,2.5,0.12,,,,,1,pendiente,,,,2026-11-10 16:10,762,notstarted,17531289
 2026-11-10,18:30,SIN CUOTA,Wiekiera A.,Toborek S.,0.626,1.6,1.76,2.08,,,,,,,1,pendiente,,,,2026-11-10 16:25,763,notstarted,17533615
+2026-11-10,18:50,SOSPECHOSO,Kolbusovsky M.,Cesak M.,0.399,2.51,2.76,3.26,3.4,0.356,,,,,4,pendiente,,,,2026-11-10 16:45,765,notstarted,17533069
+2026-11-10,18:35,FUERTE,Cyrus M.,Pesout P.,0.461,2.17,2.39,2.82,2.75,0.268,,,,,1,pendiente,,,,2026-11-10 16:49,766,notstarted,17531460
