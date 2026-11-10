@@ -203,4 +203,4 @@ fecha,hora,nivel,pick,rival,prob,cuota_minima,cuota_fuerte,cuota_sospecha,cuota_
 2026-11-10,22:15,APUESTA,Fojtik T.,Cizek A.,0.524,1.91,2.1,2.48,2.0,0.047,2.19,0.148,FUERTE,2.0,1,ganado,3-0,1.0,1.19,2026-11-10 20:21,789,finished,17531283
 2026-11-10,22:35,APUESTA,Jonas R.,Vidourek J.,0.495,2.02,2.22,2.63,2.1,0.039,2.34,0.158,FUERTE,2.1,1,ganado,3-0,1.1,1.34,2026-11-10 20:32,790,finished,17531287
 2026-11-10,22:50,FLOJO,Hendrych J.,Cousin J.,0.519,1.93,2.12,2.5,1.57,-0.185,1.75,-0.092,FLOJO,1.57,1,ganado,3-1,0.57,0.75,2026-11-10 20:49,791,finished,17531577
-2026-11-10,23:25,FLOJO,Kosacky A.,Kulisek M.,0.567,1.76,1.94,2.29,1.53,-0.132,1.64,-0.07,FLOJO,,1,pendiente,,,,2026-11-10 21:20,792,notstarted,17531582
+2026-11-10,23:25,FLOJO,Kosacky A.,Kulisek M.,0.567,1.76,1.94,2.29,1.53,-0.132,1.64,-0.07,FLOJO,,1,pendiente,,,,2026-11-10 21:20,792,inprogress,17531582
