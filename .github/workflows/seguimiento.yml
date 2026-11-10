@@ -18,6 +18,20 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
+      # La siguiente vuelta se deja en cola NADA MAS EMPEZAR: si esta vuelta se
+      # cuelga o falla, la siguiente arranca igual y la cadena no se rompe.
+      - name: Dejar en cola la siguiente vuelta
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in 1 2 3; do
+            n=$(gh run list -R "${{ github.repository }}" --workflow seguimiento.yml --status queued --json databaseId -q 'length' 2>/dev/null || echo 0)
+            p=$(gh run list -R "${{ github.repository }}" --workflow seguimiento.yml --status pending --json databaseId -q 'length' 2>/dev/null || echo 0)
+            if [ "$n" != "0" ] || [ "$p" != "0" ]; then echo "ya hay una en cola"; break; fi
+            gh workflow run seguimiento.yml --ref main -R "${{ github.repository }}" && break
+            sleep 10
+          done || true
+
       # siempre la version mas reciente de main, con el picks.csv al dia
       - uses: actions/checkout@v4
         with:
@@ -34,7 +48,9 @@ jobs:
       - name: Recuperar historico
         uses: actions/cache/restore@v4
         with:
-          path: seguimiento/cache
+          path: |
+            seguimiento/cache
+            seguimiento/cache_19041
           key: seg-${{ github.run_id }}
           restore-keys: seg-
 
@@ -53,8 +69,10 @@ jobs:
         uses: actions/cache/save@v4
         continue-on-error: true
         with:
-          path: seguimiento/cache
-          key: seg-${{ hashFiles('seguimiento/cache/*.json') }}
+          path: |
+            seguimiento/cache
+            seguimiento/cache_19041
+          key: seg-${{ hashFiles('seguimiento/cache/*.json', 'seguimiento/cache_19041/*.json') }}
 
       - name: Guardar picks
         if: always()
@@ -71,13 +89,15 @@ jobs:
             git push || true
           fi
 
-      # GitHub no siempre respeta la programacion de cada 5 minutos: al acabar,
-      # cada vuelta lanza la siguiente. Si algo ha fallado, espera 5 min antes.
-      # Para pararlo del todo: Actions -> Seguimiento TT Cup -> ... -> Disable workflow
-      - name: Lanzar la siguiente vuelta
+      # Red de seguridad: si por lo que sea no quedo ninguna en cola, lanzarla ahora
+      - name: Comprobar que queda la siguiente vuelta
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if [ "${{ steps.seg.outcome }}" != "success" ]; then sleep 300; fi
-          gh workflow run seguimiento.yml --ref main -R "${{ github.repository }}" || true
+          if [ "${{ steps.seg.outcome }}" != "success" ]; then sleep 120; fi
+          n=$(gh run list -R "${{ github.repository }}" --workflow seguimiento.yml --status queued --json databaseId -q 'length' 2>/dev/null || echo 0)
+          p=$(gh run list -R "${{ github.repository }}" --workflow seguimiento.yml --status pending --json databaseId -q 'length' 2>/dev/null || echo 0)
+          if [ "$n" = "0" ] && [ "$p" = "0" ]; then
+            gh workflow run seguimiento.yml --ref main -R "${{ github.repository }}" || true
+          fi
