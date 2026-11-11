@@ -223,12 +223,12 @@ TT Cup,tt,2026-11-11,18:35,FUERTE,Cyrus M.,Pesout P.,0.424,2.36,2.59,3.07,,3.0,0
 Elite Series,elite,2026-11-11,17:00,B,Perzynski P.,Wozniak J.,0.646,1.44,,,,1.44,0,1.52,0.056,APUESTA,1.44,0,perdido,0-3,-1,-1,2026-11-11 16:34,5,finished,17539516
 TT Cup,tt,2026-11-11,18:50,FUERTE,Kubat P.,Cerveny Jr T.,0.456,2.19,2.41,2.85,,2.75,0.254,2.27,0.035,APUESTA,2.75,1,ganado,3-0,1.75,1.27,2026-11-11 16:48,894,finished,17538596
 TT Cup,tt,2026-11-11,19:00,SIN CUOTA,Guzy K.,Odelski P.,0.549,1.82,2.01,2.37,,,,1.83,0.005,APUESTA,,1,ganado,3-0,,0.83,2026-11-11 16:55,896,finished,17539445
-TT Cup,tt,2026-11-11,19:30,SIN CUOTA,Duch A.,Kos P.,0.662,1.51,1.66,1.96,,,,1.42,-0.06,FLOJO,,2,pendiente,,,,2026-11-11 17:25,897,notstarted,17539446
-TT Cup,tt,2026-11-11,19:25,FUERTE,Strejc F.,Flicek T.,0.616,1.62,1.78,2.11,,1.83,0.128,1.65,0.016,APUESTA,,1,pendiente,,,,2026-11-11 17:26,898,notstarted,17538590
+TT Cup,tt,2026-11-11,19:30,SIN CUOTA,Duch A.,Kos P.,0.662,1.51,1.66,1.96,,,,1.42,-0.06,FLOJO,,2,pendiente,,,,2026-11-11 17:25,897,inprogress,17539446
+TT Cup,tt,2026-11-11,19:25,FUERTE,Strejc F.,Flicek T.,0.616,1.62,1.78,2.11,,1.83,0.128,1.65,0.016,APUESTA,1.83,1,ganado,3-0,0.83,0.65,2026-11-11 17:26,898,finished,17538590
 Elite Series,elite,2026-11-11,20:00,A,Urban W.,Fomin Y.,0.613,1.25,,,2.0,,,1.9,0.52,APUESTA,,1,pendiente,,,,2026-11-11 17:55,6,notstarted,17539553
-Elite Series,elite,2026-11-11,20:05,A,Brud S.,Linek A.,0.636,1.25,,,2.0,,,,,,,1,pendiente,,,,2026-11-11 18:00,11,notstarted,17539554
-Elite Series,elite,2026-11-11,20:10,A,Marcin Kowalczyk,Strus P.,0.568,1.25,,,2.0,,,,,,,1,pendiente,,,,2026-11-11 18:05,12,notstarted,17539555
-Elite Series,elite,2026-11-11,20:10,B,Zielinski M.,Staniczek A.,0.731,1.29,,,,1.29,0,,,,,0,pendiente,,,,2026-11-11 18:05,13,notstarted,17539556
-Elite Series,elite,2026-11-11,20:30,B,Mucha G.,Skupinski A.,0.688,1.36,,,,1.36,0,,,,,1,pendiente,,,,2026-11-11 18:25,14,notstarted,17539560
-TT Cup,tt,2026-11-11,20:35,APUESTA,Vidourek J.,Chmelicek M.,0.581,1.72,1.89,2.24,,1.83,0.064,,,,,3,pendiente,,,,2026-11-11 18:30,910,notstarted,17538404
-TT Cup,tt,2026-11-11,21:05,FUERTE,Vidourek J.,Martin J.,0.458,2.18,2.4,2.84,,2.5,0.146,,,,,3,pendiente,,,,2026-11-11 19:00,912,notstarted,17538411
+Elite Series,elite,2026-11-11,20:05,A,Brud S.,Linek A.,0.636,1.25,,,2.0,,,1.62,0.296,APUESTA,,1,pendiente,,,,2026-11-11 18:00,11,notstarted,17539554
+Elite Series,elite,2026-11-11,20:10,A,Marcin Kowalczyk,Strus P.,0.568,1.25,,,2.0,,,2.0,0.6,APUESTA,,1,pendiente,,,,2026-11-11 18:05,12,notstarted,17539555
+Elite Series,elite,2026-11-11,20:10,B,Zielinski M.,Staniczek A.,0.731,1.29,,,,1.29,0,1.2,-0.07,FLOJO,,0,pendiente,,,,2026-11-11 18:05,13,notstarted,17539556
+Elite Series,elite,2026-11-11,20:30,B,Mucha G.,Skupinski A.,0.688,1.36,,,,1.36,0,1.39,0.022,APUESTA,,1,pendiente,,,,2026-11-11 18:25,14,notstarted,17539560
+TT Cup,tt,2026-11-11,20:35,APUESTA,Vidourek J.,Chmelicek M.,0.581,1.72,1.89,2.24,,1.83,0.064,1.78,0.034,APUESTA,,3,pendiente,,,,2026-11-11 18:30,910,notstarted,17538404
+TT Cup,tt,2026-11-11,21:05,FUERTE,Vidourek J.,Martin J.,0.458,2.18,2.4,2.84,,2.5,0.146,2.21,0.012,APUESTA,,3,pendiente,,,,2026-11-11 19:00,912,notstarted,17538411
