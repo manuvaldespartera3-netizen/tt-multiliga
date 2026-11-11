@@ -122,7 +122,7 @@ def cuotas(mid):
 
 
 # ============================================================ caracteristicas
-def calcular(evs, now, todos=False):
+def calcular(evs, now, incluir_todos=False):
     """Entrenamiento (partidos terminados) y candidatos (partidos por empezar)."""
     ms = [p for p in (parse(e) for e in evs.values()) if p]
     fin = sorted([m for m in ms if m["final"]], key=lambda x: x["t"] + MATCH_LEN)
@@ -151,7 +151,7 @@ def calcular(evs, now, todos=False):
         else:
             f["caliente"] = ("a" if f["hoy_j_a"] > 0 and f["hoy_j_b"] == 0 else
                              "b" if f["hoy_j_b"] > 0 and f["hoy_j_a"] == 0 else None)
-            if f["caliente"] or todos:
+            if f["caliente"] or incluir_todos:   # TT Cup: solo la regla · Elite: todos
                 cands.append(f)
     return train, cands
 
@@ -252,6 +252,8 @@ def nuevos_picks(cands, mod, picks, st, now):
         if f["id"] in ya:
             continue
         lado = f["caliente"]
+        if lado not in ("a", "b"):
+            continue                       # seguridad: en TT Cup solo picks de la regla
         p = float(predecir(mod, [vector(f)])[0])
         if lado == "b":
             p = 1 - p
@@ -606,6 +608,16 @@ def main():
             p["cuota_minima"] = max(MIN_ODD, round(1 / float(p["prob"]), 2))
             p["cuota_fuerte"] = max(MIN_ODD, round((1 + VALOR_FUERTE) / float(p["prob"]), 2))
             p["cuota_sospecha"] = round((1 + VALOR_SOSPECHA) / float(p["prob"]), 2)
+    if not st.get("limpieza_1111"):
+        malos = [p for p in picks if not es_elite(p) and str(p.get("pick_jugados_hoy")) == "0"
+                 and p.get("aviso", "") >= "2026-11-10 23:00"]
+        if malos:
+            ids = {p["id"] for p in malos}
+            picks[:] = [p for p in picks if p["id"] not in ids or es_elite(p)]
+            tg(f"🧹 Borrados {len(malos)} avisos de TT Cup enviados por error desde anoche "
+               "(no cumplían la regla: «ya ha jugado 0 hoy»). Ya está corregido y no "
+               "cuentan en las estadísticas.")
+        st["limpieza_1111"] = True
     if not st.get("inicio"):
         st["inicio"] = now.strftime("%Y-%m-%d")
     if ELITE in LIGAS_SEG and not st.get("inicio_elite"):
@@ -637,7 +649,7 @@ def main():
             try:
                 evs = cargar(now, lid)
                 todos_evs.update(evs)
-                train, cands = calcular(evs, now, todos=(lid == ELITE))
+                train, cands = calcular(evs, now, incluir_todos=(lid == ELITE))
                 print(f"{now:%H:%M} · {NOMBRE.get(lid, lid)} · {len(evs)} partidos · "
                       f"{len(train)} para entrenar · {len(cands)} candidatos")
                 if lid == TTCUP:
