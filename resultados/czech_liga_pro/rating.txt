@@ -2,6 +2,66 @@
 Buscar: 14/06 – 22/09 · Confirmar (no usado para buscar): 22/09 – 10/11
 Rating = el de la web oficial ANTES de cada torneo · cuota de Sofascore · 1 u por pick
 
-0 torneos de la web · 25308 partidos de Sofascore · unidos con su rating: 0 (0%)
-Con cuota: 0
-❌ Muy pocos partidos unidos con cuota para sacar conclusiones.
+3711 torneos de la web · 25308 partidos de Sofascore · unidos con su rating: 23083 (91%)
+Con cuota: 5051
+
+🎯 PRECISIÓN en los meses de confirmación (menos es mejor)
+   Casa 0.6742 (57.3% aciertos) · Solo rating 0.6762 (59.7%) · Rating + casa 0.6706
+   ✅ el rating AÑADE información a la cuota
+
+🤖 SOLO RATING
+   ▶ valor ≥3%
+      Buscar:    2019 picks · win 44% · cuota 2.30 · -69.7 u · YIELD -3.5% (-8% a +1%)
+      Confirmar: 587 picks · win 46% · cuota 2.35 · +20.6 u · YIELD +3.5% (-4% a +11%)
+   ▶ valor ≥5%
+      Buscar:    1752 picks · win 42% · cuota 2.35 · -80.4 u · YIELD -4.6% (-9% a -0%)
+      Confirmar: 514 picks · win 46% · cuota 2.39 · +27.6 u · YIELD +5.4% (-3% a +14%)
+   ▶ valor ≥8%
+      Buscar:    1424 picks · win 42% · cuota 2.42 · -42.3 u · YIELD -3.0% (-8% a +2%)
+      Confirmar: 434 picks · win 46% · cuota 2.45 · +35.0 u · YIELD +8.1% (-2% a +18%)
+   ▶ valor ≥12%
+      Buscar:    1065 picks · win 39% · cuota 2.53 · -56.2 u · YIELD -5.3% (-11% a +1%)
+      Confirmar: 338 picks · win 46% · cuota 2.55 · +39.6 u · YIELD +11.7% (+0% a +23%)
+   ▶ valor ≥20%
+      Buscar:    629 picks · win 37% · cuota 2.72 · -15.2 u · YIELD -2.4% (-11% a +6%)
+      Confirmar: 198 picks · win 42% · cuota 2.68 · +17.3 u · YIELD +8.7% (-6% a +24%)
+
+🤖 RATING + CASA
+   ▶ valor ≥3%  ← pasa la búsqueda
+      Buscar:    263 picks · win 61% · cuota 1.89 · +30.4 u · YIELD +11.6% (+2% a +21%)
+      Confirmar: 76 picks · win 63% · cuota 1.87 · +13.7 u · YIELD +18.0% (+0% a +36%)
+   ▶ valor ≥5%
+      Buscar:    104 picks · win 59% · cuota 1.92 · +8.4 u · YIELD +8.0% (-7% a +24%)
+      Confirmar: 39 picks · win 64% · cuota 1.88 · +9.0 u · YIELD +23.0% (-2% a +48%)
+   ▶ valor ≥8%
+      Buscar:    34 picks · win 50% · cuota 2.15 · +2.7 u · YIELD +8.0% (-25% a +41%)
+      Confirmar: 14 picks · win 93% · cuota 2.10 · +13.8 u · YIELD +98.6% (+70% a +127%)
+   ▶ valor ≥12%
+      Buscar:    8 picks · win 38% · cuota 2.21 · -1.8 u · YIELD -22.4% (-81% a +37%)
+      Confirmar: 2 picks · win 100% · cuota 2.10 · +2.2 u · YIELD +110.0% (+98% a +122%)
+   ▶ valor ≥20%
+      Buscar:    1 picks · win 0% · cuota 2.25 · -1.0 u · YIELD -100.0% (-264% a +64%)
+      Confirmar: 1 picks · win 100% · cuota 2.20 · +1.2 u · YIELD +120.0% (-44% a +284%)
+   Umbral elegido al buscar: ≥3% → 🟢 CONFIRMADO
+
+📋 PATRONES de rating frente a la cuota
+▶ Rating ≥0 más y NO favorito → no pasa la búsqueda
+   Buscar:    1430 picks · win 47% · cuota 2.05 · -59.1 u · YIELD -4.1% (-9% a +0%)
+   Confirmar: 387 picks · win 51% · cuota 2.08 · +19.0 u · YIELD +4.9% (-4% a +14%)
+▶ Rating ≥20 más y NO favorito → no pasa la búsqueda
+   Buscar:    628 picks · win 49% · cuota 2.04 · -9.7 u · YIELD -1.5% (-8% a +5%)
+   Confirmar: 161 picks · win 53% · cuota 2.06 · +13.7 u · YIELD +8.5% (-5% a +22%)
+▶ Rating ≥40 más y NO favorito → no pasa la búsqueda
+   Buscar:    209 picks · win 49% · cuota 2.01 · -5.4 u · YIELD -2.6% (-14% a +9%)
+   Confirmar: 60 picks · win 65% · cuota 2.03 · +19.1 u · YIELD +31.9% (+11% a +53%)
+▶ Rating ≥60 más y NO favorito → no pasa la búsqueda
+   Buscar:    58 picks · win 50% · cuota 2.01 · +0.1 u · YIELD +0.1% (-22% a +22%)
+   Confirmar: 22 picks · win 82% · cuota 1.96 · +13.7 u · YIELD +62.2% (+35% a +90%)
+▶ Rating ≥40 más y favorito → no pasa la búsqueda
+   Buscar:    910 picks · win 64% · cuota 1.57 · +0.6 u · YIELD +0.1% (-4% a +4%)
+   Confirmar: 225 picks · win 66% · cuota 1.55 · +4.0 u · YIELD +1.8% (-6% a +10%)
+▶ Rating ≥80 más y favorito → no pasa la búsqueda
+   Buscar:    122 picks · win 66% · cuota 1.49 · -0.9 u · YIELD -0.7% (-11% a +10%)
+   Confirmar: 30 picks · win 67% · cuota 1.51 · +0.2 u · YIELD +0.8% (-21% a +22%)
+
+CONCLUSIÓN: confirmado: RATING + CASA valor ≥3%. Siguiente paso: seguimiento en real.
