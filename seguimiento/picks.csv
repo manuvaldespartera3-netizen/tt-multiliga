@@ -230,7 +230,7 @@ Elite Series,elite,2026-11-11,20:05,A,Brud S.,Linek A.,0.636,1.25,,,2.0,,,1.62,0
 Elite Series,elite,2026-11-11,20:10,A,Marcin Kowalczyk,Strus P.,0.568,1.25,,,2.0,,,2.0,0.6,APUESTA,,1,ganado,3-2,,1.0,2026-11-11 18:05,12,finished,17539555
 Elite Series,elite,2026-11-11,20:10,B,Zielinski M.,Staniczek A.,0.731,1.29,,,,1.29,0,1.2,-0.07,FLOJO,1.29,0,ganado,3-1,0.29,0.2,2026-11-11 18:05,13,finished,17539556
 Elite Series,elite,2026-11-11,20:30,B,Mucha G.,Skupinski A.,0.688,1.36,,,,1.36,0,1.39,0.022,APUESTA,1.36,1,ganado,3-0,0.36,0.39,2026-11-11 18:25,14,finished,17539560
-TT Cup,tt,2026-11-11,20:35,APUESTA,Vidourek J.,Chmelicek M.,0.581,1.72,1.89,2.24,,1.83,0.064,1.78,0.034,APUESTA,,3,pendiente,,,,2026-11-11 18:30,910,inprogress,17538404
+TT Cup,tt,2026-11-11,20:35,APUESTA,Vidourek J.,Chmelicek M.,0.581,1.72,1.89,2.24,,1.83,0.064,1.78,0.034,APUESTA,1.83,3,perdido,2-3,-1,-1,2026-11-11 18:30,910,finished,17538404
 TT Cup,tt,2026-11-11,21:05,FUERTE,Vidourek J.,Martin J.,0.458,2.18,2.4,2.84,,2.5,0.146,2.21,0.012,APUESTA,,3,pendiente,,,,2026-11-11 19:00,912,notstarted,17538411
 TT Cup,tt,2026-11-11,21:55,FLOJO,Kosacky A.,Sulc M.,0.634,1.58,1.74,2.05,,1.3,-0.176,1.3,-0.176,FLOJO,,1,pendiente,,,,2026-11-11 19:50,921,notstarted,17538597
 TT Cup,tt,2026-11-11,22:10,APUESTA,Theodor F.,Osvald D.,0.578,1.73,1.9,2.25,,1.8,0.041,1.84,0.064,APUESTA,,1,pendiente,,,,2026-11-11 20:09,923,notstarted,17538475
@@ -239,3 +239,4 @@ Elite Series,elite,2026-11-11,22:20,A,Warzecha M.,Bartosik D.,0.749,1.25,,,2.0,,
 TT Cup,tt,2026-11-11,22:25,FUERTE,Kulisek M.,Vanek P.,0.418,2.39,2.63,3.11,,2.75,0.15,2.72,0.137,FUERTE,,1,pendiente,,,,2026-11-11 20:20,925,notstarted,17538587
 Elite Series,elite,2026-11-11,22:45,A,Nocun Z.,Krezel A.,0.526,1.25,,,2.0,,,1.92,0.536,APUESTA,,1,pendiente,,,,2026-11-11 20:40,30,notstarted,17539587
 TT Cup,tt,2026-11-11,22:50,FUERTE,Mach J.,Vyskocil Z.,0.702,1.42,1.57,1.85,,1.62,0.138,,,,,1,pendiente,,,,2026-11-11 20:45,934,notstarted,17538925
+TT Cup,tt,2026-11-11,22:55,FLOJO,Kulisek M.,Sulc M.,0.581,1.72,1.89,2.24,,1.57,-0.088,,,,,1,pendiente,,,,2026-11-11 20:50,935,notstarted,17538589
