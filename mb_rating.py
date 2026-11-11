@@ -263,7 +263,9 @@ def ajustar(X, y, l2=0.5, iters=4000, lr=0.3):
         e = p - y
         w -= lr * (Z.T @ e / len(y) + l2 * w / len(y))
         b -= lr * e.mean()
-    return lambda Xn: 1 / (1 + np.exp(-np.clip(((np.asarray(Xn, float) - mu) / sd) @ w + b, -30, 30)))
+    f = lambda Xn: 1 / (1 + np.exp(-np.clip(((np.asarray(Xn, float) - mu) / sd) @ w + b, -30, 30)))
+    f.params = dict(mu=mu.tolist(), sd=sd.tolist(), w=w.tolist(), b=float(b))
+    return f
 
 
 def lados(f):
@@ -371,6 +373,20 @@ def analizar():
             L.append(f"   Umbral elegido al buscar: ≥{mejor[0] * 100:.0f}% → {v}")
             resultados.append((f"{nombre} valor ≥{mejor[0] * 100:.0f}%", v))
         L.append("")
+
+    # modelo para el seguimiento en directo: RATING + CASA ajustado con TODOS los
+    # partidos (busqueda + confirmacion). Lo lee el bot de seguimiento.
+    m_todo = ajustar([[logit((1 / f["fin_a"]) / (1 / f["fin_a"] + 1 / f["fin_b"])), f["ra"] - f["rb"]]
+                      for f in con], [f["gana_a"] for f in con])
+    try:
+        out = os.path.join(bt.OUT_ROOT, bt.slug(LID))
+        os.makedirs(out, exist_ok=True)
+        with open(os.path.join(out, "modelo_rating.json"), "w") as fh:
+            json.dump(dict(m_todo.params, variables=["logit prob casa", "rating pick - rating rival"],
+                           umbral=0.03, min_odd=MIN_ODD, max_odd=MAX_ODD, partidos=len(con),
+                           fecha=datetime.now(TZ).strftime("%Y-%m-%d")), fh, indent=1)
+    except Exception as ex:
+        print("WARN guardar modelo", ex)
 
     bloque("SOLO RATING", m_r, lambda f: [f["ra"] - f["rb"]])
     bloque("RATING + CASA", m_rc, lambda f: [logit((1 / f["fin_a"]) / (1 / f["fin_a"] + 1 / f["fin_b"])), f["ra"] - f["rb"]])
