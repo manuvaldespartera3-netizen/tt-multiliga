@@ -70,7 +70,6 @@ jobs:
         run: |
           git config user.name "tt-multiliga"
           git config user.email "tt-multiliga@users.noreply.github.com"
-          git add resultados/czech_liga_pro/rating.txt 2>/dev/null || true
+          git add resultados/czech_liga_pro/rating.txt resultados/czech_liga_pro/modelo_rating.json 2>/dev/null || git add resultados/czech_liga_pro/rating.txt 2>/dev/null || true
           git commit -m "Rating Liga Pro $(date +%F)" || echo "sin cambios"
           for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done || true
-
