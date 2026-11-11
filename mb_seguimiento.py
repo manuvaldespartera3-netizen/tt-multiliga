@@ -56,13 +56,16 @@ VALOR_SOSPECHA = 0.30
 PACE = float(os.getenv("PACE", "1.0"))
 RUN_MIN = float(os.getenv("RUN_MIN", "14"))      # minutos que dura cada ejecucion
 TG = os.getenv("TELEGRAM_TOKEN", "").strip()
+# Canal propio de Elite Series: un bot de Telegram aparte. Sin el, Elite no funciona
+# (asi el canal de TT Cup solo recibe TT Cup).
+TG_ELITE = os.getenv("TELEGRAM_TOKEN_ELITE", "").strip()
 CHAT = os.getenv("MY_CHAT_ID", "").strip()
 
 DIR = "seguimiento"
 CACHE = os.path.join(DIR, "cache")
 PICKS = os.path.join(DIR, "picks.csv")
 ESTADO = os.path.join(DIR, "estado.json")
-COLS = ["liga", "fecha", "hora", "nivel", "pick", "rival", "prob", "cuota_minima", "cuota_fuerte",
+COLS = ["liga", "canal", "fecha", "hora", "nivel", "pick", "rival", "prob", "cuota_minima", "cuota_fuerte",
         "cuota_sospecha", "cuota_2h", "valor_2h", "cuota_betcris", "valor_betcris",
         "decision_betcris", "cuota_final", "pick_jugados_hoy", "resultado", "marcador",
         "beneficio", "beneficio_betcris", "aviso", "msg", "estado_sofa", "id"]
@@ -157,15 +160,16 @@ def calcular(evs, now, incluir_todos=False):
 
 
 # ================================================================== telegram
-def tg(text, reply_to=None):
-    if not (TG and CHAT):
+def tg(text, reply_to=None, token=None):
+    token = token or TG
+    if not (token and CHAT):
         print(text)
         return None
     params = {"chat_id": CHAT, "text": text}
     if reply_to:
         params["reply_to_message_id"] = reply_to
     try:
-        with urllib.request.urlopen(f"https://api.telegram.org/bot{TG}/sendMessage",
+        with urllib.request.urlopen(f"https://api.telegram.org/bot{token}/sendMessage",
                                     urllib.parse.urlencode(params).encode(), timeout=30) as r:
             return json.loads(r.read().decode()).get("result", {}).get("message_id")
     except Exception as ex:
@@ -173,11 +177,16 @@ def tg(text, reply_to=None):
         return None
 
 
-def tg_updates(offset):
-    """Mensajes nuevos que le has escrito al bot."""
-    if not (TG and CHAT):
+def tg_canal(text, reply_to=None, token=None):
+    return tg(text, reply_to, token=token)
+
+
+def tg_updates(offset, token=None):
+    """Mensajes nuevos que le has escrito a ese bot."""
+    token = token or TG
+    if not (token and CHAT):
         return []
-    url = f"https://api.telegram.org/bot{TG}/getUpdates?timeout=0&offset={offset}"
+    url = f"https://api.telegram.org/bot{token}/getUpdates?timeout=0&offset={offset}"
     try:
         with urllib.request.urlopen(url, timeout=30) as r:
             return json.loads(r.read().decode()).get("result", [])
@@ -344,8 +353,8 @@ def nuevos_picks_elite(cands, picks, st, now):
                    f"Sofascore: {c:.2f} (favorito)\n"
                    f"↩️ Responde con tu cuota de BetCris para apuntarla\n"
                    f"🧪 Seguimiento · señal débil, sin dinero hasta confirmarla")
-            msg = tg(txt)
-            picks.append(dict(liga="Elite Series", fecha=dt.strftime("%Y-%m-%d"),
+            msg = tg(txt, token=TG_ELITE)
+            picks.append(dict(liga="Elite Series", canal="elite", fecha=dt.strftime("%Y-%m-%d"),
                               hora=dt.strftime("%H:%M"),
                               nivel="A+B" if sen_a and sen_b else ("A" if sen_a else "B"),
                               pick=pick, rival=rival, prob=round(pm, 3), cuota_minima=c,
@@ -360,6 +369,11 @@ def nuevos_picks_elite(cands, picks, st, now):
 
 def es_elite(p):
     return p.get("liga") == "Elite Series"
+
+
+def token_de(p):
+    """Bot por el que se mando el aviso de ese pick (y por el que se contesta)."""
+    return TG_ELITE if p.get("canal") == "elite" and TG_ELITE else TG
 
 
 def calc_betcris(p):
@@ -410,15 +424,26 @@ def buscar_pick(picks, por_msg, m, texto):
 
 
 def leer_respuestas(picks, st):
+    """Lee los mensajes de cada canal: TT Cup (bot principal) y Elite (su bot)."""
+    leer_canal(picks, st, "tt", TG, "offset")
+    if TG_ELITE:
+        leer_canal(picks, st, "elite", TG_ELITE, "offset_elite")
+
+
+def leer_canal(todos_picks, st, canal, token, clave_offset):
     """Lo que le escribes al bot:
        - responder al aviso con la cuota ("1,84") o "apellido cuota" ("precek 1,84")
          -> apunta tu cuota de BetCris
        - "borrar apellido" (o responder al aviso con "borrar")
          -> quita tu cuota de ese pick (el aviso sigue en el registro general)"""
-    upd = tg_updates(st.get("offset", 0))
+    picks = [p for p in todos_picks if (p.get("canal") or "tt") == canal]
+
+    def tg(text, reply_to=None):                       # contesta por el mismo canal
+        return tg_canal(text, reply_to, token=token)
+    upd = tg_updates(st.get(clave_offset, 0), token=token)
     por_msg = {str(p.get("msg")): p for p in picks if p.get("msg")}
     for u in upd:
-        st["offset"] = u["update_id"] + 1
+        st[clave_offset] = u["update_id"] + 1
         m = u.get("message") or {}
         if str((m.get("chat") or {}).get("id")) != CHAT:
             continue
@@ -430,10 +455,9 @@ def leer_respuestas(picks, st):
             del_dia = [p for p in picks if p["fecha"] == hoy]
             pend = sum(1 for p in del_dia if p.get("resultado") == "pendiente")
             ult = max((p.get("aviso", "") for p in picks), default="")
-            n_el = sum(1 for p in del_dia if es_elite(p))
-            tg(f"✅ Funcionando · comprobado a las {ahora:%H:%M}\n"
-               f"Hoy: {len(del_dia)} avisos (TT Cup {len(del_dia) - n_el} · Elite {n_el}) · "
-               f"{pend} pendientes de resultado\n"
+            tg(f"✅ Funcionando · {'ELITE SERIES' if canal == 'elite' else 'TT CUP'} · "
+               f"comprobado a las {ahora:%H:%M}\n"
+               f"Hoy: {len(del_dia)} avisos · {pend} pendientes de resultado\n"
                f"Último aviso: {ult[11:] if ult.startswith(hoy) else ult or '—'}\n"
                f"Si no llegan avisos es porque ahora no hay partidos que cumplan la regla.", mid)
             continue
@@ -516,7 +540,7 @@ def resolver(picks, evs, now):
         if res == "anulado":
             corregidos += 1                      # corregido en silencio
         elif p.get("cuota_betcris"):             # solo te avisa de los que apuntaste
-            tg(texto_resultado(p), p.get("msg") or None)
+            tg(texto_resultado(p), p.get("msg") or None, token=token_de(p))
     return corregidos
 
 
@@ -583,9 +607,9 @@ def resumen_dia(picks, st, now):
            + "(1 u por pick)")
     tg(txt)
     el = [p for p in picks if es_elite(p)]
-    if el:
+    if el and TG_ELITE:
         el_dia = [p for p in el if p["fecha"] == hoy]
-        tg(f"🇵🇱 RESUMEN ELITE SERIES · {dia:%d/%m} · {len(el_dia)} avisos\n" + bloque_elite(el_dia)
+        tg(token=TG_ELITE, text=f"🇵🇱 RESUMEN ELITE SERIES · {dia:%d/%m} · {len(el_dia)} avisos\n" + bloque_elite(el_dia)
            + f"\n📈 ACUMULADO desde {st.get('inicio_elite', hoy)} · {len(el)} avisos\n"
            + bloque_elite(el) + "(1 u por pick · señal en prueba, sin dinero)")
     st["resumen"] = hoy
@@ -600,6 +624,8 @@ def main():
     for p in picks:                          # picks de versiones anteriores
         if not p.get("liga"):
             p["liga"] = "TT Cup"
+        if not p.get("canal"):
+            p["canal"] = "tt"                  # avisos antiguos: se mandaron por el bot principal
         if es_elite(p):
             continue
         if p.get("nivel") == "REGLA" or not p.get("nivel"):
@@ -620,9 +646,12 @@ def main():
         st["limpieza_1111"] = True
     if not st.get("inicio"):
         st["inicio"] = now.strftime("%Y-%m-%d")
-    if ELITE in LIGAS_SEG and not st.get("inicio_elite"):
+    if not TG_ELITE and ELITE in LIGAS_SEG:
+        LIGAS_SEG.remove(ELITE)                  # sin canal propio, Elite no se usa
+    if ELITE in LIGAS_SEG and not st.get("canal_elite"):
+        st["canal_elite"] = True
         st["inicio_elite"] = now.strftime("%Y-%m-%d")
-        tg("🇵🇱 Añadido el seguimiento de ELITE SERIES (sin dinero, en prueba)\n"
+        tg(token=TG_ELITE, text="🇵🇱 Canal de ELITE SERIES activo (seguimiento, sin dinero)\n"
            "Solo favoritos, con una de estas dos señales:\n"
            "🔥 ya ha jugado hoy y el rival aún no\n"
            "📈 el Elo le ve mejor de lo que dice la cuota\n"
