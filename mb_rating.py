@@ -89,14 +89,21 @@ def bajar(url):
 
 
 def ultimo_id():
+    """Id del torneo mas reciente. Los torneos tienen id de 5 cifras (los
+    partidos tienen 6, por eso solo se miran numeros de 5 cifras)."""
     if os.getenv("LP_START_ID"):
         return int(os.getenv("LP_START_ID"))
     hoy = datetime.now(TZ).date()
     html = bajar(f"{BASE}/en/tournaments?date_from={hoy}&date_to={hoy + timedelta(days=2)}")
-    ids = [int(x) for x in re.findall(r'"id"\s*:\s*(\d{5,6})', html) + re.findall(r"/tournaments/(\d{5,6})", html)]
+    texto = html
     root = nuxt(html)
     if root:
-        ids += [int(x) for x in re.findall(r'"id": (\d{5,6})', json.dumps(root))]
+        texto += json.dumps(root)
+    ids = [int(x) for x in re.findall(r"/tournaments/(\d{5})(?!\d)", texto)]
+    ids += [int(x) for x in re.findall(r'"id":\s*(\d{5})(?!\d)', texto)]
+    if not ids:
+        raise RuntimeError("no encuentro el id del ultimo torneo en la web")
+    print("ultimo torneo visto en la web:", max(ids))
     return max(ids) + 20
 
 
@@ -131,7 +138,7 @@ def descargar(desde_ts):
     """Recorre los torneos hacia atras desde el ultimo hasta la fecha pedida."""
     cdir = bt.cache_dir(LID)
     tid = ultimo_id()
-    viejos = fallos = nuevos = 0
+    viejos = fallos = nuevos = buenos = 0
     pendiente = False
     while viejos < 150 and fallos < 300:
         if time.time() - bt.INICIO > bt.MAX_MIN * 60:
@@ -156,10 +163,13 @@ def descargar(desde_ts):
             fallos += 1
         else:
             fallos = 0
+            buenos += 1
             ini = datetime.fromisoformat(tr["inicio"].replace("Z", "+00:00")).timestamp()
             viejos = viejos + 1 if ini < desde_ts else 0
         tid -= 1
-    print(f"torneos nuevos descargados: {nuevos} · ultimo id mirado {tid}")
+    print(f"torneos nuevos descargados: {nuevos} · leidos bien: {buenos} · ultimo id mirado {tid}")
+    if not buenos and not pendiente:
+        raise RuntimeError("no he podido leer ningun torneo de la web oficial")
     return pendiente
 
 
