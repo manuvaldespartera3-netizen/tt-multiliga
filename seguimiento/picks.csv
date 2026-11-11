@@ -211,8 +211,8 @@ TT Cup,2026-11-11,07:30,SIN CUOTA,Masternak J.,Burkacki M.,0.456,2.19,2.41,2.85,
 TT Cup,2026-11-11,07:40,APUESTA,Mandrysz F.,Chlad P.,0.486,2.06,2.26,2.68,2.2,0.069,,,,2.2,0,perdido,0-3,-1,,2026-11-11 05:35,819,finished,17536032
 TT Cup,2026-11-11,07:45,SIN CUOTA,Zajac R.,Patrik Sturma,0.498,2.01,2.21,2.61,,,,,,,0,perdido,0-3,,,2026-11-11 05:40,820,finished,17536077
 TT Cup,2026-11-11,08:00,SIN CUOTA,Stapor D.,Radlo S.,0.424,2.36,2.59,3.06,,,,,,,0,pendiente,,,,2026-11-11 05:55,821,inprogress,17537178
-TT Cup,2026-11-11,08:10,SIN CUOTA,Jokiel P.,Drozd A.,0.441,2.27,2.5,2.95,,,,,,,0,pendiente,,,,2026-11-11 06:05,822,notstarted,17536040
-TT Cup,2026-11-11,08:15,SIN CUOTA,Matus J.,Krupnik SR L.,0.396,2.52,2.78,3.28,,,,,,,0,pendiente,,,,2026-11-11 06:10,823,notstarted,17536110
+TT Cup,2026-11-11,08:10,SIN CUOTA,Jokiel P.,Drozd A.,0.441,2.27,2.5,2.95,,,,,,,0,pendiente,,,,2026-11-11 06:05,822,inprogress,17536040
+TT Cup,2026-11-11,08:15,SIN CUOTA,Matus J.,Krupnik SR L.,0.396,2.52,2.78,3.28,,,,,,,0,pendiente,,,,2026-11-11 06:10,823,inprogress,17536110
 TT Cup,2026-11-11,08:30,SIN CUOTA,Masternak J.,Wloszek S.,0.474,2.11,2.32,2.74,,,,,,,0,pendiente,,,,2026-11-11 06:25,824,notstarted,17537190
 TT Cup,2026-11-11,08:40,SIN CUOTA,Jokiel P.,Chlad P.,0.528,1.9,2.09,2.46,,,,,,,0,pendiente,,,,2026-11-11 06:35,825,notstarted,17536037
 TT Cup,2026-11-11,08:45,SIN CUOTA,Matus J.,Patrik Sturma,0.408,2.45,2.7,3.19,,,,,,,0,pendiente,,,,2026-11-11 06:40,826,notstarted,17536096
@@ -226,3 +226,5 @@ TT Cup,2026-11-11,09:40,SIN CUOTA,Drozd A.,Chlad P.,0.5,2.0,2.2,2.6,,,,,,,0,pend
 TT Cup,2026-11-11,09:45,SIN CUOTA,Krupnik SR L.,Patrik Sturma,0.513,1.95,2.14,2.53,,,,,,,0,pendiente,,,,2026-11-11 07:40,834,notstarted,17536151
 TT Cup,2026-11-11,09:55,SIN CUOTA,Jamrich R.,Chlumsky P.,0.374,2.67,2.94,3.47,,,,,,,0,pendiente,,,,2026-11-11 07:50,835,notstarted,17536047
 TT Cup,2026-11-11,10:00,SIN CUOTA,Wloszek S.,Stapor D.,0.395,2.53,2.79,3.29,,,,,,,1,pendiente,,,,2026-11-11 07:55,836,notstarted,17537265
+TT Cup,2026-11-11,10:15,SIN CUOTA,Zajac R.,Matus J.,0.489,2.04,2.25,2.66,,,,,,,1,pendiente,,,,2026-11-11 08:10,837,notstarted,17536095
+TT Cup,2026-11-11,10:25,SIN CUOTA,Filipek M.,Fiklik O.,0.451,2.22,2.44,2.88,,,,,,,0,pendiente,,,,2026-11-11 08:20,838,notstarted,17536039
