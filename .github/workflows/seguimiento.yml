@@ -59,6 +59,7 @@ jobs:
         env:
           ZYLA_API_KEY: ${{ secrets.ZYLA_API_KEY }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_TOKEN_ELITE: ${{ secrets.TELEGRAM_TOKEN_ELITE }}
           MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
           RUN_MIN: "14"
         run: python mb_seguimiento.py
