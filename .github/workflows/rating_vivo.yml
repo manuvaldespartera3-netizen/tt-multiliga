@@ -1,1 +1,77 @@
+name: Rating Liga Pro en vivo
 
+# Canal 🏅 RATING LIGA PRO (seguimiento, sin dinero). Cada vuelta dura unos 14
+# minutos y deja en cola la siguiente, asi no depende de que GitHub respete
+# la programacion. Para pararlo: Actions -> Rating Liga Pro en vivo -> ... -> Disable workflow
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: ratingvivo
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  seguir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Dejar en cola la siguiente vuelta
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in 1 2 3; do
+            n=$(gh run list -R "${{ github.repository }}" --workflow rating_vivo.yml --status queued --json databaseId -q 'length' 2>/dev/null || echo 0)
+            p=$(gh run list -R "${{ github.repository }}" --workflow rating_vivo.yml --status pending --json databaseId -q 'length' 2>/dev/null || echo 0)
+            if [ "$n" != "0" ] || [ "$p" != "0" ]; then echo "ya hay una en cola"; break; fi
+            gh workflow run rating_vivo.yml --ref main -R "${{ github.repository }}" && break
+            sleep 10
+          done || true
+
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rating en vivo
+        id: seg
+        env:
+          BETSAPI_TOKEN: ${{ secrets.BETSAPI_TOKEN }}
+          TELEGRAM_TOKEN_RATING: ${{ secrets.TELEGRAM_TOKEN_RATING }}
+          MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
+          RUN_MIN: "14"
+        run: python mb_rating_vivo.py
+
+      - name: Guardar picks
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain seguimiento/rating_picks.csv seguimiento/rating_estado.json)" ]; then
+            git config user.name "tt-multiliga"
+            git config user.email "tt-multiliga@users.noreply.github.com"
+            git add seguimiento/rating_picks.csv seguimiento/rating_estado.json
+            git commit -m "Rating Liga Pro en vivo"
+            for i in 1 2 3; do
+              if git pull --rebase; then git push && break; else git rebase --abort || true; fi
+              sleep 5
+            done || true
+          fi
+
+      - name: Comprobar que queda la siguiente vuelta
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ steps.seg.outcome }}" != "success" ]; then sleep 120; fi
+          n=$(gh run list -R "${{ github.repository }}" --workflow rating_vivo.yml --status queued --json databaseId -q 'length' 2>/dev/null || echo 0)
+          p=$(gh run list -R "${{ github.repository }}" --workflow rating_vivo.yml --status pending --json databaseId -q 'length' 2>/dev/null || echo 0)
+          if [ "$n" = "0" ] && [ "$p" = "0" ]; then
+            gh workflow run rating_vivo.yml --ref main -R "${{ github.repository }}" || true
+          fi
