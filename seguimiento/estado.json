@@ -11,10 +11,6 @@
  "canal_elite": true,
  "offset_elite": 307940320,
  "elite_revisados": {
-  "17542557": 1794525614.5925574,
-  "17542558": 1794525614.5925574,
-  "17542559": 1794525614.5925574,
-  "17542560": 1794525889.4046845,
   "17542561": 1794526489.3231099,
   "17542562": 1794526762.8815057,
   "17542563": 1794526762.8815057,
@@ -308,22 +304,22 @@
   "17550563": 1794611495.2015316,
   "17550564": 1794611495.2015316,
   "17550565": 1794607737.0117528,
-  "17550566": 1794611495.2015316,
-  "17550567": 1794611495.2015316,
-  "17550568": 1794611495.2015316,
+  "17550566": 1794612424.4966397,
+  "17550567": 1794612424.4966397,
+  "17550568": 1794612424.4966397,
   "17550569": 1794607737.0117528,
-  "17550570": 1794611495.2015316,
-  "17550571": 1794611495.2015316,
-  "17550572": 1794611495.2015316
+  "17550570": 1794612424.4966397,
+  "17550571": 1794612424.4966397,
+  "17550572": 1794612424.4966397
  },
  "elite_diag": {
   "fecha": "2026-11-14",
-  "revisados": 9,
+  "revisados": 15,
   "con_cuota": 0,
   "favoritos": 0,
   "con_senal": 0,
-  "candidatos_ahora": 10,
-  "ultima": "00:16"
+  "candidatos_ahora": 7,
+  "ultima": "00:29"
  },
  "textos": {
   "elite:122": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 11:00\n\u2705 TOMASZ FILBRANDT\nvs Karol Wisniewski\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 67%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
