@@ -30,6 +30,8 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
+import mb_marcas as MK
+
 try:
     from zoneinfo import ZoneInfo
     TZ = ZoneInfo("Europe/Madrid")
@@ -50,7 +52,7 @@ CADA = 10 * 60             # ...cada 10 minutos
 CAMPOS = ["fecha", "hora", "pick", "rival", "rating_pick", "rating_rival", "prob_casa",
           "prob_modelo", "cuota_aviso", "valor", "cuota_minima", "cuota_cierre", "cuota_betcris",
           "decision_betcris", "resultado", "marcador", "beneficio", "beneficio_cierre",
-          "beneficio_betcris", "aviso", "msg", "id"]
+          "beneficio_betcris", "aviso", "msg", "id", "no_esta"]
 
 
 # ================================================================ utilidades
@@ -299,6 +301,31 @@ def cuota365(eid):
     return None
 
 
+def cuota_cierre(eid):
+    """(local, visitante): ultima cuota de Bet365 ANTES de empezar (sin las de en directo)."""
+    d = api("/v2/event/odds", event_id=eid, odds_market=1)
+    mejor = None
+    for o in ((d.get("results") or {}).get("odds") or {}).get("92_1") or []:
+        if o.get("ss"):
+            continue
+        h, a = num(o.get("home_od")), num(o.get("away_od"))
+        t = int(o.get("add_time") or 0)
+        if h and a and (mejor is None or t > mejor[2]):
+            mejor = (h, a, t)
+    return (mejor[0], mejor[1]) if mejor else None
+
+
+def _es_local(p):
+    """True si el pick era el local del partido (None si no se puede saber)."""
+    try:
+        res = api("/v1/event/view", event_id=p["id"]).get("results") or []
+    except Exception:
+        return None
+    if not res:
+        return None
+    return (res[0].get("home") or {}).get("name", "") == p["pick"]
+
+
 def decidir(mod, e, rr, cuotas):
     """El lado con mas valor si llega al umbral; si no, None."""
     ch, ca = cuotas
@@ -387,13 +414,14 @@ def nuevos_avisos(mod, proximos, picks, st, now):
                f"· valor {d['valor'] * 100:+.0f}%\n"
                f"↩️ Responde con tu cuota de BetCris para apuntarla\n"
                f"🧪 Seguimiento · sin dinero hasta confirmarlo")
-        msg = tg(txt)
-        picks.append(dict(fecha=dt.strftime("%Y-%m-%d"), hora=dt.strftime("%H:%M"), pick=pick,
-                          rival=rival, rating_pick=rp, rating_rival=rv,
-                          prob_casa=round(d["pc"], 3), prob_modelo=round(d["p"], 3),
-                          cuota_aviso=d["c"], valor=round(d["valor"], 3), cuota_minima=minima,
-                          resultado="pendiente", aviso=now.strftime("%Y-%m-%d %H:%M"),
-                          msg=msg or "", id=eid, lado=d["lado"]))
+        pk = dict(fecha=dt.strftime("%Y-%m-%d"), hora=dt.strftime("%H:%M"), pick=pick,
+                  rival=rival, rating_pick=rp, rating_rival=rv,
+                  prob_casa=round(d["pc"], 3), prob_modelo=round(d["p"], 3),
+                  cuota_aviso=d["c"], valor=round(d["valor"], 3), cuota_minima=minima,
+                  resultado="pendiente", aviso=now.strftime("%Y-%m-%d %H:%M"),
+                  msg="", id=eid, lado=d["lado"])
+        pk["msg"] = MK.enviar(TG, CHAT, "rating", txt, pk) or ""
+        picks.append(pk)
         ya.add(eid)
     for k in [k for k, v in mirados.items() if ahora - v > 86400]:
         del mirados[k]
@@ -433,7 +461,7 @@ def resolver(picks, now):
         p["resultado"] = "ganado" if gana else "perdido"
         p["marcador"] = f"{sh}-{sa}" if local else f"{sa}-{sh}"
         try:
-            cu = cuota365(p["id"])
+            cu = cuota_cierre(p["id"])
             if cu:
                 p["cuota_cierre"] = cu[0] if local else cu[1]
         except Exception:
@@ -480,8 +508,12 @@ def linea(rows, campo):
 def texto_resumen(picks, now, titulo):
     hoy = now.strftime("%Y-%m-%d")
     dia = [p for p in picks if p["fecha"] == hoy]
+    ne = sum(1 for p in dia if p.get("no_esta") == "si")
+    bl = sum(1 for p in dia if MK.es_blanco(p))
     return (f"{titulo}\n"
-            f"HOY ({len(dia)} avisos · {sum(1 for p in dia if p.get('resultado') == 'pendiente')} pendientes)\n"
+            f"HOY ({len(dia)} avisos · {sum(1 for p in dia if p.get('resultado') == 'pendiente')} pendientes"
+            + (f" · ⚫ {ne} no estaban en BetCris" if ne else "")
+            + (f" · ⚪ {bl} sin tu cuota" if bl else "") + ")\n"
             f"  Bet365 al avisar: {linea(dia, 'beneficio')}\n"
             f"  Tus apuestas BetCris: {linea(dia, 'beneficio_betcris')}\n"
             f"TOTAL desde el inicio\n"
@@ -497,6 +529,10 @@ def leer_mensajes(picks, st, now):
     por_msg = {str(p.get("msg")): p for p in picks if p.get("msg")}
     for u in tg_updates(off):
         st["offset"] = u["update_id"] + 1
+        b = MK.boton(u, picks, CHAT)
+        if b:                                          # boton [🚫 No está el partido]
+            MK.aplicar_boton(TG, CHAT, "rating", *b)
+            continue
         m = u.get("message") or {}
         if str((m.get("chat") or {}).get("id")) != CHAT:
             continue
@@ -504,13 +540,27 @@ def leer_mensajes(picks, st, now):
         low = txt.lower().lstrip("/")
         rep = str((m.get("reply_to_message") or {}).get("message_id", ""))
         c = num(txt.split()[0]) if txt else None
-        if rep in por_msg and c and 1.01 <= c <= 50:
-            p = por_msg[rep]
+        destino = por_msg.get(rep) if rep in por_msg else None
+        if not destino and txt and len(txt.split()) >= 2 and num(txt.split()[-1]):
+            # 'kadavy 1,85' sin responder: el pick mas reciente con ese apellido
+            c = num(txt.split()[-1])
+            pal = [w for w in norm(" ".join(txt.split()[:-1])) if len(w) >= 3]
+            cand = [p for p in picks if pal and all(w in norm(p["pick"]) for w in pal)]
+            cand = [p for p in cand if MK.es_blanco(p)] or cand
+            destino = max(cand, key=lambda p: (p["fecha"], p["hora"])) if cand else None
+        if destino and c and 1.01 <= c <= 50:
+            p = destino
             p["cuota_betcris"] = c
+            p["no_esta"] = ""
             calc_betcris(p)
+            MK.actualizar(TG, CHAT, "rating", p)
             tg(f"📝 Apuntado {p['pick'].upper()} ({p['hora']}) · BetCris {c:.2f} · mínima "
                f"{float(p['cuota_minima']):.2f} → "
                + ("💰 APUESTA" if p.get("decision_betcris") == "APUESTA" else "❌ no llega, no apostar"),
+               reply_to=m.get("message_id"))
+        elif low.startswith(("pendientes", "pendiente", "faltan")):
+            tg(MK.texto_pendientes(picks, now.strftime("%Y-%m-%d"),
+                                   (now - timedelta(days=1)).strftime("%Y-%m-%d")),
                reply_to=m.get("message_id"))
         elif low.startswith("estado"):
             d = st.get("diag", {})
@@ -533,6 +583,7 @@ def main():
         raise SystemExit("Falta el secreto BETSAPI_TOKEN")
     mod = cargar_modelo()
     st = leer_estado()
+    MK.TEXTOS = st.setdefault("textos", {})     # textos de los avisos (para cambiar su color)
     picks = leer_picks()
     if not st.get("arrancado"):
         st["arrancado"] = datetime.now(TZ).strftime("%Y-%m-%d %H:%M")
@@ -541,6 +592,21 @@ def main():
            "oficial ve valor (≥3%) frente a la cuota de Bet365.\n"
            "↩️ Responde a cada aviso con tu cuota de BetCris · 'estado' · 'resumen'\n"
            "🧪 Seguimiento: sin dinero hasta confirmarlo")
+    # arreglo (una vez): la cuota "al cierre" de los primeros avisos se tomo de
+    # las cuotas en directo; se vuelve a calcular con la ultima de antes de empezar
+    if not st.get("cierre_v2"):
+        for p in picks:
+            if p.get("resultado") in ("ganado", "perdido"):
+                try:
+                    cu = cuota_cierre(p["id"])
+                except Exception:
+                    cu = None
+                local = _es_local(p)
+                if cu and local is not None:
+                    c = cu[0] if local else cu[1]
+                    p["cuota_cierre"] = c
+                    p["beneficio_cierre"] = round(c - 1, 3) if p["resultado"] == "ganado" else -1
+        st["cierre_v2"] = True
     fin = time.time() + RUN_MIN * 60
     proximos, t_prox, t_web, t_res = [], 0, 0, 0
     while True:

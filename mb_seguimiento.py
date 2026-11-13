@@ -39,6 +39,7 @@ import urllib.request
 from datetime import datetime, timedelta
 
 import mb_api
+import mb_marcas as MK
 from mb_api import TZ, parse, day_events, odds_raw, odds_from
 from mb_backtest import (Estado, vector, entrenar, predecir, MATCH_LEN, CUTOFF,
                          MIN_PLAYED, MIN_ODD, MAX_ODD)
@@ -70,7 +71,7 @@ ESTADO = os.path.join(DIR, "estado.json")
 COLS = ["liga", "canal", "fecha", "hora", "nivel", "pick", "rival", "prob", "cuota_minima", "cuota_fuerte",
         "cuota_sospecha", "cuota_maxima", "cuota_2h", "valor_2h", "cuota_betcris", "valor_betcris",
         "decision_betcris", "cuota_final", "pick_jugados_hoy", "resultado", "marcador",
-        "beneficio", "beneficio_betcris", "aviso", "msg", "estado_sofa", "id"]
+        "beneficio", "beneficio_betcris", "aviso", "msg", "estado_sofa", "id", "no_esta"]
 
 NIVEL_TXT = {"SOSPECHOSO": "⚠️ SOSPECHOSO (valor >30%, desconfiar)",
              "FUERTE": "⭐⭐ FUERTE", "APUESTA": "💰 APUESTA",
@@ -299,14 +300,15 @@ def nuevos_picks(cands, mod, picks, st, now):
                f"Prob. {p * 100:.0f}% · ya ha jugado {jh} hoy, rival aún no\n"
                f"↩️ Responde con tu cuota de BetCris para apuntarla\n"
                f"🧪 Seguimiento")
-        msg = tg(txt)
-        picks.append(dict(liga="TT Cup", canal="tt", fecha=dt.strftime("%Y-%m-%d"), hora=dt.strftime("%H:%M"),
-                          nivel=nv, pick=pick, rival=rival, prob=round(p, 3),
-                          cuota_minima=c_apuesta, cuota_fuerte=c_fuerte,
-                          cuota_sospecha=c_sospecha,
-                          cuota_2h=c or "", valor_2h=round(valor, 3) if valor is not None else "",
-                          pick_jugados_hoy=jh, aviso=now.strftime("%Y-%m-%d %H:%M"),
-                          resultado="pendiente", msg=msg or "", id=f["id"]))
+        pk = dict(liga="TT Cup", canal="tt", fecha=dt.strftime("%Y-%m-%d"), hora=dt.strftime("%H:%M"),
+                  nivel=nv, pick=pick, rival=rival, prob=round(p, 3),
+                  cuota_minima=c_apuesta, cuota_fuerte=c_fuerte,
+                  cuota_sospecha=c_sospecha,
+                  cuota_2h=c or "", valor_2h=round(valor, 3) if valor is not None else "",
+                  pick_jugados_hoy=jh, aviso=now.strftime("%Y-%m-%d %H:%M"),
+                  resultado="pendiente", msg="", id=f["id"])
+        pk["msg"] = MK.enviar(TG, CHAT, "tt", txt, pk) or ""
+        picks.append(pk)
         ya.add(f["id"])
 
 
@@ -391,15 +393,16 @@ def aviso_elite(f, lado, c, pm, pe, sen_a, sen_b, picks, now):
            + sofa + "\n"
            "↩️ Responde con tu cuota de BetCris para apuntarla\n"
            "🧪 Seguimiento · sin dinero hasta confirmarlo")
-    msg = tg(txt, token=TG_ELITE)
-    picks.append(dict(liga="Elite Series", canal="elite", fecha=dt.strftime("%Y-%m-%d"),
-                      hora=dt.strftime("%H:%M"),
-                      nivel="A+B" if sen_a and sen_b else ("A" if sen_a else "B"),
-                      pick=pick, rival=rival, prob=round(pm if pm else pe, 3),
-                      cuota_minima=minima, cuota_maxima=maxima or "",
-                      cuota_2h=c or "", valor_2h=0 if c else "", pick_jugados_hoy=jh,
-                      aviso=now.strftime("%Y-%m-%d %H:%M"), resultado="pendiente",
-                      msg=msg or "", id=f["id"]))
+    pk = dict(liga="Elite Series", canal="elite", fecha=dt.strftime("%Y-%m-%d"),
+              hora=dt.strftime("%H:%M"),
+              nivel="A+B" if sen_a and sen_b else ("A" if sen_a else "B"),
+              pick=pick, rival=rival, prob=round(pm if pm else pe, 3),
+              cuota_minima=minima, cuota_maxima=maxima or "",
+              cuota_2h=c or "", valor_2h=0 if c else "", pick_jugados_hoy=jh,
+              aviso=now.strftime("%Y-%m-%d %H:%M"), resultado="pendiente",
+              msg="", id=f["id"])
+    pk["msg"] = MK.enviar(TG_ELITE, CHAT, "elite", txt, pk) or ""
+    picks.append(pk)
 
 
 def es_elite(p):
@@ -480,6 +483,10 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
     por_msg = {str(p.get("msg")): p for p in picks if p.get("msg")}
     for u in upd:
         st[clave_offset] = u["update_id"] + 1
+        b = MK.boton(u, picks, CHAT)
+        if b:                                          # boton [🚫 No está el partido]
+            MK.aplicar_boton(token, CHAT, canal, *b)
+            continue
         m = u.get("message") or {}
         if str((m.get("chat") or {}).get("id")) != CHAT:
             continue
@@ -508,6 +515,11 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
                f"Último aviso: {ult[11:] if ult.startswith(hoy) else ult or '—'}\n"
                f"Si no llegan avisos es porque ahora no hay partidos que cumplan la regla.", mid)
             continue
+        if limpio(texto).strip() in ("pendientes", "pendiente", "faltan"):
+            ahora = datetime.now(TZ)
+            tg(MK.texto_pendientes(picks, ahora.strftime("%Y-%m-%d"),
+                                   (ahora - timedelta(days=1)).strftime("%Y-%m-%d")), mid)
+            continue
         if limpio(texto).split()[:1] in (["borrar"], ["borra"], ["quitar"], ["quita"]):
             pk = buscar_pick(picks, por_msg, m, texto)
             if not pk or not pk.get("cuota_betcris"):
@@ -516,6 +528,7 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
                 continue
             for k in ("cuota_betcris", "valor_betcris", "decision_betcris", "beneficio_betcris"):
                 pk[k] = ""
+            MK.actualizar(token, CHAT, canal, pk)          # vuelve a ⚪
             tg(f"🗑️ Borrada tu cuota de {pk['pick'].upper()} ({pk['hora']}). "
                "Ya no cuenta en tus estadísticas de BetCris.", mid)
             continue
@@ -532,7 +545,9 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
                "o escribe: apellido cuota (ej. precek 1,84)", mid)
             continue
         pk["cuota_betcris"] = cb
+        pk["no_esta"] = ""
         calc_betcris(pk)
+        MK.actualizar(token, CHAT, canal, pk)              # 🟢 / 🟡 / 🔴
         if es_elite(pk):
             rango = (f"entre {float(pk['cuota_minima']):.2f} y {float(pk['cuota_maxima']):.2f}"
                      if pk.get("cuota_maxima") else f"mínima {float(pk['cuota_minima']):.2f}")
@@ -649,7 +664,11 @@ def resumen_dia(picks, st, now):
     del_dia = [p for p in tt if p["fecha"] == hoy]
     pend = sum(1 for p in del_dia if p["resultado"] == "pendiente")
     sin = sum(1 for p in del_dia if p["resultado"] != "pendiente" and not p.get("cuota_2h"))
+    noesta = sum(1 for p in del_dia if p.get("no_esta") == "si")
+    blancos = sum(1 for p in del_dia if MK.es_blanco(p))
     txt = (f"📋 RESUMEN TT CUP · {dia:%d/%m} · {len(del_dia)} avisos\n" + bloque(del_dia)
+           + (f"⚫ No estaban en BetCris: {noesta}\n" if noesta else "")
+           + (f"⚪ Sin tu cuota: {blancos}\n" if blancos else "")
            + (f"⏳ Pendientes: {pend}\n" if pend else "")
            + (f"(sin cuota en Sofascore: {sin}, solo cuentan si apuntaste BetCris)\n" if sin else "")
            + f"\n📈 ACUMULADO desde {st.get('inicio', hoy)} · {len(tt)} avisos\n" + bloque(tt)
@@ -658,7 +677,9 @@ def resumen_dia(picks, st, now):
     el = [p for p in picks if es_elite(p)]
     if el and TG_ELITE:
         el_dia = [p for p in el if p["fecha"] == hoy]
+        ne = sum(1 for p in el_dia if p.get("no_esta") == "si")
         tg(token=TG_ELITE, text=f"🇵🇱 RESUMEN ELITE SERIES · {dia:%d/%m} · {len(el_dia)} avisos\n" + bloque_elite(el_dia)
+           + (f"⚫ No estaban en BetCris: {ne}\n" if ne else "")
            + f"\n📈 ACUMULADO desde {st.get('inicio_elite', hoy)} · {len(el)} avisos\n"
            + bloque_elite(el) + "(1 u por pick · señal en prueba, sin dinero)")
     st["resumen"] = hoy
@@ -669,6 +690,7 @@ def main():
         raise SystemExit("Falta ZYLA_API_KEY")
     now = datetime.now(TZ)
     st = leer_estado()
+    MK.TEXTOS = st.setdefault("textos", {})  # textos de los avisos (para cambiar su color)
     picks = leer_picks()
     for p in picks:                          # picks de versiones anteriores
         if not p.get("liga"):
