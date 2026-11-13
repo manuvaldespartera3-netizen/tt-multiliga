@@ -11,8 +11,6 @@
  "canal_elite": true,
  "offset_elite": 307940303,
  "elite_revisados": {
-  "17542498": 1794508318.0499036,
-  "17542500": 1794508776.1206775,
   "17542502": 1794509384.188815,
   "17542503": 1794509651.6963916,
   "17542504": 1794509651.6963916,
@@ -35,7 +33,6 @@
   "17542521": 1794514804.4037344,
   "17542522": 1794515104.6609519,
   "17542523": 1794515104.6609519,
-  "17542524": 1794508560.2847452,
   "17542525": 1794515980.2227874,
   "17542526": 1794516312.621907,
   "17542527": 1794516611.5213912,
@@ -310,12 +307,12 @@
   "17550504": 1794594002.1282973,
   "17550505": 1794594299.9072201,
   "17550506": 1794588029.1061745,
-  "17550507": 1794593660.5058484,
+  "17550507": 1794594575.8773062,
   "17550508": 1794588629.101176,
-  "17550510": 1794593940.0365393,
-  "17550511": 1794594241.983405,
+  "17550510": 1794594875.3986478,
+  "17550511": 1794595176.7987752,
   "17550512": 1794589570.7816925,
-  "17550513": 1794593880.3514688,
+  "17550513": 1794594816.284461,
   "17550514": 1794590456.1522706,
   "17550515": 1794590735.411459,
   "17550516": 1794594481.5205965,
@@ -323,22 +320,26 @@
   "17550518": 1794591670.1095757,
   "17550520": 1794591970.4230044,
   "17550521": 1794592245.6713228,
-  "17550522": 1794594121.7945905,
+  "17550522": 1794595056.096525,
   "17550523": 1794593119.658987,
   "17550524": 1794593119.658987,
   "17550525": 1794593423.3641703,
-  "17550526": 1794593720.5320387,
-  "17550527": 1794593720.5320387,
-  "17550528": 1794594359.7456865
+  "17550526": 1794594634.7327864,
+  "17550527": 1794594634.7327864,
+  "17550528": 1794595295.8438709,
+  "17550529": 1794594634.7327864,
+  "17550530": 1794594935.615665,
+  "17550531": 1794594935.615665,
+  "17550532": 1794594935.615665
  },
  "elite_diag": {
   "fecha": "2026-11-13",
-  "revisados": 1673,
-  "con_cuota": 71,
-  "favoritos": 55,
+  "revisados": 1685,
+  "con_cuota": 76,
+  "favoritos": 60,
   "con_senal": 8,
   "candidatos_ahora": 23,
-  "ultima": "19:28",
+  "ultima": "19:42",
   "sin_cuota_caliente": 28
  },
  "textos": {
@@ -385,6 +386,7 @@
   "elite:183": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 21:10\n\u2705 SZOSTOK S.\nvs Michalski J.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 3 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 57%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:1164": "\ud83d\udd25 PICK TT CUP \u00b7 21:15\n\u2705 MACURAK M.\nvs Marsalek P.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.47 \u2192 no apostar\n\ud83d\udcb0 1.47 a 1.60 \u2192 APUESTA\n\u2b50\u2b50 1.61 a 1.91 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 1.91 \u2192 valor >30%, desconfiar\n\nSofascore: sin cuota\nProb. 68% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "elite:184": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 21:15\n\u2705 KESIC G.\nvs Mugowski A.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.62\n\u274c menos de 1.62 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 10 puntos mejor que la casa\nSofascore: 1.62 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "tt:1165": "\ud83d\udd25 PICK TT CUP \u00b7 21:25\n\u2705 FIKLIK O.\nvs Kosacky A.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.57 \u2192 no apostar\n\ud83d\udcb0 2.57 a 2.81 \u2192 APUESTA\n\u2b50\u2b50 2.82 a 3.34 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 3.34 \u2192 valor >30%, desconfiar\n\nSofascore: sin cuota\nProb. 39% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
+  "tt:1165": "\ud83d\udd25 PICK TT CUP \u00b7 21:25\n\u2705 FIKLIK O.\nvs Kosacky A.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.57 \u2192 no apostar\n\ud83d\udcb0 2.57 a 2.81 \u2192 APUESTA\n\u2b50\u2b50 2.82 a 3.34 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 3.34 \u2192 valor >30%, desconfiar\n\nSofascore: sin cuota\nProb. 39% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
+  "tt:1167": "\ud83d\udd25 PICK TT CUP \u00b7 21:45\n\u2705 MACURAK M.\nvs Chaloupka F.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.71 \u2192 no apostar\n\ud83d\udcb0 1.71 a 1.87 \u2192 APUESTA\n\u2b50\u2b50 1.88 a 2.22 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.22 \u2192 valor >30%, desconfiar\n\nSofascore: sin cuota\nProb. 59% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
  }
 }
