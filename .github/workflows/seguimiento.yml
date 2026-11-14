@@ -51,13 +51,20 @@ jobs:
           path: |
             seguimiento/cache
             seguimiento/cache_19041
-          key: seg-${{ github.run_id }}
-          restore-keys: seg-
+            seguimiento/cache_b15005
+            seguimiento/cache_b19041
+          key: segb-${{ github.run_id }}
+          restore-keys: |
+            segb-
+            seg-
 
       - name: Seguimiento
         id: seg
         env:
           ZYLA_API_KEY: ${{ secrets.ZYLA_API_KEY }}
+          # datos de BetsAPI (Zyla ya no da los partidos por jugar ni las cuotas)
+          FUENTE_DATOS: "betsapi"
+          BETSAPI_TOKEN: ${{ secrets.BETSAPI_TOKEN }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_TOKEN_ELITE: ${{ secrets.TELEGRAM_TOKEN_ELITE }}
           MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
@@ -73,7 +80,9 @@ jobs:
           path: |
             seguimiento/cache
             seguimiento/cache_19041
-          key: seg-${{ hashFiles('seguimiento/cache/*.json', 'seguimiento/cache_19041/*.json') }}
+            seguimiento/cache_b15005
+            seguimiento/cache_b19041
+          key: segb-${{ hashFiles('seguimiento/cache/*.json', 'seguimiento/cache_19041/*.json', 'seguimiento/cache_b15005/*.json', 'seguimiento/cache_b19041/*.json') }}
 
       - name: Guardar picks
         if: always()
