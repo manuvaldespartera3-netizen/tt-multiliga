@@ -40,7 +40,15 @@ from datetime import datetime, timedelta
 
 import mb_api
 import mb_marcas as MK
-from mb_api import TZ, parse, day_events, odds_raw, odds_from
+from mb_api import TZ, parse
+import mb_bets
+
+# Fuente de datos: "betsapi" (recomendada) o "zyla". Cada una con su propio
+# historico en cache: los numeros de partido y de jugador no se mezclan nunca.
+FUENTE = os.getenv("FUENTE_DATOS", "zyla").strip().lower()
+SRC = mb_bets if FUENTE == "betsapi" else mb_api
+day_events, odds_raw, odds_from = SRC.day_events, SRC.odds_raw, SRC.odds_from
+HIST_MAX = int(os.getenv("HIST_MAX_RUN", "200"))   # consultas por vuelta para bajar historico
 from mb_backtest import (Estado, vector, entrenar, predecir, MATCH_LEN, CUTOFF,
                          MIN_PLAYED, MIN_ODD, MAX_ODD)
 
@@ -80,7 +88,13 @@ NIVEL_TXT = {"SOSPECHOSO": "⚠️ SOSPECHOSO (valor >30%, desconfiar)",
 
 # ===================================================================== datos
 def cache_dir(lid):
+    if FUENTE == "betsapi":
+        return os.path.join(DIR, f"cache_b{lid}")
     return CACHE if lid == TTCUP else os.path.join(DIR, f"cache_{lid}")
+
+
+LLAMADAS_INICIO = [0]
+FALTAN = {}                 # liga -> dias del historico que faltan por bajar
 
 
 def fetch_day(d, now, lid=TTCUP):
@@ -90,6 +104,9 @@ def fetch_day(d, now, lid=TTCUP):
     if os.path.exists(path):
         with open(path) as f:
             return json.load(f)
+    if FUENTE == "betsapi" and d < (now - timedelta(days=1)).strftime("%Y-%m-%d") and \
+            mb_bets.LLAMADAS[0] - LLAMADAS_INICIO[0] > HIST_MAX:
+        return None             # historico: se baja poco a poco (limite de consultas por hora)
     for intento in range(4):
         try:
             evs = day_events(lid, d)
@@ -112,10 +129,16 @@ def cargar(now, lid=TTCUP):
     hoy = now.date()
     evs = {}
     d = hoy - timedelta(days=TRAIN_DAYS + WARMUP_DAYS)
+    faltan = 0
     while d <= hoy + timedelta(days=1):
-        for e in fetch_day(d.strftime("%Y-%m-%d"), now, lid):
+        dia = fetch_day(d.strftime("%Y-%m-%d"), now, lid)
+        if dia is None:
+            faltan += 1
+            dia = []
+        for e in dia:
             evs[str(e.get("id"))] = e
         d += timedelta(days=1)
+    FALTAN[lid] = faltan
     return evs
 
 
@@ -509,6 +532,10 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
                          f"(última revisión {d.get('ultima', '—')})\n")
                 if st.get("error_19041"):
                     extra += f"⚠️ Último error: {st['error_19041']}\n"
+            hist = st.get(f"historico_{ELITE if canal == 'elite' else TTCUP}")
+            if hist:
+                extra += f"⏳ Cargando historial de BetsAPI: {hist} días (sin avisos hasta terminar)\n"
+            extra += f"Fuente de datos: {'BetsAPI' if FUENTE == 'betsapi' else 'Zyla'}\n"
             tg(f"✅ Funcionando · {'ELITE SERIES' if canal == 'elite' else 'TT CUP'} · "
                f"comprobado a las {ahora:%H:%M}\n"
                f"Hoy: {len(del_dia)} avisos · {pend} pendientes de resultado\n" + extra +
@@ -583,6 +610,37 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
         tg(t, mid)
 
 
+def _apellido(n):
+    w = limpio(n).split()
+    if len(w) >= 2 and len(w[-1]) == 1:
+        w = w[:-1]
+    return w[-1] if len(w) >= 2 and len(w[0]) > 1 and n and not n.strip().endswith(".") else (w[0] if w else "")
+
+
+def por_nombres(p, evs):
+    """Pick apuntado con datos de Zyla: busca el mismo partido en los de BetsAPI
+    (mismos apellidos y misma hora, ±30 min)."""
+    if str(p.get("id", "")).startswith("b"):
+        return None
+    try:
+        t = datetime.strptime(f"{p['fecha']} {p['hora']}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ).timestamp()
+    except ValueError:
+        return None
+    quiero = {_apellido(p["pick"]), _apellido(p["rival"])}
+    for e in evs.values():
+        if abs(int(e.get("startTimestamp") or 0) - t) > 1800:
+            continue
+        tiene = {_apellido((e.get("homeTeam") or {}).get("name", "")),
+                 _apellido((e.get("awayTeam") or {}).get("name", ""))}
+        if quiero == tiene:
+            # mismo partido: el pick pasa a llevar el nombre que usa BetsAPI
+            casa = (e.get("homeTeam") or {}).get("name", "")
+            fuera = (e.get("awayTeam") or {}).get("name", "")
+            p["pick"], p["rival"] = (casa, fuera) if _apellido(casa) == _apellido(p["pick"]) else (fuera, casa)
+            return e
+    return None
+
+
 def resolver(picks, evs, now):
     """Apunta resultados. Un partido solo se da por ANULADO si Sofascore lo marca
     cancelado o si 6 h despues de su hora sigue sin un resultado valido (justo al
@@ -594,7 +652,7 @@ def resolver(picks, evs, now):
         res = p.get("resultado")
         if res not in ("pendiente", "anulado"):
             continue
-        e = evs.get(p["id"])
+        e = evs.get(p["id"]) or (por_nombres(p, evs) if FUENTE == "betsapi" else None)
         if not e:
             continue
         st = (e.get("status") or {}).get("type", "")
@@ -708,8 +766,9 @@ def resumen_dia(picks, st, now):
 
 
 def main():
-    if not mb_api.KEY:
-        raise SystemExit("Falta ZYLA_API_KEY")
+    if not SRC.KEY:
+        raise SystemExit("Falta BETSAPI_TOKEN" if FUENTE == "betsapi" else "Falta ZYLA_API_KEY")
+    LLAMADAS_INICIO[0] = mb_bets.LLAMADAS[0]
     now = datetime.now(TZ)
     st = leer_estado()
     MK.TEXTOS = st.setdefault("textos", {})  # textos de los avisos (para cambiar su color)
@@ -774,6 +833,28 @@ def main():
                 train, cands = calcular(evs, now, incluir_todos=(lid == ELITE))
                 print(f"{now:%H:%M} · {NOMBRE.get(lid, lid)} · {len(evs)} partidos · "
                       f"{len(train)} para entrenar · {len(cands)} candidatos")
+                if FALTAN.get(lid):
+                    # historico de BetsAPI aun incompleto: sin avisos (saldrian con datos a medias)
+                    total = TRAIN_DAYS + WARMUP_DAYS + 2
+                    st[f"historico_{lid}"] = f"{total - FALTAN[lid]}/{total}"
+                    if not st.get(f"aviso_hist_{lid}"):
+                        st[f"aviso_hist_{lid}"] = now.strftime("%Y-%m-%d %H:%M")
+                        t_h = (f"⏳ {NOMBRE.get(lid, lid)}: paso a datos de BetsAPI. Estoy cargando "
+                               f"el historial ({total - FALTAN[lid]}/{total} días). Mientras tanto "
+                               "no hay avisos nuevos (1-2 horas). Te aviso cuando termine.")
+                        if lid == ELITE and TG_ELITE:
+                            tg(t_h, token=TG_ELITE)
+                        elif lid == TTCUP:
+                            tg(t_h)
+                    continue
+                if st.get(f"historico_{lid}"):
+                    st.pop(f"historico_{lid}")
+                    aviso_hist = (f"✅ Histórico de BetsAPI cargado: vuelven los avisos de "
+                                  f"{NOMBRE.get(lid, lid)}.")
+                    if lid == ELITE and TG_ELITE:
+                        tg(aviso_hist, token=TG_ELITE)
+                    elif lid == TTCUP:
+                        tg(aviso_hist)
                 if lid == TTCUP:
                     if mod is None and len(train) >= 500:
                         mod = entrenar([vector(f) for f in train], [f["gana_a"] for f in train])
