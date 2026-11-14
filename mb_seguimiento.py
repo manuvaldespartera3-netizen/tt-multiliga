@@ -48,7 +48,8 @@ import mb_bets
 FUENTE = os.getenv("FUENTE_DATOS", "zyla").strip().lower()
 SRC = mb_bets if FUENTE == "betsapi" else mb_api
 day_events, odds_raw, odds_from = SRC.day_events, SRC.odds_raw, SRC.odds_from
-HIST_MAX = int(os.getenv("HIST_MAX_RUN", "200"))   # consultas por vuelta para bajar historico
+HIST_SEG = int(os.getenv("HIST_SEG", "420"))       # segundos por vuelta para bajar historico
+HIST_HILOS = int(os.getenv("HIST_HILOS", "4"))     # descargas a la vez (BetsAPI va lento)
 from mb_backtest import (Estado, vector, entrenar, predecir, MATCH_LEN, CUTOFF,
                          MIN_PLAYED, MIN_ODD, MAX_ODD)
 
@@ -104,9 +105,8 @@ def fetch_day(d, now, lid=TTCUP):
     if os.path.exists(path):
         with open(path) as f:
             return json.load(f)
-    if FUENTE == "betsapi" and d < (now - timedelta(days=1)).strftime("%Y-%m-%d") and \
-            mb_bets.LLAMADAS[0] - LLAMADAS_INICIO[0] > HIST_MAX:
-        return None             # historico: se baja poco a poco (limite de consultas por hora)
+    if FUENTE == "betsapi" and d < (now - timedelta(days=1)).strftime("%Y-%m-%d"):
+        return None             # historico que aun no esta: lo baja precargar() poco a poco
     for intento in range(4):
         try:
             evs = day_events(lid, d)
@@ -123,6 +123,55 @@ def fetch_day(d, now, lid=TTCUP):
             json.dump(evs, f)
         time.sleep(PACE)
     return evs
+
+
+def precargar(now):
+    """BetsAPI: baja los dias del historico que faltan, varios a la vez y como
+    mucho HIST_SEG segundos por vuelta (asi avanza siempre, aunque BetsAPI vaya
+    lento, y el bot sigue atendiendo tus mensajes el resto de la vuelta)."""
+    if FUENTE != "betsapi":
+        return
+    from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
+    limite = time.time() + HIST_SEG
+    hoy = now.date()
+    for lid in LIGAS_SEG:
+        liga = mb_bets.LIGAS.get(lid, lid)
+        faltan = []
+        d = hoy - timedelta(days=TRAIN_DAYS + WARMUP_DAYS)
+        while d <= hoy - timedelta(days=2):
+            if not os.path.exists(os.path.join(cache_dir(lid), f"{d:%Y-%m-%d}.json")):
+                faltan.append(d)
+            d += timedelta(days=1)
+        if not faltan:
+            continue
+        faltan.reverse()                       # primero los mas recientes (los que mas pesan)
+        utc = []
+        for d in faltan:
+            for k in (-1, 0):
+                du = (d + timedelta(days=k)).strftime("%Y%m%d")
+                if du not in utc and (liga, du) not in mb_bets._UTC:
+                    utc.append(du)
+        with ThreadPoolExecutor(HIST_HILOS) as ex:
+            pend = set()
+            for du in utc:
+                while len(pend) >= HIST_HILOS:
+                    _, pend = wait(pend, return_when=FIRST_COMPLETED)
+                if time.time() > limite:
+                    break
+                pend.add(ex.submit(mb_bets._dia_utc, liga, du, False))
+            wait(pend)
+        hechos = 0
+        for d in faltan:
+            dus = [(d + timedelta(days=k)).strftime("%Y%m%d") for k in (-1, 0)]
+            if all((liga, du) in mb_bets._UTC for du in dus):
+                evs = mb_bets.day_events(lid, d.strftime("%Y-%m-%d"))   # ya en memoria: sin consultas
+                os.makedirs(cache_dir(lid), exist_ok=True)
+                with open(os.path.join(cache_dir(lid), f"{d:%Y-%m-%d}.json"), "w") as f:
+                    json.dump(evs, f)
+                hechos += 1
+        print(f"historico {NOMBRE.get(lid, lid)}: {hechos} dias nuevos · faltaban {len(faltan)}")
+        if time.time() > limite:
+            break
 
 
 def cargar(now, lid=TTCUP):
@@ -770,6 +819,10 @@ def main():
         raise SystemExit("Falta BETSAPI_TOKEN" if FUENTE == "betsapi" else "Falta ZYLA_API_KEY")
     LLAMADAS_INICIO[0] = mb_bets.LLAMADAS[0]
     now = datetime.now(TZ)
+    try:
+        precargar(now)
+    except Exception as ex:
+        print("WARN historico", ex)
     st = leer_estado()
     MK.TEXTOS = st.setdefault("textos", {})  # textos de los avisos (para cambiar su color)
     picks = leer_picks()
