@@ -400,7 +400,7 @@ TT Cup,tt,2026-11-14,13:40,SIN CUOTA,Velky Junior D.,Marsalek P.,0.56,1.78,1.96,
 TT Cup,tt,2026-11-14,13:45,SIN CUOTA,Gembala J.,Skvrna J.,0.619,1.62,1.78,2.1,,,,,,,,3,ganado,3-2,,,2026-11-14 11:40,1220,finished,17557456,si
 TT Cup,tt,2026-11-14,15:25,SIN CUOTA,Cousin J.,Jachym S.,0.469,2.13,2.35,2.77,,,,,,,,1,ganado,3-2,,,2026-11-14 13:25,1222,finished,17557465,si
 Elite Series,elite,2026-11-14,17:25,A,Sulkowski B.,Eliasz A.,0.537,1.25,,,2.0,,,,,,,4,ganado,3-1,,,2026-11-14 15:20,226,finished,17556876,si
-Elite Series,elite,2026-11-14,17:35,A,Oracz J.,Kumor M.,0.65,1.25,,,2.0,,,1.28,0.024,APUESTA,,3,pendiente,,,,2026-11-14 15:30,227,inprogress,17556878,
+Elite Series,elite,2026-11-14,17:35,A,Oracz J.,Kumor M.,0.65,1.25,,,2.0,,,1.28,0.024,APUESTA,,3,perdido,1-3,,-1,2026-11-14 15:30,227,finished,17556878,
 Elite Series,elite,2026-11-14,18:25,A,Pawlik C.,Kumor M.,0.614,1.25,,,2.0,,,1.3,0.04,APUESTA,,4,pendiente,,,,2026-11-14 16:20,228,notstarted,17556888,
 Elite Series,elite,2026-11-14,18:30,A,Kesic G.,Kukawka M.,0.543,1.25,,,2.0,,,1.75,0.4,APUESTA,,4,pendiente,,,,2026-11-14 16:25,229,notstarted,17556889,
 Elite Series,elite,2026-11-14,18:35,A,Mugowski A.,Kotwica D.,0.63,1.25,,,2.0,,,1.64,0.312,APUESTA,,4,pendiente,,,,2026-11-14 16:30,230,notstarted,17556891,
@@ -408,3 +408,5 @@ Elite Series,elite,2026-11-14,18:50,A,Jedrzejowski O.,Skorupa J.,0.605,1.25,,,2.
 Elite Series,elite,2026-11-14,19:10,A,Oracz J.,Michalik J.,0.71,1.25,,,2.0,,,,,,,3,pendiente,,,,2026-11-14 17:05,232,notstarted,17556898,
 Elite Series,elite,2026-11-14,19:20,B,Baran M.,Maszczynski D.,0.71,1.33,,,,1.33,0,,,,,0,pendiente,,,,2026-11-14 17:15,233,notstarted,17556899,
 Elite Series,elite,2026-11-14,19:35,A,Jedrzejowski O.,Kumor M.,0.586,1.25,,,2.0,,,,,,,3,pendiente,,,,2026-11-14 17:30,238,notstarted,17556903,
+Elite Series,elite,2026-11-14,19:55,A,Szymik R.,Badura J.,0.58,1.25,,,2.0,,,,,,,9,pendiente,,,,2026-11-14 17:50,244,notstarted,17556907,
+Elite Series,elite,2026-11-14,20:00,A,Pawlik C.,Michalik J.,0.661,1.25,,,2.0,,,,,,,5,pendiente,,,,2026-11-14 17:55,246,notstarted,17556908,
