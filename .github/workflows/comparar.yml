@@ -1,1 +1,58 @@
+name: Comparar Zyla y BetsAPI
 
+# Comprueba que el Seguimiento TT Cup da los mismos picks con BetsAPI que con
+# Zyla, usando los dias guardados de Zyla (cuando funcionaba bien).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  comparar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar numpy
+        run: pip install numpy
+
+      # los dias de Zyla que guardaba el Seguimiento (solo se leen, no se tocan)
+      - name: Recuperar historico de Zyla
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            seguimiento/cache
+            seguimiento/cache_19041
+          key: comparar-${{ github.run_id }}
+          restore-keys: seg-
+
+      - name: Comparar
+        env:
+          BETSAPI_TOKEN: ${{ secrets.BETSAPI_TOKEN }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
+          DIAS: "7"
+          HIST_DIAS: "35"
+        run: python mb_comparar.py
+
+      - name: Guardar resultado
+        if: always()
+        run: |
+          if [ -f resultados/comparar_fuentes.txt ]; then
+            git config user.name "tt-multiliga"
+            git config user.email "tt-multiliga@users.noreply.github.com"
+            git add resultados/comparar_fuentes.txt
+            git commit -m "Comparar Zyla y BetsAPI" || exit 0
+            for i in 1 2 3; do
+              if git pull --rebase; then git push && break; else git rebase --abort || true; fi
+              sleep 5
+            done
+          fi
