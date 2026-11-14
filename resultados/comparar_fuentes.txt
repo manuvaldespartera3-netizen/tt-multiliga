@@ -1,0 +1,43 @@
+🔬 COMPARACIÓN ZYLA vs BETSAPI · Seguimiento TT Cup (regla en caliente)
+
+Días comparados: 2026-11-07 a 2026-11-13 · historial 35 días antes en las dos fuentes
+Partidos con resultado: Zyla 6955 · BetsAPI 7199 (consultas a BetsAPI: 183)
+
+PICKS de la regla: Zyla 205 · BetsAPI 217 · en las dos 189 · solo Zyla 16 · solo BetsAPI 28
+  En los que coinciden: mismo jugador elegido 189/189 · mismo resultado 188/189 · diferencia media de prob. Elo 1.9 puntos
+
+Por día (Zyla / BetsAPI / en las dos):
+  2026-11-07: 21 / 24 / 18
+  2026-11-08: 27 / 31 / 27
+  2026-11-09: 33 / 37 / 29
+  2026-11-10: 27 / 26 / 22
+  2026-11-11: 25 / 27 / 25
+  2026-11-12: 34 / 34 / 34
+  2026-11-13: 38 / 38 / 34
+
+Ejemplos solo en Zyla:
+  07/11 13:15 Veliev A. vs Chaloupka F.
+  07/11 13:45 Veliev A. vs Skalicky J.
+  07/11 16:10 Neuwirth Jr J. vs Lukas Krupnik Jnr
+  09/11 12:10 Veliev A. vs Moravec M.
+  09/11 13:40 Veliev A. vs Slavik L.
+  09/11 19:00 Kiejda P. vs Caban J.
+  09/11 22:35 Simon M. vs Vidourek J.
+  10/11 10:10 Matus J. vs Lukas Krupnik Jnr
+  10/11 10:43 Veliev A. vs Sedlacek R.
+  10/11 16:00 Kos K. vs Kiejda P.
+Ejemplos solo en BetsAPI:
+  07/11 10:15 Mrowetz B. vs Kanak A.
+  07/11 13:15 Veliiev A. vs Chaloupka F.
+  07/11 13:45 Veliiev A. vs Skalicky J.
+  07/11 14:10 Stempak L. vs Hudecek M.
+  07/11 16:10 Neuwirth Jnr J. vs Krupnik Jr L.
+  07/11 22:35 Motacek T. vs Horky J.
+  08/11 12:15 Grmela T. vs Skvrna J.
+  08/11 13:10 Krupnik J. vs Dzida L.
+  08/11 15:25 Nadvornik V. vs Zacharda J.
+  08/11 21:15 Velky Jr D. vs Marsalek P.
+
+Acierto de la regla esos días: Zyla 117/205 (57%) · BetsAPI 118/217 (54%)
+
+VEREDICTO: ✅ BetsAPI da los mismos picks que Zyla. Se puede cambiar.
