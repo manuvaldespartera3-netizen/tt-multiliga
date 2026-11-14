@@ -520,6 +520,26 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
             tg(MK.texto_pendientes(picks, ahora.strftime("%Y-%m-%d"),
                                    (ahora - timedelta(days=1)).strftime("%Y-%m-%d")), mid)
             continue
+        orden, resto = MK.orden(texto)
+        if orden:                                     # "no" (no está en BetCris) / "si" (deshacer)
+            pk = buscar_pick(picks, por_msg, m, " ".join(resto)) if (
+                str((m.get("reply_to_message") or {}).get("message_id", "")) in por_msg or resto) else None
+            if not pk:
+                tg("❓ Responde al aviso con «no» (no está en BetCris) o «si» (deshacer), "
+                   "o escribe: no apellido", mid)
+                continue
+            if orden == "no":
+                pk["no_esta"] = "si"
+                for k in ("cuota_betcris", "valor_betcris", "decision_betcris", "beneficio_betcris"):
+                    pk[k] = ""
+                MK.actualizar(token, CHAT, canal, pk)
+                tg(f"⚫⚫ Apuntado: {pk['pick'].upper()} ({pk['hora']}) no está en BetCris · no cuenta.\n"
+                   "Si aparece, responde al aviso con la cuota (o «si» para dejarlo pendiente).", mid)
+            else:
+                pk["no_esta"] = ""
+                MK.actualizar(token, CHAT, canal, pk)
+                tg(f"⚪⚪ {pk['pick'].upper()} ({pk['hora']}) vuelve a pendiente: responde con la cuota.", mid)
+            continue
         if limpio(texto).split()[:1] in (["borrar"], ["borra"], ["quitar"], ["quita"]):
             pk = buscar_pick(picks, por_msg, m, texto)
             if not pk or not pk.get("cuota_betcris"):
@@ -535,7 +555,9 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
         nums = re.findall(r"\d+[.,]\d+|\d+", texto)
         if not nums:
             continue
-        cb = float(nums[-1].replace(",", "."))
+        # la cuota es el primer numero con pinta de cuota ("1,85 120" -> 1,85)
+        validos = [float(x.replace(",", ".")) for x in nums if 1.01 <= float(x.replace(",", ".")) <= 50]
+        cb = validos[0] if validos else float(nums[-1].replace(",", "."))
         if not (1.01 <= cb <= 50):
             tg("❓ No entiendo la cuota. Escríbela así: 1,84", mid)
             continue
@@ -551,10 +573,10 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
         if es_elite(pk):
             rango = (f"entre {float(pk['cuota_minima']):.2f} y {float(pk['cuota_maxima']):.2f}"
                      if pk.get("cuota_maxima") else f"mínima {float(pk['cuota_minima']):.2f}")
-            t = (f"📝 Apuntado {pk['pick'].upper()} (Elite {pk['hora']}) · BetCris {cb:.2f}\n"
+            t = (f"{MK.color(pk)} Apuntado {pk['pick'].upper()} (Elite {pk['hora']}) · BetCris {cb:.2f}\n"
                  f"Hay que apostar {rango} → {NIVEL_TXT[pk['decision_betcris']]}")
         else:
-            t = (f"📝 Apuntado {pk['pick'].upper()} ({pk['hora']}) · BetCris {cb:.2f}\n"
+            t = (f"{MK.color(pk)} Apuntado {pk['pick'].upper()} ({pk['hora']}) · BetCris {cb:.2f}\n"
                  f"Valor {float(pk['valor_betcris']) * 100:+.0f}% → {NIVEL_TXT[pk['decision_betcris']]}")
         if pk.get("resultado") in ("ganado", "perdido", "anulado"):
             t += "\n" + texto_resultado(pk)
@@ -767,11 +789,17 @@ def main():
             tg(f"🔧 Corregidos {corr} picks que estaban como anulados: ya tienen su "
                "resultado real y cuentan en el resumen.")
         resumen_dia(picks, st, now)
+        st["latido"] = now.strftime("%Y-%m-%d %H:%M")   # señal de vida (la mira el TT AVISADOR)
         guardar_picks(picks)
         guardar_estado(st)
         if time.time() + 60 > fin:
             break
-        time.sleep(max(5, 60 - (time.time() - t0)))
+        # hasta la siguiente vuelta de datos, mira Telegram cada 15 s (respuesta rapida)
+        while time.time() - t0 < 60 and time.time() + 20 < fin:
+            time.sleep(15)
+            leer_respuestas(picks, st)
+            guardar_picks(picks)
+            guardar_estado(st)
 
 if __name__ == "__main__":
     main()

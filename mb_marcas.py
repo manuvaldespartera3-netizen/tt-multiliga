@@ -2,14 +2,15 @@
 mb_marcas.py - Marca de color en cada aviso de Telegram, para saber de un vistazo
 que picks tienen ya tu cuota de BetCris y cuales no.
 
-La primera linea del aviso cambia sola:
-  ⚪ PENDIENTE · falta tu cuota       (aun no has hecho nada)
-  🟢 APOSTABLE · BetCris 1.91         (tu cuota llega al minimo)
-  🟡 DESCONFIAR · BetCris 2.60        (valor >30%: sospechoso)
-  🔴 NO LLEGA · BetCris 1.70          (tu cuota no llega al minimo)
-  ⚫ NO ESTÁ EN BETCRIS               (pulsaste el boton)
-Debajo de cada aviso hay un boton [🚫 No está el partido] (y si lo pulsas por
-error, [↩️ Sí está, deshacer]).
+La primera y la ultima linea del aviso cambian solas:
+  ⚪⚪ PENDIENTE · falta tu cuota ⚪⚪      (aun no has hecho nada)
+  🟢🟢 APOSTABLE · BetCris 1.91 🟢🟢        (tu cuota llega al minimo)
+  🟡🟡 DESCONFIAR · BetCris 2.60 🟡🟡       (valor >30%: sospechoso)
+  🔴🔴 NO LLEGA · BetCris 1.70 🔴🔴         (tu cuota no llega al minimo)
+  ⚫⚫ NO ESTÁ EN BETCRIS ⚫⚫               (respondiste "no")
+Respondiendo al aviso: con la cuota -> se apunta · "no" -> no esta en BetCris ·
+"si" -> vuelve a pendiente (por si aparece a ultima hora; tambien vale poner la
+cuota directamente). Los avisos antiguos con boton siguen funcionando.
 
 Lo usan mb_seguimiento.py (TT Cup y Elite) y mb_rating_vivo.py (Rating Liga Pro).
 TEXTOS se guarda en el estado de cada bot: es el texto del aviso sin la primera
@@ -24,6 +25,13 @@ MAX_TEXTOS = 300
 
 
 def cabecera(p):
+    """Linea de color, con dos bolitas delante y dos detras."""
+    t = _cabecera(p)
+    b = t[0] * 2
+    return f"{b} {t[2:]} {b}"
+
+
+def _cabecera(p):
     if p.get("no_esta") == "si":
         return "⚫ NO ESTÁ EN BETCRIS"
     try:
@@ -43,11 +51,36 @@ def cabecera(p):
 
 
 def teclado(p):
-    if p.get("cuota_betcris"):
-        return {"inline_keyboard": []}
-    if p.get("no_esta") == "si":
-        return {"inline_keyboard": [[{"text": "↩️ Sí está, deshacer", "callback_data": f"siesta:{p['id']}"}]]}
-    return {"inline_keyboard": [[{"text": "🚫 No está el partido", "callback_data": f"noesta:{p['id']}"}]]}
+    """Sin botones: todo se hace respondiendo al aviso (lo mas fiable). Al
+    reescribir un aviso antiguo, esto le quita el boton que tenia."""
+    return {"inline_keyboard": []}
+
+
+def texto(p, cuerpo):
+    c = cabecera(p)
+    return f"{c}\n{cuerpo}\n{c}"
+
+
+def orden(texto_usuario):
+    """'no' / 'no está' / 'x'  -> 'no' · 'si' / 'sí está' / 'deshacer' -> 'si' ·
+    otra cosa -> None. Devuelve (orden, palabras que sobran = apellido)."""
+    import unicodedata
+    t = unicodedata.normalize("NFKD", texto_usuario or "").encode("ascii", "ignore").decode().lower()
+    w = [x for x in "".join(c if c.isalnum() else " " for c in t).split()]
+    if not w:
+        return None, []
+    if w[0] in ("no", "x", "noesta", "nohay"):
+        resto = [x for x in w[1:] if x not in ("esta", "hay", "en", "betcris", "el", "partido")]
+        return "no", resto
+    if w[0] in ("si", "deshacer", "siesta"):
+        resto = [x for x in w[1:] if x not in ("esta", "hay", "en", "betcris", "el", "partido")]
+        return "si", resto
+    return None, []
+
+
+def color(p):
+    """Las dos bolitas del estado (para las confirmaciones)."""
+    return cabecera(p)[:2]
 
 
 def es_blanco(p):
@@ -71,7 +104,7 @@ def enviar(token, chat, canal, cuerpo, p, reply_to=None):
     if not (token and chat):
         print(cabecera(p) + "\n" + cuerpo)
         return None
-    datos = {"chat_id": chat, "text": cabecera(p) + "\n" + cuerpo, "reply_markup": teclado(p)}
+    datos = {"chat_id": chat, "text": texto(p, cuerpo)}
     if reply_to:
         datos["reply_to_message_id"] = reply_to
     for intento in range(3):
@@ -101,7 +134,7 @@ def actualizar(token, chat, canal, p):
         return False                 # avisos de antes de este cambio: no se tocan
     try:
         _api(token, "editMessageText", {"chat_id": chat, "message_id": int(msg),
-                                        "text": cabecera(p) + "\n" + cuerpo,
+                                        "text": texto(p, cuerpo),
                                         "reply_markup": teclado(p)})
         return True
     except urllib.error.HTTPError as ex:
@@ -157,5 +190,6 @@ def texto_pendientes(picks, hoy, ayer):
     for p in blancos:
         dia = "" if p["fecha"] == hoy else " (ayer)"
         L.append(f"  {p['hora']}{dia} · {p['pick'].upper()} vs {p['rival']}")
-    L.append("Responde a cada aviso con la cuota, o escribe aquí: apellido cuota (ej. kadavy 1,85)")
+    L.append("Responde a cada aviso con la cuota (o «no» si no está en BetCris).\n"
+             "También vale escribir aquí: apellido cuota (ej. kadavy 1,85) o «no kadavy».")
     return "\n".join(L)

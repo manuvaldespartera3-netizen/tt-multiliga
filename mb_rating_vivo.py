@@ -539,12 +539,37 @@ def leer_mensajes(picks, st, now):
         txt = (m.get("text") or "").strip()
         low = txt.lower().lstrip("/")
         rep = str((m.get("reply_to_message") or {}).get("message_id", ""))
-        c = num(txt.split()[0]) if txt else None
+        orden, resto = MK.orden(txt)
+        if orden:                                     # "no" (no está en BetCris) / "si" (deshacer)
+            p = por_msg.get(rep)
+            if not p and resto:
+                cand = [x for x in picks if all(w in norm(x["pick"]) for w in resto)]
+                cand = [x for x in cand if MK.es_blanco(x) or orden == "si"] or cand
+                p = max(cand, key=lambda x: (x["fecha"], x["hora"])) if cand else None
+            if not p:
+                tg("❓ Responde al aviso con «no» (no está en BetCris) o «si» (deshacer), "
+                   "o escribe: no apellido", reply_to=m.get("message_id"))
+                continue
+            if orden == "no":
+                p["no_esta"] = "si"
+                for k in ("cuota_betcris", "decision_betcris", "beneficio_betcris"):
+                    p[k] = ""
+                MK.actualizar(TG, CHAT, "rating", p)
+                tg(f"⚫⚫ Apuntado: {p['pick'].upper()} ({p['hora']}) no está en BetCris · no cuenta.\n"
+                   "Si aparece, responde al aviso con la cuota (o «si» para dejarlo pendiente).",
+                   reply_to=m.get("message_id"))
+            else:
+                p["no_esta"] = ""
+                MK.actualizar(TG, CHAT, "rating", p)
+                tg(f"⚪⚪ {p['pick'].upper()} ({p['hora']}) vuelve a pendiente: responde con la cuota.",
+                   reply_to=m.get("message_id"))
+            continue
+        nums = [num(x) for x in re.findall(r"\d+[.,]\d+|\d+", txt)]
+        c = next((x for x in nums if x and 1.01 <= x <= 50), None)
         destino = por_msg.get(rep) if rep in por_msg else None
-        if not destino and txt and len(txt.split()) >= 2 and num(txt.split()[-1]):
+        if not destino and c and len(txt.split()) >= 2:
             # 'kadavy 1,85' sin responder: el pick mas reciente con ese apellido
-            c = num(txt.split()[-1])
-            pal = [w for w in norm(" ".join(txt.split()[:-1])) if len(w) >= 3]
+            pal = [w for w in norm(txt) if len(w) >= 3]
             cand = [p for p in picks if pal and all(w in norm(p["pick"]) for w in pal)]
             cand = [p for p in cand if MK.es_blanco(p)] or cand
             destino = max(cand, key=lambda p: (p["fecha"], p["hora"])) if cand else None
@@ -554,7 +579,7 @@ def leer_mensajes(picks, st, now):
             p["no_esta"] = ""
             calc_betcris(p)
             MK.actualizar(TG, CHAT, "rating", p)
-            tg(f"📝 Apuntado {p['pick'].upper()} ({p['hora']}) · BetCris {c:.2f} · mínima "
+            tg(f"{MK.color(p)} Apuntado {p['pick'].upper()} ({p['hora']}) · BetCris {c:.2f} · mínima "
                f"{float(p['cuota_minima']):.2f} → "
                + ("💰 APUESTA" if p.get("decision_betcris") == "APUESTA" else "❌ no llega, no apostar"),
                reply_to=m.get("message_id"))
@@ -634,6 +659,7 @@ def main():
             print("ERROR", ex)
             st["error"] = f"{now:%H:%M} {str(ex)[:120]}"
         leer_mensajes(picks, st, now)
+        st["latido"] = now.strftime("%Y-%m-%d %H:%M")   # señal de vida (la mira el TT AVISADOR)
         if now.hour == 23 and now.minute >= 45 and st.get("resumen") != now.strftime("%Y-%m-%d"):
             resolver(picks, now)
             tg(texto_resumen(picks, now, f"🌙 RESUMEN RATING LIGA PRO · {now:%d/%m}"))
@@ -642,7 +668,13 @@ def main():
         guardar_estado(st)
         if time.time() > fin:
             break
-        time.sleep(60)
+        # hasta la siguiente vuelta, mira Telegram cada 15 s (respuesta rapida)
+        t1 = time.time()
+        while time.time() - t1 < 60 and time.time() < fin:
+            time.sleep(15)
+            leer_mensajes(picks, st, datetime.now(TZ))
+            guardar_picks(picks)
+            guardar_estado(st)
 
 
 if __name__ == "__main__":
