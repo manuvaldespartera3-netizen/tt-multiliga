@@ -13,9 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940374,
  "elite_revisados": {
-  "b13451347": 1794689317.5490823,
-  "b13451694": 1794689317.5490823,
-  "b13455975": 1794689317.5490823,
   "b13451822": 1794691204.5270069,
   "b13455765": 1794691204.5270069,
   "b13456112": 1794691204.5270069,
@@ -25,7 +22,6 @@
   "b13453206": 1794693082.0318735,
   "b13455959": 1794694043.9347844,
   "b13456070": 1794694259.5782046,
-  "b13457648": 1794689431.0177453,
   "b13456080": 1794695508.1689153,
   "b13451821": 1794695794.8363411,
   "b13457762": 1794690487.6443233,
@@ -274,8 +270,8 @@
   "b13456169": 1794767733.517376,
   "b13461904": 1794769043.1072955,
   "b13461949": 1794770203.27348,
-  "b13455728": 1794774856.1540568,
-  "b13455819": 1794774856.1540568,
+  "b13455728": 1794775797.5677,
+  "b13455819": 1794775797.5677,
   "b13462017": 1794770829.6171014,
   "b13462016": 1794772701.7104688,
   "b13462029": 1794773914.9198773,
@@ -289,19 +285,23 @@
   "b13455946": 1794775346.5816092,
   "b13462191": 1794774123.9724116,
   "b13462217": 1794774402.5947654,
-  "b13455888": 1794774711.3191388,
-  "b13455972": 1794774989.4830575,
-  "b13462329": 1794774934.5118768,
-  "b13455798": 1794775276.2124536
+  "b13455888": 1794775655.6429152,
+  "b13455972": 1794775944.1027968,
+  "b13462329": 1794775870.9337952,
+  "b13455798": 1794776219.9650733,
+  "b13455861": 1794775512.560881,
+  "b13455378": 1794775870.9337952,
+  "b13462424": 1794776020.2104325,
+  "b13462431": 1794776020.2104325
  },
  "elite_diag": {
   "fecha": "2026-11-15",
-  "revisados": 1136,
-  "con_cuota": 644,
-  "favoritos": 508,
+  "revisados": 1146,
+  "con_cuota": 650,
+  "favoritos": 511,
   "con_senal": 27,
-  "candidatos_ahora": 10,
-  "ultima": "21:43",
+  "candidatos_ahora": 14,
+  "ultima": "21:56",
   "sin_cuota_caliente": 9
  },
  "textos": {
@@ -489,7 +489,7 @@
   "elite:409": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 23:00\n\u2705 MLYNARSKI F.\nvs Stapor R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.28\n\u274c menos de 1.28 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 14 puntos mejor que la casa\nSofascore: 1.28 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:1387": "\ud83d\udd25 PICK TT CUP \u00b7 23:25\n\u2705 VYSKOCIL Z.\nvs Kolbusovsky M.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.73 \u2192 no apostar\n\ud83d\udcb0 1.73 a 1.89 \u2192 APUESTA\n\u2b50\u2b50 1.90 a 2.25 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.25 \u2192 valor >30%, desconfiar\n\nSofascore: 1.50 \u2192 \u274c NO APOSTAR\nProb. 58% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-15 21:43",
+ "latido": "2026-11-15 21:56",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
