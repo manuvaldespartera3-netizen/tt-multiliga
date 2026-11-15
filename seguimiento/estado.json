@@ -11,9 +11,6 @@
  "canal_elite": true,
  "offset_elite": 307940358,
  "elite_revisados": {
-  "17556820": 1794656370.321492,
-  "17556821": 1794656670.5263844,
-  "17556822": 1794656670.5263844,
   "17556823": 1794656948.2884505,
   "17556824": 1794657579.2735898,
   "17556825": 1794657879.9698482,
@@ -292,29 +289,30 @@
   "b13459768": 1794739360.2690144,
   "b13459777": 1794740651.0041866,
   "b13455807": 1794742483.3358428,
-  "b13455889": 1794742126.36588,
+  "b13455889": 1794743061.5213253,
   "b13459832": 1794737762.0734546,
   "b13456121": 1794737464.207089,
-  "b13456012": 1794741844.973107,
-  "b13455811": 1794741735.3527188,
+  "b13456012": 1794742812.889908,
+  "b13455811": 1794742642.4971023,
   "b13459960": 1794739022.3680625,
   "b13459968": 1794739982.7383075,
-  "b13455867": 1794742341.5560348,
-  "b13455827": 1794742280.0445325,
+  "b13455867": 1794743281.053665,
+  "b13455827": 1794743204.5042732,
   "b13460020": 1794741562.9121122,
-  "b13456102": 1794742002.4993742,
+  "b13456102": 1794742920.749167,
   "b13460070": 1794742126.36588,
   "b13455998": 1794741919.6718638,
-  "b13460140": 1794742280.0445325
+  "b13460140": 1794743204.5042732,
+  "b13456053": 1794742569.2857206
  },
  "elite_diag": {
   "fecha": "2026-11-15",
-  "revisados": 720,
-  "con_cuota": 372,
-  "favoritos": 292,
+  "revisados": 728,
+  "con_cuota": 379,
+  "favoritos": 298,
   "con_senal": 13,
-  "candidatos_ahora": 11,
-  "ultima": "12:34",
+  "candidatos_ahora": 10,
+  "ultima": "12:47",
   "sin_cuota_caliente": 6
  },
  "textos": {
@@ -463,7 +461,7 @@
   "elite:348": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 14:30\n\u2705 KOLODZIEJ K.\nvs Adamiak G.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.61\n\u274c menos de 1.61 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 15 puntos mejor que la casa\nSofascore: 1.61 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:1305": "\ud83d\udd25 PICK TT CUP \u00b7 14:35\n\u2705 KAISLER V.\nvs Rojka M.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.12 \u2192 no apostar\n\ud83d\udcb0 2.12 a 2.33 \u2192 APUESTA\n\u2b50\u2b50 2.34 a 2.76 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.76 \u2192 valor >30%, desconfiar\n\nSofascore: 2.38 \u2192 \u2b50\u2b50 FUERTE\nProb. 47% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-15 12:34",
+ "latido": "2026-11-15 12:47",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
