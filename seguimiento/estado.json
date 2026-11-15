@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940380,
  "elite_revisados": {
-  "b13451820": 1794697270.4864779,
   "b13453203": 1794697467.0971146,
   "b13451818": 1794698398.8880324,
   "b13451819": 1794698398.8880324,
@@ -23,7 +22,6 @@
   "b13451817": 1794701116.9869046,
   "b13455780": 1794701116.9869046,
   "b13451344": 1794701745.947986,
-  "b13458335": 1794696605.5458052,
   "b13451691": 1794702610.76359,
   "b13451816": 1794702610.76359,
   "b13455817": 1794702610.76359,
@@ -272,29 +270,30 @@
   "b13456030": 1794776730.9440734,
   "b13456063": 1794776730.9440734,
   "b13462517": 1794778340.4698863,
-  "b13456241": 1794782014.7406251,
+  "b13456241": 1794782934.6290545,
   "b13456242": 1794778265.7108452,
   "b13462570": 1794779655.0368376,
   "b13462571": 1794779655.0368376,
   "b13462587": 1794779935.0151393,
-  "b13455988": 1794782227.6266432,
-  "b13456200": 1794782227.6266432,
+  "b13455988": 1794783148.9464362,
+  "b13456200": 1794783148.9464362,
   "b13462649": 1794781550.7451732,
   "b13455792": 1794780952.7089655,
   "b13456230": 1794780952.7089655,
-  "b13462714": 1794782014.7406251,
-  "b13455820": 1794782424.6539428,
-  "b13456430": 1794782424.6539428
+  "b13462714": 1794782934.6290545,
+  "b13455820": 1794783342.5950563,
+  "b13456430": 1794783342.5950563,
+  "b13462786": 1794783148.9464362,
+  "b13462789": 1794783417.5503
  },
  "elite_diag": {
-  "fecha": "2026-11-15",
-  "revisados": 1216,
-  "con_cuota": 699,
-  "favoritos": 543,
-  "con_senal": 32,
+  "fecha": "2026-11-16",
+  "revisados": 0,
+  "con_cuota": 0,
+  "favoritos": 0,
+  "con_senal": 0,
   "candidatos_ahora": 12,
-  "ultima": "23:47",
-  "sin_cuota_caliente": 9
+  "ultima": "00:01"
  },
  "textos": {
   "elite:122": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 11:00\n\u2705 TOMASZ FILBRANDT\nvs Karol Wisniewski\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 67%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -486,7 +485,7 @@
   "elite:424": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 01:20\n\u2705 MLYNARSKI F.\nvs Kukawka M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.36\n\u274c menos de 1.36 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 12 puntos mejor que la casa\nSofascore: 1.36 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:425": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 01:20\n\u2705 MUCHA G.\nvs Michalik J.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.67\n\u274c menos de 1.67 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 10 puntos mejor que la casa\nSofascore: 1.67 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-15 23:47",
+ "latido": "2026-11-16 00:01",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
