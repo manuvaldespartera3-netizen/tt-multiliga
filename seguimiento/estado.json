@@ -11,9 +11,6 @@
  "canal_elite": true,
  "offset_elite": 307940361,
  "elite_revisados": {
-  "17556845": 1794663918.697593,
-  "17556846": 1794664197.4967484,
-  "17556847": 1794664197.4967484,
   "17556848": 1794664495.0535588,
   "17556849": 1794665072.1867993,
   "17556850": 1794665373.4447856,
@@ -285,29 +282,30 @@
   "b13455815": 1794750017.510801,
   "b13460201": 1794744527.849621,
   "b13460219": 1794744809.1855624,
-  "b13456103": 1794749675.773777,
-  "b13455814": 1794749605.4130168,
+  "b13456103": 1794750629.9918933,
+  "b13455814": 1794750521.2211924,
   "b13460345": 1794746484.6026988,
-  "b13455981": 1794749262.4590294,
-  "b13456077": 1794749262.4590294,
+  "b13455981": 1794750175.469309,
+  "b13456077": 1794750175.469309,
   "b13460428": 1794747577.5532622,
-  "b13455898": 1794749834.1273768,
+  "b13455898": 1794750747.9690418,
   "b13460475": 1794748182.3689613,
-  "b13455869": 1794749755.39788,
+  "b13455869": 1794750668.7918296,
   "b13460537": 1794749348.9999852,
-  "b13455942": 1794749479.6034982,
-  "b13455987": 1794749479.6034982,
-  "b13460595": 1794749561.700849,
-  "b13455900": 1794749755.39788
+  "b13455942": 1794750381.6005356,
+  "b13455987": 1794750381.6005356,
+  "b13460595": 1794750521.2211924,
+  "b13455900": 1794749755.39788,
+  "b13460620": 1794750342.319809
  },
  "elite_diag": {
   "fecha": "2026-11-15",
-  "revisados": 805,
-  "con_cuota": 443,
-  "favoritos": 359,
+  "revisados": 815,
+  "con_cuota": 451,
+  "favoritos": 367,
   "con_senal": 15,
   "candidatos_ahora": 11,
-  "ultima": "14:40",
+  "ultima": "14:53",
   "sin_cuota_caliente": 6
  },
  "textos": {
@@ -460,7 +458,7 @@
   "elite:353": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 14:15\n\u2705 SWIDER D.\nvs Polok P.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.80\n\u274c menos de 1.80 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.80 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:354": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 16:40\n\u2705 SLAWINSKI K.\nvs Polok P.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.61\n\u274c menos de 1.61 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 12 puntos mejor que la casa\nSofascore: 1.61 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-15 14:40",
+ "latido": "2026-11-15 14:53",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
