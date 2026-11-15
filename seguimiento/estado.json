@@ -11,10 +11,6 @@
  "canal_elite": true,
  "offset_elite": 307940343,
  "elite_revisados": {
-  "17556687": 1794621033.9626,
-  "17556688": 1794621211.6373355,
-  "17556689": 1794621211.6373355,
-  "17556690": 1794621211.6373355,
   "17556691": 1794622142.9992511,
   "17556693": 1794622488.379685,
   "17556694": 1794622789.339791,
@@ -311,22 +307,24 @@
   "b13458648": 1794705392.9406464,
   "b13458647": 1794705392.9406464,
   "b13458653": 1794703880.1305106,
-  "b13456128": 1794706049.166925,
+  "b13456128": 1794706982.3580756,
   "b13451342": 1794706754.4561446,
   "b13458728": 1794705249.6207378,
   "b13456127": 1794704762.7511609,
   "b13458786": 1794706334.5363498,
   "b13458774": 1794705392.9406464,
-  "b13455891": 1794706263.3258307
+  "b13455891": 1794706263.3258307,
+  "b13458875": 1794707053.3085797,
+  "b13458897": 1794707614.5263088
  },
  "elite_diag": {
   "fecha": "2026-11-15",
-  "revisados": 134,
-  "con_cuota": 55,
-  "favoritos": 49,
+  "revisados": 137,
+  "con_cuota": 56,
+  "favoritos": 50,
   "con_senal": 5,
   "candidatos_ahora": 10,
-  "ultima": "02:39",
+  "ultima": "02:53",
   "sin_cuota_caliente": 2
  },
  "textos": {
@@ -449,7 +447,7 @@
   "elite:303": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:30\n\u2705 BERNACKI L.\nvs Badura J.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 60%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:304": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 04:35\n\u2705 FOMIN A.\nvs Karpiuk M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.80\n\u274c menos de 1.80 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.80 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-15 02:39",
+ "latido": "2026-11-15 02:53",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
