@@ -11,8 +11,6 @@
  "canal_elite": true,
  "offset_elite": 307940358,
  "elite_revisados": {
-  "17556811": 1794653689.5478797,
-  "17556813": 1794654264.380786,
   "17556814": 1794654564.1854093,
   "17556815": 1794654864.178632,
   "17556816": 1794655195.171354,
@@ -294,29 +292,31 @@
   "b13455862": 1794734438.8877435,
   "b13459748": 1794736000.647728,
   "b13459749": 1794736000.647728,
-  "b13455806": 1794739782.3063066,
+  "b13455806": 1794740711.209055,
   "b13459762": 1794736320.2790534,
   "b13459769": 1794737542.789306,
   "b13459768": 1794739360.2690144,
-  "b13459777": 1794739710.2437267,
-  "b13455807": 1794739710.2437267,
-  "b13455889": 1794739360.2690144,
+  "b13459777": 1794740651.0041866,
+  "b13455807": 1794740651.0041866,
+  "b13455889": 1794740290.2035375,
   "b13459832": 1794737762.0734546,
   "b13456121": 1794737464.207089,
   "b13456012": 1794739982.7383075,
-  "b13455811": 1794739857.124528,
+  "b13455811": 1794740787.3991508,
   "b13459960": 1794739022.3680625,
   "b13459968": 1794739982.7383075,
-  "b13455867": 1794739571.754157
+  "b13455867": 1794740501.3690243,
+  "b13455827": 1794740431.3057015,
+  "b13460020": 1794740651.0041866
  },
  "elite_diag": {
   "fecha": "2026-11-15",
-  "revisados": 693,
-  "con_cuota": 351,
-  "favoritos": 277,
+  "revisados": 701,
+  "con_cuota": 357,
+  "favoritos": 281,
   "con_senal": 12,
-  "candidatos_ahora": 12,
-  "ultima": "11:54",
+  "candidatos_ahora": 10,
+  "ultima": "12:07",
   "sin_cuota_caliente": 6
  },
  "textos": {
@@ -459,9 +459,10 @@
   "tt:1295": "\ud83d\udd25 PICK TT CUP \u00b7 12:40\n\u2705 KRUPNIK JR L.\nvs Lysek J.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.71 \u2192 no apostar\n\ud83d\udcb0 1.71 a 1.87 \u2192 APUESTA\n\u2b50\u2b50 1.88 a 2.23 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.23 \u2192 valor >30%, desconfiar\n\nSofascore: 1.44 \u2192 \u274c NO APOSTAR\nProb. 58% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "elite:343": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 13:15\n\u2705 DOSZ A.\nvs Adamiak G.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.36\n\u274c menos de 1.36 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 8 puntos mejor que la casa\nSofascore: 1.36 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:1299": "\ud83d\udd25 PICK TT CUP \u00b7 13:40\n\u2705 KRUPNIK JR L.\nvs Neuwirth Jnr J.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.73 \u2192 no apostar\n\ud83d\udcb0 1.73 a 1.89 \u2192 APUESTA\n\u2b50\u2b50 1.90 a 2.25 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.25 \u2192 valor >30%, desconfiar\n\nSofascore: 1.44 \u2192 \u274c NO APOSTAR\nProb. 58% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
-  "tt:1301": "\ud83d\udd25 PICK TT CUP \u00b7 13:55\n\u2705 KOUTNIK V.\nvs Dominik Rek L.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.81 \u2192 no apostar\n\ud83d\udcb0 1.81 a 1.98 \u2192 APUESTA\n\u2b50\u2b50 1.99 a 2.35 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.35 \u2192 valor >30%, desconfiar\n\nSofascore: 1.83 \u2192 \ud83d\udcb0 APUESTA\nProb. 55% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
+  "tt:1301": "\ud83d\udd25 PICK TT CUP \u00b7 13:55\n\u2705 KOUTNIK V.\nvs Dominik Rek L.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.81 \u2192 no apostar\n\ud83d\udcb0 1.81 a 1.98 \u2192 APUESTA\n\u2b50\u2b50 1.99 a 2.35 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.35 \u2192 valor >30%, desconfiar\n\nSofascore: 1.83 \u2192 \ud83d\udcb0 APUESTA\nProb. 55% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
+  "tt:1303": "\ud83d\udd25 PICK TT CUP \u00b7 14:10\n\u2705 DROZD K.\nvs Lysek J.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.65 \u2192 no apostar\n\ud83d\udcb0 1.65 a 1.81 \u2192 APUESTA\n\u2b50\u2b50 1.82 a 2.15 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.15 \u2192 valor >30%, desconfiar\n\nSofascore: 1.80 \u2192 \ud83d\udcb0 APUESTA\nProb. 60% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-15 11:54",
+ "latido": "2026-11-15 12:07",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
