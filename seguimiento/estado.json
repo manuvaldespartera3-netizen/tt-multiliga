@@ -12,7 +12,6 @@
  "canal_elite": true,
  "offset_elite": 307940365,
  "elite_revisados": {
-  "17556879": 1794673744.9343052,
   "17556880": 1794674034.0379999,
   "17556881": 1794674034.0379999,
   "17556882": 1794674304.989029,
@@ -273,31 +272,32 @@
   "b13460768": 1794753463.3794558,
   "b13460788": 1794753799.2398338,
   "b13455529": 1794753076.2336197,
-  "b13456312": 1794759272.83921,
-  "b13455453": 1794758630.3140857,
-  "b13455833": 1794758630.3140857,
+  "b13456312": 1794760214.194714,
+  "b13455453": 1794759595.1614275,
+  "b13455833": 1794759595.1614275,
   "b13460911": 1794755488.096119,
-  "b13455200": 1794759211.2766523,
+  "b13455200": 1794760149.6842961,
   "b13455844": 1794754827.7349815,
   "b13460989": 1794756351.5412204,
   "b13456442": 1794755408.393525,
   "b13461003": 1794756556.7951856,
-  "b13455828": 1794759211.2766523,
+  "b13455828": 1794760149.6842961,
   "b13455738": 1794756623.31861,
   "b13461097": 1794758066.8021827,
-  "b13455982": 1794758803.8312323,
-  "b13456013": 1794758803.8312323,
+  "b13455982": 1794759750.0798116,
+  "b13456013": 1794759750.0798116,
   "b13455822": 1794759354.490513,
-  "b13456165": 1794759354.490513
+  "b13456165": 1794759354.490513,
+  "b13458600": 1794759952.3152363
  },
  "elite_diag": {
   "fecha": "2026-11-15",
-  "revisados": 944,
-  "con_cuota": 526,
-  "favoritos": 429,
+  "revisados": 952,
+  "con_cuota": 531,
+  "favoritos": 431,
   "con_senal": 21,
-  "candidatos_ahora": 16,
-  "ultima": "17:15",
+  "candidatos_ahora": 14,
+  "ultima": "17:30",
   "sin_cuota_caliente": 7
  },
  "textos": {
@@ -463,7 +463,7 @@
   "elite:374": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 19:20\n\u2705 MUCHA G.\nvs Michalik J.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 19 puntos mejor que la casa\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:375": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 19:20\n\u2705 KUZMICZ J.\nvs Zochniak J.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.44\n\u274c menos de 1.44 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 2 hoy, rival a\u00fan no\nSofascore: 1.44 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-15 17:15",
+ "latido": "2026-11-15 17:30",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
