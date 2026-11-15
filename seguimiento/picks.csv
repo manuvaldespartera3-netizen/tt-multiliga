@@ -417,8 +417,8 @@ TT Cup,tt,2026-11-14,20:40,APUESTA,Matus J.,Jemelka I.,0.509,1.97,2.16,2.56,,2.1
 TT Cup,tt,2026-11-14,20:45,FLOJO,Sedlacek R.,Vitasek D.,0.541,1.85,2.03,2.4,,1.571,-0.15,1.64,-0.113,FLOJO,1.833,3,ganado,3-0,0.57,0.64,2026-11-14 19:58,1244,finished,b13455726,
 TT Cup,tt,2026-11-14,21:10,FLOJO,Krupnik Jr L.,Lysek J.,0.608,1.64,1.81,2.14,,1.5,-0.088,1.46,-0.112,FLOJO,1.5,4,ganado,3-1,0.5,0.46,2026-11-14 19:58,1245,finished,b13455831,
 TT Cup,tt,2026-11-14,21:15,FLOJO,Macurak M.,Cizek A.,0.555,1.8,1.98,2.34,,1.615,-0.103,1.68,-0.068,FLOJO,2.375,3,ganado,3-1,0.61,0.68,2026-11-14 19:58,1246,finished,b13455834,
-TT Cup,tt,2026-11-14,21:40,FUERTE,Krupnik Jr L.,Jemelka I.,0.46,2.18,2.39,2.83,,2.625,0.207,,,,2.25,4,ganado,3-1,1.62,,2026-11-14 19:58,1247,finished,b13455667,
-TT Cup,tt,2026-11-14,21:45,FLOJO,Macurak M.,Vitasek D.,0.6,1.67,1.83,2.17,,1.533,-0.081,,,,2.2,4,ganado,3-1,0.53,,2026-11-14 19:58,1248,finished,b13455634,
+TT Cup,tt,2026-11-14,21:40,FUERTE,Krupnik Jr L.,Jemelka I.,0.46,2.18,2.39,2.83,,2.625,0.207,,,,2.25,4,ganado,3-1,1.62,,2026-11-14 19:58,1247,finished,b13455667,si
+TT Cup,tt,2026-11-14,21:45,FLOJO,Macurak M.,Vitasek D.,0.6,1.67,1.83,2.17,,1.533,-0.081,,,,2.2,4,ganado,3-1,0.53,,2026-11-14 19:58,1248,finished,b13455634,si
 TT Cup,tt,2026-11-14,22:15,FLOJO,Sedlacek R.,Cizek A.,0.477,2.1,2.31,2.73,,1.833,-0.126,,,,1.8,4,perdido,2-3,-1,,2026-11-14 20:11,1259,finished,b13455772,
 Elite Series,elite,2026-11-14,21:20,B,Karpiuk M.,Maszczynski D.,0.688,1.363,,,,1.363,0,,,,1.285,1,ganado,3-0,0.36,,2026-11-14 21:00,266,finished,b13455974,si
 Elite Series,elite,2026-11-14,22:05,B,Gesiarz P.,Maszczynski D.,0.688,1.363,,,,1.363,0,1.25,-0.083,FLOJO,1.25,2,ganado,3-1,0.36,0.25,2026-11-14 21:00,267,finished,b13456026,
@@ -432,21 +432,21 @@ Elite Series,elite,2026-11-15,01:20,B,Baran M.,Maszczynski D.,0.688,1.363,,,,1.3
 Elite Series,elite,2026-11-15,02:35,B,Mlynarski F.,Kesik G.,0.625,1.5,,,,1.5,0,,,,1.25,0,ganado,3-0,0.5,,2026-11-15 00:30,291,finished,b13451815,
 Elite Series,elite,2026-11-15,03:00,A,Fomin A.,Malcher K.,0.709,1.333,,,,1.333,0,,,,1.333,1,ganado,3-2,0.33,,2026-11-15 00:55,294,finished,b13455923,si
 Elite Series,elite,2026-11-15,03:25,B,Karpiuk M.,Maszczynski D.,0.709,1.333,,,,1.333,0,,,,1.333,1,ganado,3-0,0.33,,2026-11-15 01:20,296,finished,b13455884,si
-Elite Series,elite,2026-11-15,03:10,A,Tkaczyk H.,Wiza R.,0.583,1.25,,,2.0,,,,,,,1,perdido,1-3,,,2026-11-15 01:36,301,finished,b13451343,
-Elite Series,elite,2026-11-15,04:10,B,Gesiarz P.,Maszczynski D.,0.688,1.363,,,,1.363,0,,,,1.285,1,perdido,1-3,-1,,2026-11-15 02:05,302,finished,b13456127,
-Elite Series,elite,2026-11-15,03:30,A,Bernacki L.,Badura J.,0.602,1.25,,,2.0,,,,,,,1,ganado,3-0,,,2026-11-15 02:16,303,finished,b13458774,
-Elite Series,elite,2026-11-15,04:35,B,Fomin A.,Karpiuk M.,0.515,1.8,,,,1.8,0,,,,2.0,2,perdido,2-3,-1,,2026-11-15 02:30,304,finished,b13455891,
-Elite Series,elite,2026-11-15,05:00,B,Dosz A.,Adamiak G.,0.688,1.363,,,,1.363,0,,,,1.363,0,ganado,3-1,0.36,,2026-11-15 02:55,305,finished,b13456089,
-Elite Series,elite,2026-11-15,05:25,B,Michna D.,Murawski M.,0.625,1.5,,,,1.5,0,,,,1.5,0,ganado,3-1,0.5,,2026-11-15 03:20,306,finished,b13456084,
-Elite Series,elite,2026-11-15,06:10,B,Michna D.,Adamiak G.,0.625,1.5,,,,1.5,0,,,,1.3,0,ganado,3-0,0.5,,2026-11-15 04:05,307,finished,b13456108,
-Elite Series,elite,2026-11-15,08:05,A,Murawski M.,Gawlas M.,0.537,1.727,,,,1.727,0,,,,1.571,1,perdido,1-3,-1,,2026-11-15 06:00,308,finished,b13455939,
-Elite Series,elite,2026-11-15,07:35,A,Marchlewski M.,Kosmal D.,0.563,1.25,,,2.0,,,,,,,1,perdido,1-3,,,2026-11-15 06:39,309,finished,b13459254,
-Elite Series,elite,2026-11-15,09:20,B,Dosz A.,Murawski M.,0.577,1.615,,,,1.615,0,,,,,2,pendiente,,,,2026-11-15 07:15,310,notstarted,b13455848,
-Elite Series,elite,2026-11-15,08:00,A,Kaczynski P.,Koczyba M.,0.541,1.25,,,2.0,,,,,,,1,perdido,0-3,,,2026-11-15 07:33,311,finished,b13459345,
-Elite Series,elite,2026-11-15,08:05,A,Kowol M.,Wisniewski B.,0.611,1.25,,,2.0,,,,,,,1,pendiente,,,,2026-11-15 07:33,312,notstarted,b13459350,
-TT Cup,tt,2026-11-15,10:10,FLOJO,Moravec M.,Precek E.,0.549,1.82,2.0,2.37,,1.444,-0.207,,,,,1,pendiente,,,,2026-11-15 08:05,1264,notstarted,b13458704,
-TT Cup,tt,2026-11-15,10:15,FUERTE,Travnicek J.,Slavik L.,0.505,1.98,2.18,2.57,,2.25,0.137,,,,,1,pendiente,,,,2026-11-15 08:10,1265,notstarted,b13458698,
-TT Cup,tt,2026-11-15,10:35,FLOJO,Neterda R.,Vavricka R.,0.491,2.04,2.24,2.65,,1.8,-0.117,,,,,1,pendiente,,,,2026-11-15 08:30,1266,notstarted,b13458695,
-TT Cup,tt,2026-11-15,10:05,SIN CUOTA,Zapala K.,Bartosz B.,0.441,2.27,2.49,2.95,,,,,,,,1,pendiente,,,,2026-11-15 08:39,1267,notstarted,b13459484,
-TT Cup,tt,2026-11-15,09:35,SIN CUOTA,Buklat L.,Bartosz B.,0.46,2.17,2.39,2.82,,,,,,,,1,pendiente,,,,2026-11-15 08:43,1268,notstarted,b13459494,
-TT Cup,tt,2026-11-15,10:50,FUERTE,Knazik O.,Dolezal M.,0.493,2.03,2.23,2.64,,2.5,0.233,,,,,1,pendiente,,,,2026-11-15 08:47,1269,notstarted,b13458679,
+Elite Series,elite,2026-11-15,03:10,A,Tkaczyk H.,Wiza R.,0.583,1.25,,,2.0,,,,,,,1,perdido,1-3,,,2026-11-15 01:36,301,finished,b13451343,si
+Elite Series,elite,2026-11-15,04:10,B,Gesiarz P.,Maszczynski D.,0.688,1.363,,,,1.363,0,,,,1.285,1,perdido,1-3,-1,,2026-11-15 02:05,302,finished,b13456127,si
+Elite Series,elite,2026-11-15,03:30,A,Bernacki L.,Badura J.,0.602,1.25,,,2.0,,,,,,,1,ganado,3-0,,,2026-11-15 02:16,303,finished,b13458774,si
+Elite Series,elite,2026-11-15,04:35,B,Fomin A.,Karpiuk M.,0.515,1.8,,,,1.8,0,,,,2.0,2,perdido,2-3,-1,,2026-11-15 02:30,304,finished,b13455891,si
+Elite Series,elite,2026-11-15,05:00,B,Dosz A.,Adamiak G.,0.688,1.363,,,,1.363,0,,,,1.363,0,ganado,3-1,0.36,,2026-11-15 02:55,305,finished,b13456089,si
+Elite Series,elite,2026-11-15,05:25,B,Michna D.,Murawski M.,0.625,1.5,,,,1.5,0,,,,1.5,0,ganado,3-1,0.5,,2026-11-15 03:20,306,finished,b13456084,si
+Elite Series,elite,2026-11-15,06:10,B,Michna D.,Adamiak G.,0.625,1.5,,,,1.5,0,,,,1.3,0,ganado,3-0,0.5,,2026-11-15 04:05,307,finished,b13456108,si
+Elite Series,elite,2026-11-15,08:05,A,Murawski M.,Gawlas M.,0.537,1.727,,,,1.727,0,,,,1.571,1,perdido,1-3,-1,,2026-11-15 06:00,308,finished,b13455939,si
+Elite Series,elite,2026-11-15,07:35,A,Marchlewski M.,Kosmal D.,0.563,1.25,,,2.0,,,,,,,1,perdido,1-3,,,2026-11-15 06:39,309,finished,b13459254,si
+Elite Series,elite,2026-11-15,09:20,B,Dosz A.,Murawski M.,0.577,1.615,,,,1.615,0,1.52,-0.059,FLOJO,,2,pendiente,,,,2026-11-15 07:15,310,notstarted,b13455848,
+Elite Series,elite,2026-11-15,08:00,A,Kaczynski P.,Koczyba M.,0.541,1.25,,,2.0,,,,,,,1,perdido,0-3,,,2026-11-15 07:33,311,finished,b13459345,si
+Elite Series,elite,2026-11-15,08:05,A,Kowol M.,Wisniewski B.,0.611,1.25,,,2.0,,,,,,,1,pendiente,,,,2026-11-15 07:33,312,notstarted,b13459350,si
+TT Cup,tt,2026-11-15,10:10,FLOJO,Moravec M.,Precek E.,0.549,1.82,2.0,2.37,,1.444,-0.207,1.52,-0.166,FLOJO,,1,pendiente,,,,2026-11-15 08:05,1264,notstarted,b13458704,
+TT Cup,tt,2026-11-15,10:15,FUERTE,Travnicek J.,Slavik L.,0.505,1.98,2.18,2.57,,2.25,0.137,1.9,-0.041,FLOJO,,1,pendiente,,,,2026-11-15 08:10,1265,notstarted,b13458698,
+TT Cup,tt,2026-11-15,10:35,FLOJO,Neterda R.,Vavricka R.,0.491,2.04,2.24,2.65,,1.8,-0.117,1.59,-0.219,FLOJO,,1,pendiente,,,,2026-11-15 08:30,1266,notstarted,b13458695,
+TT Cup,tt,2026-11-15,10:05,SIN CUOTA,Zapala K.,Bartosz B.,0.441,2.27,2.49,2.95,,,,1.81,-0.202,FLOJO,,1,pendiente,,,,2026-11-15 08:39,1267,notstarted,b13459484,
+TT Cup,tt,2026-11-15,09:35,SIN CUOTA,Buklat L.,Bartosz B.,0.46,2.17,2.39,2.82,,,,1.95,-0.103,FLOJO,,1,pendiente,,,,2026-11-15 08:43,1268,notstarted,b13459494,
+TT Cup,tt,2026-11-15,10:50,FUERTE,Knazik O.,Dolezal M.,0.493,2.03,2.23,2.64,,2.5,0.233,2.25,0.109,FUERTE,,1,pendiente,,,,2026-11-15 08:47,1269,notstarted,b13458679,
