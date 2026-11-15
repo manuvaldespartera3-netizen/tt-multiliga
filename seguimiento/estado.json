@@ -11,8 +11,6 @@
  "canal_elite": true,
  "offset_elite": 307940343,
  "elite_revisados": {
-  "17556674": 1794617304.9330335,
-  "17556675": 1794617304.9330335,
   "17556677": 1794618239.6201253,
   "17556678": 1794618239.6201253,
   "17556679": 1794618239.6201253,
@@ -305,12 +303,12 @@
   "b13455817": 1794702610.76359,
   "b13453202": 1794703278.4381495,
   "b13458414": 1794697909.0411408,
-  "b13451690": 1794703143.7510712,
-  "b13455846": 1794703143.7510712,
-  "b13456035": 1794703143.7510712,
+  "b13451690": 1794704095.9660263,
+  "b13455846": 1794704095.9660263,
+  "b13456035": 1794704095.9660263,
   "b13458481": 1794699707.6746101,
   "b13451815": 1794699065.2401333,
-  "b13456098": 1794702850.2338824,
+  "b13456098": 1794703806.8664494,
   "b13458515": 1794700509.2426655,
   "b13453201": 1794703422.294406,
   "b13458527": 1794700790.5031657,
@@ -318,19 +316,20 @@
   "b13451343": 1794702996.9922438,
   "b13458596": 1794702265.131776,
   "b13455884": 1794702053.266914,
-  "b13458648": 1794702610.76359,
-  "b13458647": 1794702610.76359,
-  "b13458653": 1794702924.6409032,
-  "b13456128": 1794703221.8511815
+  "b13458648": 1794703521.270692,
+  "b13458647": 1794703521.270692,
+  "b13458653": 1794703880.1305106,
+  "b13456128": 1794704171.0123627,
+  "b13451342": 1794703880.1305106
  },
  "elite_diag": {
   "fecha": "2026-11-15",
-  "revisados": 104,
-  "con_cuota": 45,
-  "favoritos": 40,
+  "revisados": 113,
+  "con_cuota": 49,
+  "favoritos": 43,
   "con_senal": 3,
-  "candidatos_ahora": 14,
-  "ultima": "01:43",
+  "candidatos_ahora": 13,
+  "ultima": "01:57",
   "sin_cuota_caliente": 1
  },
  "textos": {
@@ -450,7 +449,7 @@
   "elite:296": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:25\n\u2705 KARPIUK M.\nvs Maszczynski D.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.33\n\u274c menos de 1.33 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 11 puntos mejor que la casa\nSofascore: 1.33 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:301": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:10\n\u2705 TKACZYK H.\nvs Wiza R.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 58%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-15 01:43",
+ "latido": "2026-11-15 01:57",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
