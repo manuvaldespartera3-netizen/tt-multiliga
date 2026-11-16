@@ -261,25 +261,26 @@
   "b13456319": 1794786939.5864537,
   "b13462921": 1794788520.089805,
   "b13462937": 1794789103.951771,
-  "b13460082": 1794792186.751551,
+  "b13460082": 1794793113.6531134,
   "b13462952": 1794790253.6125185,
-  "b13455740": 1794792460.1310854,
+  "b13455740": 1794793398.382456,
   "b13462967": 1794790782.1608467,
   "b13462983": 1794791639.168863,
   "b13463001": 1794790997.2210681,
   "b13456113": 1794791125.6016066,
   "b13463024": 1794792735.1236773,
   "b13463025": 1794792735.1236773,
-  "b13456815": 1794792665.9982026
+  "b13456815": 1794793613.5732458,
+  "b13463071": 1794793471.9039152
  },
  "elite_diag": {
   "fecha": "2026-11-16",
-  "revisados": 89,
-  "con_cuota": 64,
-  "favoritos": 34,
+  "revisados": 93,
+  "con_cuota": 67,
+  "favoritos": 36,
   "con_senal": 2,
-  "candidatos_ahora": 7,
-  "ultima": "02:34"
+  "candidatos_ahora": 6,
+  "ultima": "02:47"
  },
  "textos": {
   "elite:122": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 11:00\n\u2705 TOMASZ FILBRANDT\nvs Karol Wisniewski\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 67%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -473,7 +474,7 @@
   "elite:436": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:00\n\u2705 FOMIN A.\nvs Brunner M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.50\n\u274c menos de 1.50 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.50 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:439": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 04:10\n\u2705 MUCHA G.\nvs Karpiuk M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.67\n\u274c menos de 1.67 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 15 puntos mejor que la casa\nSofascore: 1.67 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-16 02:34",
+ "latido": "2026-11-16 02:47",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
