@@ -6,12 +6,12 @@
   "b13459918"
  ],
  "v2": true,
- "offset": 70245768,
+ "offset": 70245771,
  "resumen": "2026-11-15",
  "inicio_elite": "2026-11-11",
  "limpieza_1111": true,
  "canal_elite": true,
- "offset_elite": 307940393,
+ "offset_elite": 307940394,
  "elite_revisados": {
   "b13456312": 1794760214.194714,
   "b13455453": 1794760530.0469682,
@@ -20,8 +20,6 @@
   "b13455828": 1794762905.00872,
   "b13455982": 1794764483.4720156,
   "b13456013": 1794764483.4720156,
-  "b13455822": 1794759354.490513,
-  "b13456165": 1794759354.490513,
   "b13458600": 1794766534.3128204,
   "b13455758": 1794760530.0469682,
   "b13455818": 1794767450.5469098,
@@ -268,13 +266,13 @@
   "b13461308": 1794838865.8064919,
   "b13461325": 1794845411.5470786,
   "b13466097": 1794840282.282095,
-  "b13461445": 1794845026.8138244,
+  "b13461445": 1794845952.861202,
   "b13463540": 1794840074.398903,
-  "b13460842": 1794845026.8138244,
+  "b13460842": 1794845952.861202,
   "b13466686": 1794841673.2987041,
   "b13466687": 1794841673.2987041,
-  "b13460351": 1794844683.2709699,
-  "b13461324": 1794844936.2056704,
+  "b13460351": 1794845605.7796378,
+  "b13461324": 1794845880.9175055,
   "b13464520": 1794845542.792538,
   "b13466819": 1794843069.5665708,
   "b13466828": 1794843403.5262496,
@@ -282,19 +280,22 @@
   "b13465156": 1794843069.5665708,
   "b13467137": 1794844467.106444,
   "b13467162": 1794844736.359075,
-  "b13464592": 1794845215.2666395,
-  "b13467232": 1794845026.8138244,
-  "b13467247": 1794845026.8138244
+  "b13464592": 1794846178.3444092,
+  "b13467232": 1794845952.861202,
+  "b13467247": 1794845952.861202,
+  "b13461323": 1794845732.086604,
+  "b13464566": 1794845732.086604,
+  "b13463768": 1794846307.9898908
  },
  "elite_diag": {
   "fecha": "2026-11-16",
-  "revisados": 877,
-  "con_cuota": 474,
-  "favoritos": 366,
+  "revisados": 887,
+  "con_cuota": 478,
+  "favoritos": 368,
   "con_senal": 16,
   "candidatos_ahora": 14,
-  "ultima": "17:12",
-  "sin_cuota_caliente": 6
+  "ultima": "17:26",
+  "sin_cuota_caliente": 7
  },
  "textos": {
   "elite:122": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 11:00\n\u2705 TOMASZ FILBRANDT\nvs Karol Wisniewski\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 67%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -522,9 +523,10 @@
   "tt:1453": "\ud83d\udd25 PICK TT CUP \u00b7 18:15\n\u2705 ZASKODNY M.\nvs Vicherek P.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.33 \u2192 no apostar\n\ud83d\udcb0 2.33 a 2.55 \u2192 APUESTA\n\u2b50\u2b50 2.56 a 3.02 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 3.02 \u2192 valor >30%, desconfiar\n\nSofascore: 2.38 \u2192 \ud83d\udcb0 APUESTA\nProb. 43% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "tt:1458": "\ud83d\udd25 PICK TT CUP \u00b7 18:35\n\u2705 HONS D.\nvs Flesar M.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.03 \u2192 no apostar\n\ud83d\udcb0 2.03 a 2.22 \u2192 APUESTA\n\u2b50\u2b50 2.23 a 2.63 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.63 \u2192 valor >30%, desconfiar\n\nSofascore: 1.67 \u2192 \u274c NO APOSTAR\nProb. 49% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "elite:496": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 18:35\n\u2705 SLAWOMIR J.\nvs Frank R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.33\n\u274c menos de 1.33 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 6 hoy, rival a\u00fan no\nSofascore: 1.33 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "tt:1459": "\ud83d\udd25 PICK TT CUP \u00b7 18:50\n\u2705 KOCAB J.\nvs Vanek P.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.81 \u2192 no apostar\n\ud83d\udcb0 1.81 a 1.98 \u2192 APUESTA\n\u2b50\u2b50 1.99 a 2.35 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.35 \u2192 valor >30%, desconfiar\n\nSofascore: 1.80 \u2192 \u274c NO APOSTAR\nProb. 55% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
+  "tt:1459": "\ud83d\udd25 PICK TT CUP \u00b7 18:50\n\u2705 KOCAB J.\nvs Vanek P.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.81 \u2192 no apostar\n\ud83d\udcb0 1.81 a 1.98 \u2192 APUESTA\n\u2b50\u2b50 1.99 a 2.35 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.35 \u2192 valor >30%, desconfiar\n\nSofascore: 1.80 \u2192 \u274c NO APOSTAR\nProb. 55% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
+  "elite:498": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 19:30\n\u2705 ADAMUS P.\nvs Juzek S.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 55%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-16 17:12",
+ "latido": "2026-11-16 17:26",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
