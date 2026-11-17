@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13460294": 1794810331.787924,
   "b13460474": 1794811269.6635222,
   "b13460316": 1794811804.448526,
   "b13460504": 1794812712.3605225,
@@ -266,9 +265,9 @@
   "b13465248": 1794896086.9362748,
   "b13469936": 1794891011.3236353,
   "b13465113": 1794890140.8001592,
-  "b13465255": 1794895740.4795468,
+  "b13465255": 1794896690.2737596,
   "b13469947": 1794891572.183767,
-  "b13464375": 1794895710.1031508,
+  "b13464375": 1794896619.596878,
   "b13469974": 1794892100.2024193,
   "b13469962": 1794892100.2024193,
   "b13469963": 1794892100.2024193,
@@ -276,10 +275,10 @@
   "b13465273": 1794891645.2222972,
   "b13469995": 1794892891.3295991,
   "b13470026": 1794893403.1616228,
-  "b13468773": 1794896303.5730329,
+  "b13468773": 1794897259.9672747,
   "b13470050": 1794893967.510151,
-  "b13465326": 1794896027.7827992,
-  "b13465356": 1794896027.7827992,
+  "b13465326": 1794896972.2376738,
+  "b13465356": 1794896972.2376738,
   "b13470053": 1794894204.972377,
   "b13470078": 1794895078.48491,
   "b13470091": 1794895361.3648024,
@@ -287,19 +286,21 @@
   "b13465318": 1794896518.7654164,
   "b13470150": 1794895508.8800757,
   "b13470149": 1794896446.5167308,
-  "b13470156": 1794895740.4795468,
+  "b13470156": 1794896690.2737596,
   "b13470182": 1794896027.7827992,
-  "b13465361": 1794896158.846927
+  "b13465361": 1794897115.525612,
+  "b13470220": 1794897115.525612,
+  "b13470209": 1794897115.525612
  },
  "elite_diag": {
   "fecha": "2026-11-17",
-  "revisados": 391,
-  "con_cuota": 191,
-  "favoritos": 136,
+  "revisados": 400,
+  "con_cuota": 195,
+  "favoritos": 140,
   "con_senal": 7,
-  "candidatos_ahora": 14,
-  "ultima": "07:21",
-  "sin_cuota_caliente": 3
+  "candidatos_ahora": 13,
+  "ultima": "07:35",
+  "sin_cuota_caliente": 4
  },
  "textos": {
   "elite:122": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 11:00\n\u2705 TOMASZ FILBRANDT\nvs Karol Wisniewski\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 67%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -563,9 +564,10 @@
   "elite:551": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 07:40\n\u2705 WIECEK A.\nvs Braun J.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.50\n\u274c menos de 1.50 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.50 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:552": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:05\n\u2705 SMOLKA K.\nvs Gajda R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.53\n\u274c menos de 1.53 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.53 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:553": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:55\n\u2705 GAJDA R.\nvs Przewlocki P.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 11 puntos mejor que la casa\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "elite:554": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 07:40\n\u2705 SOBEL A.\nvs Lamperski J.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 61%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
+  "elite:554": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 07:40\n\u2705 SOBEL A.\nvs Lamperski J.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 61%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
+  "elite:555": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:00\n\u2705 URBAN W.\nvs Sokolowski O.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 54%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-17 07:21",
+ "latido": "2026-11-17 07:35",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
