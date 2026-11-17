@@ -27,7 +27,6 @@
   "b13463780": 1794817906.4280093,
   "b13463800": 1794816591.9541156,
   "b13460315": 1794822384.8994942,
-  "b13462692": 1794815715.596189,
   "b13463397": 1794822384.8994942,
   "b13463825": 1794817105.011888,
   "b13463839": 1794817621.2411766,
@@ -272,7 +271,7 @@
   "b13470149": 1794896446.5167308,
   "b13470156": 1794896690.2737596,
   "b13470182": 1794896027.7827992,
-  "b13465361": 1794900814.5796263,
+  "b13465361": 1794901762.8364902,
   "b13470220": 1794897115.525612,
   "b13470209": 1794899885.5665808,
   "b13470229": 1794898555.5697427,
@@ -280,23 +279,27 @@
   "b13465363": 1794901364.944173,
   "b13465365": 1794901364.944173,
   "b13470290": 1794899710.2344522,
-  "b13465362": 1794900744.692055,
+  "b13465362": 1794901675.7815166,
   "b13470306": 1794899956.900823,
-  "b13465408": 1794901019.869093,
+  "b13465408": 1794901959.0835967,
   "b13470332": 1794901159.0347273,
   "b13470350": 1794900744.692055,
-  "b13465373": 1794900623.4516687,
+  "b13465373": 1794901534.1599069,
   "b13470412": 1794901435.7094488,
-  "b13470413": 1794901435.7094488
+  "b13470413": 1794901435.7094488,
+  "b13470457": 1794902031.9881208,
+  "b13465371": 1794902173.8592124,
+  "b13465559": 1794902173.8592124,
+  "b13467484": 1794902173.8592124
  },
  "elite_diag": {
   "fecha": "2026-11-17",
-  "revisados": 453,
-  "con_cuota": 227,
-  "favoritos": 163,
+  "revisados": 461,
+  "con_cuota": 233,
+  "favoritos": 167,
   "con_senal": 7,
-  "candidatos_ahora": 10,
-  "ultima": "08:43",
+  "candidatos_ahora": 12,
+  "ultima": "08:57",
   "sin_cuota_caliente": 4
  },
  "textos": {
@@ -566,7 +569,7 @@
   "tt:1531": "\ud83d\udd25 PICK TT CUP \u00b7 10:10\n\u2705 LYSEK J.\nvs Mandrysz F.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.19 \u2192 no apostar\n\ud83d\udcb0 2.19 a 2.39 \u2192 APUESTA\n\u2b50\u2b50 2.40 a 2.84 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.84 \u2192 valor >30%, desconfiar\n\nSofascore: 2.00 \u2192 \u274c NO APOSTAR\nProb. 46% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "tt:1532": "\ud83d\udd25 PICK TT CUP \u00b7 10:15\n\u2705 PRECEK E.\nvs Travnicek J.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.38 \u2192 no apostar\n\ud83d\udcb0 2.38 a 2.61 \u2192 APUESTA\n\u2b50\u2b50 2.62 a 3.10 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 3.10 \u2192 valor >30%, desconfiar\n\nSofascore: 2.25 \u2192 \u274c NO APOSTAR\nProb. 42% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-17 08:43",
+ "latido": "2026-11-17 08:57",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
