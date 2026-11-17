@@ -15,8 +15,6 @@
  "elite_revisados": {
   "b13460082": 1794794994.9565194,
   "b13455740": 1794796166.415166,
-  "b13463024": 1794792735.1236773,
-  "b13463025": 1794792735.1236773,
   "b13456815": 1794799190.9789379,
   "b13463071": 1794794415.9397502,
   "b13460216": 1794800756.5235016,
@@ -272,28 +270,29 @@
   "b13465104": 1794872461.4678657,
   "b13461299": 1794878414.1392474,
   "b13469259": 1794874859.8138895,
-  "b13461298": 1794877642.1763792,
+  "b13461298": 1794878579.199964,
   "b13461317": 1794873929.4087234,
-  "b13465268": 1794877642.1763792,
+  "b13465268": 1794878579.199964,
   "b13469285": 1794875121.8789752,
-  "b13461436": 1794877983.028999,
+  "b13461436": 1794878938.8340151,
   "b13469377": 1794877164.3101833,
   "b13469378": 1794877164.3101833,
   "b13461297": 1794876368.2750275,
-  "b13461316": 1794877596.4470286,
+  "b13461316": 1794878507.8687465,
   "b13469415": 1794877983.028999,
   "b13469424": 1794878271.0642796,
-  "b13467415": 1794877839.17966,
-  "b13469467": 1794878199.8300974
+  "b13467415": 1794878795.575229,
+  "b13469467": 1794879150.2898805,
+  "b13469475": 1794878452.2871754
  },
  "elite_diag": {
   "fecha": "2026-11-17",
-  "revisados": 106,
-  "con_cuota": 59,
-  "favoritos": 45,
+  "revisados": 113,
+  "con_cuota": 62,
+  "favoritos": 48,
   "con_senal": 4,
-  "candidatos_ahora": 14,
-  "ultima": "02:20"
+  "candidatos_ahora": 11,
+  "ultima": "02:33"
  },
  "textos": {
   "elite:122": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 11:00\n\u2705 TOMASZ FILBRANDT\nvs Karol Wisniewski\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 67%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -553,7 +552,7 @@
   "elite:546": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:10\n\u2705 KUKAWKA M.\nvs Smoter A.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.80\n\u274c menos de 1.80 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.80 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:547": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:50\n\u2705 KREZEL A.\nvs Lamer M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.25\n\u274c menos de 1.25 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 10 puntos mejor que la casa\nSofascore: 1.25 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-17 02:20",
+ "latido": "2026-11-17 02:33",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
