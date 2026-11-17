@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13460282": 1794828047.3644912,
   "b13460288": 1794829505.909973,
   "b13461329": 1794829505.909973,
   "b13460268": 1794829505.909973,
@@ -267,31 +266,34 @@
   "b13470716": 1794907921.9345632,
   "b13470717": 1794906968.0791337,
   "b13465500": 1794913837.4885545,
-  "b13465563": 1794913482.9468236,
+  "b13465563": 1794914415.5760102,
   "b13470780": 1794909316.45075,
   "b13465492": 1794908727.4103222,
-  "b13464708": 1794913771.2679324,
-  "b13465504": 1794913082.9681318,
+  "b13464708": 1794914696.6592681,
+  "b13465504": 1794913998.0172966,
   "b13470843": 1794910375.7851613,
   "b13470867": 1794910629.8920946,
   "b13470874": 1794912613.91278,
   "b13465494": 1794910843.1896956,
   "b13465507": 1794911729.80355,
-  "b13464707": 1794912962.8935647,
-  "b13465495": 1794913274.433731,
+  "b13464707": 1794913884.8508718,
+  "b13465495": 1794914203.659984,
   "b13471065": 1794913771.2679324,
-  "b13465505": 1794913274.433731,
+  "b13465505": 1794914203.659984,
   "b13471109": 1794913357.2038343,
-  "b13465477": 1794913837.4885545
+  "b13465477": 1794913837.4885545,
+  "b13471163": 1794913884.8508718,
+  "b13471185": 1794914148.3540823,
+  "b13471183": 1794914148.3540823
  },
  "elite_diag": {
   "fecha": "2026-11-17",
-  "revisados": 618,
-  "con_cuota": 313,
-  "favoritos": 226,
+  "revisados": 627,
+  "con_cuota": 317,
+  "favoritos": 230,
   "con_senal": 12,
-  "candidatos_ahora": 13,
-  "ultima": "12:10",
+  "candidatos_ahora": 14,
+  "ultima": "12:24",
   "sin_cuota_caliente": 7
  },
  "textos": {
@@ -577,7 +579,7 @@
   "tt:1554": "\ud83d\udd25 PICK TT CUP \u00b7 14:10\n\u2705 LYSEK J.\nvs Drozd K.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.59 \u2192 no apostar\n\ud83d\udcb0 2.59 a 2.84 \u2192 APUESTA\n\u2b50\u2b50 2.85 a 3.37 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 3.37 \u2192 valor >30%, desconfiar\n\nSofascore: 2.20 \u2192 \u274c NO APOSTAR\nProb. 39% \u00b7 ya ha jugado 4 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "tt:1556": "\ud83d\udd25 PICK TT CUP \u00b7 14:15\n\u2705 SRUBAR M.\nvs Kanak A.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.73 \u2192 no apostar\n\ud83d\udcb0 1.73 a 1.89 \u2192 APUESTA\n\u2b50\u2b50 1.90 a 2.25 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.25 \u2192 valor >30%, desconfiar\n\nSofascore: 1.83 \u2192 \ud83d\udcb0 APUESTA\nProb. 58% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-17 12:10",
+ "latido": "2026-11-17 12:24",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
