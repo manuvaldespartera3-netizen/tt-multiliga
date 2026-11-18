@@ -13,8 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13461298": 1794880483.5925326,
-  "b13465268": 1794880483.5925326,
   "b13461436": 1794881802.1998155,
   "b13461316": 1794883218.8944497,
   "b13467415": 1794884489.372908,
@@ -260,10 +258,10 @@
   "b13470996": 1794964789.5924025,
   "b13474014": 1794959515.222369,
   "b13474053": 1794964410.6748445,
-  "b13470997": 1794965323.9341977,
+  "b13470997": 1794966286.3322222,
   "b13474075": 1794961459.1424558,
   "b13474094": 1794961977.9393463,
-  "b13470994": 1794965929.593869,
+  "b13470994": 1794966852.1292443,
   "b13474102": 1794961610.1169944,
   "b13474116": 1794962541.11915,
   "b13474110": 1794964410.6748445,
@@ -271,21 +269,25 @@
   "b13470989": 1794966128.1122274,
   "b13474183": 1794963678.7391968,
   "b13474181": 1794963678.7391968,
-  "b13474180": 1794965507.477587,
-  "b13471009": 1794965788.4806995,
+  "b13474180": 1794966427.2767766,
+  "b13471009": 1794966711.6623492,
   "b13474367": 1794965009.027525,
-  "b13471001": 1794965433.027228,
+  "b13471001": 1794966356.2629256,
   "b13474390": 1794966128.1122274,
-  "b13474391": 1794966128.1122274
+  "b13474391": 1794966128.1122274,
+  "b13471012": 1794966923.3339562,
+  "b13471164": 1794966923.3339562,
+  "b13471360": 1794966923.3339562,
+  "b13471418": 1794966923.3339562
  },
  "elite_diag": {
   "fecha": "2026-11-18",
-  "revisados": 114,
-  "con_cuota": 72,
-  "favoritos": 62,
+  "revisados": 123,
+  "con_cuota": 78,
+  "favoritos": 68,
   "con_senal": 2,
-  "candidatos_ahora": 10,
-  "ultima": "02:41",
+  "candidatos_ahora": 14,
+  "ultima": "02:56",
   "sin_cuota_caliente": 3
  },
  "textos": {
@@ -590,7 +592,7 @@
   "elite:582": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:55\n\u2705 NOCUN Z.\nvs Zelezik J.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 52%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:583": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:10\n\u2705 NOCUN Z.\nvs Brunner M.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 61%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-18 02:41",
+ "latido": "2026-11-18 02:56",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
