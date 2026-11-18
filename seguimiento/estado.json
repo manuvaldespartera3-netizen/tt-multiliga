@@ -13,13 +13,10 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13464708": 1794915605.227456,
-  "b13465504": 1794915836.3865304,
   "b13464707": 1794918549.9567184,
   "b13465495": 1794918873.141285,
   "b13465505": 1794919792.7675977,
   "b13465477": 1794920422.7259095,
-  "b13471183": 1794916036.0843153,
   "b13464706": 1794921602.631825,
   "b13465497": 1794921881.7774167,
   "b13471253": 1794916488.701049,
@@ -265,10 +262,10 @@
   "b13471200": 1795000788.3706803,
   "b13475751": 1794995704.8916442,
   "b13471305": 1794995122.4573107,
-  "b13471205": 1795001390.6144493,
+  "b13471205": 1795002341.9984348,
   "b13475818": 1794996759.5538828,
   "b13475840": 1794997037.9148364,
-  "b13471334": 1795001316.4536085,
+  "b13471334": 1795002282.0940988,
   "b13471113": 1794997251.6915777,
   "b13475913": 1794998360.0724664,
   "b13475922": 1794998690.4808428,
@@ -278,22 +275,25 @@
   "b13471206": 1794999634.776538,
   "b13476032": 1795000715.6123195,
   "b13476065": 1795000961.614462,
-  "b13471291": 1795001185.9717658,
+  "b13471291": 1795002125.0434291,
   "b13476083": 1795001316.4536085,
-  "b13471212": 1795001185.9717658
+  "b13471212": 1795002125.0434291,
+  "b13476149": 1795001718.5151515,
+  "b13471336": 1795001780.2746577,
+  "b13476165": 1795001981.189709,
+  "b13476195": 1795002282.0940988
  },
  "elite_diag": {
   "fecha": "2026-11-18",
-  "revisados": 630,
-  "con_cuota": 338,
-  "favoritos": 277,
+  "revisados": 638,
+  "con_cuota": 343,
+  "favoritos": 280,
   "con_senal": 18,
-  "candidatos_ahora": 10,
-  "ultima": "12:34",
+  "candidatos_ahora": 12,
+  "ultima": "12:47",
   "sin_cuota_caliente": 10
  },
  "textos": {
-  "elite:210": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 06:10\n\u2705 SZYMIK R.\nvs Jesiek J.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 3 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 53%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:211": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 07:35\n\u2705 ALAN WOS\nvs Marchlewski M.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 52%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:212": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 07:40\n\u2705 DABROWSKI I.\nvs Waclaw Suchecki\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 58%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:213": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 07:40\n\u2705 MIASTOWSKI M.\nvs Murawski M.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 71%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -592,9 +592,10 @@
   "tt:1687": "\ud83d\udd25 PICK TT CUP \u00b7 13:45\n\u2705 SLAVIK L.\nvs Velky Jr D.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.77 \u2192 no apostar\n\ud83d\udcb0 1.77 a 1.94 \u2192 APUESTA\n\u2b50\u2b50 1.95 a 2.30 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.30 \u2192 valor >30%, desconfiar\n\nSofascore: 1.73 \u2192 \u274c NO APOSTAR\nProb. 57% \u00b7 ya ha jugado 4 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "tt:1689": "\ud83d\udd25 PICK TT CUP \u00b7 13:55\n\u2705 VONASEK J.\nvs Brozek M.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.74 \u2192 no apostar\n\ud83d\udcb0 1.74 a 1.90 \u2192 APUESTA\n\u2b50\u2b50 1.91 a 2.26 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.26 \u2192 valor >30%, desconfiar\n\nSofascore: 2.00 \u2192 \u2b50\u2b50 FUERTE\nProb. 58% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "elite:606": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 14:05\n\u2705 JADCZYK M.\nvs Murawski M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 19 puntos mejor que la casa\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "tt:1702": "\ud83d\udd25 PICK TT CUP \u00b7 14:10\n\u2705 KRUPNIK J.\nvs Moravec M.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.56 \u2192 no apostar\n\ud83d\udcb0 1.56 a 1.71 \u2192 APUESTA\n\u2b50\u2b50 1.72 a 2.03 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.03 \u2192 valor >30%, desconfiar\n\nSofascore: 1.91 \u2192 \u2b50\u2b50 FUERTE\nProb. 64% \u00b7 ya ha jugado 5 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
+  "tt:1702": "\ud83d\udd25 PICK TT CUP \u00b7 14:10\n\u2705 KRUPNIK J.\nvs Moravec M.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.56 \u2192 no apostar\n\ud83d\udcb0 1.56 a 1.71 \u2192 APUESTA\n\u2b50\u2b50 1.72 a 2.03 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.03 \u2192 valor >30%, desconfiar\n\nSofascore: 1.91 \u2192 \u2b50\u2b50 FUERTE\nProb. 64% \u00b7 ya ha jugado 5 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
+  "tt:1706": "\ud83d\udd25 PICK TT CUP \u00b7 14:50\n\u2705 VOJNA D.\nvs Knazik O.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.86 \u2192 no apostar\n\ud83d\udcb0 1.86 a 2.03 \u2192 APUESTA\n\u2b50\u2b50 2.04 a 2.41 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.41 \u2192 valor >30%, desconfiar\n\nSofascore: 1.67 \u2192 \u274c NO APOSTAR\nProb. 54% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-18 12:34",
+ "latido": "2026-11-18 12:47",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
