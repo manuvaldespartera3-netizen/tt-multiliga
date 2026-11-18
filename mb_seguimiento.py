@@ -39,17 +39,7 @@ import urllib.request
 from datetime import datetime, timedelta
 
 import mb_api
-import mb_marcas as MK
-from mb_api import TZ, parse
-import mb_bets
-
-# Fuente de datos: "betsapi" (recomendada) o "zyla". Cada una con su propio
-# historico en cache: los numeros de partido y de jugador no se mezclan nunca.
-FUENTE = os.getenv("FUENTE_DATOS", "zyla").strip().lower()
-SRC = mb_bets if FUENTE == "betsapi" else mb_api
-day_events, odds_raw, odds_from = SRC.day_events, SRC.odds_raw, SRC.odds_from
-HIST_SEG = int(os.getenv("HIST_SEG", "420"))       # segundos por vuelta para bajar historico
-HIST_HILOS = int(os.getenv("HIST_HILOS", "4"))     # descargas a la vez (BetsAPI va lento)
+from mb_api import TZ, parse, day_events, odds_raw, odds_from
 from mb_backtest import (Estado, vector, entrenar, predecir, MATCH_LEN, CUTOFF,
                          MIN_PLAYED, MIN_ODD, MAX_ODD)
 
@@ -80,22 +70,19 @@ ESTADO = os.path.join(DIR, "estado.json")
 COLS = ["liga", "canal", "fecha", "hora", "nivel", "pick", "rival", "prob", "cuota_minima", "cuota_fuerte",
         "cuota_sospecha", "cuota_maxima", "cuota_2h", "valor_2h", "cuota_betcris", "valor_betcris",
         "decision_betcris", "cuota_final", "pick_jugados_hoy", "resultado", "marcador",
-        "beneficio", "beneficio_betcris", "aviso", "msg", "estado_sofa", "id", "no_esta"]
+        "beneficio", "beneficio_betcris", "aviso", "msg", "estado_sofa", "id"]
 
-NIVEL_TXT = {"SOSPECHOSO": "⚠️ SOSPECHOSO (valor >30%, desconfiar)",
-             "FUERTE": "⭐⭐ FUERTE", "APUESTA": "💰 APUESTA",
+# Lo que ves: o es APUESTA o no lo es. (Por dentro se siguen guardando los
+# niveles de siempre, para no tocar los datos que ya hay.)
+NIVEL_TXT = {"SOSPECHOSO": "❌ NO APOSTAR (cuota demasiado alta, sospechosa)",
+             "FUERTE": "💰 APUESTA", "APUESTA": "💰 APUESTA",
              "FLOJO": "❌ NO APOSTAR", "SIN CUOTA": ""}
+ES_APUESTA = ("FUERTE", "APUESTA")
 
 
 # ===================================================================== datos
 def cache_dir(lid):
-    if FUENTE == "betsapi":
-        return os.path.join(DIR, f"cache_b{lid}")
     return CACHE if lid == TTCUP else os.path.join(DIR, f"cache_{lid}")
-
-
-LLAMADAS_INICIO = [0]
-FALTAN = {}                 # liga -> dias del historico que faltan por bajar
 
 
 def fetch_day(d, now, lid=TTCUP):
@@ -105,8 +92,6 @@ def fetch_day(d, now, lid=TTCUP):
     if os.path.exists(path):
         with open(path) as f:
             return json.load(f)
-    if FUENTE == "betsapi" and d < (now - timedelta(days=1)).strftime("%Y-%m-%d"):
-        return None             # historico que aun no esta: lo baja precargar() poco a poco
     for intento in range(4):
         try:
             evs = day_events(lid, d)
@@ -125,69 +110,14 @@ def fetch_day(d, now, lid=TTCUP):
     return evs
 
 
-def precargar(now):
-    """BetsAPI: baja los dias del historico que faltan, varios a la vez y como
-    mucho HIST_SEG segundos por vuelta (asi avanza siempre, aunque BetsAPI vaya
-    lento, y el bot sigue atendiendo tus mensajes el resto de la vuelta)."""
-    if FUENTE != "betsapi":
-        return
-    from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
-    limite = time.time() + HIST_SEG
-    hoy = now.date()
-    for lid in LIGAS_SEG:
-        liga = mb_bets.LIGAS.get(lid, lid)
-        faltan = []
-        d = hoy - timedelta(days=TRAIN_DAYS + WARMUP_DAYS)
-        while d <= hoy - timedelta(days=2):
-            if not os.path.exists(os.path.join(cache_dir(lid), f"{d:%Y-%m-%d}.json")):
-                faltan.append(d)
-            d += timedelta(days=1)
-        if not faltan:
-            continue
-        faltan.reverse()                       # primero los mas recientes (los que mas pesan)
-        utc = []
-        for d in faltan:
-            for k in (-1, 0):
-                du = (d + timedelta(days=k)).strftime("%Y%m%d")
-                if du not in utc and (liga, du) not in mb_bets._UTC:
-                    utc.append(du)
-        with ThreadPoolExecutor(HIST_HILOS) as ex:
-            pend = set()
-            for du in utc:
-                while len(pend) >= HIST_HILOS:
-                    _, pend = wait(pend, return_when=FIRST_COMPLETED)
-                if time.time() > limite:
-                    break
-                pend.add(ex.submit(mb_bets._dia_utc, liga, du, False))
-            wait(pend)
-        hechos = 0
-        for d in faltan:
-            dus = [(d + timedelta(days=k)).strftime("%Y%m%d") for k in (-1, 0)]
-            if all((liga, du) in mb_bets._UTC for du in dus):
-                evs = mb_bets.day_events(lid, d.strftime("%Y-%m-%d"))   # ya en memoria: sin consultas
-                os.makedirs(cache_dir(lid), exist_ok=True)
-                with open(os.path.join(cache_dir(lid), f"{d:%Y-%m-%d}.json"), "w") as f:
-                    json.dump(evs, f)
-                hechos += 1
-        print(f"historico {NOMBRE.get(lid, lid)}: {hechos} dias nuevos · faltaban {len(faltan)}")
-        if time.time() > limite:
-            break
-
-
 def cargar(now, lid=TTCUP):
     hoy = now.date()
     evs = {}
     d = hoy - timedelta(days=TRAIN_DAYS + WARMUP_DAYS)
-    faltan = 0
     while d <= hoy + timedelta(days=1):
-        dia = fetch_day(d.strftime("%Y-%m-%d"), now, lid)
-        if dia is None:
-            faltan += 1
-            dia = []
-        for e in dia:
+        for e in fetch_day(d.strftime("%Y-%m-%d"), now, lid):
             evs[str(e.get("id"))] = e
         d += timedelta(days=1)
-    FALTAN[lid] = faltan
     return evs
 
 
@@ -362,25 +292,20 @@ def nuevos_picks(cands, mod, picks, st, now):
                f"✅ {pick.upper()}\n"
                f"vs {rival}\n"
                f"\n"
-               f"Según la cuota de BetCris:\n"
-               f"❌ menos de {c_apuesta:.2f} → no apostar\n"
-               f"💰 {c_apuesta:.2f} a {c_fuerte - 0.01:.2f} → APUESTA\n"
-               f"⭐⭐ {c_fuerte:.2f} a {c_sospecha:.2f} → FUERTE\n"
-               f"⚠️ más de {c_sospecha:.2f} → valor >30%, desconfiar\n"
+               f"💰 APUESTA si BetCris está entre {c_apuesta:.2f} y {c_sospecha:.2f}\n"
+               f"❌ fuera de ese rango → no apostar\n"
                f"\n"
                f"Sofascore: {f'{c:.2f} → {NIVEL_TXT[nv]}' if c else 'sin cuota'}\n"
                f"Prob. {p * 100:.0f}% · ya ha jugado {jh} hoy, rival aún no\n"
-               f"↩️ Responde con tu cuota de BetCris para apuntarla\n"
-               f"🧪 Seguimiento")
-        pk = dict(liga="TT Cup", canal="tt", fecha=dt.strftime("%Y-%m-%d"), hora=dt.strftime("%H:%M"),
-                  nivel=nv, pick=pick, rival=rival, prob=round(p, 3),
-                  cuota_minima=c_apuesta, cuota_fuerte=c_fuerte,
-                  cuota_sospecha=c_sospecha,
-                  cuota_2h=c or "", valor_2h=round(valor, 3) if valor is not None else "",
-                  pick_jugados_hoy=jh, aviso=now.strftime("%Y-%m-%d %H:%M"),
-                  resultado="pendiente", msg="", id=f["id"])
-        pk["msg"] = MK.enviar(TG, CHAT, "tt", txt, pk) or ""
-        picks.append(pk)
+               f"↩️ Responde con tu cuota de BetCris para apuntarla")
+        msg = tg(txt)
+        picks.append(dict(liga="TT Cup", canal="tt", fecha=dt.strftime("%Y-%m-%d"), hora=dt.strftime("%H:%M"),
+                          nivel=nv, pick=pick, rival=rival, prob=round(p, 3),
+                          cuota_minima=c_apuesta, cuota_fuerte=c_fuerte,
+                          cuota_sospecha=c_sospecha,
+                          cuota_2h=c or "", valor_2h=round(valor, 3) if valor is not None else "",
+                          pick_jugados_hoy=jh, aviso=now.strftime("%Y-%m-%d %H:%M"),
+                          resultado="pendiente", msg=msg or "", id=f["id"]))
         ya.add(f["id"])
 
 
@@ -465,16 +390,15 @@ def aviso_elite(f, lado, c, pm, pe, sen_a, sen_b, picks, now):
            + sofa + "\n"
            "↩️ Responde con tu cuota de BetCris para apuntarla\n"
            "🧪 Seguimiento · sin dinero hasta confirmarlo")
-    pk = dict(liga="Elite Series", canal="elite", fecha=dt.strftime("%Y-%m-%d"),
-              hora=dt.strftime("%H:%M"),
-              nivel="A+B" if sen_a and sen_b else ("A" if sen_a else "B"),
-              pick=pick, rival=rival, prob=round(pm if pm else pe, 3),
-              cuota_minima=minima, cuota_maxima=maxima or "",
-              cuota_2h=c or "", valor_2h=0 if c else "", pick_jugados_hoy=jh,
-              aviso=now.strftime("%Y-%m-%d %H:%M"), resultado="pendiente",
-              msg="", id=f["id"])
-    pk["msg"] = MK.enviar(TG_ELITE, CHAT, "elite", txt, pk) or ""
-    picks.append(pk)
+    msg = tg(txt, token=TG_ELITE)
+    picks.append(dict(liga="Elite Series", canal="elite", fecha=dt.strftime("%Y-%m-%d"),
+                      hora=dt.strftime("%H:%M"),
+                      nivel="A+B" if sen_a and sen_b else ("A" if sen_a else "B"),
+                      pick=pick, rival=rival, prob=round(pm if pm else pe, 3),
+                      cuota_minima=minima, cuota_maxima=maxima or "",
+                      cuota_2h=c or "", valor_2h=0 if c else "", pick_jugados_hoy=jh,
+                      aviso=now.strftime("%Y-%m-%d %H:%M"), resultado="pendiente",
+                      msg=msg or "", id=f["id"]))
 
 
 def es_elite(p):
@@ -555,10 +479,6 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
     por_msg = {str(p.get("msg")): p for p in picks if p.get("msg")}
     for u in upd:
         st[clave_offset] = u["update_id"] + 1
-        b = MK.boton(u, picks, CHAT)
-        if b:                                          # boton [🚫 No está el partido]
-            MK.aplicar_boton(token, CHAT, canal, *b)
-            continue
         m = u.get("message") or {}
         if str((m.get("chat") or {}).get("id")) != CHAT:
             continue
@@ -581,40 +501,11 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
                          f"(última revisión {d.get('ultima', '—')})\n")
                 if st.get("error_19041"):
                     extra += f"⚠️ Último error: {st['error_19041']}\n"
-            hist = st.get(f"historico_{ELITE if canal == 'elite' else TTCUP}")
-            if hist:
-                extra += f"⏳ Cargando historial de BetsAPI: {hist} días (sin avisos hasta terminar)\n"
-            extra += f"Fuente de datos: {'BetsAPI' if FUENTE == 'betsapi' else 'Zyla'}\n"
             tg(f"✅ Funcionando · {'ELITE SERIES' if canal == 'elite' else 'TT CUP'} · "
                f"comprobado a las {ahora:%H:%M}\n"
                f"Hoy: {len(del_dia)} avisos · {pend} pendientes de resultado\n" + extra +
                f"Último aviso: {ult[11:] if ult.startswith(hoy) else ult or '—'}\n"
                f"Si no llegan avisos es porque ahora no hay partidos que cumplan la regla.", mid)
-            continue
-        if limpio(texto).strip() in ("pendientes", "pendiente", "faltan"):
-            ahora = datetime.now(TZ)
-            tg(MK.texto_pendientes(picks, ahora.strftime("%Y-%m-%d"),
-                                   (ahora - timedelta(days=1)).strftime("%Y-%m-%d")), mid)
-            continue
-        orden, resto = MK.orden(texto)
-        if orden:                                     # "no" (no está en BetCris) / "si" (deshacer)
-            pk = buscar_pick(picks, por_msg, m, " ".join(resto)) if (
-                str((m.get("reply_to_message") or {}).get("message_id", "")) in por_msg or resto) else None
-            if not pk:
-                tg("❓ Responde al aviso con «no» (no está en BetCris) o «si» (deshacer), "
-                   "o escribe: no apellido", mid)
-                continue
-            if orden == "no":
-                pk["no_esta"] = "si"
-                for k in ("cuota_betcris", "valor_betcris", "decision_betcris", "beneficio_betcris"):
-                    pk[k] = ""
-                MK.actualizar(token, CHAT, canal, pk)
-                tg(f"⚫⚫ Apuntado: {pk['pick'].upper()} ({pk['hora']}) no está en BetCris · no cuenta.\n"
-                   "Si aparece, responde al aviso con la cuota (o «si» para dejarlo pendiente).", mid)
-            else:
-                pk["no_esta"] = ""
-                MK.actualizar(token, CHAT, canal, pk)
-                tg(f"⚪⚪ {pk['pick'].upper()} ({pk['hora']}) vuelve a pendiente: responde con la cuota.", mid)
             continue
         if limpio(texto).split()[:1] in (["borrar"], ["borra"], ["quitar"], ["quita"]):
             pk = buscar_pick(picks, por_msg, m, texto)
@@ -624,16 +515,13 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
                 continue
             for k in ("cuota_betcris", "valor_betcris", "decision_betcris", "beneficio_betcris"):
                 pk[k] = ""
-            MK.actualizar(token, CHAT, canal, pk)          # vuelve a ⚪
             tg(f"🗑️ Borrada tu cuota de {pk['pick'].upper()} ({pk['hora']}). "
                "Ya no cuenta en tus estadísticas de BetCris.", mid)
             continue
         nums = re.findall(r"\d+[.,]\d+|\d+", texto)
         if not nums:
             continue
-        # la cuota es el primer numero con pinta de cuota ("1,85 120" -> 1,85)
-        validos = [float(x.replace(",", ".")) for x in nums if 1.01 <= float(x.replace(",", ".")) <= 50]
-        cb = validos[0] if validos else float(nums[-1].replace(",", "."))
+        cb = float(nums[-1].replace(",", "."))
         if not (1.01 <= cb <= 50):
             tg("❓ No entiendo la cuota. Escríbela así: 1,84", mid)
             continue
@@ -643,51 +531,18 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
                "o escribe: apellido cuota (ej. precek 1,84)", mid)
             continue
         pk["cuota_betcris"] = cb
-        pk["no_esta"] = ""
         calc_betcris(pk)
-        MK.actualizar(token, CHAT, canal, pk)              # 🟢 / 🟡 / 🔴
         if es_elite(pk):
             rango = (f"entre {float(pk['cuota_minima']):.2f} y {float(pk['cuota_maxima']):.2f}"
                      if pk.get("cuota_maxima") else f"mínima {float(pk['cuota_minima']):.2f}")
-            t = (f"{MK.color(pk)} Apuntado {pk['pick'].upper()} (Elite {pk['hora']}) · BetCris {cb:.2f}\n"
+            t = (f"📝 Apuntado {pk['pick'].upper()} (Elite {pk['hora']}) · BetCris {cb:.2f}\n"
                  f"Hay que apostar {rango} → {NIVEL_TXT[pk['decision_betcris']]}")
         else:
-            t = (f"{MK.color(pk)} Apuntado {pk['pick'].upper()} ({pk['hora']}) · BetCris {cb:.2f}\n"
+            t = (f"📝 Apuntado {pk['pick'].upper()} ({pk['hora']}) · BetCris {cb:.2f}\n"
                  f"Valor {float(pk['valor_betcris']) * 100:+.0f}% → {NIVEL_TXT[pk['decision_betcris']]}")
         if pk.get("resultado") in ("ganado", "perdido", "anulado"):
             t += "\n" + texto_resultado(pk)
         tg(t, mid)
-
-
-def _apellido(n):
-    w = limpio(n).split()
-    if len(w) >= 2 and len(w[-1]) == 1:
-        w = w[:-1]
-    return w[-1] if len(w) >= 2 and len(w[0]) > 1 and n and not n.strip().endswith(".") else (w[0] if w else "")
-
-
-def por_nombres(p, evs):
-    """Pick apuntado con datos de Zyla: busca el mismo partido en los de BetsAPI
-    (mismos apellidos y misma hora, ±30 min)."""
-    if str(p.get("id", "")).startswith("b"):
-        return None
-    try:
-        t = datetime.strptime(f"{p['fecha']} {p['hora']}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ).timestamp()
-    except ValueError:
-        return None
-    quiero = {_apellido(p["pick"]), _apellido(p["rival"])}
-    for e in evs.values():
-        if abs(int(e.get("startTimestamp") or 0) - t) > 1800:
-            continue
-        tiene = {_apellido((e.get("homeTeam") or {}).get("name", "")),
-                 _apellido((e.get("awayTeam") or {}).get("name", ""))}
-        if quiero == tiene:
-            # mismo partido: el pick pasa a llevar el nombre que usa BetsAPI
-            casa = (e.get("homeTeam") or {}).get("name", "")
-            fuera = (e.get("awayTeam") or {}).get("name", "")
-            p["pick"], p["rival"] = (casa, fuera) if _apellido(casa) == _apellido(p["pick"]) else (fuera, casa)
-            return e
-    return None
 
 
 def resolver(picks, evs, now):
@@ -701,7 +556,7 @@ def resolver(picks, evs, now):
         res = p.get("resultado")
         if res not in ("pendiente", "anulado"):
             continue
-        e = evs.get(p["id"]) or (por_nombres(p, evs) if FUENTE == "betsapi" else None)
+        e = evs.get(p["id"])
         if not e:
             continue
         st = (e.get("status") or {}).get("type", "")
@@ -778,8 +633,22 @@ def bloque_elite(rows):
             f"  📈 señal B (Elo): {resumen([r for r in rows if 'B' in r.get('nivel', '')])}\n")
 
 
+def linea(rows):
+    """'8 apuestas · 3 ✅ 5 ❌ · -1,71 u · yield -21,4%' (solo picks apostables con tu cuota)."""
+    hechos = [r for r in rows if r.get("resultado") in ("ganado", "perdido")
+              and num(r.get("beneficio_betcris")) is not None]
+    if not hechos:
+        return "0 apuestas"
+    n = len(hechos)
+    g = sum(1 for r in hechos if r["resultado"] == "ganado")
+    u = sum(float(r["beneficio_betcris"]) for r in hechos)
+    return (f"{n} apuestas · {g} ✅ {n - g} ❌ · {u:+.2f} u · yield {u / n * 100:+.1f}%"
+            ).replace(".", ",")
+
+
 def resumen_dia(picks, st, now):
-    """Resumen a partir de las 23:45; si esa noche no hubo ejecucion, de madrugada."""
+    """Resumen sencillo a partir de las 23:45 (o de madrugada si esa noche no hubo
+    ejecucion): solo tus apuestas, el dia y el acumulado."""
     if now.hour == 23 and now.minute >= 45:
         dia = now
     elif now.hour < 6:
@@ -789,42 +658,28 @@ def resumen_dia(picks, st, now):
     hoy = dia.strftime("%Y-%m-%d")
     if st.get("resumen", "") >= hoy:
         return
-    tt = [p for p in picks if not es_elite(p)]
-    del_dia = [p for p in tt if p["fecha"] == hoy]
-    pend = sum(1 for p in del_dia if p["resultado"] == "pendiente")
-    sin = sum(1 for p in del_dia if p["resultado"] != "pendiente" and not p.get("cuota_2h"))
-    noesta = sum(1 for p in del_dia if p.get("no_esta") == "si")
-    blancos = sum(1 for p in del_dia if MK.es_blanco(p))
-    txt = (f"📋 RESUMEN TT CUP · {dia:%d/%m} · {len(del_dia)} avisos\n" + bloque(del_dia)
-           + (f"⚫ No estaban en BetCris: {noesta}\n" if noesta else "")
-           + (f"⚪ Sin tu cuota: {blancos}\n" if blancos else "")
-           + (f"⏳ Pendientes: {pend}\n" if pend else "")
-           + (f"(sin cuota en Sofascore: {sin}, solo cuentan si apuntaste BetCris)\n" if sin else "")
-           + f"\n📈 ACUMULADO desde {st.get('inicio', hoy)} · {len(tt)} avisos\n" + bloque(tt)
-           + "(1 u por pick)")
-    tg(txt)
-    el = [p for p in picks if es_elite(p)]
-    if el and TG_ELITE:
-        el_dia = [p for p in el if p["fecha"] == hoy]
-        ne = sum(1 for p in el_dia if p.get("no_esta") == "si")
-        tg(token=TG_ELITE, text=f"🇵🇱 RESUMEN ELITE SERIES · {dia:%d/%m} · {len(el_dia)} avisos\n" + bloque_elite(el_dia)
-           + (f"⚫ No estaban en BetCris: {ne}\n" if ne else "")
-           + f"\n📈 ACUMULADO desde {st.get('inicio_elite', hoy)} · {len(el)} avisos\n"
-           + bloque_elite(el) + "(1 u por pick · señal en prueba, sin dinero)")
+    for liga, token, inicio, aceptadas in (
+            ("TT Cup", TG, st.get("inicio", hoy), ES_APUESTA),
+            ("Elite Series", TG_ELITE, st.get("inicio_elite", hoy), ("APUESTA",))):
+        if liga == "Elite Series" and not TG_ELITE:
+            continue
+        rows = [p for p in picks if (p.get("liga") or "TT Cup") == liga]
+        ap = [p for p in rows if p.get("decision_betcris") in aceptadas]
+        ap_dia = [p for p in ap if p["fecha"] == hoy]
+        pend = sum(1 for p in ap_dia if p.get("resultado") == "pendiente")
+        titulo = "🏓 TT CUP" if liga == "TT Cup" else "🇵🇱 ELITE SERIES (sin dinero)"
+        tg(f"📋 {titulo} · {dia:%d/%m}\n"
+           f"Hoy: {linea(ap_dia)}\n"
+           f"Acumulado desde {inicio[8:10]}/{inicio[5:7]}: {linea(ap)}"
+           + (f"\n⏳ Pendientes de hoy: {pend}" if pend else ""), token=token)
     st["resumen"] = hoy
 
 
 def main():
-    if not SRC.KEY:
-        raise SystemExit("Falta BETSAPI_TOKEN" if FUENTE == "betsapi" else "Falta ZYLA_API_KEY")
-    LLAMADAS_INICIO[0] = mb_bets.LLAMADAS[0]
+    if not mb_api.KEY:
+        raise SystemExit("Falta ZYLA_API_KEY")
     now = datetime.now(TZ)
-    try:
-        precargar(now)
-    except Exception as ex:
-        print("WARN historico", ex)
     st = leer_estado()
-    MK.TEXTOS = st.setdefault("textos", {})  # textos de los avisos (para cambiar su color)
     picks = leer_picks()
     for p in picks:                          # picks de versiones anteriores
         if not p.get("liga"):
@@ -886,28 +741,6 @@ def main():
                 train, cands = calcular(evs, now, incluir_todos=(lid == ELITE))
                 print(f"{now:%H:%M} · {NOMBRE.get(lid, lid)} · {len(evs)} partidos · "
                       f"{len(train)} para entrenar · {len(cands)} candidatos")
-                if FALTAN.get(lid):
-                    # historico de BetsAPI aun incompleto: sin avisos (saldrian con datos a medias)
-                    total = TRAIN_DAYS + WARMUP_DAYS + 2
-                    st[f"historico_{lid}"] = f"{total - FALTAN[lid]}/{total}"
-                    if not st.get(f"aviso_hist_{lid}"):
-                        st[f"aviso_hist_{lid}"] = now.strftime("%Y-%m-%d %H:%M")
-                        t_h = (f"⏳ {NOMBRE.get(lid, lid)}: paso a datos de BetsAPI. Estoy cargando "
-                               f"el historial ({total - FALTAN[lid]}/{total} días). Mientras tanto "
-                               "no hay avisos nuevos (1-2 horas). Te aviso cuando termine.")
-                        if lid == ELITE and TG_ELITE:
-                            tg(t_h, token=TG_ELITE)
-                        elif lid == TTCUP:
-                            tg(t_h)
-                    continue
-                if st.get(f"historico_{lid}"):
-                    st.pop(f"historico_{lid}")
-                    aviso_hist = (f"✅ Histórico de BetsAPI cargado: vuelven los avisos de "
-                                  f"{NOMBRE.get(lid, lid)}.")
-                    if lid == ELITE and TG_ELITE:
-                        tg(aviso_hist, token=TG_ELITE)
-                    elif lid == TTCUP:
-                        tg(aviso_hist)
                 if lid == TTCUP:
                     if mod is None and len(train) >= 500:
                         mod = entrenar([vector(f) for f in train], [f["gana_a"] for f in train])
@@ -923,17 +756,11 @@ def main():
             tg(f"🔧 Corregidos {corr} picks que estaban como anulados: ya tienen su "
                "resultado real y cuentan en el resumen.")
         resumen_dia(picks, st, now)
-        st["latido"] = now.strftime("%Y-%m-%d %H:%M")   # señal de vida (la mira el TT AVISADOR)
         guardar_picks(picks)
         guardar_estado(st)
         if time.time() + 60 > fin:
             break
-        # hasta la siguiente vuelta de datos, mira Telegram cada 15 s (respuesta rapida)
-        while time.time() - t0 < 60 and time.time() + 20 < fin:
-            time.sleep(15)
-            leer_respuestas(picks, st)
-            guardar_picks(picks)
-            guardar_estado(st)
+        time.sleep(max(5, 60 - (time.time() - t0)))
 
 if __name__ == "__main__":
     main()
