@@ -32,6 +32,7 @@ import csv
 import json
 import os
 import re
+import threading
 import time
 import unicodedata
 import urllib.parse
@@ -95,6 +96,7 @@ def cache_dir(lid):
 
 
 LLAMADAS_INICIO = [0]
+LOCK = threading.RLock()    # picks/estado: los usan a la vez la vuelta de datos y el lector de mensajes
 FALTAN = {}                 # liga -> dias del historico que faltan por bajar
 
 
@@ -107,7 +109,7 @@ def fetch_day(d, now, lid=TTCUP):
             return json.load(f)
     if FUENTE == "betsapi" and d < (now - timedelta(days=1)).strftime("%Y-%m-%d"):
         return None             # historico que aun no esta: lo baja precargar() poco a poco
-    for intento in range(4):
+    for intento in range(2 if FUENTE == "betsapi" else 4):
         try:
             evs = day_events(lid, d)
             break
@@ -280,11 +282,13 @@ def leer_picks():
 
 def guardar_picks(rows):
     os.makedirs(DIR, exist_ok=True)
-    with open(PICKS, "w", newline="") as f:
+    tmp = PICKS + ".tmp"                     # se escribe aparte y se cambia de golpe:
+    with open(tmp, "w", newline="") as f:     # si GitHub corta a medias, el csv no se rompe
         w = csv.DictWriter(f, fieldnames=COLS)
         w.writeheader()
         for r in rows:
             w.writerow({k: r.get(k, "") for k in COLS})
+    os.replace(tmp, PICKS)
 
 
 def leer_estado():
@@ -296,8 +300,10 @@ def leer_estado():
 
 def guardar_estado(st):
     os.makedirs(DIR, exist_ok=True)
-    with open(ESTADO, "w") as f:
+    tmp = ESTADO + ".tmp"
+    with open(tmp, "w") as f:
         json.dump(st, f, indent=1)
+    os.replace(tmp, ESTADO)
 
 
 # =================================================================== niveles
@@ -584,6 +590,8 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
             hist = st.get(f"historico_{ELITE if canal == 'elite' else TTCUP}")
             if hist:
                 extra += f"⏳ Cargando historial de BetsAPI: {hist} días (sin avisos hasta terminar)\n"
+            if canal == "tt" and st.get(f"error_{TTCUP}"):
+                extra += f"⚠️ Último error: {st[f'error_{TTCUP}']}\n"
             extra += f"Fuente de datos: {'BetsAPI' if FUENTE == 'betsapi' else 'Zyla'}\n"
             tg(f"✅ Funcionando · {'ELITE SERIES' if canal == 'elite' else 'TT CUP'} · "
                f"comprobado a las {ahora:%H:%M}\n"
@@ -819,10 +827,7 @@ def main():
         raise SystemExit("Falta BETSAPI_TOKEN" if FUENTE == "betsapi" else "Falta ZYLA_API_KEY")
     LLAMADAS_INICIO[0] = mb_bets.LLAMADAS[0]
     now = datetime.now(TZ)
-    try:
-        precargar(now)
-    except Exception as ex:
-        print("WARN historico", ex)
+    fin = time.time() + RUN_MIN * 60
     st = leer_estado()
     MK.TEXTOS = st.setdefault("textos", {})  # textos de los avisos (para cambiar su color)
     picks = leer_picks()
@@ -870,70 +875,102 @@ def main():
            "↩️ Responde al aviso con tu cuota (ej. 1,84) o escribe: apellido cuota\n"
            "Escribe «estado» para saber si está funcionando\n"
            "Todo queda apuntado. Resumen cada noche a las 23:45.")
+    # Tus mensajes se leen APARTE, cada 15 s, desde el primer momento: aunque
+    # BetsAPI vaya lento o se cuelgue, tus cuotas se apuntan y se contestan igual.
+    parar = threading.Event()
+
+    def lector():
+        while not parar.is_set():
+            try:
+                with LOCK:
+                    leer_respuestas(picks, st)
+                    guardar_picks(picks)
+                    guardar_estado(st)
+            except Exception as ex:
+                print("WARN lector", ex)
+            parar.wait(15)
+    hilo = threading.Thread(target=lector, daemon=True)
+    hilo.start()
+    try:
+        precargar(now)
+    except Exception as ex:
+        print("WARN historico", ex)
     # Cada ejecucion se queda RUN_MIN minutos dando una vuelta por minuto: asi
     # contesta rapido a tus cuotas y no depende de que GitHub sea puntual.
-    fin = time.time() + RUN_MIN * 60
     mod = None
     while True:
         t0 = time.time()
         now = datetime.now(TZ)
-        leer_respuestas(picks, st)
         todos_evs = {}
-        for lid in LIGAS_SEG:
+        datos = {}
+        for lid in LIGAS_SEG:                # descargas SIN bloquear la lectura de mensajes
+            if time.time() > fin + 180:
+                print("Vuelta demasiado larga: se deja la liga", lid, "para la siguiente")
+                continue
             try:
-                evs = cargar(now, lid)
-                todos_evs.update(evs)
-                train, cands = calcular(evs, now, incluir_todos=(lid == ELITE))
-                print(f"{now:%H:%M} · {NOMBRE.get(lid, lid)} · {len(evs)} partidos · "
-                      f"{len(train)} para entrenar · {len(cands)} candidatos")
-                if FALTAN.get(lid):
-                    # historico de BetsAPI aun incompleto: sin avisos (saldrian con datos a medias)
-                    total = TRAIN_DAYS + WARMUP_DAYS + 2
-                    st[f"historico_{lid}"] = f"{total - FALTAN[lid]}/{total}"
-                    if not st.get(f"aviso_hist_{lid}"):
-                        st[f"aviso_hist_{lid}"] = now.strftime("%Y-%m-%d %H:%M")
-                        t_h = (f"⏳ {NOMBRE.get(lid, lid)}: paso a datos de BetsAPI. Estoy cargando "
-                               f"el historial ({total - FALTAN[lid]}/{total} días). Mientras tanto "
-                               "no hay avisos nuevos (1-2 horas). Te aviso cuando termine.")
-                        if lid == ELITE and TG_ELITE:
-                            tg(t_h, token=TG_ELITE)
-                        elif lid == TTCUP:
-                            tg(t_h)
-                    continue
-                if st.get(f"historico_{lid}"):
-                    st.pop(f"historico_{lid}")
-                    aviso_hist = (f"✅ Histórico de BetsAPI cargado: vuelven los avisos de "
-                                  f"{NOMBRE.get(lid, lid)}.")
-                    if lid == ELITE and TG_ELITE:
-                        tg(aviso_hist, token=TG_ELITE)
-                    elif lid == TTCUP:
-                        tg(aviso_hist)
-                if lid == TTCUP:
-                    if mod is None and len(train) >= 500:
-                        mod = entrenar([vector(f) for f in train], [f["gana_a"] for f in train])
-                    if mod is not None and cands:
-                        nuevos_picks(cands, mod, picks, st, now)
-                elif lid == ELITE and cands:
-                    nuevos_picks_elite(cands, picks, st, now)
-            except Exception as ex:          # un fallo en una liga no para la otra
+                datos[lid] = cargar(now, lid)
+            except Exception as ex:
                 print("ERROR liga", lid, ex)
-                st[f"error_{lid}"] = f"{now:%H:%M} {type(ex).__name__}: {str(ex)[:120]}"
-        corr = resolver(picks, todos_evs, now)
-        if corr:
-            tg(f"🔧 Corregidos {corr} picks que estaban como anulados: ya tienen su "
-               "resultado real y cuentan en el resumen.")
-        resumen_dia(picks, st, now)
-        st["latido"] = now.strftime("%Y-%m-%d %H:%M")   # señal de vida (la mira el TT AVISADOR)
-        guardar_picks(picks)
-        guardar_estado(st)
-        if time.time() + 60 > fin:
-            break
-        # hasta la siguiente vuelta de datos, mira Telegram cada 15 s (respuesta rapida)
-        while time.time() - t0 < 60 and time.time() + 20 < fin:
-            time.sleep(15)
-            leer_respuestas(picks, st)
+                with LOCK:
+                    st[f"error_{lid}"] = f"{now:%H:%M} {type(ex).__name__}: {str(ex)[:120]}"
+        with LOCK:                           # el resto, con picks/estado reservados
+            for lid in datos:
+                try:
+                    evs = datos[lid]
+                    todos_evs.update(evs)
+                    train, cands = calcular(evs, now, incluir_todos=(lid == ELITE))
+                    print(f"{now:%H:%M} · {NOMBRE.get(lid, lid)} · {len(evs)} partidos · "
+                          f"{len(train)} para entrenar · {len(cands)} candidatos")
+                    if FALTAN.get(lid):
+                        # historico de BetsAPI aun incompleto: sin avisos (saldrian con datos a medias)
+                        total = TRAIN_DAYS + WARMUP_DAYS + 2
+                        st[f"historico_{lid}"] = f"{total - FALTAN[lid]}/{total}"
+                        if not st.get(f"aviso_hist_{lid}"):
+                            st[f"aviso_hist_{lid}"] = now.strftime("%Y-%m-%d %H:%M")
+                            t_h = (f"⏳ {NOMBRE.get(lid, lid)}: paso a datos de BetsAPI. Estoy cargando "
+                                   f"el historial ({total - FALTAN[lid]}/{total} días). Mientras tanto "
+                                   "no hay avisos nuevos (1-2 horas). Te aviso cuando termine.")
+                            if lid == ELITE and TG_ELITE:
+                                tg(t_h, token=TG_ELITE)
+                            elif lid == TTCUP:
+                                tg(t_h)
+                        continue
+                    if st.get(f"historico_{lid}"):
+                        st.pop(f"historico_{lid}")
+                        aviso_hist = (f"✅ Histórico de BetsAPI cargado: vuelven los avisos de "
+                                      f"{NOMBRE.get(lid, lid)}.")
+                        if lid == ELITE and TG_ELITE:
+                            tg(aviso_hist, token=TG_ELITE)
+                        elif lid == TTCUP:
+                            tg(aviso_hist)
+                    if lid == TTCUP:
+                        if mod is None and len(train) >= 500:
+                            mod = entrenar([vector(f) for f in train], [f["gana_a"] for f in train])
+                        if mod is not None and cands:
+                            nuevos_picks(cands, mod, picks, st, now)
+                    elif lid == ELITE and cands:
+                        nuevos_picks_elite(cands, picks, st, now)
+                except Exception as ex:          # un fallo en una liga no para la otra
+                    print("ERROR liga", lid, ex)
+                    st[f"error_{lid}"] = f"{now:%H:%M} {type(ex).__name__}: {str(ex)[:120]}"
+            corr = resolver(picks, todos_evs, now)
+            if corr:
+                tg(f"🔧 Corregidos {corr} picks que estaban como anulados: ya tienen su "
+                   "resultado real y cuentan en el resumen.")
+            resumen_dia(picks, st, now)
+            st["latido"] = now.strftime("%Y-%m-%d %H:%M")   # señal de vida (la mira el TT AVISADOR)
             guardar_picks(picks)
             guardar_estado(st)
+        if time.time() + 60 > fin:
+            break
+        while time.time() - t0 < 60 and time.time() + 20 < fin:
+            time.sleep(5)
+    parar.set()
+    hilo.join(timeout=60)
+    with LOCK:                               # ultima lectura y guardado antes de acabar
+        leer_respuestas(picks, st)
+        guardar_picks(picks)
+        guardar_estado(st)
 
 if __name__ == "__main__":
     main()

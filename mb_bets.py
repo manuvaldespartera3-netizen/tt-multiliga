@@ -36,6 +36,7 @@ LIGAS = {"15005": "29097",                          # TT Cup
          "19041": "29128"}                          # TT Elite Series
 ESTADO = {"0": "notstarted", "1": "inprogress", "3": "finished"}
 LLAMADAS = [0]
+TIEMPO = int(os.getenv("BETS_TIMEOUT", "12"))      # segundos maximos por consulta (antes 25)
 CACHE_HOY_S = int(os.getenv("BETS_CACHE_HOY_S", "240"))   # hoy/manana: refresco cada 4 min
 CACHE_AYER_S = 1800                                 # dia UTC anterior: casi todo ya terminado
 _UTC = {}                                           # (liga, dia_utc) -> (hora, [eventos crudos])
@@ -48,10 +49,10 @@ def api(path, **params):
     for host in ("https://api.b365api.com", "https://api.betsapi.com"):
         url = f"{host}{path}?{urllib.parse.urlencode(params)}"
         req = urllib.request.Request(url, headers={"User-Agent": "tt-multiliga"})
-        for intento in range(3):
+        for intento in range(2):
             try:
                 LLAMADAS[0] += 1
-                with urllib.request.urlopen(req, timeout=25) as r:
+                with urllib.request.urlopen(req, timeout=TIEMPO) as r:
                     d = json.loads(r.read().decode())
                 if isinstance(d, dict) and str(d.get("success")) == "0":
                     raise RuntimeError(f"BetsAPI: {str(d.get('error', d))[:100]}")
