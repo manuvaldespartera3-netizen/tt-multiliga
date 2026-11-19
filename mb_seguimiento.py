@@ -50,6 +50,7 @@ ELO_DIF = 0.08            # Elite: el Elo ve al favorito ≥8 puntos mejor que l
 ELITE_MAX = 2.00          # Elite 🔥 sin cuota en Sofascore: se apuesta si BetCris paga 1,25-2,00
                           # (en el historico: regla + cuota ≤2,00 → +9% en los meses de validacion)
 REVISAR_CUOTA = 15 * 60   # Elite: si aun no hay cuota, se vuelve a mirar cada 15 min
+ELITE_SEG_POR_VUELTA = 60  # Elite: como mucho 1 minuto de consultas de cuotas por vuelta
 TRAIN_DAYS = int(os.getenv("TRAIN_DAYS", "120"))
 WARMUP_DAYS = int(os.getenv("WARMUP_DAYS", "45"))
 AVISO = int(os.getenv("AVISO_MIN", "125")) * 60
@@ -110,12 +111,22 @@ def fetch_day(d, now, lid=TTCUP):
     return evs
 
 
+_MEMO = {}          # dias ya cerrados: se leen del disco una sola vez por ejecucion
+
+
 def cargar(now, lid=TTCUP):
     hoy = now.date()
     evs = {}
     d = hoy - timedelta(days=TRAIN_DAYS + WARMUP_DAYS)
     while d <= hoy + timedelta(days=1):
-        for e in fetch_day(d.strftime("%Y-%m-%d"), now, lid):
+        ds = d.strftime("%Y-%m-%d")
+        if (lid, ds) in _MEMO:
+            dia = _MEMO[(lid, ds)]
+        else:
+            dia = fetch_day(ds, now, lid)
+            if os.path.exists(os.path.join(cache_dir(lid), f"{ds}.json")):
+                _MEMO[(lid, ds)] = dia            # dia cerrado y guardado: ya no cambia
+        for e in dia:
             evs[str(e.get("id"))] = e
         d += timedelta(days=1)
     return evs
@@ -325,6 +336,8 @@ def nuevos_picks_elite(cands, picks, st, now):
     ya = {p["id"] for p in picks}
     ahora = time.time()
     for f in sorted(cands, key=lambda x: x["t"]):
+        if time.time() - ahora > ELITE_SEG_POR_VUELTA:
+            break                              # el resto, en la siguiente vuelta
         if f["id"] in ya or ahora - revisados.get(f["id"], 0) < REVISAR_CUOTA:
             continue
         revisados[f["id"]] = ahora
@@ -729,6 +742,7 @@ def main():
     # contesta rapido a tus cuotas y no depende de que GitHub sea puntual.
     fin = time.time() + RUN_MIN * 60
     mod = None
+    dur = 60
     while True:
         t0 = time.time()
         now = datetime.now(TZ)
@@ -758,9 +772,13 @@ def main():
         resumen_dia(picks, st, now)
         guardar_picks(picks)
         guardar_estado(st)
-        if time.time() + 60 > fin:
+        dur = time.time() - t0
+        print(f"vuelta de {dur:.0f} s")
+        # no empezar otra vuelta si no da tiempo a terminarla: asi la ejecucion
+        # acaba siempre a tiempo y guarda lo que ha hecho
+        if time.time() + max(60, dur) > fin:
             break
-        time.sleep(max(5, 60 - (time.time() - t0)))
+        time.sleep(max(5, 60 - dur))
 
 if __name__ == "__main__":
     main()
