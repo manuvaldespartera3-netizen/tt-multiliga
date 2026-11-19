@@ -13,12 +13,10 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13471213": 1795005317.1467927,
   "b13471291": 1795006787.7718492,
   "b13471212": 1795007696.3275561,
   "b13471336": 1795008329.3486485,
   "b13471350": 1795009129.4513867,
-  "b13476212": 1795004686.3991973,
   "b13476211": 1795005590.8018467,
   "b13476214": 1795006556.859453,
   "b13471359": 1795009764.8869932,
@@ -170,29 +168,32 @@
   "b13480783": 1795084913.3312612,
   "b13480813": 1795084576.748249,
   "b13476440": 1795084576.748249,
-  "b13476193": 1795090776.52384,
+  "b13476193": 1795091719.319268,
   "b13480932": 1795089624.9957392,
   "b13476353": 1795086635.7550106,
   "b13477355": 1795086635.7550106,
   "b13480955": 1795087702.7165768,
-  "b13476337": 1795090351.8070784,
+  "b13476337": 1795091312.028558,
   "b13481009": 1795087661.0991564,
   "b13481046": 1795089169.990961,
   "b13476201": 1795089023.6252253,
   "b13481079": 1795090039.178656,
   "b13476359": 1795089624.9957392,
   "b13481124": 1795090851.338096,
-  "b13481168": 1795090574.2537482,
-  "b13476334": 1795090574.2537482
+  "b13481168": 1795091514.5350869,
+  "b13476334": 1795091514.5350869,
+  "b13477354": 1795091159.807651,
+  "b13479861": 1795091159.807651,
+  "b13481236": 1795091851.7653456
  },
  "elite_diag": {
   "fecha": "2026-11-19",
-  "revisados": 129,
-  "con_cuota": 71,
-  "favoritos": 69,
+  "revisados": 136,
+  "con_cuota": 75,
+  "favoritos": 73,
   "con_senal": 8,
   "candidatos_ahora": 11,
-  "ultima": "13:23",
+  "ultima": "13:37",
   "sin_cuota_caliente": 7
  },
  "textos": {
@@ -497,7 +498,7 @@
   "elite:645": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 14:55\n\u2705 JADCZYK M.\nvs Miastowski M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.67\n\u274c menos de 1.67 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 11 puntos mejor que la casa\nSofascore: 1.67 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:646": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 15:05\n\u2705 SLAWINSKI K.\nvs Skotniczny R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.61\n\u274c menos de 1.61 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 12 puntos mejor que la casa\nSofascore: 1.61 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-19 13:23",
+ "latido": "2026-11-19 13:37",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
