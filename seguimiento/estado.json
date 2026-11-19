@@ -13,13 +13,10 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13471287": 1795000228.3401332,
   "b13471200": 1795000788.3706803,
   "b13471205": 1795002341.9984348,
   "b13471334": 1795003216.7614222,
   "b13471213": 1795005317.1467927,
-  "b13476000": 1795000101.6006544,
-  "b13471206": 1794999634.776538,
   "b13476032": 1795000715.6123195,
   "b13476065": 1795000961.614462,
   "b13471291": 1795006787.7718492,
@@ -173,10 +170,10 @@
   "b13475666": 1795080879.55501,
   "b13476383": 1795085567.401566,
   "b13476410": 1795085567.401566,
-  "b13476213": 1795085567.401566,
+  "b13476213": 1795086507.4622958,
   "b13479864": 1795081802.6166723,
   "b13480626": 1795082074.8236206,
-  "b13476346": 1795085292.1718886,
+  "b13476346": 1795086231.3203802,
   "b13477356": 1795085915.1649501,
   "b13480702": 1795083420.5877116,
   "b13476345": 1795085915.1649501,
@@ -184,22 +181,24 @@
   "b13480767": 1795084635.2008429,
   "b13480783": 1795084913.3312612,
   "b13480813": 1795084576.748249,
-  "b13476440": 1795084576.748249
+  "b13476440": 1795084576.748249,
+  "b13476193": 1795086008.173804,
+  "b13480932": 1795086507.4622958,
+  "b13476353": 1795086635.7550106,
+  "b13477355": 1795086635.7550106,
+  "b13480955": 1795086787.8485396
  },
  "elite_diag": {
   "fecha": "2026-11-19",
-  "revisados": 88,
-  "con_cuota": 49,
-  "favoritos": 47,
-  "con_senal": 5,
-  "candidatos_ahora": 9,
-  "ultima": "11:58",
-  "sin_cuota_caliente": 5
+  "revisados": 95,
+  "con_cuota": 53,
+  "favoritos": 51,
+  "con_senal": 6,
+  "candidatos_ahora": 12,
+  "ultima": "12:12",
+  "sin_cuota_caliente": 6
  },
  "textos": {
-  "elite:312": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:05\n\u2705 KOWOL M.\nvs Wisniewski B.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 61%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "tt:1264": "\ud83d\udd25 PICK TT CUP \u00b7 10:10\n\u2705 MORAVEC M.\nvs Precek E.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.82 \u2192 no apostar\n\ud83d\udcb0 1.82 a 1.99 \u2192 APUESTA\n\u2b50\u2b50 2.00 a 2.37 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.37 \u2192 valor >30%, desconfiar\n\nSofascore: 1.44 \u2192 \u274c NO APOSTAR\nProb. 55% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
-  "tt:1265": "\ud83d\udd25 PICK TT CUP \u00b7 10:15\n\u2705 TRAVNICEK J.\nvs Slavik L.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.98 \u2192 no apostar\n\ud83d\udcb0 1.98 a 2.17 \u2192 APUESTA\n\u2b50\u2b50 2.18 a 2.57 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.57 \u2192 valor >30%, desconfiar\n\nSofascore: 2.25 \u2192 \u2b50\u2b50 FUERTE\nProb. 51% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "tt:1266": "\ud83d\udd25 PICK TT CUP \u00b7 10:35\n\u2705 NETERDA R.\nvs Vavricka R.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.04 \u2192 no apostar\n\ud83d\udcb0 2.04 a 2.23 \u2192 APUESTA\n\u2b50\u2b50 2.24 a 2.65 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.65 \u2192 valor >30%, desconfiar\n\nSofascore: 1.80 \u2192 \u274c NO APOSTAR\nProb. 49% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "tt:1267": "\ud83d\udd25 PICK TT CUP \u00b7 10:05\n\u2705 ZAPALA K.\nvs Bartosz B.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.27 \u2192 no apostar\n\ud83d\udcb0 2.27 a 2.48 \u2192 APUESTA\n\u2b50\u2b50 2.49 a 2.95 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.95 \u2192 valor >30%, desconfiar\n\nSofascore: sin cuota\nProb. 44% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "tt:1268": "\ud83d\udd25 PICK TT CUP \u00b7 09:35\n\u2705 BUKLAT L.\nvs Bartosz B.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.17 \u2192 no apostar\n\ud83d\udcb0 2.17 a 2.38 \u2192 APUESTA\n\u2b50\u2b50 2.39 a 2.82 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.82 \u2192 valor >30%, desconfiar\n\nSofascore: sin cuota\nProb. 46% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
@@ -496,9 +495,12 @@
   "tt:1808": "\ud83d\udd25 PICK TT CUP \u00b7 13:40\n\u2705 SINDLER J.\nvs Krupnik Jr L.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.74 \u2192 no apostar\n\ud83d\udcb0 1.74 a 1.90 \u2192 APUESTA\n\u2b50\u2b50 1.91 a 2.26 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.26 \u2192 valor >30%, desconfiar\n\nSofascore: 1.61 \u2192 \u274c NO APOSTAR\nProb. 58% \u00b7 ya ha jugado 4 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "elite:640": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 12:05\n\u2705 ZOCHNIAK J.\nvs Stapor R.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 58%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:641": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 13:40\n\u2705 MIASTOWSKI M.\nvs Kolodziej K.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 6 hoy, rival a\u00fan no\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "tt:1809": "\ud83d\udd25 PICK TT CUP \u00b7 13:55\n\u2705 BROZEK M.\nvs Vonasek J.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.14 \u2192 no apostar\n\ud83d\udcb0 2.14 a 2.35 \u2192 APUESTA\n\u2b50\u2b50 2.36 a 2.78 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.78 \u2192 valor >30%, desconfiar\n\nSofascore: 1.73 \u2192 \u274c NO APOSTAR\nProb. 47% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
+  "tt:1809": "\ud83d\udd25 PICK TT CUP \u00b7 13:55\n\u2705 BROZEK M.\nvs Vonasek J.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.14 \u2192 no apostar\n\ud83d\udcb0 2.14 a 2.35 \u2192 APUESTA\n\u2b50\u2b50 2.36 a 2.78 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.78 \u2192 valor >30%, desconfiar\n\nSofascore: 1.73 \u2192 \u274c NO APOSTAR\nProb. 47% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
+  "elite:642": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 14:15\n\u2705 SLAWINSKI K.\nvs Sikon M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.36\n\u274c menos de 1.36 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 20 puntos mejor que la casa\nSofascore: 1.36 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
+  "elite:643": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 14:15\n\u2705 MYSZEWSKI A.\nvs Kujawa F.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 5 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 58%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
+  "tt:1814": "\ud83d\udd25 PICK TT CUP \u00b7 14:15\n\u2705 KRENEK T.\nvs Slavik L.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.83 \u2192 no apostar\n\ud83d\udcb0 1.83 a 2.00 \u2192 APUESTA\n\u2b50\u2b50 2.01 a 2.38 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.38 \u2192 valor >30%, desconfiar\n\nSofascore: 1.73 \u2192 \u274c NO APOSTAR\nProb. 55% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-19 11:58",
+ "latido": "2026-11-19 12:12",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
