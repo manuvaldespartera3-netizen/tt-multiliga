@@ -21,7 +21,6 @@
   "b13477208": 1795115519.1014764,
   "b13480829": 1795115519.1014764,
   "b13480824": 1795116867.778071,
-  "b13482563": 1795112514.6448154,
   "b13477194": 1795118565.5817618,
   "b13482595": 1795113382.1543622,
   "b13477467": 1795119151.8024507,
@@ -277,27 +276,27 @@
   "b13482228": 1795198832.8380103,
   "b13485329": 1795192561.1164622,
   "b13487030": 1795194245.1748445,
-  "b13480978": 1795198088.711727,
+  "b13480978": 1795199025.276688,
   "b13482311": 1795194059.130465,
-  "b13485517": 1795197958.3583446,
+  "b13485517": 1795199025.276688,
   "b13487206": 1795196335.4230227,
-  "b13482127": 1795198406.4200287,
+  "b13482127": 1795199346.795425,
   "b13487262": 1795197141.2455587,
   "b13485216": 1795196757.9826336,
-  "b13485357": 1795197958.3583446,
+  "b13485357": 1795199025.276688,
   "b13487293": 1795198230.9508572,
   "b13482310": 1795198230.9508572,
   "b13485362": 1795198551.4563046,
-  "b13487371": 1795198692.9154992
+  "b13487371": 1795199615.4145746
  },
  "elite_diag": {
   "fecha": "2026-11-20",
-  "revisados": 1027,
-  "con_cuota": 565,
-  "favoritos": 525,
+  "revisados": 1032,
+  "con_cuota": 568,
+  "favoritos": 528,
   "con_senal": 18,
-  "candidatos_ahora": 12,
-  "ultima": "19:19",
+  "candidatos_ahora": 10,
+  "ultima": "19:34",
   "sin_cuota_caliente": 16
  },
  "textos": {
@@ -602,7 +601,7 @@
   "elite:697": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 21:15\n\u2705 STAPOR R.\nvs Malinowski R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.80\n\u274c menos de 1.80 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 6 hoy, rival a\u00fan no\nSofascore: 1.80 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:698": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 21:20\n\u2705 RUSZKIEWICZ A.\nvs Cesarz M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 22 puntos mejor que la casa\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-20 19:19",
+ "latido": "2026-11-20 19:34",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
