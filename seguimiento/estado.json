@@ -13,15 +13,12 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13477194": 1795118565.5817618,
-  "b13477467": 1795119151.8024507,
   "b13477207": 1795119758.2047422,
   "b13480876": 1795119758.2047422,
   "b13477350": 1795121377.9594302,
   "b13480870": 1795121377.9594302,
   "b13477193": 1795122792.3251517,
   "b13477428": 1795122792.3251517,
-  "b13482888": 1795118493.1396084,
   "b13480956": 1795124592.018063,
   "b13476198": 1795125151.1145446,
   "b13483124": 1795119937.0235398,
@@ -270,8 +267,8 @@
   "b13482310": 1795198230.9508572,
   "b13485362": 1795198551.4563046,
   "b13487371": 1795199615.4145746,
-  "b13482126": 1795204490.5148997,
-  "b13485690": 1795204490.5148997,
+  "b13482126": 1795205400.037797,
+  "b13485690": 1795205400.037797,
   "b13487458": 1795200122.9724197,
   "b13487486": 1795201960.2620113,
   "b13482227": 1795204832.5620391,
@@ -282,21 +279,23 @@
   "b13487534": 1795204761.9842362,
   "b13487533": 1795204761.9842362,
   "b13482309": 1795202745.6983988,
-  "b13485370": 1795204620.544757,
+  "b13485370": 1795205558.1469188,
   "b13487557": 1795203901.316951,
   "b13487585": 1795204832.5620391,
-  "b13487606": 1795204403.0549655,
-  "b13482125": 1795204550.8323963,
-  "b13485554": 1795204550.8323963
+  "b13487606": 1795205351.431905,
+  "b13482125": 1795205463.408133,
+  "b13485554": 1795205463.408133,
+  "b13487663": 1795204964.3025603,
+  "b13487709": 1795205558.1469188
  },
  "elite_diag": {
   "fecha": "2026-11-20",
-  "revisados": 1088,
-  "con_cuota": 597,
-  "favoritos": 557,
+  "revisados": 1096,
+  "con_cuota": 602,
+  "favoritos": 562,
   "con_senal": 20,
-  "candidatos_ahora": 14,
-  "ultima": "21:00",
+  "candidatos_ahora": 13,
+  "ultima": "21:13",
   "sin_cuota_caliente": 18
  },
  "textos": {
@@ -601,7 +600,7 @@
   "elite:702": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 22:30\n\u2705 FILBRANDT T.\nvs Stapor R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.40\n\u274c menos de 1.40 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 12 puntos mejor que la casa\nSofascore: 1.40 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:2026": "\ud83d\udd25 PICK TT CUP \u00b7 22:50\n\u2705 VYSKOCIL Z.\nvs Vich L.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.97 \u2192 no apostar\n\ud83d\udcb0 1.97 a 2.16 \u2192 APUESTA\n\u2b50\u2b50 2.17 a 2.57 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.57 \u2192 valor >30%, desconfiar\n\nSofascore: 1.91 \u2192 \u274c NO APOSTAR\nProb. 51% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-20 21:00",
+ "latido": "2026-11-20 21:13",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
