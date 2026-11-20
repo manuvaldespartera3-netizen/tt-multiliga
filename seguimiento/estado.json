@@ -159,31 +159,33 @@
   "b13482347": 1795134439.149342,
   "b13477463": 1795135032.1228974,
   "b13483616": 1795130056.927372,
-  "b13477190": 1795135032.1228974,
-  "b13477347": 1795135032.1228974,
+  "b13477190": 1795135957.219977,
+  "b13477347": 1795135957.219977,
   "b13483642": 1795130853.357239,
   "b13483662": 1795131454.5058274,
   "b13483666": 1795131764.6103246,
   "b13477203": 1795135592.537885,
   "b13481039": 1795135592.537885,
   "b13483717": 1795132856.6422522,
-  "b13482115": 1795135283.736951,
+  "b13482115": 1795136202.146801,
   "b13483775": 1795134309.8464518,
   "b13483795": 1795134827.7930334,
-  "b13477189": 1795134967.4142218,
-  "b13477462": 1795135216.369006,
-  "b13483823": 1795134756.7000418,
-  "b13482114": 1795135216.369006,
-  "b13483838": 1795135339.2679245
+  "b13477189": 1795135883.4095984,
+  "b13477462": 1795136134.6181812,
+  "b13483823": 1795135669.0511985,
+  "b13482114": 1795136134.6181812,
+  "b13483838": 1795136257.4979239,
+  "b13483852": 1795135957.219977,
+  "b13483856": 1795136202.146801
  },
  "elite_diag": {
   "fecha": "2026-11-20",
-  "revisados": 96,
-  "con_cuota": 52,
-  "favoritos": 50,
+  "revisados": 106,
+  "con_cuota": 56,
+  "favoritos": 53,
   "con_senal": 0,
   "candidatos_ahora": 11,
-  "ultima": "01:46"
+  "ultima": "02:00"
  },
  "textos": {
   "tt:1360": "\ud83d\udd25 PICK TT CUP \u00b7 21:25\n\u2705 CIBIK P.\nvs Kolbusovsky M.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.56 \u2192 no apostar\n\ud83d\udcb0 1.56 a 1.70 \u2192 APUESTA\n\u2b50\u2b50 1.71 a 2.02 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.02 \u2192 valor >30%, desconfiar\n\nSofascore: 1.28 \u2192 \u274c NO APOSTAR\nProb. 64% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
@@ -487,7 +489,7 @@
   "elite:662": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 00:10\n\u2705 KUBIAK A.\nvs Frank R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.33\n\u274c menos de 1.33 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 10 puntos mejor que la casa\nSofascore: 1.33 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:663": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 00:35\n\u2705 SULKOWSKI B.\nvs Kotwica D.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.53\n\u274c menos de 1.53 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 13 puntos mejor que la casa\nSofascore: 1.53 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-20 01:46",
+ "latido": "2026-11-20 02:00",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
