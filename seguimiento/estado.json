@@ -6,15 +6,13 @@
   "b13459918"
  ],
  "v2": true,
- "offset": 70245910,
+ "offset": 70245911,
  "resumen": "2026-11-19",
  "inicio_elite": "2026-11-11",
  "limpieza_1111": true,
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13480751": 1795113309.236653,
-  "b13480894": 1795113309.236653,
   "b13477429": 1795114099.3042264,
   "b13477195": 1795114408.69811,
   "b13480260": 1795115048.7893317,
@@ -22,7 +20,6 @@
   "b13480829": 1795115519.1014764,
   "b13480824": 1795116867.778071,
   "b13477194": 1795118565.5817618,
-  "b13482595": 1795113382.1543622,
   "b13477467": 1795119151.8024507,
   "b13477207": 1795119758.2047422,
   "b13480876": 1795119758.2047422,
@@ -276,31 +273,33 @@
   "b13482228": 1795198832.8380103,
   "b13485329": 1795192561.1164622,
   "b13487030": 1795194245.1748445,
-  "b13480978": 1795199025.276688,
+  "b13480978": 1795199967.6425974,
   "b13482311": 1795194059.130465,
-  "b13485517": 1795199025.276688,
+  "b13485517": 1795199967.6425974,
   "b13487206": 1795196335.4230227,
-  "b13482127": 1795199346.795425,
+  "b13482127": 1795200275.603321,
   "b13487262": 1795197141.2455587,
   "b13485216": 1795196757.9826336,
-  "b13485357": 1795199025.276688,
+  "b13485357": 1795199967.6425974,
   "b13487293": 1795198230.9508572,
   "b13482310": 1795198230.9508572,
   "b13485362": 1795198551.4563046,
-  "b13487371": 1795199615.4145746
+  "b13487371": 1795199615.4145746,
+  "b13482126": 1795199838.8394237,
+  "b13485690": 1795199838.8394237,
+  "b13487458": 1795200122.9724197
  },
  "elite_diag": {
   "fecha": "2026-11-20",
-  "revisados": 1032,
-  "con_cuota": 568,
-  "favoritos": 528,
+  "revisados": 1039,
+  "con_cuota": 573,
+  "favoritos": 533,
   "con_senal": 18,
-  "candidatos_ahora": 10,
-  "ultima": "19:34",
-  "sin_cuota_caliente": 16
+  "candidatos_ahora": 11,
+  "ultima": "19:47",
+  "sin_cuota_caliente": 17
  },
  "textos": {
-  "elite:505": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 20:05\n\u2705 BLOCHO P.\nvs Kwodawski B.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83d\udcc8 el Elo le ve 16 puntos mejor que la casa\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:1469": "\ud83d\udd25 PICK TT CUP \u00b7 19:00\n\u2705 KOMOROWICZ J.\nvs Kos K.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.36 \u2192 no apostar\n\ud83d\udcb0 2.36 a 2.59 \u2192 APUESTA\n\u2b50\u2b50 2.60 a 3.07 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 3.07 \u2192 valor >30%, desconfiar\n\nSofascore: sin cuota\nProb. 42% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "tt:1470": "\ud83d\udd25 PICK TT CUP \u00b7 19:30\n\u2705 PATRYK K.\nvs Rokita G.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.87 \u2192 no apostar\n\ud83d\udcb0 1.87 a 2.05 \u2192 APUESTA\n\u2b50\u2b50 2.06 a 2.43 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.43 \u2192 valor >30%, desconfiar\n\nSofascore: sin cuota\nProb. 53% \u00b7 ya ha jugado 2 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "tt:1471": "\ud83d\udd25 PICK TT CUP \u00b7 20:15\n\u2705 BACA J.\nvs Kowal R.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.88 \u2192 no apostar\n\ud83d\udcb0 1.88 a 2.06 \u2192 APUESTA\n\u2b50\u2b50 2.07 a 2.45 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.45 \u2192 valor >30%, desconfiar\n\nSofascore: 2.00 \u2192 \ud83d\udcb0 APUESTA\nProb. 53% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
@@ -599,9 +598,10 @@
   "elite:696": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 20:50\n\u2705 LAMPERSKI J.\nvs Wozniak J.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.67\n\u274c menos de 1.67 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83d\udcc8 el Elo le ve 17 puntos mejor que la casa\nSofascore: 1.67 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:2018": "\ud83d\udd25 PICK TT CUP \u00b7 21:05\n\u2705 KAISLER V.\nvs Hons D.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.11 \u2192 no apostar\n\ud83d\udcb0 2.11 a 2.31 \u2192 APUESTA\n\u2b50\u2b50 2.32 a 2.74 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.74 \u2192 valor >30%, desconfiar\n\nSofascore: 2.50 \u2192 \u2b50\u2b50 FUERTE\nProb. 47% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "elite:697": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 21:15\n\u2705 STAPOR R.\nvs Malinowski R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.80\n\u274c menos de 1.80 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 6 hoy, rival a\u00fan no\nSofascore: 1.80 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "elite:698": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 21:20\n\u2705 RUSZKIEWICZ A.\nvs Cesarz M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 22 puntos mejor que la casa\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
+  "elite:698": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 21:20\n\u2705 RUSZKIEWICZ A.\nvs Cesarz M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 22 puntos mejor que la casa\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
+  "elite:699": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 20:10\n\u2705 PIECOWSKI M.\nvs Strus P.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 59%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-20 19:34",
+ "latido": "2026-11-20 19:47",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
