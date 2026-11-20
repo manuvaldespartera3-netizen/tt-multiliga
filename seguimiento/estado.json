@@ -171,17 +171,17 @@
   "b13483775": 1795134309.8464518,
   "b13483795": 1795134827.7930334,
   "b13477189": 1795140503.8822317,
-  "b13477462": 1795139796.496114,
+  "b13477462": 1795140747.4036183,
   "b13483823": 1795135669.0511985,
-  "b13482114": 1795139796.496114,
+  "b13482114": 1795140747.4036183,
   "b13483838": 1795136257.4979239,
   "b13483852": 1795136861.7378118,
   "b13483856": 1795137114.3803656,
-  "b13481136": 1795140503.8822317,
+  "b13481136": 1795141417.1468718,
   "b13483881": 1795137710.1082246,
   "b13483900": 1795137656.0120678,
   "b13483901": 1795138615.5700088,
-  "b13477188": 1795140126.4217901,
+  "b13477188": 1795141036.7390633,
   "b13477461": 1795138805.2490182,
   "b13483932": 1795139845.8550344,
   "b13483933": 1795138936.8997872,
@@ -190,16 +190,19 @@
   "b13481007": 1795140692.397868,
   "b13481035": 1795140692.397868,
   "b13484044": 1795140188.7640061,
-  "b13483426": 1795140312.5240965
+  "b13483426": 1795140312.5240965,
+  "b13480973": 1795141224.3367596,
+  "b13481264": 1795141224.3367596,
+  "b13481993": 1795141224.3367596
  },
  "elite_diag": {
   "fecha": "2026-11-20",
-  "revisados": 154,
-  "con_cuota": 79,
-  "favoritos": 68,
+  "revisados": 161,
+  "con_cuota": 83,
+  "favoritos": 71,
   "con_senal": 1,
-  "candidatos_ahora": 12,
-  "ultima": "03:11",
+  "candidatos_ahora": 14,
+  "ultima": "03:25",
   "sin_cuota_caliente": 5
  },
  "textos": {
@@ -504,7 +507,7 @@
   "elite:669": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:35\n\u2705 JUROWICZ G.\nvs Nowak J.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 54%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:670": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 05:10\n\u2705 NOWAK J.\nvs Vincenec O.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 2 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 51%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-20 03:11",
+ "latido": "2026-11-20 03:25",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
