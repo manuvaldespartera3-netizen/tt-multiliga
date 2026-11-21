@@ -894,7 +894,7 @@ Elite Series,elite,2026-11-21,11:40,A,Dosz A.,Kolodziej K.,0.663,1.4,,,,1.4,0,,,
 Elite Series,elite,2026-11-21,10:20,A,Jedrzejak P.,Wojtaszczyk W.,0.611,1.25,,,2.0,,,,,,,1,ganado,3-0,,,2026-11-21 09:52,733,finished,b13489728,,,,,,
 TT Cup,tt,2026-11-21,12:10,FLOJO,Krupnik J.,Konvicka V.,0.585,1.71,1.88,2.22,,1.571,-0.082,,,,1.363,3,ganado,3-1,0.57,,2026-11-21 10:05,2052,finished,b13488510,,si,1.571,bot,NO,0.57
 Elite Series,elite,2026-11-21,12:25,B,Dosz A.,Adamiak G.,0.709,1.333,,,,1.333,0,,,,1.333,4,ganado,3-1,0.33,,2026-11-21 10:20,734,finished,b13485647,,,,,,
-TT Cup,tt,2026-11-21,12:45,FLOJO,Kanak A.,Konvicka V.,0.576,1.74,1.91,2.26,,1.533,-0.117,,,,,3,pendiente,,,,2026-11-21 10:40,2055,notstarted,b13488399,,si,1.533,bot,NO,
+TT Cup,tt,2026-11-21,12:45,FLOJO,Kanak A.,Konvicka V.,0.576,1.74,1.91,2.26,,1.533,-0.117,,,,,3,anulado,,0,,2026-11-21 10:40,2055,canceled,b13488399,,si,1.533,bot,NO,0
 TT Cup,tt,2026-11-21,12:45,SIN CUOTA,Kanak A.,Raska M.,0.559,1.79,1.97,2.32,,1.727,-0.035,1.81,0.012,APUESTA,1.727,3,perdido,1-3,-1,-1,2026-11-21 10:40,2056,finished,b13489455,,si,1.727,bot,NO,-1
 Elite Series,elite,2026-11-21,12:50,A,Dosz S.,Kolodziej K.,0.537,1.727,,,,1.727,0,,,,1.833,5,perdido,0-3,-1,,2026-11-21 10:46,735,finished,b13485553,,,,,,
 Elite Series,elite,2026-11-21,11:30,A,Jedrzejak P.,Morawiec D.,0.685,1.25,,,2.0,,,,,,,2,ganado,3-2,,,2026-11-21 11:02,736,finished,b13489918,,,,,,
@@ -902,11 +902,14 @@ TT Cup,tt,2026-11-21,13:10,APUESTA,Krupnik J.,Velky Jr D.,0.604,1.66,1.82,2.15,,
 TT Cup,tt,2026-11-21,13:15,FLOJO,Mrowetz B.,Volny J.,0.625,1.6,1.76,2.08,,1.4,-0.126,,,,1.363,3,perdido,2-3,-1,,2026-11-21 11:10,2058,finished,b13488475,,si,1.4,bot,NO,-1
 Elite Series,elite,2026-11-21,13:15,B,Michna D.,Adamiak G.,0.645,1.444,,,,1.444,0,,,,1.333,5,perdido,1-3,-1,,2026-11-21 11:10,737,finished,b13485685,,,,,,
 Elite Series,elite,2026-11-21,13:25,B,Jesiek J.,Sawicki G.,0.608,1.533,,,,1.533,0,,,,1.727,5,ganado,3-1,0.53,,2026-11-21 11:20,738,finished,b13485919,,,,,,
-TT Cup,tt,2026-11-21,13:40,FLOJO,Krupnik J.,Molin T.,0.599,1.67,1.84,2.17,,1.5,-0.102,,,,,3,pendiente,,,,2026-11-21 11:35,2059,inprogress,b13488502,,si,1.5,bot,NO,
+TT Cup,tt,2026-11-21,13:40,FLOJO,Krupnik J.,Molin T.,0.599,1.67,1.84,2.17,,1.5,-0.102,,,,1.444,3,perdido,1-3,-1,,2026-11-21 11:35,2059,finished,b13488502,,si,1.5,bot,NO,-1
 Elite Series,elite,2026-11-21,13:40,A,Spanik T.,Kolodziej K.,0.608,1.533,,,,1.533,0,,,,1.533,6,ganado,3-0,0.53,,2026-11-21 11:35,739,finished,b13485608,,,,,,
 TT Cup,tt,2026-11-21,13:45,FLOJO,Mrowetz B.,Konvicka V.,0.578,1.73,1.9,2.25,,1.666,-0.038,,,,,4,pendiente,,,,2026-11-21 11:40,2060,notstarted,b13488646,,si,1.666,bot,NO,
-TT Cup,tt,2026-11-21,13:45,SIN CUOTA,Mrowetz B.,Raska M.,0.555,1.8,1.98,2.34,,1.615,-0.104,1.51,-0.162,FLOJO,,4,pendiente,,,,2026-11-21 11:40,2061,inprogress,b13489524,,si,1.615,bot,NO,
-Elite Series,elite,2026-11-21,14:05,B,Dosz A.,Dosz S.,0.515,1.8,,,,1.8,0,,,,,5,pendiente,,,,2026-11-21 12:00,740,notstarted,b13485590,,,,,,
+TT Cup,tt,2026-11-21,13:45,SIN CUOTA,Mrowetz B.,Raska M.,0.555,1.8,1.98,2.34,,1.615,-0.104,1.51,-0.162,FLOJO,1.666,4,ganado,3-2,0.61,0.51,2026-11-21 11:40,2061,finished,b13489524,,si,1.615,bot,NO,0.61
+Elite Series,elite,2026-11-21,14:05,B,Dosz A.,Dosz S.,0.515,1.8,,,,1.8,0,,,,,5,pendiente,,,,2026-11-21 12:00,740,inprogress,b13485590,,,,,,
 TT Cup,tt,2026-11-21,14:10,FLOJO,Velky Jr D.,Konvicka V.,0.526,1.9,2.09,2.47,,1.571,-0.174,,,,,1,pendiente,,,,2026-11-21 12:05,2066,notstarted,b13488584,,si,1.571,bot,NO,
 TT Cup,tt,2026-11-21,14:35,FLOJO,Kucera M.,Polak O.,0.526,1.9,2.09,2.47,,1.615,-0.151,,,,,1,pendiente,,,,2026-11-21 12:30,2068,notstarted,b13488504,,si,1.615,bot,NO,
 TT Cup,tt,2026-11-21,15:25,FLOJO,Dvorak J.,Koutnik V.,0.399,2.51,2.76,3.26,,1.615,-0.356,,,,,1,pendiente,,,,2026-11-21 13:23,2070,notstarted,b13488550,,si,1.615,bot,NO,
+TT Cup,tt,2026-11-21,16:05,APUESTA,Lovl J.,Horky J.,0.557,1.8,1.98,2.33,,1.8,0.002,,,,,4,pendiente,,,,2026-11-21 14:01,2072,notstarted,b13489842,,si,1.8,bot,SI,
+TT Cup,tt,2026-11-21,16:10,APUESTA,Molin T.,Precek E.,0.602,1.66,1.83,2.16,,1.8,0.083,,,,,3,pendiente,,,,2026-11-21 14:05,2073,notstarted,b13489998,,si,1.8,bot,SI,
+Elite Series,elite,2026-11-21,16:10,B,Kolodziej K.,Adamiak G.,0.537,1.727,,,,1.727,0,,,,,3,pendiente,,,,2026-11-21 14:05,741,notstarted,b13485658,,,,,,
