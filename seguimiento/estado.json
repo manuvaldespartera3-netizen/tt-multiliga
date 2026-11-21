@@ -257,7 +257,7 @@
   "b13485587": 1795235727.6749334,
   "b13485846": 1795235727.6749334,
   "b13489245": 1795237168.0938125,
-  "b13485767": 1795241269.8220363,
+  "b13485767": 1795242183.9064724,
   "b13489265": 1795237672.2876377,
   "b13489267": 1795237955.9990654,
   "b13489268": 1795237955.9990654,
@@ -274,23 +274,23 @@
   "b13485891": 1795242101.7784996,
   "b13489392": 1795241042.9764662,
   "b13487255": 1795242101.7784996,
-  "b13489396": 1795241333.7062953,
+  "b13489396": 1795242264.6801615,
   "b13485676": 1795241727.1149433,
-  "b13485775": 1795241727.1149433
+  "b13485775": 1795242646.491838,
+  "b13489430": 1795242700.5033798,
+  "b13489431": 1795242700.5033798
  },
  "elite_diag": {
   "fecha": "2026-11-21",
-  "revisados": 330,
-  "con_cuota": 159,
-  "favoritos": 143,
+  "revisados": 335,
+  "con_cuota": 160,
+  "favoritos": 144,
   "con_senal": 15,
-  "candidatos_ahora": 16,
-  "ultima": "07:21",
-  "sin_cuota_caliente": 2
+  "candidatos_ahora": 15,
+  "ultima": "07:35",
+  "sin_cuota_caliente": 4
  },
  "textos": {
-  "elite:552": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:05\n\u2705 SMOLKA K.\nvs Gajda R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.53\n\u274c menos de 1.53 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.53 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "elite:553": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:55\n\u2705 GAJDA R.\nvs Przewlocki P.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 11 puntos mejor que la casa\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:554": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 07:40\n\u2705 SOBEL A.\nvs Lamperski J.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 61%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:555": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:00\n\u2705 URBAN W.\nvs Sokolowski O.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 54%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:1531": "\ud83d\udd25 PICK TT CUP \u00b7 10:10\n\u2705 LYSEK J.\nvs Mandrysz F.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.19 \u2192 no apostar\n\ud83d\udcb0 2.19 a 2.39 \u2192 APUESTA\n\u2b50\u2b50 2.40 a 2.84 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.84 \u2192 valor >30%, desconfiar\n\nSofascore: 2.00 \u2192 \u274c NO APOSTAR\nProb. 46% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
@@ -588,9 +588,11 @@
   "elite:721": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:30\n\u2705 SPANIK T.\nvs Dosz S.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.80\n\u274c menos de 1.80 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 20 puntos mejor que la casa\nSofascore: 1.80 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:722": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:30\n\u2705 SZYMIK R.\nvs Sawicki G.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.44\n\u274c menos de 1.44 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.44 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:723": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 07:35\n\u2705 SZURLEJ K.\nvs Marchlewski M.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 54%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "elite:724": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 09:20\n\u2705 DOSZ A.\nvs Adamiak G.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.33\n\u274c menos de 1.33 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 14 puntos mejor que la casa\nSofascore: 1.33 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
+  "elite:724": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 09:20\n\u2705 DOSZ A.\nvs Adamiak G.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.33\n\u274c menos de 1.33 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 14 puntos mejor que la casa\nSofascore: 1.33 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
+  "elite:725": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:00\n\u2705 URBAN W.\nvs Mecik P.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 51%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
+  "elite:726": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:00\n\u2705 BARAN S.\nvs Maruszak P.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 66%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-21 07:21",
+ "latido": "2026-11-21 07:35",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
