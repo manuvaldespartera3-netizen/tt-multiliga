@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13481169": 1795178981.095973,
   "b13484238": 1795179543.8588822,
   "b13481125": 1795180474.4772127,
   "b13481140": 1795181043.812724,
@@ -260,29 +259,33 @@
   "b13490030": 1795259444.1162393,
   "b13485590": 1795258845.1681979,
   "b13490065": 1795259933.504663,
-  "b13485649": 1795264235.8343723,
+  "b13485649": 1795265186.6667347,
   "b13490114": 1795260552.385861,
-  "b13485638": 1795264159.263819,
+  "b13485638": 1795265110.964523,
   "b13490152": 1795261471.0526721,
-  "b13485912": 1795264677.1389775,
+  "b13485912": 1795265630.7480295,
   "b13490201": 1795262021.6784678,
-  "b13485689": 1795264677.1389775,
+  "b13485689": 1795265630.7480295,
   "b13490235": 1795263089.661208,
-  "b13485897": 1795264298.985834,
+  "b13485897": 1795265236.235399,
   "b13490269": 1795263679.4331715,
-  "b13485666": 1795264298.985834,
+  "b13485666": 1795265236.235399,
   "b13485811": 1795264844.9035401,
-  "b13490375": 1795264159.263819,
-  "b13485678": 1795264844.9035401
+  "b13490375": 1795265110.964523,
+  "b13485678": 1795264844.9035401,
+  "b13490422": 1795265041.1431954,
+  "b13490427": 1795265350.9482315,
+  "b13486061": 1795265436.7355807,
+  "b13490442": 1795265630.7480295
  },
  "elite_diag": {
   "fecha": "2026-11-21",
-  "revisados": 561,
-  "con_cuota": 311,
-  "favoritos": 295,
+  "revisados": 572,
+  "con_cuota": 318,
+  "favoritos": 301,
   "con_senal": 26,
-  "candidatos_ahora": 11,
-  "ultima": "13:40",
+  "candidatos_ahora": 13,
+  "ultima": "13:54",
   "sin_cuota_caliente": 7
  },
  "textos": {
@@ -587,7 +590,7 @@
   "tt:2068": "\ud83d\udd25 PICK TT CUP \u00b7 14:35\n\u2705 KUCERA M.\nvs Polak O.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.90\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 53% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento",
   "tt:2070": "\ud83d\udd25 PICK TT CUP \u00b7 15:25\n\u2705 DVORAK J.\nvs Koutnik V.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 2.51\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 40% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-21 13:40",
+ "latido": "2026-11-21 13:54",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
