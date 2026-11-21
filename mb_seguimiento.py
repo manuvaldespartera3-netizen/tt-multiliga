@@ -81,7 +81,15 @@ ESTADO = os.path.join(DIR, "estado.json")
 COLS = ["liga", "canal", "fecha", "hora", "nivel", "pick", "rival", "prob", "cuota_minima", "cuota_fuerte",
         "cuota_sospecha", "cuota_maxima", "cuota_2h", "valor_2h", "cuota_betcris", "valor_betcris",
         "decision_betcris", "cuota_final", "pick_jugados_hoy", "resultado", "marcador",
-        "beneficio", "beneficio_betcris", "aviso", "msg", "estado_sofa", "id", "no_esta"]
+        "beneficio", "beneficio_betcris", "aviso", "msg", "estado_sofa", "id", "no_esta",
+        "modo_ref", "cuota_ref", "fuente_ref", "decision_ref", "beneficio_ref"]
+
+# TT Cup desde el 21/11: la decision la marca la CUOTA DEL BOT (la que da BetsAPI
+# antes del partido). Si el bot no tiene cuota, vale la tuya. Verde = apostar,
+# rojo = no apostar, blanco = sin cuota. El resumen cuenta desde esta fecha.
+INICIO_REF = os.getenv("INICIO_REF", "2026-11-21")
+REVISAR_REF = 10 * 60      # pick sin cuota del bot: se vuelve a mirar cada 10 min hasta que empiece
+_REV_REF = {}
 
 NIVEL_TXT = {"SOSPECHOSO": "⚠️ SOSPECHOSO (valor >30%, desconfiar)",
              "FUERTE": "⭐⭐ FUERTE", "APUESTA": "💰 APUESTA",
@@ -368,15 +376,11 @@ def nuevos_picks(cands, mod, picks, st, now):
                f"✅ {pick.upper()}\n"
                f"vs {rival}\n"
                f"\n"
-               f"Según la cuota de BetCris:\n"
-               f"❌ menos de {c_apuesta:.2f} → no apostar\n"
-               f"💰 {c_apuesta:.2f} a {c_fuerte - 0.01:.2f} → APUESTA\n"
-               f"⭐⭐ {c_fuerte:.2f} a {c_sospecha:.2f} → FUERTE\n"
-               f"⚠️ más de {c_sospecha:.2f} → valor >30%, desconfiar\n"
+               f"💰 Se apuesta con cuota ≥ {c_apuesta:.2f}\n"
+               f"🟢 la cuota llega · 🔴 no llega · ⚪ sin cuota\n"
+               f"↩️ Si sale ⚪, responde con tu cuota de BetCris\n"
                f"\n"
-               f"Sofascore: {f'{c:.2f} → {NIVEL_TXT[nv]}' if c else 'sin cuota'}\n"
                f"Prob. {p * 100:.0f}% · ya ha jugado {jh} hoy, rival aún no\n"
-               f"↩️ Responde con tu cuota de BetCris para apuntarla\n"
                f"🧪 Seguimiento")
         pk = dict(liga="TT Cup", canal="tt", fecha=dt.strftime("%Y-%m-%d"), hora=dt.strftime("%H:%M"),
                   nivel=nv, pick=pick, rival=rival, prob=round(p, 3),
@@ -385,6 +389,7 @@ def nuevos_picks(cands, mod, picks, st, now):
                   cuota_2h=c or "", valor_2h=round(valor, 3) if valor is not None else "",
                   pick_jugados_hoy=jh, aviso=now.strftime("%Y-%m-%d %H:%M"),
                   resultado="pendiente", msg="", id=f["id"])
+        calc_ref(pk)
         pk["msg"] = MK.enviar(TG, CHAT, "tt", txt, pk) or ""
         picks.append(pk)
         ya.add(f["id"])
@@ -492,8 +497,63 @@ def token_de(p):
     return TG_ELITE if p.get("canal") == "elite" and TG_ELITE else TG
 
 
+def en_ref(p):
+    return not es_elite(p) and p.get("fecha", "") >= INICIO_REF
+
+
+def calc_ref(p):
+    """TT Cup (sistema nuevo): cuota de referencia = la del bot; si no hay, la tuya.
+    🟢 SI si llega a la cuota minima, 🔴 NO si no llega, ⚪ sin cuota."""
+    if not en_ref(p):
+        return
+    p["modo_ref"] = "si"
+    c, fuente = num(p.get("cuota_2h")), "bot"
+    if not c:
+        c, fuente = num(p.get("cuota_betcris")), "tuya"
+    cm = num(p.get("cuota_minima"))
+    if not c or not cm:
+        for k in ("cuota_ref", "fuente_ref", "decision_ref", "beneficio_ref"):
+            p[k] = ""
+        return
+    p["cuota_ref"], p["fuente_ref"] = c, fuente
+    p["decision_ref"] = "SI" if c >= cm else "NO"
+    res = p.get("resultado")
+    p["beneficio_ref"] = (round(c - 1, 2) if res == "ganado" else -1 if res == "perdido"
+                          else 0 if res == "anulado" else "")
+
+
+def revisar_ref(picks, evs, now):
+    """Picks del sistema nuevo: si el bot aun no tenia cuota, la vuelve a buscar
+    (solo antes de que empiece el partido) y actualiza el color del aviso."""
+    for p in picks:
+        if not en_ref(p):
+            continue
+        antes = MK.cabecera(p) if p.get("modo_ref") else ""
+        if (p.get("resultado") == "pendiente" and not num(p.get("cuota_2h"))
+                and time.time() - _REV_REF.get(p["id"], 0) > REVISAR_REF):
+            try:
+                inicio = datetime.strptime(f"{p['fecha']} {p['hora']}", "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
+            except ValueError:
+                inicio = now
+            e = evs.get(p["id"])
+            if e and now < inicio:
+                _REV_REF[p["id"]] = time.time()
+                o = cuotas(p["id"])
+                time.sleep(PACE)
+                if o:
+                    local = (e.get("homeTeam") or {}).get("name") == p["pick"]
+                    c = o[1] if local else o[3]
+                    if c and num(p.get("prob")):
+                        p["cuota_2h"] = c
+                        p["valor_2h"] = round(float(p["prob"]) * c - 1, 3)
+        calc_ref(p)
+        if MK.cabecera(p) != antes:
+            MK.actualizar(TG, CHAT, "tt", p)
+
+
 def calc_betcris(p):
     """Decision y beneficio con la cuota de BetCris apuntada."""
+    calc_ref(p)
     cb = num(p.get("cuota_betcris"))
     pr = num(p.get("prob"))
     if not cb or not pr:
@@ -519,6 +579,12 @@ def calc_betcris(p):
 def texto_resultado(p):
     ic = {"ganado": "✅ GANADO", "perdido": "❌ PERDIDO", "anulado": "➖ ANULADO"}[p["resultado"]]
     t = f"🏁 {p['pick'].upper()} vs {p['rival']} · {ic} {p.get('marcador', '')}"
+    if p.get("modo_ref") == "si":
+        if p.get("decision_ref"):
+            b = num(p.get("beneficio_ref")) or 0
+            t += (f"\n{'🟢 APOSTAR' if p['decision_ref'] == 'SI' else '🔴 NO APOSTAR'} · cuota "
+                  f"{float(p['cuota_ref']):.2f} ({p['fuente_ref']}) · {b:+.2f} u")
+        return t
     if p.get("cuota_betcris"):
         b = num(p.get("beneficio_betcris")) or 0
         t += (f"\nBetCris {float(p['cuota_betcris']):.2f} · {NIVEL_TXT[p['decision_betcris']]}"
@@ -616,11 +682,17 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
                 pk["no_esta"] = "si"
                 for k in ("cuota_betcris", "valor_betcris", "decision_betcris", "beneficio_betcris"):
                     pk[k] = ""
+                calc_ref(pk)
                 MK.actualizar(token, CHAT, canal, pk)
-                tg(f"⚫⚫ Apuntado: {pk['pick'].upper()} ({pk['hora']}) no está en BetCris · no cuenta.\n"
-                   "Si aparece, responde al aviso con la cuota (o «si» para dejarlo pendiente).", mid)
+                if pk.get("fuente_ref") == "bot":
+                    tg(f"{MK.color(pk)} Apuntado: {pk['pick'].upper()} ({pk['hora']}) no está en BetCris.\n"
+                       "Para el registro sigue contando con la cuota del bot.", mid)
+                else:
+                    tg(f"⚫⚫ Apuntado: {pk['pick'].upper()} ({pk['hora']}) no está en BetCris · no cuenta.\n"
+                       "Si aparece, responde al aviso con la cuota (o «si» para dejarlo pendiente).", mid)
             else:
                 pk["no_esta"] = ""
+                calc_ref(pk)
                 MK.actualizar(token, CHAT, canal, pk)
                 tg(f"⚪⚪ {pk['pick'].upper()} ({pk['hora']}) vuelve a pendiente: responde con la cuota.", mid)
             continue
@@ -632,9 +704,12 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
                 continue
             for k in ("cuota_betcris", "valor_betcris", "decision_betcris", "beneficio_betcris"):
                 pk[k] = ""
+            calc_ref(pk)
             MK.actualizar(token, CHAT, canal, pk)          # vuelve a ⚪
             tg(f"🗑️ Borrada tu cuota de {pk['pick'].upper()} ({pk['hora']}). "
-               "Ya no cuenta en tus estadísticas de BetCris.", mid)
+               + ("Ahora: " + MK.color(pk) + (" (cuenta la cuota del bot)" if pk.get("fuente_ref") == "bot"
+                                              else " sin cuota") if pk.get("modo_ref") == "si"
+                  else "Ya no cuenta en tus estadísticas de BetCris."), mid)
             continue
         nums = re.findall(r"\d+[.,]\d+|\d+", texto)
         if not nums:
@@ -653,12 +728,21 @@ def leer_canal(todos_picks, st, canal, token, clave_offset):
         pk["cuota_betcris"] = cb
         pk["no_esta"] = ""
         calc_betcris(pk)
+        calc_ref(pk)
         MK.actualizar(token, CHAT, canal, pk)              # 🟢 / 🟡 / 🔴
         if es_elite(pk):
             rango = (f"entre {float(pk['cuota_minima']):.2f} y {float(pk['cuota_maxima']):.2f}"
                      if pk.get("cuota_maxima") else f"mínima {float(pk['cuota_minima']):.2f}")
             t = (f"{MK.color(pk)} Apuntado {pk['pick'].upper()} (Elite {pk['hora']}) · BetCris {cb:.2f}\n"
                  f"Hay que apostar {rango} → {NIVEL_TXT[pk['decision_betcris']]}")
+        elif pk.get("modo_ref") == "si":
+            dec = "🟢 APOSTAR" if pk.get("decision_ref") == "SI" else "🔴 NO APOSTAR"
+            if pk.get("fuente_ref") == "bot":
+                t = (f"{MK.color(pk)} Apuntada tu cuota {cb:.2f} de {pk['pick'].upper()} ({pk['hora']}).\n"
+                     f"Para el registro cuenta la cuota del bot: {float(pk['cuota_ref']):.2f} → {dec}")
+            else:
+                t = (f"{MK.color(pk)} Apuntado {pk['pick'].upper()} ({pk['hora']}) · tu cuota {cb:.2f}\n"
+                     f"Mínimo {float(pk['cuota_minima']):.2f} → {dec}")
         else:
             t = (f"{MK.color(pk)} Apuntado {pk['pick'].upper()} ({pk['hora']}) · BetCris {cb:.2f}\n"
                  f"Valor {float(pk['valor_betcris']) * 100:+.0f}% → {NIVEL_TXT[pk['decision_betcris']]}")
@@ -740,7 +824,7 @@ def resolver(picks, evs, now):
         calc_betcris(p)
         if res == "anulado":
             corregidos += 1                      # corregido en silencio
-        elif p.get("cuota_betcris"):             # solo te avisa de los que apuntaste
+        elif p.get("cuota_betcris") or p.get("decision_ref") == "SI":   # apuntados o 🟢
             tg(texto_resultado(p), p.get("msg") or None, token=token_de(p))
     return corregidos
 
@@ -786,6 +870,20 @@ def bloque_elite(rows):
             f"  📈 señal B (Elo): {resumen([r for r in rows if 'B' in r.get('nivel', '')])}\n")
 
 
+def bloque_ref(rows):
+    si = [r for r in rows if r.get("decision_ref") == "SI"]
+    no = [r for r in rows if r.get("decision_ref") == "NO"]
+    blancos = [r for r in rows if not r.get("decision_ref") and r.get("resultado") != "anulado"]
+    pend = sum(1 for r in rows if r.get("resultado") == "pendiente")
+    bot = sum(1 for r in rows if r.get("fuente_ref") == "bot")
+    tuya = sum(1 for r in rows if r.get("fuente_ref") == "tuya")
+    return (f"🟢 Apostar: {resumen(si, 'beneficio_ref')}\n"
+            f"🔴 No apostar: {resumen(no, 'beneficio_ref')}\n"
+            + (f"⚪ Sin cuota (no cuentan): {len(blancos)}\n" if blancos else "")
+            + (f"⏳ Pendientes: {pend}\n" if pend else "")
+            + f"(cuota del bot: {bot} · tuya: {tuya})\n")
+
+
 def resumen_dia(picks, st, now):
     """Resumen a partir de las 23:45; si esa noche no hubo ejecucion, de madrugada."""
     if now.hour == 23 and now.minute >= 45:
@@ -797,19 +895,12 @@ def resumen_dia(picks, st, now):
     hoy = dia.strftime("%Y-%m-%d")
     if st.get("resumen", "") >= hoy:
         return
-    tt = [p for p in picks if not es_elite(p)]
+    tt = [p for p in picks if en_ref(p)]                 # sistema nuevo: desde INICIO_REF
     del_dia = [p for p in tt if p["fecha"] == hoy]
-    pend = sum(1 for p in del_dia if p["resultado"] == "pendiente")
-    sin = sum(1 for p in del_dia if p["resultado"] != "pendiente" and not p.get("cuota_2h"))
-    noesta = sum(1 for p in del_dia if p.get("no_esta") == "si")
-    blancos = sum(1 for p in del_dia if MK.es_blanco(p))
-    txt = (f"📋 RESUMEN TT CUP · {dia:%d/%m} · {len(del_dia)} avisos\n" + bloque(del_dia)
-           + (f"⚫ No estaban en BetCris: {noesta}\n" if noesta else "")
-           + (f"⚪ Sin tu cuota: {blancos}\n" if blancos else "")
-           + (f"⏳ Pendientes: {pend}\n" if pend else "")
-           + (f"(sin cuota en Sofascore: {sin}, solo cuentan si apuntaste BetCris)\n" if sin else "")
-           + f"\n📈 ACUMULADO desde {st.get('inicio', hoy)} · {len(tt)} avisos\n" + bloque(tt)
-           + "(1 u por pick)")
+    ini = datetime.strptime(INICIO_REF, "%Y-%m-%d")
+    txt = (f"📋 RESUMEN TT CUP · {dia:%d/%m} · {len(del_dia)} avisos\n" + bloque_ref(del_dia)
+           + f"\n📈 ACUMULADO desde el {ini:%d/%m} · {len(tt)} avisos\n" + bloque_ref(tt)
+           + "(1 u por pick · cuenta la cuota del bot; si no tiene, la tuya)")
     tg(txt)
     el = [p for p in picks if es_elite(p)]
     if el and TG_ELITE:
@@ -954,6 +1045,10 @@ def main():
                     print("ERROR liga", lid, ex)
                     st[f"error_{lid}"] = f"{now:%H:%M} {type(ex).__name__}: {str(ex)[:120]}"
             corr = resolver(picks, todos_evs, now)
+            try:
+                revisar_ref(picks, todos_evs, now)
+            except Exception as ex:
+                print("WARN revisar_ref", ex)
             if corr:
                 tg(f"🔧 Corregidos {corr} picks que estaban como anulados: ya tienen su "
                    "resultado real y cuentan en el resumen.")

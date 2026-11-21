@@ -32,6 +32,16 @@ def cabecera(p):
 
 
 def _cabecera(p):
+    if p.get("modo_ref") == "si":            # TT Cup desde el 21/11: manda la cuota del bot
+        d = p.get("decision_ref")
+        if d in ("SI", "NO"):
+            c = float(p.get("cuota_ref") or 0)
+            src = "bot" if p.get("fuente_ref") == "bot" else "tuya"
+            return (f"🟢 APOSTAR · cuota {c:.2f} ({src})" if d == "SI"
+                    else f"🔴 NO APOSTAR · cuota {c:.2f} ({src})")
+        if p.get("no_esta") == "si":
+            return "⚫ NO ESTÁ EN BETCRIS"
+        return "⚪ SIN CUOTA · responde con la tuya"
     if p.get("no_esta") == "si":
         return "⚫ NO ESTÁ EN BETCRIS"
     try:
@@ -84,6 +94,8 @@ def color(p):
 
 
 def es_blanco(p):
+    if p.get("modo_ref") == "si":
+        return not p.get("decision_ref") and p.get("no_esta") != "si"
     return not p.get("cuota_betcris") and p.get("no_esta") != "si"
 
 
