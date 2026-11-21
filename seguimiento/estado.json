@@ -13,15 +13,12 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13482115": 1795138936.8997872,
   "b13477189": 1795140503.8822317,
   "b13477462": 1795140747.4036183,
   "b13482114": 1795141701.1347485,
   "b13481136": 1795143241.686823,
   "b13477188": 1795144795.891678,
-  "b13477461": 1795138805.2490182,
   "b13483932": 1795139845.8550344,
-  "b13483933": 1795138936.8997872,
   "b13480911": 1795146293.2970707,
   "b13480922": 1795139733.2241006,
   "b13481007": 1795146293.2970707,
@@ -272,29 +269,31 @@
   "b13488639": 1795219687.1543798,
   "b13485428": 1795218968.6017225,
   "b13488663": 1795220297.4414709,
-  "b13487112": 1795224287.3582423,
+  "b13487112": 1795225256.4124057,
   "b13485547": 1795220424.9812703,
-  "b13485269": 1795224508.1199083,
+  "b13485269": 1795225448.458783,
   "b13488716": 1795221767.0541253,
-  "b13485306": 1795224508.1199083,
+  "b13485306": 1795225448.458783,
   "b13488742": 1795222788.8237758,
   "b13488771": 1795223475.8032742,
-  "b13482214": 1795224380.3925583,
+  "b13482214": 1795225324.8025775,
   "b13488781": 1795223651.690185,
   "b13488908": 1795224756.923566,
-  "b13485367": 1795224633.846784
+  "b13485367": 1795225570.3957362,
+  "b13488935": 1795225514.408178,
+  "b13488936": 1795225514.408178
  },
  "elite_diag": {
   "fecha": "2026-11-21",
-  "revisados": 104,
-  "con_cuota": 52,
-  "favoritos": 52,
+  "revisados": 111,
+  "con_cuota": 56,
+  "favoritos": 56,
   "con_senal": 3,
   "candidatos_ahora": 9,
-  "ultima": "02:38"
+  "ultima": "02:53",
+  "sin_cuota_caliente": 1
  },
  "textos": {
-  "elite:519": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 20:45\n\u2705 ADAMUS P.\nvs Tkaczyk H.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 59%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:520": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 21:10\n\u2705 MARUD G.\nvs Juzek S.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 6 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 54%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:1512": "\ud83d\udd25 PICK TT CUP \u00b7 22:35\n\u2705 MEZLIK S.\nvs Vidourek J.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.90 \u2192 no apostar\n\ud83d\udcb0 1.90 a 2.08 \u2192 APUESTA\n\u2b50\u2b50 2.09 a 2.47 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.47 \u2192 valor >30%, desconfiar\n\nSofascore: 1.73 \u2192 \u274c NO APOSTAR\nProb. 53% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "tt:1513": "\ud83d\udd25 PICK TT CUP \u00b7 22:50\n\u2705 JICHA D.\nvs Zlamal J.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.22 \u2192 no apostar\n\ud83d\udcb0 2.22 a 2.43 \u2192 APUESTA\n\u2b50\u2b50 2.44 a 2.88 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.88 \u2192 valor >30%, desconfiar\n\nSofascore: 2.62 \u2192 \u2b50\u2b50 FUERTE\nProb. 45% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
@@ -593,9 +592,10 @@
   "elite:706": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 01:20\n\u2705 BERNACKI L.\nvs Cesarz M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.40\n\u274c menos de 1.40 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.40 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:708": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 02:45\n\u2705 FILBRANDT T.\nvs Malinowski R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.40\n\u274c menos de 1.40 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83d\udcc8 el Elo le ve 14 puntos mejor que la casa\nSofascore: 1.40 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:709": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:00\n\u2705 SZYMIK R.\nvs Juszczyk K.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "elite:710": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:25\n\u2705 RUSZKIEWICZ A.\nvs Cesarz M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.67\n\u274c menos de 1.67 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 22 puntos mejor que la casa\nSofascore: 1.67 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
+  "elite:710": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:25\n\u2705 RUSZKIEWICZ A.\nvs Cesarz M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.67\n\u274c menos de 1.67 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 22 puntos mejor que la casa\nSofascore: 1.67 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
+  "elite:711": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:10\n\u2705 SZYMANSKI I.\nvs Wiza R.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 60%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-21 02:38",
+ "latido": "2026-11-21 02:53",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
