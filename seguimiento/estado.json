@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13481129": 1795175846.5760937,
   "b13481135": 1795176554.5491517,
   "b13482316": 1795176554.5491517,
   "b13481116": 1795177459.468437,
@@ -22,7 +21,6 @@
   "b13481125": 1795180474.4772127,
   "b13481140": 1795181043.812724,
   "b13482315": 1795181043.812724,
-  "b13485592": 1795175707.4870856,
   "b13481071": 1795181946.136506,
   "b13481188": 1795182435.2264633,
   "b13485730": 1795177022.5402405,
@@ -263,25 +261,27 @@
   "b13485919": 1795256437.2814806,
   "b13489975": 1795257753.2018456,
   "b13485608": 1795257353.4094226,
-  "b13485703": 1795260755.9569776,
+  "b13485703": 1795261698.012218,
   "b13490030": 1795259444.1162393,
   "b13485590": 1795258845.1681979,
   "b13490065": 1795259933.504663,
-  "b13485649": 1795261347.7079377,
+  "b13485649": 1795262272.221545,
   "b13490114": 1795260552.385861,
-  "b13485638": 1795261270.7099497,
+  "b13485638": 1795262210.6199093,
   "b13490152": 1795261471.0526721,
-  "b13485912": 1795260967.3046908,
-  "b13490201": 1795261058.9690685
+  "b13485912": 1795261886.8729644,
+  "b13490201": 1795262021.6784678,
+  "b13485689": 1795261886.8729644,
+  "b13490235": 1795262162.0917943
  },
  "elite_diag": {
   "fecha": "2026-11-21",
-  "revisados": 529,
-  "con_cuota": 285,
-  "favoritos": 269,
+  "revisados": 536,
+  "con_cuota": 290,
+  "favoritos": 274,
   "con_senal": 26,
-  "candidatos_ahora": 12,
-  "ultima": "12:44",
+  "candidatos_ahora": 11,
+  "ultima": "12:58",
   "sin_cuota_caliente": 7
  },
  "textos": {
@@ -586,7 +586,7 @@
   "tt:2066": "\ud83d\udd25 PICK TT CUP \u00b7 14:10\n\u2705 VELKY JR D.\nvs Konvicka V.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.90\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 53% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento",
   "tt:2068": "\ud83d\udd25 PICK TT CUP \u00b7 14:35\n\u2705 KUCERA M.\nvs Polak O.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.90\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 53% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-21 12:44",
+ "latido": "2026-11-21 12:58",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
