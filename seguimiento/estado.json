@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13482228": 1795198832.8380103,
   "b13480978": 1795199967.6425974,
   "b13485517": 1795201028.2811265,
   "b13482127": 1795202267.0429204,
@@ -259,7 +258,7 @@
   "b13491073": 1795284313.088665,
   "b13491102": 1795284313.088665,
   "b13491331": 1795279449.2285342,
-  "b13486057": 1795284123.1560771,
+  "b13486057": 1795285148.1626785,
   "b13485655": 1795278954.4867644,
   "b13487242": 1795279323.129322,
   "b13491232": 1795284919.217268,
@@ -274,26 +273,26 @@
   "b13490924": 1795280813.124741,
   "b13491519": 1795282179.2163599,
   "b13489777": 1795281352.4962854,
-  "b13487105": 1795284709.9913924,
+  "b13487105": 1795285659.5127335,
   "b13491191": 1795281928.8174567,
-  "b13491329": 1795284709.9913924,
+  "b13491329": 1795285659.5127335,
   "b13491618": 1795283620.0213203,
-  "b13488302": 1795284709.9913924,
+  "b13488302": 1795285659.5127335,
   "b13485654": 1795284976.8308454,
-  "b13487241": 1795284330.5911353,
+  "b13487241": 1795285296.3301184,
   "b13491065": 1795283424.620453,
-  "b13491733": 1795284578.840728,
-  "b13487104": 1795284648.9276643,
+  "b13491733": 1795285547.320115,
+  "b13487104": 1795285593.019796,
   "b13491122": 1795284919.217268
  },
  "elite_diag": {
   "fecha": "2026-11-21",
-  "revisados": 856,
-  "con_cuota": 444,
-  "favoritos": 404,
+  "revisados": 863,
+  "con_cuota": 446,
+  "favoritos": 406,
   "con_senal": 35,
-  "candidatos_ahora": 21,
-  "ultima": "19:16",
+  "candidatos_ahora": 17,
+  "ultima": "19:29",
   "sin_cuota_caliente": 13
  },
  "textos": {
@@ -598,7 +597,7 @@
   "tt:2091": "\ud83d\udd25 PICK TT CUP \u00b7 20:45\n\u2705 KRUPNIK JR L.\nvs Przybyla J.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.87\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 53% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento",
   "elite:755": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 20:55\n\u2705 MUCHA G.\nvs Natkaniec M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.61\n\u274c menos de 1.61 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 15 puntos mejor que la casa\nSofascore: 1.61 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-21 19:16",
+ "latido": "2026-11-21 19:29",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
