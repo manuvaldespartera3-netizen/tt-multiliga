@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13482152": 1795170519.1635647,
   "b13482270": 1795171609.6871033,
   "b13484239": 1795171609.6871033,
   "b13481283": 1795171355.5009725,
@@ -258,30 +257,31 @@
   "b13486126": 1795256387.6665325,
   "b13489727": 1795252107.8567536,
   "b13489728": 1795251197.310278,
-  "b13485516": 1795256015.4578834,
+  "b13485516": 1795256962.0482478,
   "b13489741": 1795252705.8612068,
-  "b13486091": 1795255693.095448,
+  "b13486091": 1795256654.935967,
   "b13489791": 1795253665.9777062,
   "b13489792": 1795253665.9777062,
   "b13485647": 1795252864.1044452,
-  "b13485839": 1795256209.1884153,
+  "b13485839": 1795257126.8887708,
   "b13489846": 1795254957.3910477,
   "b13485553": 1795254366.3350294,
   "b13489888": 1795255771.926065,
-  "b13485695": 1795255901.703799,
+  "b13485695": 1795256808.6531208,
   "b13489918": 1795255339.7655044,
   "b13485685": 1795255833.2392545,
-  "b13489957": 1795256275.0133832,
-  "b13485919": 1795256437.2814806
+  "b13489957": 1795257216.7282104,
+  "b13485919": 1795256437.2814806,
+  "b13489975": 1795256808.6531208
  },
  "elite_diag": {
   "fecha": "2026-11-21",
-  "revisados": 489,
-  "con_cuota": 257,
-  "favoritos": 241,
+  "revisados": 495,
+  "con_cuota": 261,
+  "favoritos": 245,
   "con_senal": 24,
-  "candidatos_ahora": 14,
-  "ultima": "11:20",
+  "candidatos_ahora": 12,
+  "ultima": "11:34",
   "sin_cuota_caliente": 7
  },
  "textos": {
@@ -586,7 +586,7 @@
   "elite:737": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 13:15\n\u2705 MICHNA D.\nvs Adamiak G.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.44\n\u274c menos de 1.44 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 19 puntos mejor que la casa\nSofascore: 1.44 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:738": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 13:25\n\u2705 JESIEK J.\nvs Sawicki G.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.53\n\u274c menos de 1.53 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.53 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-21 11:20",
+ "latido": "2026-11-21 11:34",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
