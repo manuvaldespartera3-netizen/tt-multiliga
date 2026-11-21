@@ -13,9 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13477426": 1795133098.690218,
-  "b13480850": 1795133098.690218,
-  "b13480259": 1795133588.4567642,
   "b13477348": 1795134439.149342,
   "b13482347": 1795134439.149342,
   "b13477463": 1795135032.1228974,
@@ -274,31 +271,33 @@
   "b13482218": 1795219153.0768995,
   "b13485544": 1795212951.9837914,
   "b13488407": 1795214587.0775223,
-  "b13482216": 1795218586.1334937,
-  "b13482217": 1795218586.1334937,
-  "b13482122": 1795219153.0768995,
+  "b13482216": 1795219498.8285732,
+  "b13482217": 1795219498.8285732,
+  "b13482122": 1795220057.926506,
   "b13488491": 1795215893.5638354,
-  "b13485180": 1795218780.9674034,
+  "b13485180": 1795219687.1543798,
   "b13488505": 1795216294.401927,
-  "b13485371": 1795218714.4329324,
+  "b13485371": 1795219632.044275,
   "b13488560": 1795217363.161237,
-  "b13482215": 1795218426.7672446,
+  "b13482215": 1795219368.7803812,
   "b13488597": 1795217936.6724334,
   "b13488599": 1795218236.0248606,
   "b13482121": 1795219282.8914132,
   "b13488621": 1795218899.620963,
   "b13485294": 1795218049.1001062,
-  "b13488639": 1795218780.9674034,
-  "b13485428": 1795218968.6017225
+  "b13488639": 1795219687.1543798,
+  "b13485428": 1795218968.6017225,
+  "b13488663": 1795219368.7803812,
+  "b13487112": 1795219560.0092313
  },
  "elite_diag": {
   "fecha": "2026-11-21",
-  "revisados": 48,
-  "con_cuota": 23,
-  "favoritos": 23,
+  "revisados": 57,
+  "con_cuota": 27,
+  "favoritos": 27,
   "con_senal": 2,
   "candidatos_ahora": 13,
-  "ultima": "01:01"
+  "ultima": "01:15"
  },
  "textos": {
   "tt:1498": "\ud83d\udd25 PICK TT CUP \u00b7 22:25\n\u2705 KRAL A.\nvs Balcar F.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.96 \u2192 no apostar\n\ud83d\udcb0 1.96 a 2.14 \u2192 APUESTA\n\u2b50\u2b50 2.15 a 2.55 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.55 \u2192 valor >30%, desconfiar\n\nSofascore: 1.73 \u2192 \u274c NO APOSTAR\nProb. 51% \u00b7 ya ha jugado 4 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
@@ -602,7 +601,7 @@
   "elite:708": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 02:45\n\u2705 FILBRANDT T.\nvs Malinowski R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.40\n\u274c menos de 1.40 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83d\udcc8 el Elo le ve 14 puntos mejor que la casa\nSofascore: 1.40 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:709": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:00\n\u2705 SZYMIK R.\nvs Juszczyk K.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-21 01:01",
+ "latido": "2026-11-21 01:15",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
