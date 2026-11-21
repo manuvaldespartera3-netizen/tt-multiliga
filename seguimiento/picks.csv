@@ -892,8 +892,8 @@ TT Cup,tt,2026-11-21,11:25,FLOJO,Jicha D.,Ovcharenko M.,0.508,1.97,2.17,2.56,,1.
 Elite Series,elite,2026-11-21,11:25,A,Rolak J.,Wisniewski B.,0.619,1.25,,,2.0,,,,,,,3,ganado,3-0,,,2026-11-21 09:20,731,finished,b13486058,,,,,,
 Elite Series,elite,2026-11-21,11:40,A,Dosz A.,Kolodziej K.,0.663,1.4,,,,1.4,0,,,,1.166,3,ganado,3-1,0.4,,2026-11-21 09:35,732,finished,b13485659,,,,,,
 Elite Series,elite,2026-11-21,10:20,A,Jedrzejak P.,Wojtaszczyk W.,0.611,1.25,,,2.0,,,,,,,1,ganado,3-0,,,2026-11-21 09:52,733,finished,b13489728,,,,,,
-TT Cup,tt,2026-11-21,12:10,FLOJO,Krupnik J.,Konvicka V.,0.585,1.71,1.88,2.22,,1.571,-0.082,,,,,3,pendiente,,,,2026-11-21 10:05,2052,inprogress,b13488510,,si,1.571,bot,NO,
-Elite Series,elite,2026-11-21,12:25,B,Dosz A.,Adamiak G.,0.709,1.333,,,,1.333,0,,,,,4,pendiente,,,,2026-11-21 10:20,734,notstarted,b13485647,,,,,,
+TT Cup,tt,2026-11-21,12:10,FLOJO,Krupnik J.,Konvicka V.,0.585,1.71,1.88,2.22,,1.571,-0.082,,,,1.363,3,ganado,3-1,0.57,,2026-11-21 10:05,2052,finished,b13488510,,si,1.571,bot,NO,0.57
+Elite Series,elite,2026-11-21,12:25,B,Dosz A.,Adamiak G.,0.709,1.333,,,,1.333,0,,,,,4,pendiente,,,,2026-11-21 10:20,734,inprogress,b13485647,,,,,,
 TT Cup,tt,2026-11-21,12:45,FLOJO,Kanak A.,Konvicka V.,0.576,1.74,1.91,2.26,,1.533,-0.117,,,,,3,pendiente,,,,2026-11-21 10:40,2055,notstarted,b13488399,,si,1.533,bot,NO,
 TT Cup,tt,2026-11-21,12:45,SIN CUOTA,Kanak A.,Raska M.,0.559,1.79,1.97,2.32,,1.727,-0.035,1.81,0.012,APUESTA,,3,pendiente,,,,2026-11-21 10:40,2056,notstarted,b13489455,,si,1.727,bot,NO,
 Elite Series,elite,2026-11-21,12:50,A,Dosz S.,Kolodziej K.,0.537,1.727,,,,1.727,0,,,,,5,pendiente,,,,2026-11-21 10:46,735,notstarted,b13485553,,,,,,
@@ -908,3 +908,4 @@ TT Cup,tt,2026-11-21,13:45,FLOJO,Mrowetz B.,Konvicka V.,0.578,1.73,1.9,2.25,,1.6
 TT Cup,tt,2026-11-21,13:45,SIN CUOTA,Mrowetz B.,Raska M.,0.555,1.8,1.98,2.34,,,,1.51,-0.162,FLOJO,,4,pendiente,,,,2026-11-21 11:40,2061,notstarted,b13489524,,si,1.51,tuya,NO,
 Elite Series,elite,2026-11-21,14:05,B,Dosz A.,Dosz S.,0.515,1.8,,,,1.8,0,,,,,5,pendiente,,,,2026-11-21 12:00,740,notstarted,b13485590,,,,,,
 TT Cup,tt,2026-11-21,14:10,FLOJO,Velky Jr D.,Konvicka V.,0.526,1.9,2.09,2.47,,1.571,-0.174,,,,,1,pendiente,,,,2026-11-21 12:05,2066,notstarted,b13488584,,si,1.571,bot,NO,
+TT Cup,tt,2026-11-21,14:35,FLOJO,Kucera M.,Polak O.,0.526,1.9,2.09,2.47,,1.615,-0.151,,,,,1,pendiente,,,,2026-11-21 12:30,2068,notstarted,b13488504,,si,1.615,bot,NO,

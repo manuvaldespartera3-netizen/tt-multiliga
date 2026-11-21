@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13481126": 1795173430.0398674,
   "b13481129": 1795175846.5760937,
   "b13481135": 1795176554.5491517,
   "b13482316": 1795176554.5491517,
@@ -255,11 +254,11 @@
   "b13489791": 1795253665.9777062,
   "b13489792": 1795253665.9777062,
   "b13485647": 1795252864.1044452,
-  "b13485839": 1795258976.7965236,
+  "b13485839": 1795259933.504663,
   "b13489846": 1795254957.3910477,
   "b13485553": 1795254366.3350294,
   "b13489888": 1795255771.926065,
-  "b13485695": 1795259600.7461696,
+  "b13485695": 1795260552.385861,
   "b13489918": 1795255339.7655044,
   "b13485685": 1795255833.2392545,
   "b13489957": 1795257216.7282104,
@@ -269,22 +268,23 @@
   "b13485703": 1795259820.9702194,
   "b13490030": 1795259444.1162393,
   "b13485590": 1795258845.1681979,
-  "b13490065": 1795258976.7965236,
-  "b13485649": 1795259444.1162393,
-  "b13490114": 1795259624.6542525
+  "b13490065": 1795259933.504663,
+  "b13485649": 1795260376.360074,
+  "b13490114": 1795260552.385861,
+  "b13485638": 1795260316.266761,
+  "b13490152": 1795260552.385861
  },
  "elite_diag": {
   "fecha": "2026-11-21",
-  "revisados": 515,
-  "con_cuota": 276,
-  "favoritos": 260,
+  "revisados": 522,
+  "con_cuota": 280,
+  "favoritos": 264,
   "con_senal": 26,
-  "candidatos_ahora": 13,
-  "ultima": "12:16",
+  "candidatos_ahora": 12,
+  "ultima": "12:30",
   "sin_cuota_caliente": 7
  },
  "textos": {
-  "tt:1569": "\ud83d\udd25 PICK TT CUP \u00b7 16:35\n\u2705 MOTACEK T.\nvs Lovl J.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.31 \u2192 no apostar\n\ud83d\udcb0 2.31 a 2.53 \u2192 APUESTA\n\u2b50\u2b50 2.54 a 3.00 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 3.00 \u2192 valor >30%, desconfiar\n\nSofascore: 2.62 \u2192 \u2b50\u2b50 FUERTE\nProb. 43% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "tt:1587": "\ud83d\udd25 PICK TT CUP \u00b7 16:45\n\u2705 KANAK A.\nvs Mrowetz B.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.01 \u2192 no apostar\n\ud83d\udcb0 2.01 a 2.20 \u2192 APUESTA\n\u2b50\u2b50 2.21 a 2.62 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.62 \u2192 valor >30%, desconfiar\n\nSofascore: 2.00 \u2192 \u274c NO APOSTAR\nProb. 50% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
   "elite:566": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 17:00\n\u2705 MARCHLEWSKI K.\nvs Piecowski M.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 3 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 61%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:1589": "\ud83d\udd25 PICK TT CUP \u00b7 17:05\n\u2705 MOTACEK T.\nvs Ruzicka J.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.13 \u2192 no apostar\n\ud83d\udcb0 2.13 a 2.34 \u2192 APUESTA\n\u2b50\u2b50 2.35 a 2.77 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.77 \u2192 valor >30%, desconfiar\n\nSofascore: 2.50 \u2192 \u2b50\u2b50 FUERTE\nProb. 47% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
@@ -583,9 +583,10 @@
   "tt:2060": "\ud83d\udd25 PICK TT CUP \u00b7 13:45\n\u2705 MROWETZ B.\nvs Konvicka V.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.73\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 58% \u00b7 ya ha jugado 4 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento",
   "tt:2061": "\ud83d\udd25 PICK TT CUP \u00b7 13:45\n\u2705 MROWETZ B.\nvs Raska M.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.80\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 56% \u00b7 ya ha jugado 4 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento",
   "elite:740": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 14:05\n\u2705 DOSZ A.\nvs Dosz S.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.80\n\u274c menos de 1.80 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 27 puntos mejor que la casa\nSofascore: 1.80 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "tt:2066": "\ud83d\udd25 PICK TT CUP \u00b7 14:10\n\u2705 VELKY JR D.\nvs Konvicka V.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.90\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 53% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento"
+  "tt:2066": "\ud83d\udd25 PICK TT CUP \u00b7 14:10\n\u2705 VELKY JR D.\nvs Konvicka V.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.90\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 53% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento",
+  "tt:2068": "\ud83d\udd25 PICK TT CUP \u00b7 14:35\n\u2705 KUCERA M.\nvs Polak O.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.90\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 53% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-21 12:16",
+ "latido": "2026-11-21 12:30",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
