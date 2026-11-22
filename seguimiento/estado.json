@@ -13,8 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13487102": 1795297544.19234,
-  "b13491230": 1795297544.19234,
   "b13487239": 1795297812.6133072,
   "b13488300": 1795297812.6133072,
   "b13491085": 1795298743.4803233,
@@ -22,7 +20,6 @@
   "b13491045": 1795300437.1622474,
   "b13487238": 1795301937.778268,
   "b13488299": 1795302323.340555,
-  "b13492543": 1795296898.2560308,
   "b13487100": 1795303228.1092656,
   "b13487237": 1795303228.1092656,
   "b13490939": 1795303228.1092656,
@@ -275,28 +272,29 @@
   "b13496745": 1795379097.8628676,
   "b13496755": 1795379405.4947977,
   "b13495693": 1795383158.1291919,
-  "b13491271": 1795382651.579857,
+  "b13491271": 1795383566.7785716,
   "b13496815": 1795380217.3771422,
   "b13496835": 1795380469.5054524,
-  "b13495029": 1795382837.2094946,
+  "b13495029": 1795383798.1456382,
   "b13491270": 1795383158.1291919,
   "b13496898": 1795381933.4423556,
   "b13496927": 1795382460.6473072,
-  "b13491323": 1795382520.2077682,
-  "b13495692": 1795382520.2077682,
-  "b13496957": 1795382374.0204153,
-  "b13496958": 1795382374.0204153,
-  "b13491216": 1795383018.8603997,
-  "b13491397": 1795383018.8603997
+  "b13491323": 1795383426.543204,
+  "b13495692": 1795383426.543204,
+  "b13496957": 1795383300.8452623,
+  "b13496958": 1795383300.8452623,
+  "b13491216": 1795383924.6668482,
+  "b13491397": 1795383018.8603997,
+  "b13497006": 1795383866.034728
  },
  "elite_diag": {
   "fecha": "2026-11-22",
-  "revisados": 1039,
-  "con_cuota": 555,
-  "favoritos": 451,
+  "revisados": 1047,
+  "con_cuota": 559,
+  "favoritos": 454,
   "con_senal": 39,
-  "candidatos_ahora": 12,
-  "ultima": "22:33",
+  "candidatos_ahora": 11,
+  "ultima": "22:47",
   "sin_cuota_caliente": 7
  },
  "textos": {
@@ -601,7 +599,7 @@
   "tt:2154": "\ud83d\udd25 PICK TT CUP \u00b7 22:05\n\u2705 MARTIN J.\nvs Pros O.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.65\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 61% \u00b7 ya ha jugado 4 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento",
   "elite:812": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 00:35\n\u2705 MLYNARSKI F.\nvs Pietraszko L.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.44\n\u274c menos de 1.44 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 13 puntos mejor que la casa\nSofascore: 1.44 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-22 22:33",
+ "latido": "2026-11-22 22:47",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
