@@ -13,14 +13,11 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13485767": 1795243128.939233,
   "b13487256": 1795244869.8527186,
   "b13485681": 1795246718.105881,
   "b13485891": 1795246718.105881,
   "b13487255": 1795247664.49194,
   "b13485775": 1795248201.7470236,
-  "b13489430": 1795242700.5033798,
-  "b13489431": 1795242700.5033798,
   "b13485528": 1795249742.9820302,
   "b13485684": 1795243251.8812892,
   "b13489466": 1795245118.4444828,
@@ -267,7 +264,7 @@
   "b13491523": 1795322132.214677,
   "b13491659": 1795328662.9339716,
   "b13493570": 1795323472.7982233,
-  "b13490430": 1795328601.8941567,
+  "b13490430": 1795329512.1334302,
   "b13493602": 1795324378.0674362,
   "b13493603": 1795324378.0674362,
   "b13491251": 1795323664.5741189,
@@ -280,22 +277,26 @@
   "b13493647": 1795326341.5438058,
   "b13493668": 1795326905.4770093,
   "b13493675": 1795327448.0097468,
-  "b13491211": 1795328489.8777907,
+  "b13491211": 1795329447.5977736,
   "b13491627": 1795326654.9526434,
   "b13493715": 1795328601.8941567,
   "b13493717": 1795328601.8941567,
   "b13493723": 1795328792.9608998,
-  "b13491142": 1795328166.7435904,
-  "b13491235": 1795328166.7435904
+  "b13491142": 1795329074.5699456,
+  "b13491235": 1795329074.5699456,
+  "b13493760": 1795329074.5699456,
+  "b13493789": 1795329579.142813,
+  "b13491147": 1795329638.1854706,
+  "b13491550": 1795329638.1854706
  },
  "elite_diag": {
   "fecha": "2026-11-22",
-  "revisados": 376,
-  "con_cuota": 173,
-  "favoritos": 146,
+  "revisados": 384,
+  "con_cuota": 178,
+  "favoritos": 150,
   "con_senal": 14,
-  "candidatos_ahora": 15,
-  "ultima": "07:26"
+  "candidatos_ahora": 13,
+  "ultima": "07:40"
  },
  "textos": {
   "elite:601": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 10:20\n\u2705 HETNAR K.\nvs Rus M.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 78%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -599,7 +600,7 @@
   "elite:779": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:05\n\u2705 WOJTASZCZYK W.\nvs Adach R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.36\n\u274c menos de 1.36 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.36 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:780": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:55\n\u2705 ADACH R.\nvs Sobkow Z.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.67\n\u274c menos de 1.67 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 14 puntos mejor que la casa\nSofascore: 1.67 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-22 07:26",
+ "latido": "2026-11-22 07:40",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
