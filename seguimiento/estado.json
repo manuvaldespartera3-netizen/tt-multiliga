@@ -17,10 +17,8 @@
   "b13485269": 1795227283.120153,
   "b13485306": 1795228191.8903067,
   "b13482214": 1795228983.628595,
-  "b13488908": 1795224756.923566,
   "b13485367": 1795231054.0178506,
   "b13488935": 1795226452.2797277,
-  "b13488936": 1795225514.408178,
   "b13485665": 1795226172.0048056,
   "b13485670": 1795226172.0048056,
   "b13487494": 1795232620.742462,
@@ -275,24 +273,26 @@
   "b13492979": 1795306751.6217606,
   "b13492994": 1795306974.0376234,
   "b13493004": 1795307547.3125222,
-  "b13491228": 1795310488.6342757,
-  "b13491227": 1795310738.7525992,
+  "b13491228": 1795311393.618322,
+  "b13491227": 1795311641.7181096,
   "b13493059": 1795309056.1601844,
-  "b13488295": 1795310488.6342757,
+  "b13488295": 1795311393.618322,
   "b13493066": 1795309832.8132803,
   "b13493074": 1795310143.1141014,
   "b13493084": 1795310337.7469983,
   "b13491222": 1795309520.7611175,
-  "b13491346": 1795311059.4115293
+  "b13491346": 1795311059.4115293,
+  "b13493156": 1795311709.391232,
+  "b13493157": 1795311709.391232
  },
  "elite_diag": {
   "fecha": "2026-11-22",
-  "revisados": 111,
-  "con_cuota": 62,
-  "favoritos": 50,
+  "revisados": 116,
+  "con_cuota": 64,
+  "favoritos": 52,
   "con_senal": 5,
-  "candidatos_ahora": 10,
-  "ultima": "02:31"
+  "candidatos_ahora": 8,
+  "ultima": "02:45"
  },
  "textos": {
   "tt:1666": "\ud83d\udd25 PICK TT CUP \u00b7 10:15\n\u2705 SEDLACEK R.\nvs Vitasek D.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 1.88 \u2192 no apostar\n\ud83d\udcb0 1.88 a 2.06 \u2192 APUESTA\n\u2b50\u2b50 2.07 a 2.45 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.45 \u2192 valor >30%, desconfiar\n\nSofascore: 1.61 \u2192 \u274c NO APOSTAR\nProb. 53% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
@@ -596,7 +596,7 @@
   "elite:770": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 04:10\n\u2705 MALCHER K.\nvs Maszczynski D.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.36\n\u274c menos de 1.36 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 12 puntos mejor que la casa\nSofascore: 1.36 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:771": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 04:35\n\u2705 FOMIN A.\nvs Natkaniec M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.44\n\u274c menos de 1.44 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 12 puntos mejor que la casa\nSofascore: 1.44 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-22 02:31",
+ "latido": "2026-11-22 02:45",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
