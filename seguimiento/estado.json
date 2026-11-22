@@ -13,8 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13485689": 1795268495.7561846,
-  "b13485897": 1795269033.744175,
   "b13485666": 1795269979.817139,
   "b13485811": 1795270654.4905698,
   "b13485678": 1795271562.0453804,
@@ -276,31 +274,32 @@
   "b13491316": 1795353994.5912414,
   "b13494480": 1795348453.747884,
   "b13494515": 1795349345.7499154,
-  "b13491635": 1795353994.5912414,
+  "b13491635": 1795354967.9675045,
   "b13494524": 1795349560.642421,
-  "b13493369": 1795354407.5892513,
+  "b13493369": 1795355363.2435884,
   "b13494544": 1795349887.7622173,
-  "b13491170": 1795354407.5892513,
+  "b13491170": 1795355363.2435884,
   "b13494575": 1795350009.3027945,
-  "b13491504": 1795354087.285156,
+  "b13491504": 1795355044.5994053,
   "b13491534": 1795351204.903262,
-  "b13493368": 1795354605.16336,
+  "b13493368": 1795355568.988829,
   "b13494656": 1795352867.0294418,
   "b13491527": 1795352768.077485,
   "b13494737": 1795353994.5912414,
-  "b13491513": 1795354295.6156092,
-  "b13491681": 1795354222.086436,
-  "b13491501": 1795354535.7675571,
-  "b13494823": 1795354694.259555
+  "b13491513": 1795355254.5990753,
+  "b13491681": 1795355178.308509,
+  "b13491501": 1795355442.6193917,
+  "b13494823": 1795355609.609144,
+  "b13494845": 1795354967.9675045
  },
  "elite_diag": {
   "fecha": "2026-11-22",
-  "revisados": 674,
-  "con_cuota": 351,
-  "favoritos": 292,
+  "revisados": 684,
+  "con_cuota": 357,
+  "favoritos": 298,
   "con_senal": 25,
   "candidatos_ahora": 11,
-  "ultima": "14:40",
+  "ultima": "14:54",
   "sin_cuota_caliente": 3
  },
  "textos": {
@@ -605,7 +604,7 @@
   "elite:794": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 16:10\n\u2705 DOSZ A.\nvs Dosz S.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.80\n\u274c menos de 1.80 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 28 puntos mejor que la casa\nSofascore: 1.80 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:2123": "\ud83d\udd25 PICK TT CUP \u00b7 16:20\n\u2705 CIBIK P.\nvs Brandtl Jr A.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.78\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 56% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-22 14:40",
+ "latido": "2026-11-22 14:54",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
