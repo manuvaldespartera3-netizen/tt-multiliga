@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13482122": 1795220978.4654703,
   "b13485180": 1795221513.6926713,
   "b13485371": 1795222455.7693987,
   "b13482215": 1795223163.6994648,
@@ -267,9 +266,9 @@
   "b13491229": 1795305853.904713,
   "b13492758": 1795301086.9274242,
   "b13492759": 1795301086.9274242,
-  "b13490795": 1795306443.6103013,
-  "b13491020": 1795306443.6103013,
-  "b13488298": 1795306093.6114614,
+  "b13490795": 1795307358.1749525,
+  "b13491020": 1795307358.1749525,
+  "b13488298": 1795307041.8710053,
   "b13492847": 1795302723.2937388,
   "b13490750": 1795306890.3440073,
   "b13491078": 1795306890.3440073,
@@ -279,21 +278,21 @@
   "b13490727": 1795303823.1809995,
   "b13491347": 1795303823.1809995,
   "b13492926": 1795305290.0802314,
-  "b13488297": 1795306328.8882196,
+  "b13488297": 1795307239.9137979,
   "b13491112": 1795305354.6809926,
   "b13492979": 1795306751.6217606,
-  "b13492994": 1795306042.0008562,
-  "b13493004": 1795306628.7794535,
-  "b13491228": 1795306816.031822
+  "b13492994": 1795306974.0376234,
+  "b13493004": 1795307547.3125222,
+  "b13491228": 1795307750.674567
  },
  "elite_diag": {
   "fecha": "2026-11-22",
-  "revisados": 75,
-  "con_cuota": 46,
-  "favoritos": 35,
+  "revisados": 82,
+  "con_cuota": 49,
+  "favoritos": 37,
   "con_senal": 3,
-  "candidatos_ahora": 13,
-  "ultima": "01:21"
+  "candidatos_ahora": 11,
+  "ultima": "01:35"
  },
  "textos": {
   "elite:595": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 10:05\n\u2705 WIECEK A.\nvs Bialek A.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.44\n\u274c menos de 1.44 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 12 puntos mejor que la casa\nSofascore: 1.44 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -597,7 +596,7 @@
   "elite:768": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 02:35\n\u2705 GESIARZ P.\nvs Maszczynski D.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.33\n\u274c menos de 1.33 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 10 puntos mejor que la casa\nSofascore: 1.33 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:769": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:00\n\u2705 MUCHA G.\nvs Natkaniec M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.50\n\u274c menos de 1.50 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 15 puntos mejor que la casa\nSofascore: 1.50 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-22 01:21",
+ "latido": "2026-11-22 01:35",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
