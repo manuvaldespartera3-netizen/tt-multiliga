@@ -13,9 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13487257": 1795239197.6282642,
-  "b13485607": 1795239511.4075818,
-  "b13486167": 1795239511.4075818,
   "b13485679": 1795240706.9631221,
   "b13485787": 1795241636.2298107,
   "b13485767": 1795243128.939233,
@@ -270,34 +267,35 @@
   "b13491307": 1795319461.035484,
   "b13491506": 1795319461.035484,
   "b13493374": 1795321211.31127,
-  "b13491062": 1795325269.1720722,
-  "b13491074": 1795325269.1720722,
-  "b13490746": 1795325269.1720722,
+  "b13491062": 1795326183.5265844,
+  "b13491074": 1795326183.5265844,
+  "b13490746": 1795326183.5265844,
   "b13493425": 1795322697.2589765,
   "b13493456": 1795322928.9361255,
   "b13491523": 1795322132.214677,
-  "b13491659": 1795324960.0105228,
+  "b13491659": 1795325867.9020114,
   "b13493570": 1795323472.7982233,
-  "b13490430": 1795324859.680906,
+  "b13490430": 1795325803.3921497,
   "b13493602": 1795324378.0674362,
   "b13493603": 1795324378.0674362,
   "b13491251": 1795323664.5741189,
   "b13491507": 1795323664.5741189,
   "b13493612": 1795324710.4339137,
-  "b13493620": 1795324501.2914178,
-  "b13493637": 1795325154.1341357,
-  "b13491288": 1795325154.1341357,
-  "b13491637": 1795325154.1341357,
-  "b13493647": 1795325398.5826893
+  "b13493620": 1795325442.4971802,
+  "b13493637": 1795326057.0273774,
+  "b13491288": 1795326057.0273774,
+  "b13491637": 1795326057.0273774,
+  "b13493647": 1795325398.5826893,
+  "b13493668": 1795325997.225955
  },
  "elite_diag": {
   "fecha": "2026-11-22",
-  "revisados": 334,
-  "con_cuota": 151,
-  "favoritos": 131,
+  "revisados": 344,
+  "con_cuota": 156,
+  "favoritos": 135,
   "con_senal": 13,
   "candidatos_ahora": 15,
-  "ultima": "06:29"
+  "ultima": "06:44"
  },
  "textos": {
   "elite:600": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 11:45\n\u2705 KOLEK M.\nvs Rutkowski M.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 54%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -601,7 +599,7 @@
   "elite:778": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:05\n\u2705 SPANIK T.\nvs Malachowski M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.53\n\u274c menos de 1.53 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.53 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:779": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:05\n\u2705 WOJTASZCZYK W.\nvs Adach R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.36\n\u274c menos de 1.36 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.36 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-22 06:29",
+ "latido": "2026-11-22 06:44",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
