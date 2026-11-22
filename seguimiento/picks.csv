@@ -1013,7 +1013,7 @@ TT Cup,tt,2026-11-22,20:05,FLOJO,Martin J.,Kabelka J.,0.617,1.62,1.78,2.11,,1.53
 Elite Series,elite,2026-11-22,20:05,A,Jadam D.,Pietraszko L.,0.558,1.666,,,,1.666,0,,,,1.571,3,ganado,3-1,0.67,,2026-11-22 18:01,804,finished,b13491274,,,,,,
 TT Cup,tt,2026-11-22,20:10,FLOJO,Krupnik Jr L.,Oleksik J.,0.562,1.78,1.96,2.31,,1.727,-0.029,,,,1.571,2,perdido,0-3,-1,,2026-11-22 18:05,2128,finished,b13494853,,si,1.727,bot,NO,-1
 TT Cup,tt,2026-11-22,20:15,FLOJO,Skvor O.,Vanous J.,0.52,1.92,2.12,2.5,,1.666,-0.134,,,,1.666,2,perdido,1-3,-1,,2026-11-22 18:10,2129,finished,b13494295,,si,1.666,bot,NO,-1
-Elite Series,elite,2026-11-22,20:50,B,Mlynarski F.,Pietraszko L.,0.577,1.615,,,,1.615,0,,,,,4,pendiente,,,,2026-11-22 18:45,805,notstarted,b13491399,,,,,,
+Elite Series,elite,2026-11-22,20:50,B,Mlynarski F.,Pietraszko L.,0.577,1.615,,,,1.615,0,,,,,4,pendiente,,,,2026-11-22 18:45,805,inprogress,b13491399,,,,,,
 TT Cup,tt,2026-11-22,20:55,APUESTA,Vyskocil Z.,Vich L.,0.541,1.85,2.03,2.4,,2.0,0.081,,,,,1,pendiente,,,,2026-11-22 18:50,2133,notstarted,b13494294,,si,2.0,bot,SI,
 TT Cup,tt,2026-11-22,19:20,FLOJO,Drozd A.,Lorenc M.,0.471,2.12,2.33,2.76,,2.0,-0.057,,,,1.833,1,perdido,1-3,-1,,2026-11-22 18:59,2134,finished,b13496003,,si,2.0,bot,NO,-1
 TT Cup,tt,2026-11-22,21:05,FLOJO,Martin J.,Vosyka L.,0.514,1.94,2.14,2.53,,1.833,-0.057,,,,,4,pendiente,,,,2026-11-22 19:00,2135,notstarted,b13494478,,si,1.833,bot,NO,
@@ -1025,8 +1025,10 @@ TT Cup,tt,2026-11-22,21:25,APUESTA,Cibik P.,Kratochvil C.,0.565,1.77,1.95,2.3,,1
 TT Cup,tt,2026-11-22,21:40,APUESTA,Krupnik Jr L.,Matus J.,0.479,2.09,2.3,2.71,,2.25,0.078,,,,,2,pendiente,,,,2026-11-22 19:35,2139,notstarted,b13494990,,si,2.25,bot,SI,
 TT Cup,tt,2026-11-22,21:45,FLOJO,Skvor O.,Jancak R.,0.521,1.92,2.11,2.49,,1.5,-0.218,,,,,3,pendiente,,,,2026-11-22 19:40,2140,notstarted,b13494967,,si,1.5,bot,NO,
 Elite Series,elite,2026-11-22,20:25,A,Adamus P.,Tkaczyk H.,0.608,1.25,,,2.0,,,,,,,1,pendiente,,,,2026-11-22 19:57,808,notstarted,b13496223,,,,,,
-TT Cup,tt,2026-11-22,22:05,FLOJO,Martin J.,Vidourek J.,0.608,1.64,1.81,2.14,,1.533,-0.068,,,,,4,pendiente,,,,2026-11-22 20:00,2141,notstarted,b13494477,,si,1.533,bot,NO,
+TT Cup,tt,2026-11-22,22:05,FLOJO,Martin J.,Vidourek J.,0.608,1.64,1.81,2.14,,1.533,-0.068,,,,,4,anulado,,0,,2026-11-22 20:00,2141,canceled,b13494477,,si,1.533,bot,NO,0
 TT Cup,tt,2026-11-22,22:10,FLOJO,Benesz R.,Oleksik J.,0.544,1.84,2.02,2.39,,1.727,-0.061,,,,,1,pendiente,,,,2026-11-22 20:05,2142,notstarted,b13494892,,si,1.727,bot,NO,
 TT Cup,tt,2026-11-22,22:15,FLOJO,Jemelka I.,Vanous J.,0.525,1.91,2.1,2.48,,1.615,-0.152,,,,,1,pendiente,,,,2026-11-22 20:10,2143,notstarted,b13495382,,si,1.615,bot,NO,
 Elite Series,elite,2026-11-22,22:30,B,Mlynarski F.,Jadam D.,0.537,1.727,,,,1.727,0,,,,,5,pendiente,,,,2026-11-22 20:25,809,notstarted,b13491272,,,,,,
 TT Cup,tt,2026-11-22,22:35,FUERTE,Kabelka J.,Vosyka L.,0.431,2.32,2.55,3.02,,2.625,0.131,,,,,1,pendiente,,,,2026-11-22 20:32,2145,notstarted,b13494863,,si,2.625,bot,SI,
+TT Cup,tt,2026-11-22,22:50,FLOJO,Vanek P.,Dvorak P.,0.533,1.88,2.06,2.44,,1.727,-0.08,,,,,1,pendiente,,,,2026-11-22 20:45,2147,notstarted,b13494883,,si,1.727,bot,NO,
+TT Cup,tt,2026-11-22,22:55,FLOJO,Cibik P.,Vich L.,0.542,1.84,2.03,2.4,,1.833,-0.006,,,,,3,pendiente,,,,2026-11-22 20:50,2148,notstarted,b13494998,,si,1.833,bot,NO,
