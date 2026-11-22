@@ -1,0 +1,87 @@
+name: Simulacion 12 meses TT Cup
+
+# Simula 12 meses de la regla en caliente de TT Cup con datos y cuotas de BetsAPI.
+# Se lanza a mano UNA vez: si no le da tiempo, se relanza solo y sigue donde lo dejo.
+on:
+  workflow_dispatch:
+    inputs:
+      vuelta:
+        description: "Vuelta (dejar en 1)"
+        default: "1"
+
+permissions:
+  contents: write
+  actions: write      # para relanzarse si falta terminar
+
+concurrency:
+  group: historico
+  cancel-in-progress: false
+
+jobs:
+  simular:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar numpy
+        run: pip install numpy
+
+      # lo ya descargado se guarda: la siguiente vuelta sigue donde lo dejo
+      - name: Recuperar descargas
+        uses: actions/cache/restore@v4
+        with:
+          path: resultados_12m/tt_cup/cache
+          key: h12-${{ github.run_id }}
+          restore-keys: h12-
+
+      - name: Simular
+        env:
+          BETSAPI_TOKEN: ${{ secrets.BETSAPI_TOKEN }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
+          VUELTA: ${{ github.event.inputs.vuelta || '1' }}
+          BT_MAX_MIN: "300"
+          BETS_GAP: "2.5"
+        run: python mb_historico.py
+
+      - name: Guardar descargas
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: resultados_12m/tt_cup/cache
+          key: h12-${{ github.run_id }}
+
+      - name: Guardar resultados en el repositorio
+        if: always()
+        run: |
+          git config user.name "tt-multiliga"
+          git config user.email "tt-multiliga@users.noreply.github.com"
+          git add resultados_12m/tt_cup/*.txt resultados_12m/tt_cup/*.csv 2>/dev/null || true
+          git commit -m "Simulacion 12 meses TT Cup" || echo "sin cambios"
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done || true
+
+      - name: Relanzar si falta terminar
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
+        run: |
+          V=${{ github.event.inputs.vuelta || '1' }}
+          if [ -f resultados_12m/tt_cup/INCOMPLETO ] || [ "${{ job.status }}" != "success" ]; then
+            if [ "$V" -lt 5 ]; then
+              gh workflow run historico.yml --ref main -R "${{ github.repository }}" -f vuelta=$((V+1))
+            elif [ -n "$TELEGRAM_TOKEN" ]; then
+              curl -s "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+                --data-urlencode "chat_id=${MY_CHAT_ID}" \
+                --data-urlencode "text=⚠️ La simulación de 12 meses no ha podido terminar en 5 vueltas. Avisa a Claude." > /dev/null
+            fi
+          fi
+
