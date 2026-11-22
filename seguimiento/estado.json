@@ -20,8 +20,6 @@
   "b13485678": 1795271562.0453804,
   "b13486061": 1795272103.973319,
   "b13485675": 1795273568.240305,
-  "b13490531": 1795267966.5052052,
-  "b13485575": 1795267838.596708,
   "b13485765": 1795274934.4277713,
   "b13490588": 1795269471.5665214,
   "b13490608": 1795269701.1624832,
@@ -280,26 +278,29 @@
   "b13494515": 1795349345.7499154,
   "b13491635": 1795353994.5912414,
   "b13494524": 1795349560.642421,
-  "b13493369": 1795353503.2047865,
+  "b13493369": 1795354407.5892513,
   "b13494544": 1795349887.7622173,
-  "b13491170": 1795353503.2047865,
+  "b13491170": 1795354407.5892513,
   "b13494575": 1795350009.3027945,
-  "b13491504": 1795353114.5837815,
+  "b13491504": 1795354087.285156,
   "b13491534": 1795351204.903262,
-  "b13493368": 1795353668.7417338,
+  "b13493368": 1795354605.16336,
   "b13494656": 1795352867.0294418,
   "b13491527": 1795352768.077485,
   "b13494737": 1795353994.5912414,
-  "b13491513": 1795353368.129008
+  "b13491513": 1795354295.6156092,
+  "b13491681": 1795354222.086436,
+  "b13491501": 1795354535.7675571,
+  "b13494823": 1795354694.259555
  },
  "elite_diag": {
   "fecha": "2026-11-22",
-  "revisados": 666,
-  "con_cuota": 346,
-  "favoritos": 287,
+  "revisados": 674,
+  "con_cuota": 351,
+  "favoritos": 292,
   "con_senal": 25,
   "candidatos_ahora": 11,
-  "ultima": "14:26",
+  "ultima": "14:40",
   "sin_cuota_caliente": 3
  },
  "textos": {
@@ -604,7 +605,7 @@
   "elite:794": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 16:10\n\u2705 DOSZ A.\nvs Dosz S.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.80\n\u274c menos de 1.80 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 28 puntos mejor que la casa\nSofascore: 1.80 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:2123": "\ud83d\udd25 PICK TT CUP \u00b7 16:20\n\u2705 CIBIK P.\nvs Brandtl Jr A.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.78\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 56% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-22 14:26",
+ "latido": "2026-11-22 14:40",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
