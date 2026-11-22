@@ -976,7 +976,7 @@ TT Cup,tt,2026-11-22,10:50,FLOJO,Fiala J.,Zahradka Z.,0.538,1.86,2.04,2.42,,1.72
 Elite Series,elite,2026-11-22,11:00,A,Dosz S.,Kolodziej K.,0.537,1.727,,,,1.727,0,,,,1.571,4,ganado,3-0,0.73,,2026-11-22 08:55,782,finished,b13491572,,,,,,
 TT Cup,tt,2026-11-22,11:25,APUESTA,Stusek M.,Kadavy O.,0.528,1.89,2.08,2.46,,1.909,0.007,,,,1.909,1,perdido,0-3,-1,,2026-11-22 09:20,2108,finished,b13492652,,si,1.909,bot,SI,-1
 Elite Series,elite,2026-11-22,11:25,B,Wojtaszczyk W.,Krupa S.,0.537,1.727,,,,1.727,0,,,,1.571,3,ganado,3-0,0.73,,2026-11-22 09:20,783,finished,b13491405,,,,,,
-Elite Series,elite,2026-11-22,11:40,B,Dosz A.,Spanik T.,0.577,1.615,,,,1.615,0,,,,,4,pendiente,,,,2026-11-22 09:35,784,inprogress,b13491359,,,,,,
+Elite Series,elite,2026-11-22,11:40,B,Dosz A.,Spanik T.,0.577,1.615,,,,1.615,0,,,,1.571,4,perdido,0-3,-1,,2026-11-22 09:35,784,finished,b13491359,,,,,,
 Elite Series,elite,2026-11-22,11:45,A,Marchlewski M.,Solilo D.,0.667,1.25,,,2.0,,,,,,,4,pendiente,,,,2026-11-22 09:40,785,notstarted,b13490477,,,,,,
 Elite Series,elite,2026-11-22,12:00,B,Kolodziej K.,Adamiak G.,0.577,1.615,,,,1.615,0,,,,,0,pendiente,,,,2026-11-22 09:55,786,notstarted,b13491048,,,,,,
 TT Cup,tt,2026-11-22,12:10,FLOJO,Macurak M.,Skvrna J.,0.438,2.28,2.51,2.97,,2.0,-0.124,,,,,3,pendiente,,,,2026-11-22 10:05,2109,notstarted,b13492755,,si,2.0,bot,NO,
@@ -986,3 +986,4 @@ TT Cup,tt,2026-11-22,12:40,APUESTA,Macurak M.,Chaloupka F.,0.449,2.23,2.45,2.89,
 TT Cup,tt,2026-11-22,12:45,FLOJO,Raska M.,Dzida L.,0.486,2.06,2.27,2.68,,2.0,-0.029,,,,,3,pendiente,,,,2026-11-22 10:40,2112,notstarted,b13492436,,si,2.0,bot,NO,
 Elite Series,elite,2026-11-22,13:00,B,Wojtaszczyk W.,Przewlocki P.,0.558,1.666,,,,1.666,0,,,,,4,pendiente,,,,2026-11-22 10:55,789,notstarted,b13491570,,,,,,
 TT Cup,tt,2026-11-22,13:15,FLOJO,Mrowetz B.,Volny J.,0.605,1.65,1.82,2.15,,1.5,-0.092,,,,,3,pendiente,,,,2026-11-22 11:10,2113,notstarted,b13492496,,si,1.5,bot,NO,
+TT Cup,tt,2026-11-22,13:45,FLOJO,Mrowetz B.,Dzida L.,0.539,1.85,2.04,2.41,,1.833,-0.011,,,,,4,pendiente,,,,2026-11-22 11:40,2115,notstarted,b13492699,,si,1.833,bot,NO,
