@@ -266,29 +266,31 @@
   "b13497304": 1795391686.403313,
   "b13497308": 1795391938.4834456,
   "b13497325": 1795392535.463052,
-  "b13495267": 1795397204.87183,
+  "b13495267": 1795398163.2851486,
   "b13497340": 1795393097.3403132,
   "b13497358": 1795393375.5293496,
   "b13491214": 1795393224.178109,
   "b13497385": 1795394534.3264785,
   "b13497396": 1795394847.388542,
-  "b13495213": 1795397139.3936315,
+  "b13495213": 1795398101.0977917,
   "b13497483": 1795396409.2518804,
   "b13497491": 1795395764.23516,
-  "b13491213": 1795396884.2590454,
+  "b13491213": 1795397788.3627818,
   "b13497493": 1795397075.4245307,
   "b13497510": 1795396660.5193114,
-  "b13497511": 1795396660.5193114,
-  "b13494991": 1795397453.9621015
+  "b13497511": 1795397600.6308846,
+  "b13494991": 1795398356.774349,
+  "b13497564": 1795398101.0977917,
+  "b13497565": 1795398101.0977917
  },
  "elite_diag": {
   "fecha": "2026-11-23",
-  "revisados": 93,
-  "con_cuota": 65,
-  "favoritos": 56,
+  "revisados": 100,
+  "con_cuota": 69,
+  "favoritos": 59,
   "con_senal": 2,
-  "candidatos_ahora": 10,
-  "ultima": "02:31",
+  "candidatos_ahora": 7,
+  "ultima": "02:45",
   "sin_cuota_caliente": 1
  },
  "textos": {
@@ -593,7 +595,7 @@
   "elite:816": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:25\n\u2705 MUCHA G.\nvs Pyrek D.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.36\n\u274c menos de 1.36 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.36 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:817": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 02:45\n\u2705 SIKON M.\nvs Sawicki G.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 54%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-23 02:31",
+ "latido": "2026-11-23 02:45",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
