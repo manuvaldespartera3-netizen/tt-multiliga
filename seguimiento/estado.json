@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13493370": 1795343576.518514,
   "b13491658": 1795344733.4297655,
   "b13491302": 1795346247.4066396,
   "b13491498": 1795347158.0244193,
@@ -269,8 +268,8 @@
   "b13494474": 1795423235.37914,
   "b13498369": 1795424484.1339185,
   "b13498370": 1795424484.1339185,
-  "b13494851": 1795429106.7846305,
-  "b13495290": 1795429106.7846305,
+  "b13494851": 1795430049.0262308,
+  "b13495290": 1795430049.0262308,
   "b13498396": 1795424075.2964296,
   "b13498432": 1795425424.0977988,
   "b13498433": 1795425424.0977988,
@@ -279,25 +278,28 @@
   "b13498505": 1795425549.6078138,
   "b13495462": 1795425609.4776058,
   "b13497919": 1795425925.285859,
-  "b13495046": 1795429046.1922398,
+  "b13495046": 1795429980.087794,
   "b13498611": 1795427673.1365423,
   "b13498628": 1795427890.6695821,
-  "b13495530": 1795428923.1042018,
+  "b13495530": 1795429852.8149807,
   "b13498664": 1795428454.645091,
-  "b13495133": 1795428643.4592102,
+  "b13495133": 1795429547.81835,
   "b13498697": 1795429046.1922398,
   "b13495187": 1795428643.4592102,
-  "b13495134": 1795429230.4467926,
-  "b13498782": 1795429422.9181507
+  "b13495134": 1795430168.7560747,
+  "b13498782": 1795430357.4561348,
+  "b13498793": 1795429793.0566182,
+  "b13495055": 1795430104.451134,
+  "b13498821": 1795430298.5419474
  },
  "elite_diag": {
   "fecha": "2026-11-23",
-  "revisados": 531,
-  "con_cuota": 296,
-  "favoritos": 278,
+  "revisados": 541,
+  "con_cuota": 302,
+  "favoritos": 284,
   "con_senal": 19,
-  "candidatos_ahora": 15,
-  "ultima": "11:24",
+  "candidatos_ahora": 16,
+  "ultima": "11:39",
   "sin_cuota_caliente": 9
  },
  "textos": {
@@ -602,7 +604,7 @@
   "elite:842": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 13:15\n\u2705 DOSZ A.\nvs Spanik T.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.53\n\u274c menos de 1.53 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.53 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:2171": "\ud83d\udd25 PICK TT CUP \u00b7 13:25\n\u2705 DVORAK P.\nvs Kocab J.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.85\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 54% \u00b7 ya ha jugado 1 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento"
  },
- "latido": "2026-11-23 11:24",
+ "latido": "2026-11-23 11:39",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
