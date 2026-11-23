@@ -32,6 +32,13 @@ def cabecera(p):
 
 
 def _cabecera(p):
+    if p.get("regla") == "COMB":             # TT Cup desde el 24/11: solo se avisan los que cumplen todo
+        c = float(p.get("cuota_ref") or p.get("cuota_2h") or 0)
+        est = "⭐ " if p.get("estrella") else ""
+        tuya = f" · tuya {float(p['cuota_betcris']):.2f}" if p.get("cuota_betcris") else ""
+        if p.get("decision_ref") == "SI":
+            return f"🟢 APOSTAR {est}· cuota {c:.2f}{tuya}"
+        return f"🔴 NO CUMPLE · cuota {c:.2f}{tuya}"
     if p.get("modo_ref") == "si":            # TT Cup desde el 21/11: manda la cuota del bot
         d = p.get("decision_ref")
         if d in ("SI", "NO"):
@@ -94,6 +101,8 @@ def color(p):
 
 
 def es_blanco(p):
+    if p.get("regla") == "COMB":             # avisado y sin tu cuota todavia
+        return p.get("decision_ref") == "SI" and not p.get("cuota_betcris")
     if p.get("modo_ref") == "si":
         return not p.get("decision_ref") and p.get("no_esta") != "si"
     return not p.get("cuota_betcris") and p.get("no_esta") != "si"
