@@ -1076,8 +1076,8 @@ Elite Series,elite,2026-11-23,12:30,A,Dosz S.,Rutkowski M.,0.537,1.25,,,2.0,,,,,
 Elite Series,elite,2026-11-23,13:15,B,Dosz A.,Spanik T.,0.608,1.533,,,,1.533,0,,,,1.533,5,ganado,3-2,0.53,,2026-11-23 11:10,842,finished,b13495187,,,,,,
 TT Cup,tt,2026-11-23,13:25,FLOJO,Dvorak P.,Kocab J.,0.541,1.85,2.03,2.4,,1.666,-0.099,,,,1.666,1,ganado,3-0,0.67,,2026-11-23 11:20,2171,finished,b13496854,,si,1.666,bot,NO,0.67
 TT Cup,tt,2026-11-23,13:45,FLOJO,Krenek T.,Skvrna J.,0.456,2.19,2.41,2.85,,1.833,-0.164,,,,1.4,4,ganado,3-1,0.83,,2026-11-23 11:40,2172,finished,b13496843,,si,1.833,bot,NO,0.83
-TT Cup,tt,2026-11-23,13:55,FUERTE,Dvorak P.,Vesecky D.,0.471,2.12,2.34,2.76,,2.375,0.118,,,,,1,pendiente,,,,2026-11-23 11:50,2173,inprogress,b13496944,,si,2.375,bot,SI,
-TT Cup,tt,2026-11-23,14:15,FLOJO,Velky Jr D.,Benes R.,0.521,1.92,2.11,2.49,,1.833,-0.045,,,,,4,pendiente,,,,2026-11-23 12:10,2174,inprogress,b13496931,,si,1.833,bot,NO,
+TT Cup,tt,2026-11-23,13:55,FUERTE,Dvorak P.,Vesecky D.,0.471,2.12,2.34,2.76,,2.375,0.118,,,,1.909,1,ganado,3-2,1.38,,2026-11-23 11:50,2173,finished,b13496944,,si,2.375,bot,SI,1.38
+TT Cup,tt,2026-11-23,14:15,FLOJO,Velky Jr D.,Benes R.,0.521,1.92,2.11,2.49,,1.833,-0.045,,,,1.666,4,perdido,0-3,-1,,2026-11-23 12:10,2174,finished,b13496931,,si,1.833,bot,NO,-1
 TT Cup,tt,2026-11-23,14:10,FUERTE,Lasota L.,Sedlacek R.,0.556,1.8,1.98,2.34,,2.25,0.25,,,,,1,pendiente,,,,2026-11-23 12:12,2175,inprogress,b13496842,,si,2.25,bot,SI,
 Elite Series,elite,2026-11-23,12:55,A,Olbrycht M.,Zochniak J.,0.542,1.25,,,2.0,,,,,,,5,ganado,3-2,,,2026-11-23 12:26,843,finished,b13499020,,,,,,
 TT Cup,tt,2026-11-23,14:50,FLOJO,Knazik O.,Brandtl Jr A.,0.493,2.03,2.23,2.64,,1.571,-0.226,,,,,1,pendiente,,,,2026-11-23 12:45,2176,notstarted,b13496961,,si,1.571,bot,NO,
@@ -1086,3 +1086,4 @@ TT Cup,tt,2026-11-23,15:25,FUERTE,Dvorak P.,Cerny M.,0.389,2.57,2.83,3.34,,3.25,
 Elite Series,elite,2026-11-23,13:50,A,Sobel A.,Minda M.,0.646,1.25,,,2.0,,,,,,,6,perdido,1-3,,,2026-11-23 13:22,845,finished,b13499271,,,,,,
 Elite Series,elite,2026-11-23,15:45,B,Dosz A.,Jadczyk M.,0.515,1.8,,,,1.8,0,,,,,8,pendiente,,,,2026-11-23 13:40,846,notstarted,b13495259,,,,,,
 TT Cup,tt,2026-11-23,16:10,FUERTE,Lasota L.,Srubar M.,0.528,1.89,2.08,2.46,,2.2,0.162,,,,,2,pendiente,,,,2026-11-23 14:05,2179,notstarted,b13498516,,si,2.2,bot,SI,
+TT Cup,tt,2026-11-23,16:20,FLOJO,Holik S.,Koutnik V.,0.503,1.99,2.19,2.58,,1.727,-0.131,,,,,4,pendiente,,,,2026-11-23 14:15,2181,notstarted,b13498467,,si,1.727,bot,NO,
