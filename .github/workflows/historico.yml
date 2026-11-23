@@ -1,10 +1,18 @@
 name: Simulacion 12 meses TT Cup
 
-# Simula 12 meses de la regla en caliente de TT Cup con datos y cuotas de BetsAPI.
-# Se lanza a mano UNA vez: si no le da tiempo, se relanza solo y sigue donde lo dejo.
+# Simula 12 meses de la regla en caliente con datos y cuotas reales de BetsAPI.
+# Se lanza a mano UNA vez por liga: si no le da tiempo, se relanza solo y sigue donde lo dejo.
 on:
   workflow_dispatch:
     inputs:
+      liga:
+        description: "Liga"
+        type: choice
+        default: "TT Elite Series"
+        options:
+          - "TT Elite Series"
+          - "Czech Liga Pro"
+          - "TT Cup"
       vuelta:
         description: "Vuelta (dejar en 1)"
         default: "1"
@@ -13,6 +21,7 @@ permissions:
   contents: write
   actions: write      # para relanzarse si falta terminar
 
+# una simulacion detras de otra (nunca dos a la vez: no gastar el cupo del bot)
 concurrency:
   group: historico
   cancel-in-progress: false
@@ -22,6 +31,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 350
     steps:
+      - name: Elegir liga
+        run: |
+          case "${{ github.event.inputs.liga }}" in
+            "TT Cup")          echo "LIGA_SIM=15005" >> $GITHUB_ENV; echo "SLUG=tt_cup" >> $GITHUB_ENV ;;
+            "Czech Liga Pro")  echo "LIGA_SIM=19039" >> $GITHUB_ENV; echo "SLUG=czech_liga_pro" >> $GITHUB_ENV ;;
+            *)                 echo "LIGA_SIM=19041" >> $GITHUB_ENV; echo "SLUG=tt_elite_series" >> $GITHUB_ENV ;;
+          esac
+
       - uses: actions/checkout@v4
         with:
           ref: main
@@ -37,11 +54,11 @@ jobs:
       - name: Recuperar descargas
         uses: actions/cache/restore@v4
         with:
-          path: resultados_12m/tt_cup/cache
-          key: h12b-${{ github.run_id }}
+          path: resultados_12m/${{ env.SLUG }}/cache
+          key: h12c-${{ env.SLUG }}-${{ github.run_id }}
           restore-keys: |
-            h12b-
-            h12-
+            h12c-${{ env.SLUG }}-
+            ${{ env.SLUG == 'tt_cup' && 'h12b-' || 'h12-ninguna-' }}
 
       - name: Simular
         env:
@@ -57,16 +74,16 @@ jobs:
         if: always()
         uses: actions/cache/save@v4
         with:
-          path: resultados_12m/tt_cup/cache
-          key: h12b-${{ github.run_id }}
+          path: resultados_12m/${{ env.SLUG }}/cache
+          key: h12c-${{ env.SLUG }}-${{ github.run_id }}
 
       - name: Guardar resultados en el repositorio
         if: always()
         run: |
           git config user.name "tt-multiliga"
           git config user.email "tt-multiliga@users.noreply.github.com"
-          git add resultados_12m/tt_cup/*.txt resultados_12m/tt_cup/*.csv 2>/dev/null || true
-          git commit -m "Simulacion 12 meses TT Cup (detalle)" || echo "sin cambios"
+          git add resultados_12m/${{ env.SLUG }}/*.txt resultados_12m/${{ env.SLUG }}/*.csv 2>/dev/null || true
+          git commit -m "Simulacion 12 meses ${{ env.SLUG }}" || echo "sin cambios"
           for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done || true
 
       - name: Relanzar si falta terminar
@@ -77,14 +94,13 @@ jobs:
           MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
         run: |
           V=${{ github.event.inputs.vuelta || '1' }}
-          if [ -f resultados_12m/tt_cup/INCOMPLETO ] || [ "${{ job.status }}" != "success" ]; then
-            if [ "$V" -lt 5 ]; then
-              gh workflow run historico.yml --ref main -R "${{ github.repository }}" -f vuelta=$((V+1))
+          if [ -f resultados_12m/${{ env.SLUG }}/INCOMPLETO ] || [ "${{ job.status }}" != "success" ]; then
+            if [ "$V" -lt 6 ]; then
+              gh workflow run historico.yml --ref main -R "${{ github.repository }}" \
+                -f liga="${{ github.event.inputs.liga }}" -f vuelta=$((V+1))
             elif [ -n "$TELEGRAM_TOKEN" ]; then
               curl -s "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
                 --data-urlencode "chat_id=${MY_CHAT_ID}" \
-                --data-urlencode "text=⚠️ La simulación de 12 meses no ha podido terminar en 5 vueltas. Avisa a Claude." > /dev/null
+                --data-urlencode "text=⚠️ La simulación de 12 meses de ${{ github.event.inputs.liga }} no ha podido terminar en 6 vueltas. Avisa a Claude." > /dev/null
             fi
           fi
-
-
