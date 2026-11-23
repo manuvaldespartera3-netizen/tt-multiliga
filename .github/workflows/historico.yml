@@ -38,8 +38,10 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: resultados_12m/tt_cup/cache
-          key: h12-${{ github.run_id }}
-          restore-keys: h12-
+          key: h12b-${{ github.run_id }}
+          restore-keys: |
+            h12b-
+            h12-
 
       - name: Simular
         env:
@@ -56,7 +58,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: resultados_12m/tt_cup/cache
-          key: h12-${{ github.run_id }}
+          key: h12b-${{ github.run_id }}
 
       - name: Guardar resultados en el repositorio
         if: always()
@@ -64,7 +66,7 @@ jobs:
           git config user.name "tt-multiliga"
           git config user.email "tt-multiliga@users.noreply.github.com"
           git add resultados_12m/tt_cup/*.txt resultados_12m/tt_cup/*.csv 2>/dev/null || true
-          git commit -m "Simulacion 12 meses TT Cup" || echo "sin cambios"
+          git commit -m "Simulacion 12 meses TT Cup (detalle)" || echo "sin cambios"
           for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done || true
 
       - name: Relanzar si falta terminar
@@ -84,4 +86,5 @@ jobs:
                 --data-urlencode "text=⚠️ La simulación de 12 meses no ha podido terminar en 5 vueltas. Avisa a Claude." > /dev/null
             fi
           fi
+
 
