@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13488298": 1795307960.6158476,
   "b13490750": 1795308742.9080963,
   "b13491078": 1795308742.9080963,
   "b13488297": 1795310867.7168622,
@@ -267,30 +266,31 @@
   "b13497191": 1795388664.818791,
   "b13497195": 1795388915.7010446,
   "b13497209": 1795389197.5140777,
-  "b13491268": 1795393283.2848735,
-  "b13495145": 1795393283.2848735,
+  "b13491268": 1795394217.3586314,
+  "b13495145": 1795394217.3586314,
   "b13497243": 1795389703.2365768,
   "b13497265": 1795390840.1338577,
   "b13491321": 1795390252.2068791,
-  "b13495691": 1795393887.8096225,
+  "b13495691": 1795394847.388542,
   "b13497304": 1795391686.403313,
   "b13497308": 1795391938.4834456,
   "b13497325": 1795392535.463052,
-  "b13495267": 1795393567.9830627,
+  "b13495267": 1795394474.7173862,
   "b13497340": 1795393097.3403132,
   "b13497358": 1795393375.5293496,
   "b13491214": 1795393224.178109,
-  "b13497385": 1795393631.5173972,
-  "b13497396": 1795393887.8096225
+  "b13497385": 1795394534.3264785,
+  "b13497396": 1795394847.388542,
+  "b13495213": 1795394406.91907
  },
  "elite_diag": {
   "fecha": "2026-11-23",
-  "revisados": 66,
-  "con_cuota": 47,
-  "favoritos": 41,
+  "revisados": 73,
+  "con_cuota": 52,
+  "favoritos": 45,
   "con_senal": 2,
-  "candidatos_ahora": 10,
-  "ultima": "01:35"
+  "candidatos_ahora": 9,
+  "ultima": "01:49"
  },
  "textos": {
   "elite:639": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 13:25\n\u2705 DLUGAJ R.\nvs Idaczyk R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.80\n\u274c menos de 1.80 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 11 puntos mejor que la casa\nSofascore: 1.80 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -594,7 +594,7 @@
   "elite:815": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 02:35\n\u2705 KOLEK M.\nvs Pietraszko L.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:816": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:25\n\u2705 MUCHA G.\nvs Pyrek D.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.36\n\u274c menos de 1.36 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.36 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-23 01:35",
+ "latido": "2026-11-23 01:49",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
