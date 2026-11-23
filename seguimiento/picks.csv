@@ -1082,9 +1082,9 @@ TT Cup,tt,2026-11-23,14:10,FUERTE,Lasota L.,Sedlacek R.,0.556,1.8,1.98,2.34,,2.2
 Elite Series,elite,2026-11-23,12:55,A,Olbrycht M.,Zochniak J.,0.542,1.25,,,2.0,,,,,,,5,ganado,3-2,,,2026-11-23 12:26,843,finished,b13499020,,,,,,
 TT Cup,tt,2026-11-23,14:50,FLOJO,Knazik O.,Brandtl Jr A.,0.493,2.03,2.23,2.64,,1.571,-0.226,,,,1.571,1,ganado,3-0,0.57,,2026-11-23 12:45,2176,finished,b13496961,,si,1.571,bot,NO,0.57
 Elite Series,elite,2026-11-23,15:05,B,Slawinski K.,Hetnar K.,0.537,1.727,,,,1.727,0,,,,2.1,7,perdido,1-3,-1,,2026-11-23 13:00,844,finished,b13495175,,,,,,
-TT Cup,tt,2026-11-23,15:25,FUERTE,Dvorak P.,Cerny M.,0.389,2.57,2.83,3.34,,3.25,0.263,,,,,1,pendiente,,,,2026-11-23 13:20,2177,inprogress,b13496936,,si,3.25,bot,SI,
+TT Cup,tt,2026-11-23,15:25,FUERTE,Dvorak P.,Cerny M.,0.389,2.57,2.83,3.34,,3.25,0.263,,,,3.25,1,perdido,1-3,-1,,2026-11-23 13:20,2177,finished,b13496936,,si,3.25,bot,SI,-1
 Elite Series,elite,2026-11-23,13:50,A,Sobel A.,Minda M.,0.646,1.25,,,2.0,,,,,,,6,perdido,1-3,,,2026-11-23 13:22,845,finished,b13499271,,,,,,
-Elite Series,elite,2026-11-23,15:45,B,Dosz A.,Jadczyk M.,0.515,1.8,,,,1.8,0,,,,,8,pendiente,,,,2026-11-23 13:40,846,notstarted,b13495259,,,,,,
+Elite Series,elite,2026-11-23,15:45,B,Dosz A.,Jadczyk M.,0.515,1.8,,,,1.8,0,,,,,8,pendiente,,,,2026-11-23 13:40,846,inprogress,b13495259,,,,,,
 TT Cup,tt,2026-11-23,16:10,FUERTE,Lasota L.,Srubar M.,0.528,1.89,2.08,2.46,,2.2,0.162,,,,,2,pendiente,,,,2026-11-23 14:05,2179,notstarted,b13498516,,si,2.2,bot,SI,
 TT Cup,tt,2026-11-23,16:20,FLOJO,Holik S.,Koutnik V.,0.503,1.99,2.19,2.58,,1.727,-0.131,,,,,4,pendiente,,,,2026-11-23 14:15,2181,notstarted,b13498467,,si,1.727,bot,NO,
 TT Cup,tt,2026-11-23,16:40,APUESTA,Lasota L.,Pribyl J.,0.505,1.98,2.18,2.57,,2.1,0.061,,,,,3,pendiente,,,,2026-11-23 14:35,2184,notstarted,b13498560,,si,2.1,bot,SI,
