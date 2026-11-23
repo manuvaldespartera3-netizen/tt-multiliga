@@ -53,14 +53,103 @@ def api_lenta(path, **params):
 mb_bets.api = api_lenta
 
 
-# ---- cuotas: se guarda solo lo necesario (apertura y cierre), no la respuesta entera
+# ---- cuotas: se guarda la evolucion ANTES del partido (hora, local, visitante),
+# para poder medir cuando abre el mercado, cuanto se mueve y la cuota de 2 h antes
+LISTAS = {}
+
+
 def odds_raw(mid):
-    return {"t": mb_bets.odds_from(mb_bets.odds_raw(mid))}
+    data = mb_bets.odds_raw(mid)
+    lista = (((data or {}).get("results") or {}).get("odds") or {}).get("92_1") or []
+    out = []
+    for o in lista:
+        if o.get("ss"):
+            continue                              # en directo: no cuenta
+        try:
+            h, a, t = float(o["home_od"]), float(o["away_od"]), int(o.get("add_time") or 0)
+        except (KeyError, TypeError, ValueError):
+            continue
+        if h > 1 and a > 1:
+            out.append((t, h, a))
+    out.sort()
+    return {"mid": mid, "l": out}
 
 
 def odds_from(d):
-    t = (d or {}).get("t")
-    return tuple(t) if t else None
+    lista = (d or {}).get("l") or []
+    LISTAS[(d or {}).get("mid")] = lista
+    if not lista:
+        return None
+    return lista[0][1], lista[-1][1], lista[0][2], lista[-1][2]
+
+
+class CuotasDetalle(bt.Cuotas):
+    """Como las de mb_backtest, pero en archivos odds2_ (con toda la evolucion)."""
+
+    def get(self, mid):
+        path = os.path.join(bt.cache_dir(self.lid), f"odds2_{mid}.json")
+        if os.path.exists(path):
+            with open(path) as fh:
+                return odds_from(json.load(fh))
+        if self.cortado or self.nuevas >= bt.MAX_ODDS or time.time() - bt.INICIO > bt.MAX_MIN * 60:
+            self.cupo += 1
+            return None
+        data = None
+        for intento in range(3):
+            try:
+                data = odds_raw(mid)
+                break
+            except Exception as ex:
+                print("WARN cuotas", mid, ex)
+                time.sleep(8 * (intento + 1))
+        self.nuevas += 1
+        if data is None:
+            self.fallos_seguidos += 1
+            if self.fallos_seguidos >= 5:
+                print("STOP cuotas: 5 fallos seguidos")
+                self.cortado = True
+            self.cupo += 1
+            return None
+        self.fallos_seguidos = 0
+        with open(path, "w") as fh:
+            json.dump(data, fh)
+        return odds_from(data)
+
+
+bt.Cuotas = CuotasDetalle
+
+
+def guardar_detalle(ev):
+    """Un pick de la regla por fila, con todo lo que se sabia antes del partido."""
+    import csv
+    cols = ["fecha", "hora", "pick", "rival", "gana", "marcador", "prob", "cuota_cierre",
+            "cuota_2h", "cuota_apertura", "abre_h_antes", "movimientos", "rival_cuota_cierre",
+            "pick_jugados_hoy", "pick_ganados_hoy", "rival_jugados_hoy", "elo_pick", "elo_rival",
+            "forma_pick", "forma_rival", "partidos_pick", "partidos_rival", "h2h_pick", "h2h_rival", "id"]
+    path = os.path.join(OUT, "picks_detalle.csv")
+    with open(path, "w", newline="") as fh:
+        w = csv.writer(fh)
+        w.writerow(cols)
+        for f in sorted(ev, key=lambda x: x["t"]):
+            s = f["caliente"]
+            if not s or f.get("p") is None:
+                continue
+            o = "b" if s == "a" else "a"
+            lista = LISTAS.get(f["id"]) or []
+            if not lista:
+                continue
+            i = 1 if s == "a" else 2
+            antes = [x for x in lista if x[0] <= f["t"] - 2 * 3600]
+            p = f["p"] if s == "a" else 1 - f["p"]
+            dt = datetime.fromtimestamp(f["t"], bt.TZ)
+            w.writerow([dt.strftime("%Y-%m-%d"), dt.strftime("%H:%M"), f[s], f[o],
+                        f["gana_a"] if s == "a" else 1 - f["gana_a"], f["marcador"], round(p, 4),
+                        lista[-1][i], antes[-1][i] if antes else "", lista[0][i],
+                        round((f["t"] - lista[0][0]) / 3600, 2), len(lista), lista[-1][3 - i],
+                        f[f"hoy_j_{s}"], f[f"hoy_g_{s}"], f[f"hoy_j_{o}"], f[f"elo_{s}"], f[f"elo_{o}"],
+                        round(f[f"forma_{s}"], 3), round(f[f"forma_{o}"], 3), f[f"n_{s}"], f[f"n_{o}"],
+                        f[f"h2h_{s}"], f[f"h2h_{o}"], f["id"]])
+    return path
 
 
 bt.day_events = mb_bets.day_events
@@ -159,11 +248,12 @@ def main():
         tg("❌ Simulación 12 meses: BetsAPI no ha dado suficientes partidos.\n" + "\n".join(lineas[:8]))
         return
     bt.guardar_csv("15005", ev)
+    guardar_detalle(ev)
     txt = informe(ev)
     with open(os.path.join(OUT, "informe_12m.txt"), "w") as fh:
         fh.write(txt + "\n")
     print(txt)
-    tg(txt)
+    tg(txt + "\n\n✅ Datos con el detalle de cuotas guardados: avisa a Claude para buscar el filtro.")
 
 
 if __name__ == "__main__":
