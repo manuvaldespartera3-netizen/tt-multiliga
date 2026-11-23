@@ -13,11 +13,9 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13490430": 1795329512.1334302,
   "b13491288": 1795331649.3137581,
   "b13491637": 1795331649.3137581,
   "b13491211": 1795333196.1916287,
-  "b13493723": 1795328792.9608998,
   "b13491142": 1795334677.4468641,
   "b13491235": 1795334677.4468641,
   "b13493760": 1795329978.2009447,
@@ -266,14 +264,14 @@
   "b13495122": 1795408563.6115851,
   "b13495474": 1795408563.6115851,
   "b13497972": 1795409853.6735508,
-  "b13494419": 1795414962.9483323,
+  "b13494419": 1795415921.8846056,
   "b13497989": 1795410496.4746444,
   "b13495495": 1795410046.8795633,
   "b13495516": 1795410046.8795633,
-  "b13495086": 1795414645.3272488,
+  "b13495086": 1795415547.3439147,
   "b13498030": 1795412431.9721935,
-  "b13495096": 1795414298.247738,
-  "b13495214": 1795414298.247738,
+  "b13495096": 1795415234.5953853,
+  "b13495214": 1795415234.5953853,
   "b13498037": 1795413278.1163137,
   "b13498079": 1795413548.794378,
   "b13498084": 1795413857.3357108,
@@ -282,22 +280,22 @@
   "b13498103": 1795414645.3272488,
   "b13498107": 1795414899.0182967,
   "b13498116": 1795415145.969771,
-  "b13495088": 1795414517.0129313,
-  "b13495140": 1795414517.0129313,
-  "b13498137": 1795415086.9629624
+  "b13495088": 1795415425.562576,
+  "b13495140": 1795415425.562576,
+  "b13498137": 1795415086.9629624,
+  "b13498146": 1795415674.3980277
  },
  "elite_diag": {
   "fecha": "2026-11-23",
-  "revisados": 347,
-  "con_cuota": 190,
-  "favoritos": 180,
+  "revisados": 354,
+  "con_cuota": 194,
+  "favoritos": 184,
   "con_senal": 11,
-  "candidatos_ahora": 17,
-  "ultima": "07:25",
-  "sin_cuota_caliente": 2
+  "candidatos_ahora": 12,
+  "ultima": "07:39",
+  "sin_cuota_caliente": 3
  },
  "textos": {
-  "elite:645": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 14:55\n\u2705 JADCZYK M.\nvs Miastowski M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.67\n\u274c menos de 1.67 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 11 puntos mejor que la casa\nSofascore: 1.67 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:646": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 15:05\n\u2705 SLAWINSKI K.\nvs Skotniczny R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.61\n\u274c menos de 1.61 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 12 puntos mejor que la casa\nSofascore: 1.61 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:647": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 15:45\n\u2705 JADCZYK M.\nvs Wloczko K.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.61\n\u274c menos de 1.61 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.61 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:648": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 15:55\n\u2705 SLAWINSKI K.\nvs Idaczyk R.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.50\n\u274c menos de 1.50 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 14 puntos mejor que la casa\nSofascore: 1.50 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -596,9 +594,10 @@
   "elite:824": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:05\n\u2705 PETAS K.\nvs Dosz S.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.67\n\u274c menos de 1.67 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.67 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:825": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:05\n\u2705 SLAWINSKI K.\nvs Polok P.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.57\n\u274c menos de 1.57 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 12 puntos mejor que la casa\nSofascore: 1.57 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:826": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:55\n\u2705 SLAWINSKI K.\nvs Hetnar K.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.61\n\u274c menos de 1.61 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 14 puntos mejor que la casa\nSofascore: 1.61 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "elite:827": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:55\n\u2705 DOSZ A.\nvs Petas K.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.57\n\u274c menos de 1.57 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 10 puntos mejor que la casa\nSofascore: 1.57 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
+  "elite:827": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:55\n\u2705 DOSZ A.\nvs Petas K.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.57\n\u274c menos de 1.57 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 10 puntos mejor que la casa\nSofascore: 1.57 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
+  "elite:828": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:00\n\u2705 KUZMICZ J.\nvs Poliniewicz G.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 70%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-23 07:25",
+ "latido": "2026-11-23 07:39",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
