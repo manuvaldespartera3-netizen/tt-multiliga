@@ -1,0 +1,24 @@
+📊 TT CUP · REGLA EN CALIENTE · SIMULACIÓN 12 MESES
+Cuota del bot (BetsAPI) · 🟢 = la cuota llega al mínimo · 1 u = 50 €
+
+Mes      🟢 apuestas  acierto   yield     unidades   euros   | 🔴 yield
+Nov 25     98        45%     -5.2%      -5.1 u     -257 € | -9% (106)
+Dic 25    183        51%     +8.1%     +14.8 u     +742 € | -5% (206)
+Ene 26    141        45%     -3.5%      -4.9 u     -247 € | +1% (232)
+Feb 26    140        53%    +17.3%     +24.2 u    +1210 € | -13% (258)
+Mar 26    117        41%     -7.2%      -8.4 u     -422 € | -5% (258)
+Abr 26    132        41%     -5.1%      -6.7 u     -336 € | -2% (277)
+May 26    136        41%     -9.0%     -12.2 u     -612 € | -11% (284)
+Jun 26    113        53%    +18.4%     +20.8 u    +1039 € | -10% (247)
+Jul 26    215        44%     +0.4%      +0.8 u      +40 € | -5% (370)
+Ago 26    277        49%    +11.7%     +32.3 u    +1614 € | -2% (555)
+Sep 26    316        50%     +9.6%     +30.3 u    +1515 € | +1% (573)
+Oct 26    299        45%     +1.2%      +3.7 u     +184 € | +5% (541)
+Nov 26    222        47%     +3.8%      +8.5 u     +423 € | -2% (428)
+
+TOTAL 🟢: 2389 apuestas · acierto 47% · yield +4.1% · +97.9 u · +4893 €
+TOTAL 🔴 (no se apuestan): 4335 · yield -3.1%
+Meses 🟢 en negativo: 5 de 13
+Peor caída: -34.8 u (-1741 €) · peor día -10.1 u (2026-09-04) · peor racha: 11 perdidas seguidas
+
+Picks de la regla: 11315 · con cuota válida: 6724 · sin cuota o fuera de 1,25-4,00: 4591 (no cuentan)
