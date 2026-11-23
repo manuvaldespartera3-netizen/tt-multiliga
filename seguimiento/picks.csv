@@ -1105,7 +1105,7 @@ Elite Series,elite,2026-11-23,19:35,A,Zelezik J.,Zmijewski A.,0.511,1.25,,,2.0,,
 Elite Series,elite,2026-11-23,19:40,A,Stapor R.,Smoter A.,0.558,1.666,,,,1.666,0,,,,1.666,1,perdido,0-3,-1,,2026-11-23 17:35,857,finished,b13499134,,,,,,
 TT Cup,tt,2026-11-23,19:25,FLOJO,Sulc M.,Volek J.,0.464,2.15,2.37,2.8,,1.727,-0.199,,,,1.727,1,ganado,3-1,0.73,,2026-11-23 17:41,2192,finished,b13498546,,si,1.727,bot,NO,0.73
 TT Cup,tt,2026-11-23,20:20,FLOJO,Vyskocil Z.,Mach J.,0.444,2.25,2.48,2.93,,2.25,-0.002,,,,2.375,1,perdido,0-3,-1,,2026-11-23 18:15,2194,finished,b13498663,,si,2.25,bot,SI,-1
-Elite Series,elite,2026-11-23,20:20,A,Marud G.,Nowak J.,0.741,1.25,,,2.0,,,,,,,6,pendiente,,,,2026-11-23 18:15,858,notstarted,b13494369,,,,,,
+Elite Series,elite,2026-11-23,20:20,A,Marud G.,Nowak J.,0.741,1.25,,,2.0,,,,,,,6,perdido,2-3,,,2026-11-23 18:15,858,finished,b13494369,,,,,,
 TT Cup,tt,2026-11-23,20:35,APUESTA,Kaisler V.,Krcil T.,0.45,2.22,2.45,2.89,,2.25,0.012,,,,2.25,2,perdido,2-3,-1,,2026-11-23 18:30,2195,finished,b13498678,,si,2.25,bot,SI,-1
 TT Cup,tt,2026-11-23,20:45,APUESTA,Baca J.,Kowal R.,0.506,1.97,2.17,2.57,,2.0,0.013,,,,1.8,3,perdido,1-3,-1,,2026-11-23 18:40,2196,finished,b13498451,,si,2.0,bot,SI,-1
 TT Cup,tt,2026-11-23,19:00,SIN CUOTA,Kos K.,Caban J.,0.46,2.18,2.39,2.83,,,,,,,,1,ganado,3-0,,,2026-11-23 18:49,2197,finished,b13500843,,si,,,,
@@ -1114,10 +1114,10 @@ Elite Series,elite,2026-11-23,20:25,A,Staniczek A.,Maszczynski D.,0.619,1.25,,,2
 TT Cup,tt,2026-11-23,21:15,FLOJO,Vicherek P.,Baros A.,0.59,1.69,1.86,2.2,,1.666,-0.017,,,,1.533,3,ganado,3-2,0.67,,2026-11-23 19:10,2200,finished,b13498510,,si,1.666,bot,NO,0.67
 Elite Series,elite,2026-11-23,19:45,A,Zwolinski M.,Lukaszewski M.,0.639,1.25,,,2.0,,,,,,,1,ganado,3-0,,,2026-11-23 19:19,860,finished,b13501115,,,,,,
 Elite Series,elite,2026-11-23,20:00,A,Warzecha M.,Gesiarz P.,0.619,1.25,,,2.0,,,,,,,1,perdido,1-3,,,2026-11-23 19:33,861,finished,b13501171,,,,,,
-Elite Series,elite,2026-11-23,21:40,B,Rudomina K.,Solilo D.,0.515,1.8,,,,1.8,0,,,,,4,pendiente,,,,2026-11-23 19:35,862,inprogress,b13498954,,,,,,
+Elite Series,elite,2026-11-23,21:40,B,Rudomina K.,Solilo D.,0.515,1.8,,,,1.8,0,,,,2.0,4,ganado,3-1,0.8,,2026-11-23 19:35,862,finished,b13498954,,,,,,
 TT Cup,tt,2026-11-23,21:45,APUESTA,Vicherek P.,Kowal R.,0.527,1.9,2.09,2.47,,1.909,0.007,,,,,4,pendiente,,,,2026-11-23 19:40,2201,inprogress,b13498536,,si,1.909,bot,SI,
 Elite Series,elite,2026-11-23,20:10,A,Kowalczyk M.,Strus P.,0.597,1.25,,,2.0,,,,,,,1,ganado,3-1,,,2026-11-23 19:43,863,finished,b13501233,,,,,,
-TT Cup,tt,2026-11-23,21:50,FLOJO,Vyskocil Z.,Dlask M.,0.644,1.55,1.71,2.02,,1.363,-0.122,,,,,1,pendiente,,,,2026-11-23 19:45,2202,notstarted,b13498465,,si,1.363,bot,NO,
+TT Cup,tt,2026-11-23,21:50,FLOJO,Vyskocil Z.,Dlask M.,0.644,1.55,1.71,2.02,,1.363,-0.122,,,,,1,pendiente,,,,2026-11-23 19:45,2202,inprogress,b13498465,,si,1.363,bot,NO,
 TT Cup,tt,2026-11-23,22:00,SIN CUOTA,Kos K.,Kedzierski P.,0.579,1.73,1.9,2.24,,,,,,,,3,pendiente,,,,2026-11-23 19:55,2203,notstarted,b13500219,,si,,,,
 TT Cup,tt,2026-11-23,22:10,FLOJO,Jokiel P.,Vanous J.,0.539,1.85,2.04,2.41,,1.666,-0.101,,,,,1,pendiente,,,,2026-11-23 20:05,2204,notstarted,b13498450,,si,1.666,bot,NO,
 TT Cup,tt,2026-11-23,22:15,FLOJO,Baca J.,Baros A.,0.566,1.77,1.94,2.3,,1.533,-0.132,,,,,4,pendiente,,,,2026-11-23 20:10,2205,notstarted,b13498472,,si,1.533,bot,NO,
@@ -1126,3 +1126,4 @@ Elite Series,elite,2026-11-23,23:00,B,Stapor R.,Pilch A.,0.645,1.444,,,,1.444,0,
 Elite Series,elite,2026-11-23,23:10,A,Zelezik J.,Machelski M.,0.751,1.25,,,2.0,,,,,,,7,pendiente,,,,2026-11-23 21:05,865,notstarted,b13495769,,,,,,
 Elite Series,elite,2026-11-23,23:25,B,Rudomina K.,Kujawa F.,0.577,1.615,,,,1.615,0,,,,,6,pendiente,,,,2026-11-23 21:20,866,notstarted,b13499017,,,,,,
 TT Cup,tt,2026-11-23,23:25,SOSPECHOSO,Balcar F.,Hendrych J.,0.551,1.81,1.99,2.36,,2.5,0.379,,,,,1,pendiente,,,,2026-11-23 21:31,2212,notstarted,b13498473,,si,2.5,bot,SI,
+Elite Series,elite,2026-11-23,22:20,A,Tkaczyk H.,Nowak J.,0.599,1.25,,,2.0,,,,,,,5,pendiente,,,,2026-11-23 21:55,867,notstarted,b13501757,,,,,,
