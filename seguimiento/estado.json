@@ -19,8 +19,6 @@
   "b13491268": 1795395124.3634074,
   "b13495145": 1795395124.3634074,
   "b13495691": 1795396703.9175906,
-  "b13497304": 1795391686.403313,
-  "b13497308": 1795391938.4834456,
   "b13497325": 1795392535.463052,
   "b13495267": 1795398163.2851486,
   "b13497340": 1795393097.3403132,
@@ -274,32 +272,34 @@
   "b13500317": 1795477105.1892188,
   "b13501912": 1795472430.6005182,
   "b13501913": 1795472430.6005182,
-  "b13495562": 1795477105.1892188,
+  "b13495562": 1795478027.5098183,
   "b13501934": 1795472633.7626762,
   "b13500316": 1795475859.8158638,
   "b13501973": 1795473809.7449744,
   "b13495767": 1795477681.1446388,
   "b13502001": 1795475359.7632525,
-  "b13500315": 1795477291.1846917,
+  "b13500315": 1795478233.3203938,
   "b13500314": 1795477681.1446388,
   "b13502017": 1795474900.5950086,
   "b13502058": 1795476136.860075,
-  "b13500313": 1795477037.607606,
+  "b13500313": 1795477981.1506374,
   "b13502069": 1795476634.6114862,
-  "b13495561": 1795477291.1846917,
+  "b13495561": 1795478233.3203938,
   "b13502080": 1795477537.3519003,
-  "b13500400": 1795477537.3519003,
-  "b13502111": 1795477414.07638,
-  "b13499016": 1795477537.3519003
+  "b13500400": 1795478492.0860364,
+  "b13502111": 1795478344.7862313,
+  "b13499016": 1795478492.0860364,
+  "b13502138": 1795477981.1506374,
+  "b13502159": 1795478492.0860364
  },
  "elite_diag": {
   "fecha": "2026-11-24",
-  "revisados": 42,
-  "con_cuota": 21,
-  "favoritos": 14,
+  "revisados": 51,
+  "con_cuota": 27,
+  "favoritos": 17,
   "con_senal": 1,
   "candidatos_ahora": 12,
-  "ultima": "00:47"
+  "ultima": "01:01"
  },
  "textos": {
   "tt:1960": "\ud83d\udd25 PICK TT CUP \u00b7 16:15\n\u2705 CIZEK A.\nvs Chaloupka F.\n\nSeg\u00fan la cuota de BetCris:\n\u274c menos de 2.27 \u2192 no apostar\n\ud83d\udcb0 2.27 a 2.49 \u2192 APUESTA\n\u2b50\u2b50 2.50 a 2.95 \u2192 FUERTE\n\u26a0\ufe0f m\u00e1s de 2.95 \u2192 valor >30%, desconfiar\n\nSofascore: 2.25 \u2192 \u274c NO APOSTAR\nProb. 44% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento",
@@ -603,7 +603,7 @@
   "elite:867": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 22:20\n\u2705 TKACZYK H.\nvs Nowak J.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 5 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 60%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:869": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 01:20\n\u2705 STAPOR R.\nvs Kujawa F.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.61\n\u274c menos de 1.61 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.61 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-24 00:47",
+ "latido": "2026-11-24 01:01",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
