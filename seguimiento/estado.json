@@ -18,8 +18,6 @@
   "b13495404": 1795423294.6354008,
   "b13495008": 1795423635.183408,
   "b13495180": 1795424010.2891927,
-  "b13498238": 1795419495.2041724,
-  "b13498239": 1795419813.3873336,
   "b13495455": 1795425549.6078138,
   "b13498260": 1795420778.9928243,
   "b13498261": 1795420778.9928243,
@@ -263,7 +261,7 @@
   "b13499274": 1795505199.25245,
   "b13499306": 1795505199.25245,
   "b13502862": 1795500175.9512694,
-  "b13499259": 1795504946.8732922,
+  "b13499259": 1795505854.294596,
   "b13499293": 1795499461.4221873,
   "b13502884": 1795501273.5834682,
   "b13502885": 1795500368.919615,
@@ -274,24 +272,26 @@
   "b13502928": 1795502967.181613,
   "b13499224": 1795502461.9671926,
   "b13499506": 1795502461.9671926,
-  "b13499347": 1795505452.5243726,
+  "b13499347": 1795506354.0294063,
   "b13503011": 1795504660.8101702,
   "b13503010": 1795504660.8101702,
-  "b13499256": 1795504817.8091526,
-  "b13503070": 1795504660.8101702,
-  "b13503071": 1795504660.8101702,
-  "b13503079": 1795504946.8732922,
+  "b13499256": 1795505726.6439788,
+  "b13503070": 1795505602.6331356,
+  "b13503071": 1795505602.6331356,
+  "b13503079": 1795505854.294596,
   "b13499258": 1795505133.154212,
-  "b13499325": 1795505452.5243726
+  "b13499325": 1795506354.0294063,
+  "b13503100": 1795506293.5506546,
+  "b13503101": 1795506293.5506546
  },
  "elite_diag": {
   "fecha": "2026-11-24",
-  "revisados": 417,
-  "con_cuota": 216,
-  "favoritos": 162,
+  "revisados": 426,
+  "con_cuota": 220,
+  "favoritos": 166,
   "con_senal": 11,
   "candidatos_ahora": 13,
-  "ultima": "08:31",
+  "ultima": "08:45",
   "sin_cuota_caliente": 2
  },
  "textos": {
@@ -596,7 +596,7 @@
   "elite:880": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 09:45\n\u2705 PASZKIEWICZ M.\nvs Adamus K.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.61\n\u274c menos de 1.61 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 10 puntos mejor que la casa\nSofascore: 1.61 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:881": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 10:30\n\u2705 KOSOWSKI J.\nvs Petas K.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.80\n\u274c menos de 1.80 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 12 puntos mejor que la casa\nSofascore: 1.80 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-24 08:31",
+ "latido": "2026-11-24 08:45",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
