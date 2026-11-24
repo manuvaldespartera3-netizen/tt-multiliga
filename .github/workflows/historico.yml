@@ -67,7 +67,7 @@ jobs:
           MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
           VUELTA: ${{ github.event.inputs.vuelta || '1' }}
           BT_MAX_MIN: "300"
-          BETS_GAP: "2.5"
+          BETS_GAP: "4"
         run: python mb_historico.py
 
       - name: Guardar descargas
@@ -95,12 +95,13 @@ jobs:
         run: |
           V=${{ github.event.inputs.vuelta || '1' }}
           if [ -f resultados_12m/${{ env.SLUG }}/INCOMPLETO ] || [ "${{ job.status }}" != "success" ]; then
-            if [ "$V" -lt 6 ]; then
+            if [ "$V" -lt 12 ]; then
               gh workflow run historico.yml --ref main -R "${{ github.repository }}" \
                 -f liga="${{ github.event.inputs.liga }}" -f vuelta=$((V+1))
             elif [ -n "$TELEGRAM_TOKEN" ]; then
               curl -s "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
                 --data-urlencode "chat_id=${MY_CHAT_ID}" \
-                --data-urlencode "text=⚠️ La simulación de 12 meses de ${{ github.event.inputs.liga }} no ha podido terminar en 6 vueltas. Avisa a Claude." > /dev/null
+                --data-urlencode "text=⚠️ La simulación de 12 meses de ${{ github.event.inputs.liga }} no ha podido terminar en 12 vueltas. Avisa a Claude." > /dev/null
             fi
           fi
+
