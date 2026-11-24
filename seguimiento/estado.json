@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13495055": 1795436552.7042844,
   "b13495310": 1795437254.5963717,
   "b13495146": 1795438216.921407,
   "b13497918": 1795438838.8666043,
@@ -22,10 +21,8 @@
   "b13495082": 1795440653.5846848,
   "b13495357": 1795441560.8673713,
   "b13497917": 1795441560.8673713,
-  "b13499195": 1795436303.8548312,
   "b13495298": 1795442707.0695856,
   "b13499252": 1795437109.2980716,
-  "b13499271": 1795436552.7042844,
   "b13495311": 1795443402.1754987,
   "b13499284": 1795437701.9310603,
   "b13495259": 1795437637.383337,
@@ -271,28 +268,31 @@
   "b13499300": 1795517116.1320157,
   "b13500491": 1795517116.1320157,
   "b13503701": 1795518550.377577,
-  "b13498831": 1795521687.7614098,
+  "b13498831": 1795522597.3889186,
   "b13503766": 1795519337.4203024,
-  "b13499285": 1795522252.164801,
+  "b13499285": 1795523164.5293446,
   "b13503775": 1795519589.7415905,
   "b13503813": 1795520435.037331,
   "b13499502": 1795519527.645685,
   "b13499364": 1795520118.2083678,
-  "b13500490": 1795521938.166319,
+  "b13500490": 1795522849.7927186,
   "b13503909": 1795521094.49927,
   "b13498830": 1795521034.4952073,
   "b13503952": 1795522388.7503347,
   "b13499404": 1795521628.2138648,
-  "b13503973": 1795521829.9976406
+  "b13503973": 1795522745.3577495,
+  "b13499370": 1795522538.1047678,
+  "b13504057": 1795522745.3577495,
+  "b13499278": 1795523164.5293446
  },
  "elite_diag": {
   "fecha": "2026-11-24",
-  "revisados": 622,
-  "con_cuota": 341,
-  "favoritos": 269,
+  "revisados": 629,
+  "con_cuota": 345,
+  "favoritos": 273,
   "con_senal": 22,
   "candidatos_ahora": 13,
-  "ultima": "13:12",
+  "ultima": "13:27",
   "sin_cuota_caliente": 7
  },
  "textos": {
@@ -597,7 +597,7 @@
   "elite:896": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 14:55\n\u2705 JADCZYK M.\nvs Braun J.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 10 puntos mejor que la casa\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:897": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 15:05\n\u2705 PASZKIEWICZ M.\nvs Juzek S.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.44\n\u274c menos de 1.44 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 15 puntos mejor que la casa\nSofascore: 1.44 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-24 13:12",
+ "latido": "2026-11-24 13:27",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
