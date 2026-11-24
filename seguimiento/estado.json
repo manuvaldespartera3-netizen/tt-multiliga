@@ -16,7 +16,6 @@
   "b13495267": 1795398163.2851486,
   "b13495213": 1795400882.354798,
   "b13491213": 1795402322.313159,
-  "b13497511": 1795397600.6308846,
   "b13494991": 1795403931.8673854,
   "b13497564": 1795399062.0720375,
   "b13497565": 1795399062.0720375,
@@ -272,30 +271,30 @@
   "b13502080": 1795477537.3519003,
   "b13500400": 1795483080.3528826,
   "b13502111": 1795478344.7862313,
-  "b13499016": 1795483080.3528826,
+  "b13499016": 1795483984.1843941,
   "b13502138": 1795478898.9509552,
   "b13502159": 1795479402.922326,
-  "b13495560": 1795483331.8416429,
+  "b13495560": 1795484235.869171,
   "b13502177": 1795480919.3187628,
   "b13502176": 1795480919.3187628,
   "b13495766": 1795483018.3453522,
   "b13502223": 1795481985.3406317,
   "b13502224": 1795481985.3406317,
-  "b13495559": 1795482954.655984,
+  "b13495559": 1795483863.915926,
   "b13502253": 1795483141.1137748,
   "b13502262": 1795483396.8814485,
-  "b13495765": 1795482954.655984,
-  "b13502320": 1795483018.3453522,
-  "b13502326": 1795483271.857659
+  "b13495765": 1795483863.915926,
+  "b13502320": 1795483925.1898167,
+  "b13502326": 1795484176.7080662
  },
  "elite_diag": {
   "fecha": "2026-11-24",
-  "revisados": 109,
-  "con_cuota": 57,
-  "favoritos": 35,
+  "revisados": 115,
+  "con_cuota": 60,
+  "favoritos": 37,
   "con_senal": 1,
-  "candidatos_ahora": 10,
-  "ultima": "02:26",
+  "candidatos_ahora": 7,
+  "ultima": "02:40",
   "sin_cuota_caliente": 1
  },
  "textos": {
@@ -600,7 +599,7 @@
   "elite:869": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 01:20\n\u2705 STAPOR R.\nvs Kujawa F.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.61\n\u274c menos de 1.61 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.61 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:870": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:35\n\u2705 ZELEZIK J.\nvs Staniczek A.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 83%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-24 02:26",
+ "latido": "2026-11-24 02:40",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
