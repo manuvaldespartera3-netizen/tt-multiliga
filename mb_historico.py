@@ -12,7 +12,7 @@ No toca nada del bot ni de los resultados anteriores: todo va a resultados_12m/.
 Si no le da tiempo a bajar todas las cuotas, se relanza solo y sigue donde lo dejo.
 
 Variables: BETSAPI_TOKEN, TELEGRAM_TOKEN, MY_CHAT_ID, MESES (12), VUELTA (1),
-           BETS_GAP (2.5 s entre consultas: deja sitio de sobra al bot en vivo)
+           BETS_GAP (4 s entre consultas: deja sitio de sobra al bot en vivo)
 """
 import json
 import os
@@ -30,7 +30,7 @@ os.environ.update(LIGA=LIGA_ID, BT_DAYS=str(DIAS), BT_WARMUP="45", ARRANQUE_DIAS
 import mb_bets                                # noqa: E402
 import mb_backtest as bt                      # noqa: E402
 
-GAP = float(os.getenv("BETS_GAP", "2.5"))
+GAP = float(os.getenv("BETS_GAP", "4"))
 VUELTA = int(os.getenv("VUELTA", "1") or 1)
 UNIDAD = 50
 NOMBRE = bt.LIGAS.get(LIGA_ID, LIGA_ID)
@@ -44,13 +44,21 @@ _ult = [0.0]
 
 
 def api_lenta(path, **params):
-    espera = GAP - (time.time() - _ult[0])
-    if espera > 0:
-        time.sleep(espera)
-    try:
-        return _api(path, **params)
-    finally:
-        _ult[0] = time.time()
+    """Si BetsAPI dice que vamos demasiado rapido (HTTP 429), se para 5 minutos y
+    sigue: asi no se corta la vuelta y el bot en vivo recupera su cupo."""
+    for intento in range(8):
+        espera = GAP - (time.time() - _ult[0])
+        if espera > 0:
+            time.sleep(espera)
+        try:
+            return _api(path, **params)
+        except RuntimeError as ex:
+            if "429" not in str(ex) or intento == 7:
+                raise
+            print("BetsAPI pide esperar (429): pausa de 5 minutos")
+            time.sleep(300)
+        finally:
+            _ult[0] = time.time()
 
 
 mb_bets.api = api_lenta
