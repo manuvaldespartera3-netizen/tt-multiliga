@@ -22,7 +22,6 @@
   "b13499069": 1795463981.8480659,
   "b13499008": 1795464208.7911983,
   "b13495771": 1795465116.6538851,
-  "b13501171": 1795458833.3705664,
   "b13495566": 1795465434.3078077,
   "b13498954": 1795458959.6641142,
   "b13501233": 1795459424.1762052,
@@ -275,31 +274,31 @@
   "b13505306": 1795541378.0075026,
   "b13502679": 1795540519.4777706,
   "b13505361": 1795541879.5700443,
-  "b13500304": 1795543861.4089634,
-  "b13500305": 1795543861.4089634,
+  "b13500304": 1795544776.338014,
+  "b13500305": 1795544776.338014,
   "b13503563": 1795541120.121605,
   "b13505422": 1795542824.1671655,
   "b13505440": 1795543146.318745,
   "b13503550": 1795542352.090629,
-  "b13503469": 1795543586.1523323,
-  "b13505550": 1795543651.8111854,
-  "b13500397": 1795543861.4089634,
+  "b13503469": 1795544507.7840157,
+  "b13505550": 1795544577.1196532,
+  "b13500397": 1795544776.338014,
   "b13503641": 1795544113.5578423,
-  "b13505607": 1795544246.400788
+  "b13505607": 1795544246.400788,
+  "b13500303": 1795544776.338014,
+  "b13505665": 1795545267.8384733
  },
  "elite_diag": {
   "fecha": "2026-11-24",
-  "revisados": 929,
-  "con_cuota": 502,
-  "favoritos": 390,
+  "revisados": 936,
+  "con_cuota": 505,
+  "favoritos": 393,
   "con_senal": 34,
   "candidatos_ahora": 16,
-  "ultima": "19:20",
-  "sin_cuota_caliente": 10
+  "ultima": "19:34",
+  "sin_cuota_caliente": 12
  },
  "textos": {
-  "elite:718": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 07:40\n\u2705 SOBKOW Z.\nvs Sawicki G.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.67\n\u274c menos de 1.67 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.67 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "elite:719": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:05\n\u2705 DOSZ A.\nvs Jadczyk M.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:720": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:05\n\u2705 PRUSZKOWSKI J.\nvs Tkaczyk H.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.67\n\u274c menos de 1.67 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: 1.67 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:721": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:30\n\u2705 SPANIK T.\nvs Dosz S.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.80\n\u274c menos de 1.80 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 20 puntos mejor que la casa\nSofascore: 1.80 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:722": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:30\n\u2705 SZYMIK R.\nvs Sawicki G.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.44\n\u274c menos de 1.44 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.44 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -597,9 +596,11 @@
   "elite:910": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 20:50\n\u2705 PIETRASZKO L.\nvs Blocho P.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.53\n\u274c menos de 1.53 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 8 puntos mejor que la casa\nSofascore: 1.53 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:911": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 21:20\n\u2705 KUREK P.\nvs Schaniel K.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.61\n\u274c menos de 1.61 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 9 puntos mejor que la casa\nSofascore: 1.61 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:912": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 19:45\n\u2705 SKORSKI M.\nvs Mrugala B.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 58%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
-  "tt:2218": "\ud83d\udd25 PICK TT CUP \u00b7 21:25\n\u2705 FIKLIK O.\nvs Hyza D.\n\n\ud83d\udcb0 Cuota del bot 2.38 \u00b7 m\u00ednimo 2.23\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\n\n\u21a9\ufe0f Responde con tu cuota de BetCris para tu yield"
+  "tt:2218": "\ud83d\udd25 PICK TT CUP \u00b7 21:25\n\u2705 FIKLIK O.\nvs Hyza D.\n\n\ud83d\udcb0 Cuota del bot 2.38 \u00b7 m\u00ednimo 2.23\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\n\n\u21a9\ufe0f Responde con tu cuota de BetCris para tu yield",
+  "elite:913": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 21:30\n\u2705 KREZEL A.\nvs Brunner M.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 55%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
+  "elite:914": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 20:00\n\u2705 URBAN W.\nvs Jurowicz G.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 56%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-24 19:20",
+ "latido": "2026-11-24 19:34",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
