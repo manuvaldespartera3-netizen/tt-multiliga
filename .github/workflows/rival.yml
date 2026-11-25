@@ -1,0 +1,55 @@
+name: Marcar si el rival juega antes
+
+# Solo lee las descargas ya guardadas de la simulacion de 12 meses (no consulta
+# BetsAPI): tarda unos minutos y puede ir a la vez que cualquier otra cosa.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rival
+  cancel-in-progress: false
+
+jobs:
+  marcar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      max-parallel: 1
+      matrix:
+        liga:
+          - {id: "15005", slug: "tt_cup"}
+          - {id: "19041", slug: "tt_elite_series"}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Recuperar descargas (solo lectura)
+        uses: actions/cache/restore@v4
+        with:
+          path: resultados_12m/${{ matrix.liga.slug }}/cache
+          key: h12c-${{ matrix.liga.slug }}-ninguna
+          restore-keys: |
+            h12c-${{ matrix.liga.slug }}-
+            ${{ matrix.liga.slug == 'tt_cup' && 'h12b-' || 'h12-ninguna-' }}
+
+      - name: Marcar
+        env:
+          LIGA_SIM: ${{ matrix.liga.id }}
+        run: python mb_rival.py
+
+      - name: Guardar en el repositorio
+        run: |
+          git config user.name "tt-multiliga"
+          git config user.email "tt-multiliga@users.noreply.github.com"
+          git add resultados_12m/${{ matrix.liga.slug }}/picks_detalle_rival.csv
+          git commit -m "Rival juega antes ${{ matrix.liga.slug }}" || echo "sin cambios"
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done || true
+
