@@ -13,14 +13,11 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13500313": 1795481644.3315039,
   "b13495561": 1795482822.1814075,
   "b13500400": 1795483080.3528826,
   "b13499016": 1795483984.1843941,
   "b13495560": 1795485150.4944654,
   "b13495766": 1795483018.3453522,
-  "b13502223": 1795481985.3406317,
-  "b13502224": 1795481985.3406317,
   "b13495559": 1795487562.817432,
   "b13502253": 1795483141.1137748,
   "b13502262": 1795483396.8814485,
@@ -285,28 +282,31 @@
   "b13506870": 1795563816.7910755,
   "b13506873": 1795562965.6276,
   "b13506872": 1795565804.0612297,
-  "b13500293": 1795567672.9053524,
-  "b13503621": 1795567672.9053524,
+  "b13500293": 1795568586.661359,
+  "b13503621": 1795568586.661359,
   "b13506895": 1795564612.3490183,
-  "b13503978": 1795567355.2095733,
+  "b13503978": 1795568273.2348056,
   "b13506934": 1795565804.0612297,
   "b13506947": 1795566117.1345637,
   "b13506961": 1795566712.0508215,
   "b13503513": 1795566059.2804136,
-  "b13500292": 1795567230.8928318,
+  "b13500292": 1795568147.4415035,
   "b13506983": 1795567860.4028375,
-  "b13503773": 1795567230.8928318,
-  "b13506999": 1795567421.4891143,
-  "b13507017": 1795567929.7450438
+  "b13503773": 1795568147.4415035,
+  "b13506999": 1795568333.3169837,
+  "b13507017": 1795568836.751091,
+  "b13507044": 1795568273.2348056,
+  "b13503953": 1795568712.5184257,
+  "b13507053": 1795568782.9066522
  },
  "elite_diag": {
   "fecha": "2026-11-25",
-  "revisados": 104,
-  "con_cuota": 66,
-  "favoritos": 61,
+  "revisados": 114,
+  "con_cuota": 71,
+  "favoritos": 66,
   "con_senal": 1,
-  "candidatos_ahora": 11,
-  "ultima": "01:53"
+  "candidatos_ahora": 10,
+  "ultima": "02:07"
  },
  "textos": {
   "elite:725": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 08:00\n\u2705 URBAN W.\nvs Mecik P.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 51%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
@@ -610,7 +610,7 @@
   "tt:2220": "\ud83d\udd25 PICK TT CUP \u00b7 23:25\n\u2705 FIKLIK O.\nvs Kosacky A.\n\n\ud83d\udcb0 Cuota del bot 2.62 \u00b7 m\u00ednimo 2.54\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\n\n\u21a9\ufe0f Responde con tu cuota de BetCris para tu yield",
   "elite:918": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 03:25\n\u2705 KUREK P.\nvs Schaniel K.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.67\n\u274c menos de 1.67 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 15 puntos mejor que la casa\nSofascore: 1.67 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-25 01:53",
+ "latido": "2026-11-25 02:07",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
