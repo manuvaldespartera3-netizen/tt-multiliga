@@ -32,7 +32,7 @@ def cabecera(p):
 
 
 def _cabecera(p):
-    if p.get("regla") == "COMB":             # TT Cup desde el 24/11: solo se avisan los que cumplen todo
+    if p.get("regla") in ("COMB", "A"):      # solo se avisan los que cumplen todo
         c = float(p.get("cuota_ref") or p.get("cuota_2h") or 0)
         est = "⭐ " if p.get("estrella") else ""
         tuya = f" · tuya {float(p['cuota_betcris']):.2f}" if p.get("cuota_betcris") else ""
@@ -101,7 +101,7 @@ def color(p):
 
 
 def es_blanco(p):
-    if p.get("regla") == "COMB":             # avisado y sin tu cuota todavia
+    if p.get("regla") in ("COMB", "A"):      # avisado y sin tu cuota todavia
         return p.get("decision_ref") == "SI" and not p.get("cuota_betcris")
     if p.get("modo_ref") == "si":
         return not p.get("decision_ref") and p.get("no_esta") != "si"
