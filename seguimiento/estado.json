@@ -13,7 +13,6 @@
  "canal_elite": true,
  "offset_elite": 307940406,
  "elite_revisados": {
-  "b13499325": 1795512720.033983,
   "b13501738": 1795513564.474007,
   "b13498295": 1795514540.4455035,
   "b13499311": 1795514540.4455035,
@@ -21,7 +20,6 @@
   "b13498833": 1795515773.1166542,
   "b13499286": 1795516337.8430166,
   "b13499267": 1795517258.8067951,
-  "b13503347": 1795512294.4915876,
   "b13503421": 1795512967.515107,
   "b13498832": 1795518550.377577,
   "b13499302": 1795519090.2540894,
@@ -290,7 +288,7 @@
   "b13508017": 1795594898.6859365,
   "b13508025": 1795595241.6398873,
   "b13508026": 1795595241.6398873,
-  "b13504019": 1795598276.6818736,
+  "b13504019": 1795599249.6054358,
   "b13506279": 1795594529.9575212,
   "b13504063": 1795598459.7657013,
   "b13504929": 1795598459.7657013,
@@ -302,23 +300,27 @@
   "b13508100": 1795597180.4689496,
   "b13508101": 1795597180.4689496,
   "b13503294": 1795596341.985601,
-  "b13504069": 1795598151.5244994,
+  "b13504069": 1795599052.172862,
   "b13508120": 1795597622.5602098,
-  "b13504032": 1795597834.9591389,
+  "b13504032": 1795598740.925416,
   "b13508137": 1795597367.2679884,
   "b13504051": 1795597557.2520604,
-  "b13508160": 1795597622.5602098,
-  "b13508203": 1795598400.869046,
-  "b13503568": 1795598459.7657013
+  "b13508160": 1795598546.383283,
+  "b13508203": 1795599301.4025486,
+  "b13503568": 1795598459.7657013,
+  "b13508213": 1795598491.8619108,
+  "b13504048": 1795599052.172862,
+  "b13508467": 1795599249.6054358,
+  "b13508468": 1795599249.6054358
  },
  "elite_diag": {
   "fecha": "2026-11-25",
-  "revisados": 493,
-  "con_cuota": 270,
-  "favoritos": 243,
+  "revisados": 502,
+  "con_cuota": 274,
+  "favoritos": 247,
   "con_senal": 13,
   "candidatos_ahora": 18,
-  "ultima": "10:20",
+  "ultima": "10:34",
   "sin_cuota_caliente": 9
  },
  "textos": {
@@ -623,7 +625,7 @@
   "elite:938": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 10:30\n\u2705 BUCZYNSKI W.\nvs Juzek S.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 1 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 63%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "elite:939": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 12:10\n\u2705 SZOSTOK S.\nvs Mecik P.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.73\n\u274c menos de 1.73 \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\n\ud83d\udcc8 el Elo le ve 12 puntos mejor que la casa\nSofascore: 1.73 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo"
  },
- "latido": "2026-11-25 10:20",
+ "latido": "2026-11-25 10:34",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15"
 }
