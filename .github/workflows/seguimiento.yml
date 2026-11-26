@@ -53,10 +53,36 @@ jobs:
             seguimiento/cache_19041
             seguimiento/cache_b15005
             seguimiento/cache_b19041
+            seguimiento/cache_b19039
           key: segb-${{ github.run_id }}
           restore-keys: |
             segb-
             seg-
+
+      # Liga Pro: la primera vez, el historico se copia de la simulacion de 12 meses
+      # (ya descargado), asi no hay que volver a bajarlo de BetsAPI
+      - name: Mirar historico de Liga Pro
+        id: lp
+        run: |
+          n=$(ls seguimiento/cache_b19039 2>/dev/null | wc -l)
+          echo "n=$n" >> $GITHUB_OUTPUT
+
+      - name: Recuperar historico de Liga Pro (simulacion)
+        if: steps.lp.outputs.n < 100
+        uses: actions/cache/restore@v4
+        continue-on-error: true
+        with:
+          path: resultados_12m/czech_liga_pro/cache
+          key: h12c-czech_liga_pro-ninguna
+          restore-keys: h12c-czech_liga_pro-
+
+      - name: Copiar historico de Liga Pro
+        if: steps.lp.outputs.n < 100
+        run: |
+          mkdir -p seguimiento/cache_b19039
+          cp -n resultados_12m/czech_liga_pro/cache/20*.json seguimiento/cache_b19039/ 2>/dev/null || true
+          rm -rf resultados_12m/czech_liga_pro/cache
+          echo "dias copiados: $(ls seguimiento/cache_b19039 | wc -l)"
 
       - name: Seguimiento
         id: seg
@@ -67,6 +93,7 @@ jobs:
           BETSAPI_TOKEN: ${{ secrets.BETSAPI_TOKEN }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_TOKEN_ELITE: ${{ secrets.TELEGRAM_TOKEN_ELITE }}
+          TELEGRAM_TOKEN_LP: ${{ secrets.TELEGRAM_TOKEN_RATING }}
           MY_CHAT_ID: ${{ secrets.MY_CHAT_ID }}
           RUN_MIN: "14"
         run: python mb_seguimiento.py
@@ -82,7 +109,8 @@ jobs:
             seguimiento/cache_19041
             seguimiento/cache_b15005
             seguimiento/cache_b19041
-          key: segb-${{ hashFiles('seguimiento/cache/*.json', 'seguimiento/cache_19041/*.json', 'seguimiento/cache_b15005/*.json', 'seguimiento/cache_b19041/*.json') }}
+            seguimiento/cache_b19039
+          key: segb-${{ hashFiles('seguimiento/cache/*.json', 'seguimiento/cache_19041/*.json', 'seguimiento/cache_b15005/*.json', 'seguimiento/cache_b19041/*.json', 'seguimiento/cache_b19039/*.json') }}
 
       - name: Guardar picks
         if: always()
@@ -111,3 +139,4 @@ jobs:
           if [ "$n" = "0" ] && [ "$p" = "0" ]; then
             gh workflow run seguimiento.yml --ref main -R "${{ github.repository }}" || true
           fi
+
