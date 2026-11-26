@@ -1,0 +1,24 @@
+📊 CZECH LIGA PRO · REGLA EN CALIENTE · SIMULACIÓN 12 MESES
+Cuota del bot (BetsAPI) · 🟢 = la cuota llega al mínimo · 1 u = 50 €
+
+Mes      🟢 apuestas  acierto   yield     unidades   euros   | 🔴 yield
+Nov 25    147        41%     -6.9%     -10.2 u     -509 € | -8% (324)
+Dic 25    414        39%    -11.7%     -48.5 u    -2424 € | -4% (757)
+Ene 26    416        41%     -6.0%     -24.9 u    -1246 € | -4% (744)
+Feb 26    325        48%     +4.6%     +14.9 u     +743 € | -5% (658)
+Mar 26    384        42%    -10.3%     -39.5 u    -1976 € | -10% (690)
+Abr 26    372        42%     -6.6%     -24.6 u    -1228 € | -8% (667)
+May 26    404        46%     +4.5%     +18.1 u     +906 € | -9% (720)
+Jun 26    374        41%     -6.8%     -25.6 u    -1278 € | -7% (645)
+Jul 26    368        44%     -3.0%     -11.1 u     -554 € | -7% (733)
+Ago 26    424        41%     -8.9%     -37.6 u    -1879 € | -7% (745)
+Sep 26    381        43%     -1.4%      -5.4 u     -272 € | -10% (715)
+Oct 26    351        44%     +0.9%      +3.2 u     +161 € | -7% (738)
+Nov 26    237        36%    -22.6%     -53.6 u    -2682 € | -5% (672)
+
+TOTAL 🟢: 4597 apuestas · acierto 42% · yield -5.3% · -244.8 u · -12239 €
+TOTAL 🔴 (no se apuestan): 8808 · yield -6.8%
+Meses 🟢 en negativo: 10 de 13
+Peor caída: -248.1 u (-12405 €) · peor día -12.2 u (2026-01-30) · peor racha: 16 perdidas seguidas
+
+Picks de la regla: 13717 · con cuota válida: 13405 · sin cuota o fuera de 1,25-4,00: 312 (no cuentan)
