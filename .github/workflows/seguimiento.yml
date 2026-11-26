@@ -23,13 +23,15 @@ jobs:
       - name: Dejar en cola la siguiente vuelta
         env:
           GH_TOKEN: ${{ github.token }}
+        # Se lanza SIEMPRE (sin mirar si ya hay otra): GitHub solo deja una en espera
+        # y descarta las sobrantes, asi que nunca se acumulan y la cadena no se corta.
         run: |
-          for i in 1 2 3; do
-            n=$(gh run list -R "${{ github.repository }}" --workflow seguimiento.yml --status queued --json databaseId -q 'length' 2>/dev/null || echo 0)
-            p=$(gh run list -R "${{ github.repository }}" --workflow seguimiento.yml --status pending --json databaseId -q 'length' 2>/dev/null || echo 0)
-            if [ "$n" != "0" ] || [ "$p" != "0" ]; then echo "ya hay una en cola"; break; fi
-            gh workflow run seguimiento.yml --ref main -R "${{ github.repository }}" && break
-            sleep 10
+          for i in 1 2 3 4 5; do
+            if gh workflow run seguimiento.yml --ref main -R "${{ github.repository }}"; then
+              echo "siguiente vuelta en cola"; break
+            fi
+            echo "no se pudo lanzar (intento $i), reintento"
+            sleep 15
           done || true
 
       # siempre la version mas reciente de main, con el picks.csv al dia
@@ -53,11 +55,18 @@ jobs:
             seguimiento/cache_19041
             seguimiento/cache_b15005
             seguimiento/cache_b19041
-            seguimiento/cache_b19039
           key: segb-${{ github.run_id }}
           restore-keys: |
             segb-
             seg-
+
+      # Liga Pro va en su propia copia (asi no se mezcla con la de TT Cup y Elite)
+      - name: Recuperar historico de Liga Pro
+        uses: actions/cache/restore@v4
+        with:
+          path: seguimiento/cache_b19039
+          key: segl-${{ github.run_id }}
+          restore-keys: segl-
 
       # Liga Pro: la primera vez, el historico se copia de la simulacion de 12 meses
       # (ya descargado), asi no hay que volver a bajarlo de BetsAPI
@@ -109,8 +118,15 @@ jobs:
             seguimiento/cache_19041
             seguimiento/cache_b15005
             seguimiento/cache_b19041
-            seguimiento/cache_b19039
-          key: segb-${{ hashFiles('seguimiento/cache/*.json', 'seguimiento/cache_19041/*.json', 'seguimiento/cache_b15005/*.json', 'seguimiento/cache_b19041/*.json', 'seguimiento/cache_b19039/*.json') }}
+          key: segb-${{ hashFiles('seguimiento/cache/*.json', 'seguimiento/cache_19041/*.json', 'seguimiento/cache_b15005/*.json', 'seguimiento/cache_b19041/*.json') }}
+
+      - name: Guardar historico de Liga Pro
+        if: always()
+        uses: actions/cache/save@v4
+        continue-on-error: true
+        with:
+          path: seguimiento/cache_b19039
+          key: segl-${{ hashFiles('seguimiento/cache_b19039/*.json') }}
 
       - name: Guardar picks
         if: always()
@@ -134,9 +150,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if [ "${{ steps.seg.outcome }}" != "success" ]; then sleep 120; fi
-          n=$(gh run list -R "${{ github.repository }}" --workflow seguimiento.yml --status queued --json databaseId -q 'length' 2>/dev/null || echo 0)
-          p=$(gh run list -R "${{ github.repository }}" --workflow seguimiento.yml --status pending --json databaseId -q 'length' 2>/dev/null || echo 0)
-          if [ "$n" = "0" ] && [ "$p" = "0" ]; then
-            gh workflow run seguimiento.yml --ref main -R "${{ github.repository }}" || true
-          fi
+          for i in 1 2 3 4 5; do
+            if gh workflow run seguimiento.yml --ref main -R "${{ github.repository }}"; then
+              echo "siguiente vuelta en cola"; break
+            fi
+            echo "no se pudo lanzar (intento $i), reintento"
+            sleep 15
+          done || true
+
 
