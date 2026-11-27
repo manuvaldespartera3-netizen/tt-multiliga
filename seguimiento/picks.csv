@@ -1392,11 +1392,11 @@ TT Cup,tt,2026-11-27,18:35,FUERTE,Ruzicka J.,Kucera M.,0.533,1.87,2.06,2.44,,2.2
 TT Cup,tt,2026-11-27,18:55,APUESTA,Stusek M.,Flicek T.,0.553,1.81,1.99,2.35,,1.833,0.014,,,,1.833,1,perdido,0-3,-1,,2026-11-27 16:50,,finished,b13518574,,si,1.833,bot,NO,-1,A,2.2,,-0.27,-2.253
 Elite Series,elite,2026-11-27,18:55,FLOJO,Solilo D.,Maruszak P.,0.568,1.76,1.94,2.29,,1.444,-0.18,,,,1.25,4,ganado,3-0,0.44,,2026-11-27 16:50,,finished,b13518652,,si,1.444,bot,NO,0.44,A,1.444,,-0.931,0.31
 TT Cup,tt,2026-11-27,18:50,APUESTA,Dvorak M.,Hrncir J.,0.525,1.9,2.09,2.47,,2.0,0.051,,,,1.909,1,ganado,3-2,1.0,,2026-11-27 16:51,,finished,b13518600,,si,2.0,bot,NO,1.0,A,2.0,,-1.747,-0.933
-Elite Series,elite,2026-11-27,19:20,FLOJO,Brud S.,Woskowicz M.,0.608,1.65,1.81,2.14,,1.5,-0.088,,,,,3,pendiente,,,,2026-11-27 17:15,,inprogress,b13515507,,si,1.5,bot,NO,,A,1.5,,1.371,1.252
+Elite Series,elite,2026-11-27,19:20,FLOJO,Brud S.,Woskowicz M.,0.608,1.65,1.81,2.14,,1.5,-0.088,,,,1.285,3,ganado,3-2,0.5,,2026-11-27 17:15,,finished,b13515507,,si,1.5,bot,NO,0.5,A,1.5,,1.371,1.252
 TT Cup,tt,2026-11-27,19:25,FLOJO,Vorisek T.,Jicha D.,0.524,1.91,2.1,2.48,,1.833,-0.039,,,,,2,pendiente,,,,2026-11-27 17:20,,inprogress,b13518521,,si,1.833,bot,NO,,A,1.833,,0.778,0.815
 Elite Series,elite,2026-11-27,19:35,SIN CUOTA,Lewczuk M.,Bladziak K.,0.69,1.45,1.6,1.89,,,,,,,,4,pendiente,,,,2026-11-27 17:30,,notstarted,b13515461,,si,,,,,A,,,0.438,1.073
-Elite Series,elite,2026-11-27,19:40,FLOJO,Solilo D.,Sulkowski B.,0.369,2.71,2.98,3.52,,1.833,-0.324,,,,,5,pendiente,,,,2026-11-27 17:35,,notstarted,b13518631,,si,1.833,bot,NO,,A,1.833,,0.145,-0.851
-Elite Series,elite,2026-11-27,19:45,FLOJO,Adach R.,Paszkiewicz M.,0.363,2.76,3.03,3.58,,1.909,-0.307,,,,,1,pendiente,,,,2026-11-27 17:41,,notstarted,b13518803,,si,1.909,bot,NO,,A,1.909,,0.391,-2.964
+Elite Series,elite,2026-11-27,19:40,FLOJO,Solilo D.,Sulkowski B.,0.369,2.71,2.98,3.52,,1.833,-0.324,,,,,5,pendiente,,,,2026-11-27 17:35,,inprogress,b13518631,,si,1.833,bot,NO,,A,1.833,,0.145,-0.851
+Elite Series,elite,2026-11-27,19:45,FLOJO,Adach R.,Paszkiewicz M.,0.363,2.76,3.03,3.58,,1.909,-0.307,,,,,1,pendiente,,,,2026-11-27 17:41,,inprogress,b13518803,,si,1.909,bot,NO,,A,1.909,,0.391,-2.964
 Czech Liga Pro,lp,2026-11-27,20:00,FLOJO,Wawrosz P.,Vavrecka M.,0.576,1.73,1.91,2.26,,1.727,-0.005,,,,,4,pendiente,,,,2026-11-27 17:55,,notstarted,b13514004,,si,1.727,bot,NO,,LP,1.727,,-0.828,0.665
 Elite Series,elite,2026-11-27,18:15,SIN CUOTA,Skorski M.,Skop S.,0.412,2.43,2.67,3.16,,,,,,,,3,ganado,3-2,,,2026-11-27 18:01,,finished,b13520375,,si,,,,,A,,,1.794,-0.187
 Elite Series,elite,2026-11-27,20:10,FLOJO,Baron M.,Fomin Y.,0.601,1.66,1.83,2.16,,1.444,-0.133,,,,,1,pendiente,,,,2026-11-27 18:05,,notstarted,b13518767,,si,1.444,bot,NO,,A,1.444,,-0.764,1.721
@@ -1409,3 +1409,5 @@ Czech Liga Pro,lp,2026-11-27,21:00,FLOJO,Stefek M.,Didi J.,0.449,2.23,2.45,2.89,
 TT Cup,tt,2026-11-27,21:10,FLOJO,Lasota L.,Ogrocki T.,0.597,1.67,1.84,2.18,,1.571,-0.062,,,,,3,pendiente,,,,2026-11-27 19:06,,notstarted,b13518577,,si,1.571,bot,NO,,A,1.571,,2.686,-3.117
 Elite Series,elite,2026-11-27,19:45,SIN CUOTA,Skorski M.,Szlubowski D.,0.419,2.39,2.63,3.1,,,,,,,,4,pendiente,,,,2026-11-27 19:17,,notstarted,b13520699,,si,,,,,A,,,1.934,-4.619
 Elite Series,elite,2026-11-27,20:00,SIN CUOTA,Warzecha M.,Oracz J.,0.478,2.09,2.3,2.72,,,,,,,,1,pendiente,,,,2026-11-27 19:30,,notstarted,b13520732,,si,,,,,A,,,-0.207,-0.292
+TT Cup,tt,2026-11-27,21:40,FLOJO,Lasota L.,Branny D.,0.502,1.99,2.19,2.59,,1.666,-0.164,,,,,3,pendiente,,,,2026-11-27 19:37,,notstarted,b13518653,,si,1.666,bot,NO,,A,1.666,,2.686,3.326
+Elite Series,elite,2026-11-27,20:10,SIN CUOTA,Poloszczanski D.,Strus P.,0.569,1.76,1.93,2.28,,,,,,,,1,pendiente,,,,2026-11-27 19:45,,notstarted,b13520799,,si,,,,,A,,,1.541,0.965
