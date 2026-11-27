@@ -1414,15 +1414,15 @@ Elite Series,elite,2026-11-27,20:10,SIN CUOTA,Poloszczanski D.,Strus P.,0.569,1.
 Czech Liga Pro,lp,2026-11-27,22:00,APUESTA,Wawrosz P.,Cabis M.,0.499,2.0,2.2,2.61,,2.1,0.048,,,,2.1,4,ganado,3-1,1.1,,2026-11-27 19:55,,finished,b13514096,,si,2.1,bot,NO,1.1,LP,2.1,,-0.828,0.891
 Czech Liga Pro,lp,2026-11-27,22:00,FLOJO,Stefek M.,Regner T.,0.527,1.9,2.09,2.47,,1.727,-0.089,,,,1.727,4,perdido,2-3,-1,,2026-11-27 19:55,,finished,b13514455,,si,1.727,bot,NO,-1,LP,1.571,,-4.487,-0.852
 Elite Series,elite,2026-11-27,20:25,SIN CUOTA,Skorupa J.,Natkaniec M.,0.596,1.68,1.85,2.18,,,,,,,,1,ganado,3-1,,,2026-11-27 20:00,,finished,b13520850,,si,,,,,A,,,2.309,-2.967
-TT Cup,tt,2026-11-27,22:15,FLOJO,Raska M.,Fojtik T.,0.482,2.08,2.28,2.7,,2.0,-0.036,,,,,1,pendiente,,,,2026-11-27 20:10,,inprogress,b13518615,,si,2.0,bot,NO,,A,2.0,,-0.849,1.066
-Czech Liga Pro,lp,2026-11-27,22:30,FLOJO,Zahradka M.,Wolf F.,0.573,1.74,1.92,2.27,,1.727,-0.01,,,,,1,pendiente,,,,2026-11-27 20:25,,notstarted,b13514457,,si,1.727,bot,NO,,LP,1.727,,1.318,-0.589
-Czech Liga Pro,lp,2026-11-27,22:30,FLOJO,Jungman F.,Placek M.,0.614,1.63,1.79,2.12,,1.571,-0.035,,,,,1,pendiente,,,,2026-11-27 20:25,,notstarted,b13514732,,si,1.571,bot,NO,,LP,1.571,,-0.995,-1.129
-Czech Liga Pro,lp,2026-11-27,22:30,APUESTA,Didi J.,Necas M.,0.593,1.69,1.86,2.19,,1.727,0.024,,,,,1,pendiente,,,,2026-11-27 20:25,,notstarted,b13514764,,si,1.727,bot,NO,,LP,1.727,,2.7,2.205
-Czech Liga Pro,lp,2026-11-27,22:30,FLOJO,Milota T.,Priesol D.,0.514,1.95,2.14,2.53,,1.571,-0.193,,,,,1,pendiente,,,,2026-11-27 20:25,,notstarted,b13516839,,si,1.571,bot,NO,,LP,1.727,,2.461,2.47
-TT Cup,tt,2026-11-27,22:35,FLOJO,Chmelicek M.,Mezlik S.,0.547,1.83,2.01,2.37,,1.8,-0.015,,,,,1,pendiente,,,,2026-11-27 20:31,,notstarted,b13518590,,si,1.8,bot,NO,,A,1.8,,1.853,0.718
+TT Cup,tt,2026-11-27,22:15,FLOJO,Raska M.,Fojtik T.,0.482,2.08,2.28,2.7,,2.0,-0.036,,,,2.0,1,ganado,3-0,1.0,,2026-11-27 20:10,,finished,b13518615,,si,2.0,bot,NO,1.0,A,2.0,,-0.849,1.066
+Czech Liga Pro,lp,2026-11-27,22:30,FLOJO,Zahradka M.,Wolf F.,0.573,1.74,1.92,2.27,,1.727,-0.01,,,,,1,pendiente,,,,2026-11-27 20:25,,inprogress,b13514457,,si,1.727,bot,NO,,LP,1.727,,1.318,-0.589
+Czech Liga Pro,lp,2026-11-27,22:30,FLOJO,Jungman F.,Placek M.,0.614,1.63,1.79,2.12,,1.571,-0.035,,,,,1,pendiente,,,,2026-11-27 20:25,,inprogress,b13514732,,si,1.571,bot,NO,,LP,1.571,,-0.995,-1.129
+Czech Liga Pro,lp,2026-11-27,22:30,APUESTA,Didi J.,Necas M.,0.593,1.69,1.86,2.19,,1.727,0.024,,,,,1,pendiente,,,,2026-11-27 20:25,,inprogress,b13514764,,si,1.727,bot,NO,,LP,1.727,,2.7,2.205
+Czech Liga Pro,lp,2026-11-27,22:30,FLOJO,Milota T.,Priesol D.,0.514,1.95,2.14,2.53,,1.571,-0.193,,,,,1,pendiente,,,,2026-11-27 20:25,,inprogress,b13516839,,si,1.571,bot,NO,,LP,1.727,,2.461,2.47
+TT Cup,tt,2026-11-27,22:35,FLOJO,Chmelicek M.,Mezlik S.,0.547,1.83,2.01,2.37,,1.8,-0.015,,,,,1,pendiente,,,,2026-11-27 20:31,,inprogress,b13518590,,si,1.8,bot,NO,,A,1.8,,1.853,0.718
 TT Cup,tt,2026-11-27,22:50,FLOJO,Vich L.,Vyskocil Z.,0.479,2.09,2.3,2.71,,1.8,-0.137,,,,,1,pendiente,,,,2026-11-27 20:50,,notstarted,b13518896,,si,1.8,bot,NO,,A,1.8,,-0.603,-1.198
 Elite Series,elite,2026-11-27,23:00,FLOJO,Sikora F.,Szymik R.,0.429,2.33,2.56,3.03,,1.909,-0.181,,,,,3,pendiente,,,,2026-11-27 20:55,,notstarted,b13513509,,si,1.909,bot,NO,,A,2.5,,-2.522,-0.925
 TT Cup,tt,2026-11-27,23:25,FLOJO,Hendrych J.,Cousin J.,0.463,2.16,2.37,2.8,,1.571,-0.272,,,,,1,pendiente,,,,2026-11-27 21:31,,notstarted,b13518675,,si,1.571,bot,NO,,A,1.571,,-0.395,-0.568
 Elite Series,elite,2026-11-27,23:55,SIN CUOTA,Skorski M.,Lukaszewski M.,0.672,1.49,1.64,1.93,,,,,,,,6,pendiente,,,,2026-11-27 21:50,,notstarted,b13513432,,si,,,,,A,,,0.804,0.493
-Elite Series,elite,2026-11-27,22:20,SIN CUOTA,Wiza R.,Kowalski K.,0.713,1.4,1.54,1.82,,,,,,,,1,pendiente,,,,2026-11-27 21:52,,notstarted,b13521351,,si,,,,,A,,,-0.531,-0.882
+Elite Series,elite,2026-11-27,22:20,SIN CUOTA,Wiza R.,Kowalski K.,0.713,1.4,1.54,1.82,,,,,,,,1,ganado,3-0,,,2026-11-27 21:52,,finished,b13521351,,si,,,,,A,,,-0.531,-0.882
 Elite Series,elite,2026-11-27,22:45,SIN CUOTA,Szymanski I.,Michalski J.,0.563,1.78,1.95,2.31,,,,,,,,1,pendiente,,,,2026-11-27 22:18,,notstarted,b13521470,,si,,,,,A,,,-1.366,-1.448
