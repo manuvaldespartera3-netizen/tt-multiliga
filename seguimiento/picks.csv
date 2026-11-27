@@ -1328,7 +1328,7 @@ TT Cup,tt,2026-11-27,10:00,SIN CUOTA,Masternak J.,Chojnacki J.,0.435,2.3,2.53,2.
 TT Cup,tt,2026-11-27,10:10,FUERTE,Heuman I.,Benes R.,0.524,1.91,2.1,2.48,,2.1,0.101,,,,2.1,1,perdido,1-3,-1,,2026-11-27 08:05,,finished,b13517173,,si,2.1,bot,NO,-1,A,2.1,,3.789,1.264
 TT Cup,tt,2026-11-27,10:15,FLOJO,Mrowetz B.,Krupnik J.,0.494,2.02,2.23,2.63,,1.833,-0.095,,,,1.833,1,perdido,2-3,-1,,2026-11-27 08:10,,finished,b13516980,,si,1.833,bot,NO,-1,A,1.833,,-0.121,-1.826
 TT Cup,tt,2026-11-27,10:30,SIN CUOTA,Galus M.,Molka B.,0.531,1.88,2.07,2.45,,,,,,,,1,ganado,3-0,,,2026-11-27 08:25,,finished,b13516739,,si,,,,,A,,,1.152,2.176
-Czech Liga Pro,lp,2026-11-27,10:30,FLOJO,Revay R.,Navedla M.,0.524,1.91,2.1,2.48,,1.727,-0.095,,,,,1,pendiente,,,,2026-11-27 08:25,,inprogress,b13514058,,si,1.727,bot,NO,,LP,1.727,,0.997,-3.101
+Czech Liga Pro,lp,2026-11-27,10:30,FLOJO,Revay R.,Navedla M.,0.524,1.91,2.1,2.48,,1.727,-0.095,,,,1.615,1,perdido,1-3,-1,,2026-11-27 08:25,,finished,b13514058,,si,1.727,bot,NO,-1,LP,1.727,,0.997,-3.101
 Czech Liga Pro,lp,2026-11-27,10:30,FLOJO,Hruska Sr V.,Chalupnicek M.,0.531,1.88,2.07,2.45,,1.833,-0.027,,,,1.833,1,perdido,0-3,-1,,2026-11-27 08:25,,finished,b13514235,,si,1.833,bot,NO,-1,LP,1.833,,1.058,-0.334
 Czech Liga Pro,lp,2026-11-27,10:30,FLOJO,Virag A.,Zientek Z.,0.647,1.55,1.7,2.01,,1.4,-0.094,,,,1.533,1,ganado,3-0,0.4,,2026-11-27 08:25,,finished,b13514239,,si,1.4,bot,NO,0.4,LP,1.4,,-0.355,2.84
 Czech Liga Pro,lp,2026-11-27,10:30,FUERTE,Saleny P.,Robin Wagner M.,0.493,2.03,2.23,2.64,,2.375,0.17,,,,2.1,1,ganado,3-2,1.38,,2026-11-27 08:25,,finished,b13514251,,si,2.375,bot,NO,1.38,LP,2.375,,-1.009,0.081
@@ -1341,3 +1341,5 @@ Elite Series,elite,2026-11-27,11:50,SIN CUOTA,Klocek K.,Minda M.,0.384,2.6,2.86,
 Elite Series,elite,2026-11-27,10:45,SIN CUOTA,Slosarczyk P.,Tobiasz W.,0.572,1.75,1.92,2.27,,,,,,,,1,pendiente,,,,2026-11-27 10:16,,notstarted,b13518607,,si,,,,,A,,,-2.086,-0.979
 Czech Liga Pro,lp,2026-11-27,12:30,FLOJO,Zurek F.,Sionkala E.,0.576,1.73,1.91,2.26,,1.533,-0.116,,,,,3,pendiente,,,,2026-11-27 10:25,,notstarted,b13513673,,si,1.533,bot,NO,,LP,1.666,,-0.842,-0.097
 Elite Series,elite,2026-11-27,12:35,SIN CUOTA,Warpas B.,Minda M.,0.28,3.57,3.93,4.64,,,,,,,,5,pendiente,,,,2026-11-27 10:30,,notstarted,b13515512,,si,,,,,A,,,0.608,-0.11
+Elite Series,elite,2026-11-27,11:20,SIN CUOTA,Mitas J.,Czerwinski B.,0.514,1.94,2.14,2.53,,,,,,,,4,pendiente,,,,2026-11-27 10:55,,notstarted,b13518688,,si,,,,,A,,,-0.944,-1.535
+Czech Liga Pro,lp,2026-11-27,13:00,FLOJO,Zurek F.,Varecha P.,0.562,1.78,1.96,2.31,,1.4,-0.213,,,,,3,pendiente,,,,2026-11-27 10:55,,notstarted,b13514406,,si,1.4,bot,NO,,LP,1.4,,-0.842,-0.255
