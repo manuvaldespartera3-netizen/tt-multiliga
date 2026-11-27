@@ -1297,15 +1297,16 @@ Czech Liga Pro,lp,2026-11-26,18:00,FLOJO,Mikyska L.,Pleskot J.,0.478,2.09,2.3,2.
 Czech Liga Pro,lp,2026-11-26,18:00,FLOJO,Szotkowski J.,Biolek M.,0.509,1.96,2.16,2.55,,1.727,-0.12,,,,1.727,4,perdido,1-3,-1,,2026-11-26 17:02,,finished,b13509294,,si,1.727,bot,NO,-1,LP,1.727,,0.463,-0.201
 Czech Liga Pro,lp,2026-11-26,18:30,FLOJO,Gireth P.,Nesnera J.,0.514,1.95,2.14,2.53,,1.571,-0.193,,,,1.727,1,perdido,1-3,-1,,2026-11-26 17:02,,finished,b13509520,,si,1.571,bot,NO,-1,LP,1.571,,0.307,1.933
 Czech Liga Pro,lp,2026-11-27,02:30,APUESTA,Chlebecek M.,Regner M.,0.475,2.1,2.31,2.74,,2.2,0.046,,,,2.5,1,ganado,3-1,1.2,,2026-11-27 00:25,,finished,b13509508,,si,2.2,bot,NOCHE,,LP,1.909,,-0.227,-0.545
-Czech Liga Pro,lp,2026-11-27,02:30,FLOJO,Vejvoda V.,Kasnik S.,0.514,1.95,2.14,2.53,,1.666,-0.144,,,,,1,pendiente,,,,2026-11-27 00:25,,notstarted,b13510158,,si,1.666,bot,NOCHE,,LP,1.666,,-3.668,-0.768
+Czech Liga Pro,lp,2026-11-27,02:30,FLOJO,Vejvoda V.,Kasnik S.,0.514,1.95,2.14,2.53,,1.666,-0.144,,,,,1,anulado,,0,,2026-11-27 00:25,,canceled,b13510158,,si,1.666,bot,NOCHE,,LP,1.666,,-3.668,-0.768
 Czech Liga Pro,lp,2026-11-27,02:30,FLOJO,Vejvoda V.,Svacha O.,0.477,2.1,2.31,2.73,,1.909,-0.089,,,,2.2,1,ganado,3-0,0.91,,2026-11-27 00:25,,finished,b13516664,,si,1.909,bot,NOCHE,,LP,1.909,,-3.668,-1.786
-Czech Liga Pro,lp,2026-11-27,02:30,FLOJO,Kouble D.,Postelt V.,0.596,1.68,1.85,2.18,,1.5,-0.106,,,,,1,pendiente,,,,2026-11-27 00:27,,inprogress,b13509534,,si,1.5,bot,NOCHE,,LP,1.5,,-0.671,1.61
-Elite Series,elite,2026-11-27,03:00,FLOJO,Michalik J.,Lewczuk M.,0.503,1.99,2.19,2.59,,1.909,-0.041,,,,,1,pendiente,,,,2026-11-27 00:55,,notstarted,b13514075,,si,1.909,bot,NOCHE,,A,1.833,,1.853,1.89
-Czech Liga Pro,lp,2026-11-27,03:00,FLOJO,Krejci R.,Hlawatschke A.,0.349,2.86,3.15,3.72,,2.1,-0.266,,,,,1,pendiente,,,,2026-11-27 00:55,,notstarted,b13509526,,si,2.1,bot,NOCHE,,LP,2.75,,1.662,1.568
-Czech Liga Pro,lp,2026-11-27,03:00,FLOJO,Louda J.,Sychra M.,0.435,2.3,2.53,2.99,,1.666,-0.275,,,,,1,pendiente,,,,2026-11-27 00:55,,notstarted,b13509769,,si,1.666,bot,NOCHE,,LP,1.666,,-0.96,-0.158
-Czech Liga Pro,lp,2026-11-27,03:00,FLOJO,Trefny J.,Plachy J.,0.484,2.06,2.27,2.68,,1.727,-0.163,,,,,1,pendiente,,,,2026-11-27 00:55,,notstarted,b13509822,,si,1.727,bot,NOCHE,,LP,1.727,,1.898,-0.872
+Czech Liga Pro,lp,2026-11-27,02:30,FLOJO,Kouble D.,Postelt V.,0.596,1.68,1.85,2.18,,1.5,-0.106,,,,1.5,1,ganado,3-1,0.5,,2026-11-27 00:27,,finished,b13509534,,si,1.5,bot,NOCHE,,LP,1.5,,-0.671,1.61
+Elite Series,elite,2026-11-27,03:00,FLOJO,Michalik J.,Lewczuk M.,0.503,1.99,2.19,2.59,,1.909,-0.041,,,,,1,pendiente,,,,2026-11-27 00:55,,inprogress,b13514075,,si,1.909,bot,NOCHE,,A,1.833,,1.853,1.89
+Czech Liga Pro,lp,2026-11-27,03:00,FLOJO,Krejci R.,Hlawatschke A.,0.349,2.86,3.15,3.72,,2.1,-0.266,,,,,1,pendiente,,,,2026-11-27 00:55,,inprogress,b13509526,,si,2.1,bot,NOCHE,,LP,2.75,,1.662,1.568
+Czech Liga Pro,lp,2026-11-27,03:00,FLOJO,Louda J.,Sychra M.,0.435,2.3,2.53,2.99,,1.666,-0.275,,,,,1,anulado,,0,,2026-11-27 00:55,,canceled,b13509769,,si,1.666,bot,NOCHE,,LP,1.666,,-0.96,-0.158
+Czech Liga Pro,lp,2026-11-27,03:00,FLOJO,Trefny J.,Plachy J.,0.484,2.06,2.27,2.68,,1.727,-0.163,,,,,1,pendiente,,,,2026-11-27 00:55,,inprogress,b13509822,,si,1.727,bot,NOCHE,,LP,1.727,,1.898,-0.872
 Elite Series,elite,2026-11-27,03:25,FLOJO,Zelezik J.,Nocun Z.,0.515,1.94,2.14,2.53,,1.833,-0.057,,,,,1,pendiente,,,,2026-11-27 01:20,,notstarted,b13509920,,si,1.833,bot,NOCHE,,A,1.909,,-0.116,-0.731
 Czech Liga Pro,lp,2026-11-27,03:30,SIN CUOTA,Svacha O.,Skakal M.,0.428,2.34,2.57,3.04,,2.0,-0.144,,,,,1,pendiente,,,,2026-11-27 01:25,,notstarted,b13517179,,si,2.0,bot,NOCHE,,LP,2.0,,-1.7,3.302
-Czech Liga Pro,lp,2026-11-27,03:30,FLOJO,Skakal M.,Kasnik S.,0.575,1.74,1.91,2.26,,1.444,-0.17,,,,,1,pendiente,,,,2026-11-27 01:27,,notstarted,b13509423,,si,1.444,bot,NOCHE,,LP,1.571,,3.048,-0.768
-Elite Series,elite,2026-11-27,02:45,SIN CUOTA,Jurowicz G.,Tkocz M.,0.412,2.43,2.67,3.16,,,,,,,,1,pendiente,,,,2026-11-27 02:16,,notstarted,b13517466,,si,,,NOCHE,,A,,,-2.476,-1.2
+Czech Liga Pro,lp,2026-11-27,03:30,FLOJO,Skakal M.,Kasnik S.,0.575,1.74,1.91,2.26,,1.444,-0.17,,,,,1,anulado,,0,,2026-11-27 01:27,,canceled,b13509423,,si,1.444,bot,NOCHE,,LP,1.571,,3.048,-0.768
+Elite Series,elite,2026-11-27,02:45,SIN CUOTA,Jurowicz G.,Tkocz M.,0.412,2.43,2.67,3.16,,,,,,,,1,perdido,0-3,,,2026-11-27 02:16,,finished,b13517466,,si,,,NOCHE,,A,,,-2.476,-1.2
 Elite Series,elite,2026-11-27,03:10,SIN CUOTA,Pyrek D.,Barton A.,0.836,1.25,1.32,1.55,,,,,,,,1,pendiente,,,,2026-11-27 02:44,,notstarted,b13517518,,si,,,NOCHE,,A,,,-0.595,-0.129
+Elite Series,elite,2026-11-27,03:30,SIN CUOTA,Zmijewski A.,Fomin A.,0.538,1.86,2.05,2.42,,,,,,,,1,pendiente,,,,2026-11-27 03:02,,notstarted,b13517551,,si,,,NOCHE,,A,,,0.962,-0.573
