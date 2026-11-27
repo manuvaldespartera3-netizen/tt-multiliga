@@ -1356,7 +1356,7 @@ Czech Liga Pro,lp,2026-11-27,14:30,FLOJO,Danko P.,Vavrecka R.,0.6,1.67,1.83,2.17
 TT Cup,tt,2026-11-27,14:35,FUERTE,Polak O.,Hitzger J.,0.452,2.21,2.43,2.88,,2.5,0.13,,,,2.2,1,ganado,3-2,1.5,,2026-11-27 12:30,,finished,b13516984,,si,2.5,bot,NO,1.5,A,2.5,,1.452,0.894
 Czech Liga Pro,lp,2026-11-27,14:30,APUESTA,Varecha P.,Sionkala E.,0.641,1.56,1.72,2.03,,1.571,0.007,,,,1.727,1,perdido,2-3,-1,,2026-11-27 12:31,,finished,b13514770,,si,1.571,bot,NO,-1,LP,1.571,,0.932,-0.097
 TT Cup,tt,2026-11-27,14:50,FLOJO,Knazik O.,Dominik Rek L.,0.467,2.14,2.35,2.78,,2.0,-0.065,,,,2.0,1,perdido,2-3,-1,,2026-11-27 12:45,,finished,b13517138,,si,2.0,bot,NO,-1,A,2.0,,-2.075,-0.508
-TT Cup,tt,2026-11-27,15:25,FLOJO,Kosacky A.,Vonasek J.,0.491,2.04,2.24,2.65,,1.5,-0.263,,,,,1,pendiente,,,,2026-11-27 13:20,,notstarted,b13517287,,si,1.5,bot,NO,,A,1.5,,-1.038,0.378
+TT Cup,tt,2026-11-27,15:25,FLOJO,Kosacky A.,Vonasek J.,0.491,2.04,2.24,2.65,,1.5,-0.263,,,,,1,pendiente,,,,2026-11-27 13:20,,inprogress,b13517287,,si,1.5,bot,NO,,A,1.5,,-1.038,0.378
 Elite Series,elite,2026-11-27,14:10,SIN CUOTA,Czerwinski B.,Zochniak J.,0.493,2.03,2.23,2.64,,,,,,,,1,perdido,1-3,,,2026-11-27 13:42,,finished,b13519260,,si,,,,,A,,,-1.548,-0.169
 TT Cup,tt,2026-11-27,16:00,SIN CUOTA,Komorowicz J.,Zabinski M.,0.622,1.61,1.77,2.09,,,,,,,,1,pendiente,,,,2026-11-27 13:56,,notstarted,b13516768,,si,,,,,A,,,0.95,-1.905
 Czech Liga Pro,lp,2026-11-27,16:00,FLOJO,Trefny J.,Dedek J.,0.593,1.69,1.85,2.19,,1.571,-0.068,,,,,5,pendiente,,,,2026-11-27 13:56,,notstarted,b13514292,,si,1.571,bot,NO,,LP,1.571,,2.709,-0.624
@@ -1370,3 +1370,5 @@ Elite Series,elite,2026-11-27,17:00,SIN CUOTA,Skorski M.,Eliasz A.,0.41,2.44,2.6
 Czech Liga Pro,lp,2026-11-27,17:00,FLOJO,Drabek Z.,Syroha M.,0.472,2.12,2.33,2.75,,1.727,-0.184,,,,,4,pendiente,,,,2026-11-27 14:55,,notstarted,b13514396,,si,1.727,bot,NO,,LP,1.727,,-0.99,-0.929
 Czech Liga Pro,lp,2026-11-27,17:00,FLOJO,Zuzanek J.,Zmuda P.,0.493,2.03,2.23,2.64,,1.666,-0.179,,,,,3,pendiente,,,,2026-11-27 14:55,,notstarted,b13514710,,si,1.666,bot,NO,,LP,1.833,,0.464,1.665
 TT Cup,tt,2026-11-27,17:15,APUESTA,Sturma P.,Jancak R.,0.456,2.19,2.41,2.85,,2.25,0.026,1.99,-0.093,FLOJO,,3,pendiente,,,,2026-11-27 15:10,2251,notstarted,b13518516,,si,2.25,bot,SI,,A,2.25,,-0.262,-1.766
+TT Cup,tt,2026-11-27,17:25,APUESTA,Stusek M.,Jicha D.,0.522,1.91,2.11,2.49,,2.1,0.097,,,,,1,pendiente,,,,2026-11-27 15:20,,notstarted,b13518654,,si,2.1,bot,NO,,A,2.375,,-0.27,0.815
+Czech Liga Pro,lp,2026-11-27,17:30,APUESTA,Trefny J.,Just F.,0.428,2.33,2.57,3.03,,2.5,0.071,,,,,5,pendiente,,,,2026-11-27 15:25,,notstarted,b13514583,,si,2.5,bot,NO,,LP,2.5,,2.709,-0.331
