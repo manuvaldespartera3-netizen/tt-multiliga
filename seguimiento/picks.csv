@@ -1472,15 +1472,15 @@ TT Cup,tt,2026-11-28,13:15,FLOJO,Veliiev A.,Cizek A.,0.567,1.76,1.94,2.29,,1.666
 TT Cup,tt,2026-11-28,13:25,FLOJO,Cousin J.,Muhlhauser Z.,0.525,1.9,2.09,2.47,,1.8,-0.054,,,,1.8,1,perdido,1-3,-1,,2026-11-28 11:20,,finished,b13521803,,si,1.8,bot,NO,-1,A,1.8,,-0.371,0.146
 Elite Series,elite,2026-11-28,13:25,APUESTA,Jesiek J.,Fira D.,0.567,1.76,1.94,2.29,,1.833,0.04,,,,1.833,5,perdido,2-3,-1,,2026-11-28 11:20,,finished,b13518951,,si,1.833,bot,NO,-1,A,1.8,,0.523,1.209
 Elite Series,elite,2026-11-28,11:50,SIN CUOTA,Sinicki M.,Guminski K.,0.59,1.69,1.86,2.2,,,,,,,,4,ganado,3-1,,,2026-11-28 11:23,,finished,b13523535,,si,,,,,A,,,-1.165,-2.97
-Czech Liga Pro,lp,2026-11-28,13:30,FLOJO,Hejl Jnr P.,Velicka L.,0.506,1.98,2.17,2.57,,1.909,-0.034,,,,,3,pendiente,,,,2026-11-28 11:25,,inprogress,b13519550,,si,1.909,bot,NO,,LP,1.727,,1.703,1.914
-Czech Liga Pro,lp,2026-11-28,13:30,FLOJO,Vrabec M.,Marjan M.,0.496,2.02,2.22,2.62,,1.571,-0.221,,,,,4,pendiente,,,,2026-11-28 11:25,,inprogress,b13519553,,si,1.571,bot,NO,,LP,1.571,,-2.081,-1.317
-Czech Liga Pro,lp,2026-11-28,13:30,FLOJO,Urbaniec R.,Klement M.,0.535,1.87,2.06,2.43,,1.727,-0.077,,,,,4,pendiente,,,,2026-11-28 11:25,,inprogress,b13519658,,si,1.727,bot,NO,,LP,1.727,,-1.488,0.799
-TT Cup,tt,2026-11-28,13:40,APUESTA,Jokiel P.,Przybyla J.,0.512,1.95,2.15,2.54,,2.0,0.024,,,,,3,pendiente,,,,2026-11-28 11:35,2258,inprogress,b13522002,,si,2.0,bot,SI,,A,2.0,,1.925,1.362
+Czech Liga Pro,lp,2026-11-28,13:30,FLOJO,Hejl Jnr P.,Velicka L.,0.506,1.98,2.17,2.57,,1.909,-0.034,,,,2.2,3,perdido,2-3,-1,,2026-11-28 11:25,,finished,b13519550,,si,1.909,bot,NO,-1,LP,1.727,,1.703,1.914
+Czech Liga Pro,lp,2026-11-28,13:30,FLOJO,Vrabec M.,Marjan M.,0.496,2.02,2.22,2.62,,1.571,-0.221,,,,1.5,4,perdido,1-3,-1,,2026-11-28 11:25,,finished,b13519553,,si,1.571,bot,NO,-1,LP,1.571,,-2.081,-1.317
+Czech Liga Pro,lp,2026-11-28,13:30,FLOJO,Urbaniec R.,Klement M.,0.535,1.87,2.06,2.43,,1.727,-0.077,,,,1.833,4,ganado,3-2,0.73,,2026-11-28 11:25,,finished,b13519658,,si,1.727,bot,NO,0.73,LP,1.727,,-1.488,0.799
+TT Cup,tt,2026-11-28,13:40,APUESTA,Jokiel P.,Przybyla J.,0.512,1.95,2.15,2.54,,2.0,0.024,,,,2.0,3,perdido,1-3,-1,,2026-11-28 11:35,2258,finished,b13522002,,si,2.0,bot,SI,-1,A,2.0,,1.925,1.362
 Elite Series,elite,2026-11-28,12:05,SIN CUOTA,Linek A.,Kukawka M.,0.35,2.86,3.14,3.72,,,,,,,,4,ganado,3-1,,,2026-11-28 11:36,,finished,b13523570,,si,,,,,A,,,-0.962,2.015
 TT Cup,tt,2026-11-28,13:45,FLOJO,Veliiev A.,Pawlik D.,0.474,2.11,2.32,2.74,,1.909,-0.095,,,,,4,pendiente,,,,2026-11-28 11:40,,inprogress,b13521879,,si,1.909,bot,NO,,A,2.1,,-0.771,1.837
-TT Cup,tt,2026-11-28,13:55,APUESTA,Cousin J.,Zelezny D.,0.482,2.08,2.28,2.7,,2.2,0.06,,,,,1,pendiente,,,,2026-11-28 11:50,,notstarted,b13521877,,si,2.2,bot,NO,,A,2.5,,-0.371,-1.536
-Czech Liga Pro,lp,2026-11-28,14:00,FLOJO,Vavrecka R.,Velicka L.,0.519,1.93,2.12,2.5,,1.909,-0.009,,,,,4,pendiente,,,,2026-11-28 11:55,,notstarted,b13519018,,si,1.909,bot,NO,,LP,2.0,,2.401,1.914
-Czech Liga Pro,lp,2026-11-28,14:00,FLOJO,Saleny P.,Klement M.,0.543,1.84,2.03,2.4,,1.833,-0.005,,,,,4,pendiente,,,,2026-11-28 11:55,,notstarted,b13519545,,si,1.833,bot,NO,,LP,1.909,,2.166,0.799
+TT Cup,tt,2026-11-28,13:55,APUESTA,Cousin J.,Zelezny D.,0.482,2.08,2.28,2.7,,2.2,0.06,,,,,1,pendiente,,,,2026-11-28 11:50,,inprogress,b13521877,,si,2.2,bot,NO,,A,2.5,,-0.371,-1.536
+Czech Liga Pro,lp,2026-11-28,14:00,FLOJO,Vavrecka R.,Velicka L.,0.519,1.93,2.12,2.5,,1.909,-0.009,,,,,4,pendiente,,,,2026-11-28 11:55,,inprogress,b13519018,,si,1.909,bot,NO,,LP,2.0,,2.401,1.914
+Czech Liga Pro,lp,2026-11-28,14:00,FLOJO,Saleny P.,Klement M.,0.543,1.84,2.03,2.4,,1.833,-0.005,,,,,4,pendiente,,,,2026-11-28 11:55,,inprogress,b13519545,,si,1.833,bot,NO,,LP,1.909,,2.166,0.799
 TT Cup,tt,2026-11-28,14:15,FLOJO,Cizek A.,Slavik L.,0.435,2.3,2.53,2.99,,2.25,-0.021,,,,,1,pendiente,,,,2026-11-28 12:11,,notstarted,b13521820,,si,2.25,bot,NO,,A,2.25,,-1.553,2.112
 Czech Liga Pro,lp,2026-11-28,14:30,FLOJO,Urbaniec R.,Regner M.,0.534,1.87,2.06,2.44,,1.533,-0.182,,,,,4,pendiente,,,,2026-11-28 12:25,,notstarted,b13519742,,si,1.533,bot,NO,,LP,1.533,,-1.488,-0.158
 Czech Liga Pro,lp,2026-11-28,14:30,FLOJO,Dedek J.,Prokupek J.,0.521,1.92,2.11,2.49,,1.8,-0.062,,,,,1,pendiente,,,,2026-11-28 12:25,,notstarted,b13519758,,si,1.8,bot,NO,,LP,1.8,,1.768,-2.249
