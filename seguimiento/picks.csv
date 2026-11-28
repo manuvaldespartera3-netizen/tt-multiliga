@@ -1431,10 +1431,11 @@ Czech Liga Pro,lp,2026-11-28,02:30,APUESTA,Sulava L.,Necas M.,0.459,2.18,2.39,2.
 Czech Liga Pro,lp,2026-11-28,02:30,FLOJO,Mikuska A.,Placek M.,0.486,2.06,2.26,2.67,,1.615,-0.215,,,,1.615,1,ganado,3-1,0.61,,2026-11-28 00:25,,finished,b13514527,,si,1.615,bot,NOCHE,,LP,1.615,,-1.168,-1.739
 Elite Series,elite,2026-11-28,02:45,SIN CUOTA,Oracz J.,Lewczuk M.,0.714,1.4,1.54,1.82,,,,,,,,1,pendiente,,,,2026-11-28 00:40,,notstarted,b13515455,,si,,,NOCHE,,A,,,1.548,-2.399
 Elite Series,elite,2026-11-28,02:45,FLOJO,Sulkowski B.,Woskowicz M.,0.599,1.67,1.84,2.17,,1.4,-0.161,,,,1.666,1,ganado,3-1,0.4,,2026-11-28 00:40,,finished,b13518802,,si,1.4,bot,NOCHE,,A,1.571,,-0.862,-1.687
-Elite Series,elite,2026-11-28,03:00,FLOJO,Szymik R.,Adach R.,0.531,1.88,2.07,2.45,,1.8,-0.045,,,,,1,pendiente,,,,2026-11-28 00:55,,inprogress,b13518704,,si,1.8,bot,NOCHE,,A,1.8,,-1.689,-0.081
-Czech Liga Pro,lp,2026-11-28,03:00,APUESTA,Pleskot J.,Dolezal V.,0.363,2.75,3.03,3.58,,3.0,0.09,,,,,1,pendiente,,,,2026-11-28 00:55,,inprogress,b13514008,,si,3.0,bot,NOCHE,,LP,3.0,,-1.725,3.068
-Elite Series,elite,2026-11-28,03:25,SIN CUOTA,Sikora F.,Baron M.,0.424,2.36,2.59,3.06,,2.5,0.06,,,,,1,pendiente,,,,2026-11-28 01:23,,notstarted,b13520099,,si,2.5,bot,NOCHE,,A,2.5,,-1.232,-0.355
-Czech Liga Pro,lp,2026-11-28,03:30,FUERTE,Brozhik K.,Pikous M.,0.537,1.86,2.05,2.42,,2.25,0.209,,,,,1,pendiente,,,,2026-11-28 01:26,,notstarted,b13514748,,si,2.25,bot,NOCHE,,LP,2.25,,0.417,-2.518
-Czech Liga Pro,lp,2026-11-28,03:30,FLOJO,Necas M.,Hasmanda R.,0.516,1.94,2.13,2.52,,1.833,-0.054,,,,,1,pendiente,,,,2026-11-28 01:29,,notstarted,b13514402,,si,1.833,bot,NOCHE,,LP,1.833,,0.691,-0.152
+Elite Series,elite,2026-11-28,03:00,FLOJO,Szymik R.,Adach R.,0.531,1.88,2.07,2.45,,1.8,-0.045,,,,1.8,1,ganado,3-0,0.8,,2026-11-28 00:55,,finished,b13518704,,si,1.8,bot,NOCHE,,A,1.8,,-1.689,-0.081
+Czech Liga Pro,lp,2026-11-28,03:00,APUESTA,Pleskot J.,Dolezal V.,0.363,2.75,3.03,3.58,,3.0,0.09,,,,3.0,1,perdido,2-3,-1,,2026-11-28 00:55,,finished,b13514008,,si,3.0,bot,NOCHE,,LP,3.0,,-1.725,3.068
+Elite Series,elite,2026-11-28,03:25,SIN CUOTA,Sikora F.,Baron M.,0.424,2.36,2.59,3.06,,2.5,0.06,,,,,1,pendiente,,,,2026-11-28 01:23,,inprogress,b13520099,,si,2.5,bot,NOCHE,,A,2.5,,-1.232,-0.355
+Czech Liga Pro,lp,2026-11-28,03:30,FUERTE,Brozhik K.,Pikous M.,0.537,1.86,2.05,2.42,,2.25,0.209,,,,,1,pendiente,,,,2026-11-28 01:26,,inprogress,b13514748,,si,2.25,bot,NOCHE,,LP,2.25,,0.417,-2.518
+Czech Liga Pro,lp,2026-11-28,03:30,FLOJO,Necas M.,Hasmanda R.,0.516,1.94,2.13,2.52,,1.833,-0.054,,,,,1,pendiente,,,,2026-11-28 01:29,,inprogress,b13514402,,si,1.833,bot,NOCHE,,LP,1.833,,0.691,-0.152
 Elite Series,elite,2026-11-28,03:35,SIN CUOTA,Bladziak K.,Skorupa J.,0.368,2.72,2.99,3.53,,,,,,,,1,pendiente,,,,2026-11-28 01:58,,notstarted,b13522095,,si,,,NOCHE,,A,,,0.127,0.061
 Elite Series,elite,2026-11-28,03:10,SIN CUOTA,Guzik M.,Wiza R.,0.622,1.61,1.77,2.09,,,,,,,,1,pendiente,,,,2026-11-28 02:44,,notstarted,b13522197,,si,,,NOCHE,,A,,,-0.439,0.078
+Elite Series,elite,2026-11-28,05:25,FLOJO,Szymik R.,Wojtaszczyk W.,0.469,2.13,2.35,2.77,,2.0,-0.062,,,,,2,pendiente,,,,2026-11-28 03:20,,notstarted,b13518989,,si,2.0,bot,NOCHE,,A,2.0,,-1.146,0.975
