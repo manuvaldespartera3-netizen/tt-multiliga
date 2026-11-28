@@ -320,7 +320,6 @@
   "sin_cuota_caliente": 10
  },
  "textos": {
-  "elite:742": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 16:35\n\u2705 SPANIK T.\nvs Dosz S.\n\n\ud83d\udcb0 APUESTA si BetCris \u2265 1.61\n\u274c menos de 1.61 \u2192 no apostar\n\n\ud83d\udcc8 el Elo le ve 16 puntos mejor que la casa\nSofascore: 1.61 (favorito)\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:2075": "\ud83d\udd25 PICK TT CUP \u00b7 16:40\n\u2705 MOLIN T.\nvs Vitasek D.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.94\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 51% \u00b7 ya ha jugado 3 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento",
   "elite:743": "\ud83c\uddf5\ud83c\uddf1 PICK ELITE SERIES \u00b7 17:00\n\u2705 KOLODZIEJ K.\nvs Jadam D.\n\n\ud83d\udcb0 APUESTA si BetCris est\u00e1 entre 1.25 y 2.00\n\u274c m\u00e1s de 2.00 (no es favorito) \u2192 no apostar\n\n\ud83d\udd25 ya ha jugado 3 hoy, rival a\u00fan no\nSofascore: sin cuota \u00b7 Elo le da 53%\n\u21a9\ufe0f Responde con tu cuota de BetCris para apuntarla\n\ud83e\uddea Seguimiento \u00b7 sin dinero hasta confirmarlo",
   "tt:2076": "\ud83d\udd25 PICK TT CUP \u00b7 17:05\n\u2705 LOVL J.\nvs Mezlik S.\n\n\ud83d\udcb0 Se apuesta con cuota \u2265 1.68\n\ud83d\udfe2 la cuota llega \u00b7 \ud83d\udd34 no llega \u00b7 \u26aa sin cuota\n\u21a9\ufe0f Si sale \u26aa, responde con tu cuota de BetCris\n\nProb. 59% \u00b7 ya ha jugado 4 hoy, rival a\u00fan no\n\ud83e\uddea Seguimiento",
@@ -619,9 +618,10 @@
   "tt:2243": "\ud83d\udd25 PICK TT CUP \u00b7 17:55\n\u2705 ZACHARDA J.\nvs Kadavy O.\n\n\ud83d\udcb0 Cuota del bot 2.50 \u00b7 m\u00ednimo 1.83\n\ud83d\udcc8 llega en mejor forma que el rival\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\n\n\u21a9\ufe0f Responde con tu cuota de BetCris para tu yield",
   "lp:296": "\ud83c\udde8\ud83c\uddff PICK LIGA PRO \u00b7 17:30\n\u2705 VAVRECKA M.\nvs Velebil L.\n\n\ud83d\udcb0 Cuota del bot 2.20 \u00b7 m\u00ednimo 2.05\n\ud83d\udcc8 llega en mejor forma que el rival\n\u2b06\ufe0f la cuota sube: abri\u00f3 a 1.44\n\ud83d\udd25 ya ha jugado 4 hoy, rival a\u00fan no\n\n\u21a9\ufe0f Responde con tu cuota de BetCris para tu yield",
   "tt:2251": "\ud83d\udd25 PICK TT CUP \u00b7 17:15\n\u2705 STURMA P.\nvs Jancak R.\n\n\ud83d\udcb0 Cuota del bot 2.25 \u00b7 m\u00ednimo 2.19\n\ud83d\udcc8 llega en mejor forma que el rival\n\ud83d\udd25 ya ha jugado 3 hoy, rival a\u00fan no\n\n\u21a9\ufe0f Responde con tu cuota de BetCris para tu yield",
-  "tt:2258": "\ud83d\udd25 PICK TT CUP \u00b7 13:40\n\u2705 JOKIEL P.\nvs Przybyla J.\n\n\ud83d\udcb0 Cuota del bot 2.00 \u00b7 m\u00ednimo 1.95\n\ud83d\udcc8 llega en mejor forma que el rival\n\ud83d\udd25 ya ha jugado 3 hoy, rival a\u00fan no\n\n\u21a9\ufe0f Responde con tu cuota de BetCris para tu yield"
+  "tt:2258": "\ud83d\udd25 PICK TT CUP \u00b7 13:40\n\u2705 JOKIEL P.\nvs Przybyla J.\n\n\ud83d\udcb0 Cuota del bot 2.00 \u00b7 m\u00ednimo 1.95\n\ud83d\udcc8 llega en mejor forma que el rival\n\ud83d\udd25 ya ha jugado 3 hoy, rival a\u00fan no\n\n\u21a9\ufe0f Responde con tu cuota de BetCris para tu yield",
+  "tt:2263": "\ud83d\udd25 PICK TT CUP \u00b7 17:15\n\u2705 PAWLIK D.\nvs Chaloupka F.\n\n\ud83d\udcb0 Cuota del bot 2.10 \u00b7 m\u00ednimo 1.69\n\ud83d\udcc8 llega en mejor forma que el rival\n\ud83d\udd25 ya ha jugado 3 hoy, rival a\u00fan no\n\n\u21a9\ufe0f Responde con tu cuota de BetCris para tu yield"
  },
- "latido": "2026-11-28 14:59",
+ "latido": "2026-11-28 15:14",
  "aviso_hist_15005": "2026-11-14 19:15",
  "aviso_hist_19041": "2026-11-14 19:15",
  "elite_a": "2026-11-25",
